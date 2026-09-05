@@ -61,7 +61,7 @@ A JSON array of 126 objects, one per site, ordered by `id`. This is the ground t
 | `pais` | text | Country of the institution. |
 | `url` | text | Home page audited. |
 | `ok` | boolean | The page loaded. True for all 126. |
-| `https` | boolean | Valid TLS certificate. |
+| `https` | boolean | The page was served over HTTPS. **Not** the same as the documentary indicator of Figure 1: see `tls_deficiencias_agosto2026.csv`. |
 | `axe_version` | text | Engine version. `4.13.0` for all 126. |
 | `fecha` | datetime | Time of the visit, ISO 8601. |
 | `cookies` | object | See below. |
@@ -101,7 +101,7 @@ A flattened view of the JSON above, 126 rows, for quick inspection. Columns: `id
 
 ### `data/raw/tracking/resultados_<VANTAGE>_r<N>.json`
 
-Thirteen files, one per pass. Same structure as `resultados.json`, plus two fields: `vantage` and `run`. Pass `GB_r1` is truncated, 5,053 bytes against the usual 25,000, because it aborted when the VPN had not switched country; it is kept as evidence and excluded from the analysis.
+Thirteen files, one per pass. Same structure as `resultados.json`, plus two fields: `vantage` and `run`. Pass `GB_r1` is truncated, 49,546 bytes against the usual 280,000, because it aborted when the VPN had not switched country; it is kept as evidence and excluded from the analysis.
 
 ### `data/raw/tracking/meta_<VANTAGE>_r<N>.json`
 
@@ -259,13 +259,30 @@ Documentary indicators, coded by inspecting each institution's first-level priva
 | `DPO` | A privacy contact or data protection officer is identified. |
 | `Ckp.` | A dedicated cookie policy is published. Benchmark group only. |
 | `Acc.` | An accessibility statement or accessibility tools are declared. |
-| `Transp.` | Transparency indicator. Ecuadorian group only. |
+| `Transp.` | Transparency under the Ecuadorian access-to-information act (LOTAIP). Ecuadorian group only. It is **not** transport security. |
 
 Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and empty where the column does not apply to that group. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article.
 
 The two groups were coded with partly different column sets, which is why some columns are empty for one group and not the other. The Ecuadorian group carries between two and six `nv` cells per indicator; the benchmark group carries none. That asymmetry is itself a finding and is invisible in the aggregate percentages.
 
 **Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extraer_matriz_documental.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
+
+### `tls_deficiencias_agosto2026.csv` — 5 rows
+
+The five Ecuadorian sites whose TLS chain was found deficient in the documentary check of August 2026. They are the difference between the 63 sites served over HTTPS and the 58 counted as having a valid certificate in Figure 1 and in the results table.
+
+| Column | Description |
+|---|---|
+| `sigla` | Institutional acronym. |
+| `universidad` | Full name. |
+| `url` | Home page checked. |
+| `observacion` | What was found in August 2026. |
+| `fecha_observacion` | Month of the observation. |
+| `verificacion_posterior` | Result of re-checking the chain on 5 September 2026. |
+
+**Why this file exists.** This indicator was coded by inspecting each site in a browser, not by the automated auditor, and the two do not measure the same thing: the auditor's `https` field records that the page was served over HTTPS, and Playwright rejects an invalid certificate outright, so a broken chain would appear as a load failure rather than as `https: false`. That is why `resultados.json` shows `https: true` for all 126 sites while the article reports 58 of 63 for Ecuador.
+
+All five certificates were valid when re-checked on 5 September 2026, having been renewed in the interval; one residual trace remains, in that the apex domain of ESPAM MFL still does not resolve and only the `www` host does. The August observation is therefore not reproducible today, which is a property of the object measured rather than a defect of the record: sites change, as stated in the README.
 
 ### `sensibilidad_inclusion.csv` — 3 rows
 

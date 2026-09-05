@@ -59,7 +59,7 @@ Lista JSON de 126 objetos, uno por sitio, ordenados por `id`. Es la fuente de ve
 | `pais` | texto | País de la institución. |
 | `url` | texto | Portada auditada. |
 | `ok` | booleano | La página cargó. Verdadero en los 126. |
-| `https` | booleano | Certificado TLS válido. |
+| `https` | booleano | La página se sirvió por HTTPS. **No** equivale al indicador documental de la Figura 1: ver `tls_deficiencias_agosto2026.csv`. |
 | `axe_version` | texto | Versión del motor. `4.13.0` en los 126. |
 | `fecha` | fecha-hora | Momento de la visita, ISO 8601. |
 | `cookies` | objeto | Ver abajo. |
@@ -99,7 +99,7 @@ Vista aplanada del JSON anterior, 126 filas, para inspección rápida. Columnas:
 
 ### `data/raw/tracking/resultados_<PUNTO>_r<N>.json`
 
-Trece archivos, uno por pasada. Misma estructura que `resultados.json`, con dos campos añadidos: `vantage` y `run`. La pasada `GB_r1` está truncada, con 5 053 bytes frente a los 25 000 habituales, porque se abortó al detectar que la VPN no había cambiado de país; se conserva como evidencia y el análisis la excluye.
+Trece archivos, uno por pasada. Misma estructura que `resultados.json`, con dos campos añadidos: `vantage` y `run`. La pasada `GB_r1` está truncada, con 49 546 bytes frente a los 280 000 habituales, porque se abortó al detectar que la VPN no había cambiado de país; se conserva como evidencia y el análisis la excluye.
 
 ### `data/raw/tracking/meta_<PUNTO>_r<N>.json`
 
@@ -257,13 +257,30 @@ Indicadores documentales, codificados inspeccionando el aviso de privacidad de p
 | `DPO` | Identifica contacto de privacidad o delegado de protección de datos. |
 | `Ckp.` | Publica política de cookies específica. Solo grupo de referencia. |
 | `Acc.` | Declara accesibilidad o herramientas de accesibilidad. |
-| `Transp.` | Indicador de transparencia. Solo grupo ecuatoriano. |
+| `Transp.` | Transparencia según la ley ecuatoriana de acceso a la información (LOTAIP). Solo grupo ecuatoriano. **No** es seguridad de transporte. |
 
 Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y vacío donde la columna no aplica a ese grupo. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo.
 
 Los dos grupos se codificaron con conjuntos de columnas en parte distintos, y por eso algunas quedan vacías en un grupo y no en el otro. El grupo ecuatoriano tiene entre dos y seis celdas `nv` por indicador; el de referencia no tiene ninguna. Esa asimetría es en sí misma un hallazgo y queda invisible en los porcentajes agregados.
 
 **Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extraer_matriz_documental.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
+
+### `tls_deficiencias_agosto2026.csv` — 5 filas
+
+Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de resultados.
+
+| Columna | Descripción |
+|---|---|
+| `sigla` | Sigla de la institución. |
+| `universidad` | Nombre completo. |
+| `url` | Portada comprobada. |
+| `observacion` | Lo observado en agosto de 2026. |
+| `fecha_observacion` | Mes de la observación. |
+| `verificacion_posterior` | Resultado de recomprobar la cadena el 5 de septiembre de 2026. |
+
+**Por qué existe este archivo.** Este indicador se codificó inspeccionando cada sitio en un navegador, no con el auditor automatizado, y ambos no miden lo mismo: el campo `https` del auditor registra que la página se sirvió por HTTPS, y Playwright rechaza de plano un certificado inválido, de modo que una cadena rota aparecería como fallo de carga y no como `https: false`. Por eso `resultados.json` marca `https: true` en los 126 sitios mientras el artículo reporta 58 de 63 para Ecuador.
+
+Los cinco certificados eran válidos al recomprobarlos el 5 de septiembre de 2026, renovados en el intervalo; queda un rastro residual, y es que el dominio raíz de ESPAM MFL sigue sin resolver y solo responde el host `www`. La observación de agosto no es reproducible hoy, lo cual es una propiedad del objeto medido y no un defecto del registro: los sitios cambian, como advierte el README.
 
 ### `sensibilidad_inclusion.csv` — 3 filas
 

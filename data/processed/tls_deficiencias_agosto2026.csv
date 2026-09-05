@@ -1,0 +1,6 @@
+sigla,universidad,url,observacion,fecha_observacion,verificacion_posterior
+ESPAM MFL,Escuela Superior Politecnica Agropecuaria de Manabi,https://www.espam.edu.ec,cadena o configuracion deficiente,2026-08,"2026-09-05: cadena valida; el dominio sin www no resuelve"
+UTA,Universidad Tecnica de Ambato,https://www.uta.edu.ec,cadena o configuracion deficiente; sitio marcado no verificable por certificado,2026-08,2026-09-05: cadena valida
+Yachay Tech,Universidad de Investigacion de Tecnologia Experimental Yachay,https://www.yachaytech.edu.ec,cadena o configuracion deficiente,2026-08,2026-09-05: cadena valida
+U. Otavalo,Universidad de Otavalo,https://www.uotavalo.edu.ec,cadena o configuracion deficiente,2026-08,2026-09-05: cadena valida
+UTB,Universidad Tecnica de Babahoyo,https://www.utb.edu.ec,deficiencia en el subdominio www,2026-08,2026-09-05: cadena valida
