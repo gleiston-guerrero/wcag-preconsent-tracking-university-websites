@@ -129,8 +129,8 @@ En PowerShell:
 
 ```powershell
 Get-Content CHECKSUMS.txt | ForEach-Object {
-    $h, $r = $_ -split '\s+', 2
-    $a = (Get-FileHash $r -Algorithm SHA256).Hash.ToLower()
+    $h, $r = $_ -split '  ', 2
+    $a = (Get-FileHash -LiteralPath $r -Algorithm SHA256).Hash.ToLower()
     if ($a -ne $h) { "DIFIERE: $r" }
 }
 ```
