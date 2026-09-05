@@ -1,0 +1,80 @@
+{
+  "vantage": "GB",
+  "run": 1,
+  "inicio": "2026-08-15T21:35:54.523Z",
+  "geolocalizacion": [
+    {
+      "servicio": "https://ipinfo.io/json",
+      "ip": "164.90.212.184",
+      "pais": "DE",
+      "ciudad": "Frankfurt am Main",
+      "organizacion": "AS14061 DigitalOcean, LLC"
+    },
+    {
+      "servicio": "https://ipwho.is/",
+      "ip": "164.90.212.184",
+      "pais": "DE",
+      "ciudad": "Frankfurt am Main",
+      "organizacion": "DigitalOcean, LLC"
+    }
+  ],
+  "coincide_con_vantage": false,
+  "controles_de_ubicacion": [
+    {
+      "momento": "inicio",
+      "sitio": 0,
+      "lecturas": [
+        {
+          "servicio": "https://ipinfo.io/json",
+          "ip": "164.90.212.184",
+          "pais": "DE",
+          "ciudad": "Frankfurt am Main",
+          "organizacion": "AS14061 DigitalOcean, LLC"
+        },
+        {
+          "servicio": "https://ipwho.is/",
+          "ip": "164.90.212.184",
+          "pais": "DE",
+          "ciudad": "Frankfurt am Main",
+          "organizacion": "DigitalOcean, LLC"
+        }
+      ],
+      "correcta": false
+    },
+    {
+      "momento": "intermedio",
+      "sitio": 25,
+      "lecturas": [
+        {
+          "servicio": "https://ipinfo.io/json",
+          "ip": "164.90.212.184",
+          "pais": "DE",
+          "ciudad": "Frankfurt am Main",
+          "organizacion": "AS14061 DigitalOcean, LLC"
+        },
+        {
+          "servicio": "https://ipwho.is/",
+          "ip": "164.90.212.184",
+          "pais": "DE",
+          "ciudad": "Frankfurt am Main",
+          "organizacion": "DigitalOcean, LLC"
+        }
+      ],
+      "correcta": false,
+      "estado": "mal"
+    }
+  ],
+  "configuracion": {
+    "ESPERA_JS_MS": 4000,
+    "TIMEOUT_MS": 45000,
+    "REINTENTOS": 1,
+    "INCLUIR_AAA": true,
+    "MEDIR_COOKIES": true,
+    "USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
+  },
+  "axe_core": "4.13.0",
+  "playwright": "1.62.1",
+  "node": "v24.18.1",
+  "plataforma": "win32 x64",
+  "sitios": 126
+}

@@ -1,0 +1,25 @@
+No Subir/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+*.zip
+*.rar
+*.7z
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+~$*
+.~lock.*
+.DS_Store
+Thumbs.db
+clasificacion_repositorio.csv
+
+data/interim/
+data/interim/

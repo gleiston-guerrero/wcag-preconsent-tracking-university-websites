@@ -1,0 +1,69 @@
+sigla,campo,antes,despues,motivo
+UCE,cookies_antes_consentir,(vacio),5,restaurado del informe HTML combinado
+UCE,nombres_cookies,(vacio),"__utma, __utmc, __utmz, __utmt, __utmb",restaurado del informe HTML combinado
+UCE,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
+UG,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
+MIT,rastreo,(vacio),no,importado del informe HTML combinado
+Stanford,rastreo,(vacio),yes,importado del informe HTML combinado
+Harvard,rastreo,(vacio),no,importado del informe HTML combinado
+Oxford,rastreo,(vacio),no,importado del informe HTML combinado
+Cambridge,rastreo,(vacio),no,importado del informe HTML combinado
+Caltech,rastreo,(vacio),no,importado del informe HTML combinado
+UC Berkeley,rastreo,(vacio),yes,importado del informe HTML combinado
+Princeton,rastreo,(vacio),no,importado del informe HTML combinado
+Imperial,rastreo,(vacio),no,importado del informe HTML combinado
+U Chicago,rastreo,(vacio),yes,importado del informe HTML combinado
+ETH Zurich,rastreo,(vacio),no,importado del informe HTML combinado
+Yale,rastreo,(vacio),yes,importado del informe HTML combinado
+UPenn,rastreo,(vacio),no,importado del informe HTML combinado
+UCL,rastreo,(vacio),no,importado del informe HTML combinado
+Cornell,rastreo,(vacio),yes,importado del informe HTML combinado
+Tsinghua,rastreo,(vacio),no,importado del informe HTML combinado
+Peking,rastreo,(vacio),yes,importado del informe HTML combinado
+Johns Hopkins,rastreo,(vacio),yes,importado del informe HTML combinado
+Columbia,rastreo,(vacio),no,importado del informe HTML combinado
+Toronto,rastreo,(vacio),no,importado del informe HTML combinado
+UCLA,rastreo,(vacio),no,importado del informe HTML combinado
+NUS,rastreo,(vacio),no,importado del informe HTML combinado
+U Tokyo,rastreo,(vacio),no,importado del informe HTML combinado
+TUM,rastreo,(vacio),no,importado del informe HTML combinado
+Melbourne,rastreo,(vacio),yes,importado del informe HTML combinado
+Edinburgh,rastreo,(vacio),no,importado del informe HTML combinado
+EPFL,rastreo,(vacio),no,importado del informe HTML combinado
+Michigan,rastreo,(vacio),no,importado del informe HTML combinado
+Northwestern,rastreo,(vacio),no,importado del informe HTML combinado
+Fudan,rastreo,(vacio),no,importado del informe HTML combinado
+PSL,rastreo,(vacio),no,importado del informe HTML combinado
+HKU,rastreo,(vacio),yes,importado del informe HTML combinado
+Zhejiang,rastreo,(vacio),no,importado del informe HTML combinado
+NYU,rastreo,(vacio),no,importado del informe HTML combinado
+SJTU,rastreo,(vacio),no,importado del informe HTML combinado
+KCL,rastreo,(vacio),no,importado del informe HTML combinado
+UCSD,rastreo,(vacio),no,importado del informe HTML combinado
+LMU,rastreo,(vacio),no,importado del informe HTML combinado
+Duke,rastreo,(vacio),no,importado del informe HTML combinado
+Manchester,rastreo,(vacio),no,importado del informe HTML combinado
+UBC,rastreo,(vacio),no,importado del informe HTML combinado
+Sydney,rastreo,(vacio),yes,importado del informe HTML combinado
+Paris-Saclay,rastreo,(vacio),no,importado del informe HTML combinado
+Kyoto,rastreo,(vacio),no,importado del informe HTML combinado
+Illinois,rastreo,(vacio),no,importado del informe HTML combinado
+UT Austin,rastreo,(vacio),no,importado del informe HTML combinado
+UW,rastreo,(vacio),no,importado del informe HTML combinado
+NTU,rastreo,(vacio),no,importado del informe HTML combinado
+McGill,rastreo,(vacio),no,importado del informe HTML combinado
+CUHK,rastreo,(vacio),yes,importado del informe HTML combinado
+CMU,rastreo,(vacio),no,importado del informe HTML combinado
+Wisconsin,rastreo,(vacio),no,importado del informe HTML combinado
+USTC,rastreo,(vacio),yes,importado del informe HTML combinado
+WUSTL,rastreo,(vacio),no,importado del informe HTML combinado
+Monash,rastreo,(vacio),no,importado del informe HTML combinado
+SNU,rastreo,(vacio),no,importado del informe HTML combinado
+Heidelberg,rastreo,(vacio),no,importado del informe HTML combinado
+HKUST,rastreo,(vacio),no,importado del informe HTML combinado
+Karolinska,rastreo,(vacio),no,importado del informe HTML combinado
+TU Delft,rastreo,(vacio),no,importado del informe HTML combinado
+ANU,rastreo,(vacio),no,importado del informe HTML combinado
+KU Leuven,rastreo,(vacio),no,importado del informe HTML combinado
+Queensland,rastreo,(vacio),no,importado del informe HTML combinado
+UCE,rastreo,no,yes,las cookies coinciden con la lista RASTREO de auditar.js

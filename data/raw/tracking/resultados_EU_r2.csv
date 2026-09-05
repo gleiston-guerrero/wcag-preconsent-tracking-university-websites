@@ -1,0 +1,127 @@
+id,vantage,run,grupo,sigla,pais,url,ok,error,title,lang,viewport,https,cookies_pre,rastreo_pre,nombres_rastreo,cmp,banner,ax_violaciones,ax_nodos,nivelA_nodos,nivelAA_nodos,nivelAAA_nodos,Perceptible,Operable,Comprensible,Robusto,max_nivel_sin_fallo_auto,incompletos,fecha
+1,EU,2,mundo,MIT,US,https://www.mit.edu,true,,MIT - Massachusetts Institute of Technology,en,1,1,0,0,,,0,3,8,1,6,1,1,6,0,1,ninguno,4,2026-08-15T20:44:33.961Z
+2,EU,2,mundo,Stanford,US,https://www.stanford.edu,true,,Stanford University,en,1,1,10,4,YSC VISITOR_INFO1_LIVE _ga_Q0JD4PHRZ7 _ga,,0,1,11,0,0,11,11,0,0,0,AA,1,2026-08-15T20:44:43.238Z
+3,EU,2,mundo,Harvard,US,https://www.harvard.edu,true,,Harvard University,en-US,1,1,8,5,_ga_KBLBYHG5EP _ga _gid _gat_UA-2923555-1 _fbp,,0,2,13,0,3,10,13,0,0,0,A,2,2026-08-15T20:44:51.707Z
+4,EU,2,mundo,Oxford,GB,https://www.ox.ac.uk,true,,University of Oxford,en,1,1,6,2,YSC VISITOR_INFO1_LIVE,,1,0,0,0,0,0,0,0,0,0,AAA,4,2026-08-15T20:44:59.321Z
+5,EU,2,mundo,Cambridge,GB,https://www.cam.ac.uk,true,,University of Cambridge,en,1,1,0,0,,,1,2,6,5,0,1,6,0,0,0,ninguno,2,2026-08-15T20:45:08.036Z
+6,EU,2,mundo,Caltech,US,https://www.caltech.edu,true,,Home - www.caltech.edu,en,1,1,4,2,_ga_7RL83EX4D4 _ga,,0,4,30,5,0,25,28,0,0,2,ninguno,3,2026-08-15T20:45:17.705Z
+7,EU,2,mundo,UC Berkeley,US,https://www.berkeley.edu,true,,"University of California, Berkeley: Home",en-US,1,1,10,5,YSC VISITOR_INFO1_LIVE nmstat _ga_JD06GX6S4V _ga,,0,0,0,0,0,0,0,0,0,0,AAA,2,2026-08-15T20:45:25.756Z
+8,EU,2,mundo,Princeton,US,https://www.princeton.edu,true,,Home | Princeton University,en,1,1,2,2,_ga_92L6B9PQCG _ga,,0,0,0,0,0,0,0,0,0,0,AAA,2,2026-08-15T20:45:34.228Z
+9,EU,2,mundo,Imperial,GB,https://www.imperial.ac.uk,true,,Imperial College London,en-GB,1,1,6,0,,OneTrust,1,2,19,0,15,4,4,15,0,0,A,3,2026-08-15T20:45:43.051Z
+10,EU,2,mundo,U Chicago,US,https://www.uchicago.edu,true,,The University of Chicago,en,1,1,19,9,_ga_2V4M4Z833J _ga _gid _gat_UA-373360-31 _gat_UA-3572058-26 nmstat _ga_DBDWJCS0JR _hjSessionUser_3545609 _hjSession_3545609,,0,1,1,1,0,0,0,0,0,1,ninguno,6,2026-08-15T20:45:52.430Z
+11,EU,2,mundo,ETH Zurich,CH,https://ethz.ch,true,,ETH Zürich - Homepage | ETH Zürich,de,1,1,1,0,,OneTrust,1,2,2,1,0,1,2,0,0,0,ninguno,1,2026-08-15T20:46:03.819Z
+12,EU,2,mundo,Yale,US,https://www.yale.edu,true,,Yale University,en,1,1,7,6,nmstat _ga_D491W728G4 _ga _ga _gid _gat_gtag_UA_991898_23,,0,3,19,5,0,14,17,0,0,2,ninguno,3,2026-08-15T20:46:11.592Z
+13,EU,2,mundo,UPenn,US,https://www.upenn.edu,true,,University of Pennsylvania,en,1,1,4,4,_ga _gid _gat_UA-78054-1 _ga_LL85393RFV,,0,2,4,1,0,3,4,0,0,0,ninguno,4,2026-08-15T20:46:19.193Z
+14,EU,2,mundo,UCL,GB,https://www.ucl.ac.uk,true,,Welcome to UCL | University College London,en,1,1,2,0,,,1,0,0,0,0,0,0,0,0,0,AAA,3,2026-08-15T20:46:28.197Z
+15,EU,2,mundo,Cornell,US,https://www.cornell.edu,true,,Cornell University,en,1,1,9,9,nmstat __utma __utmc __utmz __utmt __utmb _ga_PMZ19X3F8W _ga _ga_XJK3YSJ0LV,,0,1,4,0,0,4,4,0,0,0,AA,5,2026-08-15T20:46:39.574Z
+16,EU,2,mundo,Tsinghua,CN,https://www.tsinghua.edu.cn/en/,true,,Tsinghua University,,1,1,1,0,,,0,10,49,39,6,4,11,32,1,5,ninguno,5,2026-08-15T20:46:51.761Z
+17,EU,2,mundo,Peking,CN,https://english.pku.edu.cn,true,,Peking University,,1,1,0,0,,,0,5,19,18,1,0,2,14,1,2,ninguno,3,2026-08-15T20:47:03.875Z
+18,EU,2,mundo,Johns Hopkins,US,https://www.jhu.edu,true,,Johns Hopkins University,en,1,1,10,5,_ga_TSX9K66082 _ga _ga_8031WYVC9V nmstat personalization_id,,0,3,8,6,0,2,3,5,0,0,ninguno,4,2026-08-15T20:47:13.511Z
+19,EU,2,mundo,Columbia,US,https://www.columbia.edu,true,,Columbia University in the City of New York,en,1,1,15,6,_ga_09H1KYXPLX _ga _gid _gat_gtag_UA_18290390_1 YSC VISITOR_INFO1_LIVE,,1,4,52,2,6,44,51,0,0,1,ninguno,1,2026-08-15T20:47:22.785Z
+20,EU,2,mundo,Toronto,CA,https://www.utoronto.ca,true,,University of Toronto,en,1,1,4,4,_gcl_au _ga _ga_0X74MN6XS3 IDE,,0,1,19,0,0,19,19,0,0,0,AA,3,2026-08-15T20:47:30.823Z
+21,EU,2,mundo,UCLA,US,https://www.ucla.edu,true,,A World Leader in Education and Research Excellence | UCLA,en,1,1,9,4,YSC VISITOR_INFO1_LIVE _ga_6BMZK7EYHE _ga,,0,1,64,0,0,64,64,0,0,0,AA,3,2026-08-15T20:47:40.430Z
+22,EU,2,mundo,NUS,SG,https://nus.edu.sg,true,,NUS - National University of Singapore,,1,1,7,2,_ga _ga_2T8KTSDET6,,1,7,60,24,21,15,36,23,1,0,ninguno,2,2026-08-15T20:47:55.573Z
+23,EU,2,mundo,U Tokyo,JP,https://www.u-tokyo.ac.jp/en/,true,,The University of Tokyo,en,1,1,2,2,_ga_DWSZ09TFCH _ga,,0,8,28,11,6,11,15,3,0,10,ninguno,3,2026-08-15T20:48:10.510Z
+24,EU,2,mundo,TUM,DE,https://www.tum.de/en/,true,,Technical University of Munich: The Entrepreneurial University - TUM,en-US,1,1,0,0,,,0,1,23,0,0,23,23,0,0,0,AA,5,2026-08-15T20:48:19.575Z
+25,EU,2,mundo,Melbourne,AU,https://www.unimelb.edu.au,true,,The University of Melbourne - Australia's #1 Ranked University,en,1,1,34,15,utag_main__ss utag_main__st utag_main_ses_id s_nr30 s_tslv s_inv s_ips s_tp s_ppv utag_main_v_id _ga_J6RRCK6F9V _ga_YE8SEG9T0S _ga _ga_L55G410M0Q AMCV_0BFB1E5866E1D2E70A495C3B%40AdobeOrg,,1,1,1,1,0,0,1,0,0,0,ninguno,4,2026-08-15T20:48:28.361Z
+26,EU,2,mundo,Edinburgh,GB,https://www.ed.ac.uk,true,,The University of Edinburgh,en,1,1,0,0,,,0,2,37,1,0,36,37,0,0,0,ninguno,3,2026-08-15T20:48:40.230Z
+27,EU,2,mundo,EPFL,CH,https://www.epfl.ch/en/,true,,EPFL,en-GB,1,1,2,2,_ga_N6BF9H5G73 _ga,,1,3,101,1,85,15,100,1,0,0,ninguno,4,2026-08-15T20:48:48.926Z
+28,EU,2,mundo,Michigan,US,https://umich.edu,true,,University of Michigan,en,1,1,2,0,,,0,2,13,0,5,8,8,5,0,0,A,3,2026-08-15T20:48:55.971Z
+29,EU,2,mundo,Northwestern,US,https://www.northwestern.edu,true,,Northwestern University,en,1,1,9,0,,CookieYes,0,0,0,0,0,0,0,0,0,0,AAA,2,2026-08-15T20:49:06.213Z
+30,EU,2,mundo,Fudan,CN,https://www.fudan.edu.cn/en/,true,,Fudan University,,1,1,4,3,Hm_lvt_829a28d038f7cea73ca2728904e244bc Hm_lpvt_829a28d038f7cea73ca2728904e244bc HMACCOUNT,,0,6,44,18,3,23,40,3,1,0,ninguno,3,2026-08-15T20:49:20.907Z
+31,EU,2,mundo,PSL,FR,https://www.psl.eu/en,true,,PSL University | PSL,en,1,1,1,0,,,1,5,25,8,12,5,16,8,0,1,ninguno,4,2026-08-15T20:49:33.400Z
+32,EU,2,mundo,HKU,HK,https://www.hku.hk,true,,The University of Hong Kong (HKU),en,1,1,8,7,__utma __utmc __utmz __utmt __utmb _ga_ZHLLDTLTMG _ga,,0,8,27,13,14,0,15,1,0,11,ninguno,4,2026-08-15T20:49:48.332Z
+33,EU,2,mundo,Zhejiang,CN,https://www.zju.edu.cn/english/,true,,Zhejiang University (ZJU),en,1,1,1,0,,,0,3,14,13,1,0,2,12,0,0,ninguno,3,2026-08-15T20:50:02.848Z
+34,EU,2,mundo,NYU,US,https://www.nyu.edu,true,,ERROR: The request could not be satisfied,,0,1,0,0,,,0,1,1,1,0,0,0,0,1,0,ninguno,0,2026-08-15T20:50:09.273Z
+35,EU,2,mundo,SJTU,CN,https://www.sjtu.edu.cn,true,,上海交通大学中文主页门户网站,zh-Hans,1,1,0,0,,,0,5,48,5,5,38,47,0,0,1,ninguno,2,2026-08-15T20:50:31.642Z
+36,EU,2,mundo,KCL,GB,https://www.kcl.ac.uk,true,,King's College London,en-GB,1,1,2,0,,OneTrust,1,2,41,1,0,40,40,0,0,1,ninguno,3,2026-08-15T20:50:39.410Z
+37,EU,2,mundo,UCSD,US,https://www.ucsd.edu,true,,University of California San Diego,en,1,1,22,10,_ga_ZBPHLZYTS4 _ga _gcl_au YSC VISITOR_INFO1_LIVE _ttp _tt_enable_cookie _ttp _hjSessionUser_3662797 _hjSession_3662797,,0,3,44,2,7,35,35,7,0,2,ninguno,4,2026-08-15T20:50:52.177Z
+38,EU,2,mundo,LMU,DE,https://www.lmu.de,true,,Startseite - LMU München,de,1,1,0,0,,,0,1,9,0,0,9,9,0,0,0,AA,4,2026-08-15T20:51:02.712Z
+39,EU,2,mundo,Duke,US,https://www.duke.edu,true,,"Duke University - Fueled by creativity, informed by scholarship",en-US,1,1,14,9,YSC VISITOR_INFO1_LIVE _ga _ga_EFHNRXCSHV __utma __utmc __utmz __utmt_UA-3896341-5 __utmb,,1,1,7,0,0,7,7,0,0,0,AA,3,2026-08-15T20:51:16.408Z
+40,EU,2,mundo,Manchester,GB,https://www.manchester.ac.uk,true,,The University of Manchester,en,1,1,1,0,,OneTrust,1,1,1,1,0,0,0,0,0,1,ninguno,1,2026-08-15T20:51:25.474Z
+41,EU,2,mundo,UBC,CA,https://www.ubc.ca,true,,The University of British Columbia,en-ca,1,1,8,4,_gcl_au _ga_Q74JQJCYJK _ga IDE,,0,2,18,0,5,13,13,5,0,0,A,4,2026-08-15T20:51:34.327Z
+42,EU,2,mundo,Sydney,AU,https://www.sydney.edu.au,true,,One of Australia’s top universities - The University of Sydney,en-US,1,1,26,12,s_ecid _gcl_au _ga_KXYY9PEVLH _ga AMCV_35B46472540D9EE20A4C98A6%40AdobeOrg s_ips _hjSessionUser_550296 _hjSession_550296 s_tp s_ppv YSC VISITOR_INFO1_LIVE,,0,3,15,1,1,13,14,1,0,0,ninguno,2,2026-08-15T20:51:44.437Z
+43,EU,2,mundo,Paris-Saclay,FR,https://www.universite-paris-saclay.fr/en,true,,Université Paris-Saclay,en,1,1,2,0,,Tarteaucitron,1,2,8,1,0,7,7,0,0,1,ninguno,3,2026-08-15T20:51:53.020Z
+44,EU,2,mundo,Kyoto,JP,https://www.kyoto-u.ac.jp/en,true,,KYOTO UNIVERSITY,en,1,1,2,2,_ga_P51JW1MC7Y _ga,,0,2,5,0,5,0,1,4,0,0,A,3,2026-08-15T20:52:02.273Z
+45,EU,2,mundo,Illinois,US,https://illinois.edu,true,,Illinois,en-US,1,1,4,2,_ga_TWFEJJKL35 _ga,OneTrust,0,1,9,0,0,9,9,0,0,0,AA,4,2026-08-15T20:52:15.171Z
+46,EU,2,mundo,UT Austin,US,https://www.utexas.edu,true,,403 Forbidden,,0,1,0,0,,,0,1,1,1,0,0,0,0,1,0,ninguno,0,2026-08-15T20:52:21.776Z
+47,EU,2,mundo,UW,US,https://www.washington.edu,true,,UW Homepage,en,1,1,6,5,_ga _ga_3T65WK0BM8 _ga_JLHM9WH4JV _gcl_au test_cookie,,0,3,11,1,7,3,3,7,0,1,ninguno,3,2026-08-15T20:52:35.431Z
+48,EU,2,mundo,NTU,SG,https://www.ntu.edu.sg,true,,Nanyang Technological University - NTU Singapore,en,1,1,1,1,_gcl_au,,1,4,15,5,3,7,8,7,0,0,ninguno,2,2026-08-15T20:52:45.101Z
+49,EU,2,mundo,McGill,CA,https://www.mcgill.ca,true,,McGill University,,1,1,1,0,,,1,3,7,6,0,1,6,0,1,0,ninguno,1,2026-08-15T20:52:53.853Z
+50,EU,2,mundo,CUHK,HK,https://www.cuhk.edu.hk/english/index.html,true,,The Chinese University of Hong Kong,en,1,1,8,8,__utma __utmc __utmz __utmt __utmb _ga _ga_3VWFFZCDJ6 _fbp,,0,6,44,6,10,28,31,11,0,2,ninguno,2,2026-08-15T20:53:06.440Z
+51,EU,2,mundo,CMU,US,https://www.cmu.edu,true,,Carnegie Mellon University | CMU,en,1,1,6,4,_gcl_au _ga _ga_1XQYSMEBVE test_cookie,OneTrust,0,1,1,1,0,0,0,1,0,0,ninguno,5,2026-08-15T20:53:20.220Z
+52,EU,2,mundo,Wisconsin,US,https://www.wisc.edu,true,,University of Wisconsin–Madison,en,1,1,6,4,_ga_D04HXCEERG _ga _ga _ga_PLJ9E3ZY82,,1,1,45,0,0,45,45,0,0,0,AA,2,2026-08-15T20:53:28.393Z
+53,EU,2,mundo,USTC,CN,https://en.ustc.edu.cn,true,,University of Science and Technology of China,,1,1,5,3,Hm_lvt_1c599d6edf63923fd73ae82fd7293a24 Hm_lpvt_1c599d6edf63923fd73ae82fd7293a24 HMACCOUNT,,0,5,12,11,1,0,3,7,1,1,ninguno,2,2026-08-15T20:53:37.953Z
+54,EU,2,mundo,WUSTL,US,https://washu.edu,true,,Home | WashU,en-US,1,1,14,12,_ga_T94ZQ4ENLH _ga utag_main__sn utag_main__se utag_main__ss utag_main__st utag_main_ses_id utag_main__pn utag_main_v_id utag_main_dc_visit utag_main_dc_event utag_main_dc_region,,0,3,26,5,0,21,21,4,0,1,ninguno,5,2026-08-15T20:53:52.280Z
+55,EU,2,mundo,Monash,AU,https://www.monash.edu,true,,Monash University | Study at Monash Uni | Melbourne,en,1,1,10,3,YSC VISITOR_INFO1_LIVE utag_main,,1,2,18,0,1,17,18,0,0,0,A,3,2026-08-15T20:54:02.693Z
+56,EU,2,mundo,SNU,KR,https://en.snu.ac.kr,true,,Seoul National University,en,1,1,2,2,_ga_PVQ4G3Z4TR _ga,,0,3,22,0,14,8,22,0,0,0,A,3,2026-08-15T20:54:10.928Z
+57,EU,2,mundo,Heidelberg,DE,https://www.uni-heidelberg.de/en,true,,Heidelberg University,en,1,1,2,0,,,0,2,68,1,0,67,67,0,0,1,ninguno,2,2026-08-15T20:54:20.132Z
+58,EU,2,mundo,HKUST,HK,https://hkust.edu.hk/,true,,The Hong Kong University of Science and Technology ｜World's Top 50 Universities｜Leading Research Excellence,en,1,1,0,0,,,0,7,17,14,2,1,10,5,0,2,ninguno,4,2026-08-15T20:54:30.137Z
+59,EU,2,mundo,Karolinska,SE,https://ki.se/en,true,,Karolinska Institutet - a medical university,en,1,1,2,0,,,0,5,7,4,2,1,2,2,0,3,ninguno,2,2026-08-15T20:54:46.440Z
+60,EU,2,mundo,TU Delft,NL,https://www.tudelft.nl/en/,true,,403 - You have no access to the requested resource,,1,1,0,0,,,0,3,6,1,2,3,5,0,1,0,ninguno,0,2026-08-15T20:54:52.843Z
+61,EU,2,mundo,ANU,AU,https://www.anu.edu.au/,true,,The Australian National University,en,1,1,5,2,_ga_E1GV4NJHV2 _ga,OneTrust,0,1,1,0,0,1,1,0,0,0,AA,4,2026-08-15T20:55:08.949Z
+62,EU,2,mundo,KU Leuven,BE,https://www.kuleuven.be/english/,true,,KU Leuven,en,1,1,6,0,,OneTrust,1,3,5,1,3,1,5,0,0,0,ninguno,2,2026-08-15T20:55:17.976Z
+63,EU,2,mundo,Queensland,AU,https://www.uq.edu.au/,true,,The University of Queensland,en,1,1,11,6,_gcl_au _ga_QG0JXDMRML _ga _fbp _hjSessionUser_2849117 _hjSession_2849117,,0,2,13,1,0,12,13,0,0,0,ninguno,2,2026-08-15T20:55:30.442Z
+64,EU,2,ecuador,EPN,EC,https://www.epn.edu.ec,true,,,es,1,1,5,0,,,0,3,4,2,2,0,2,2,0,0,ninguno,1,2026-08-15T20:55:40.841Z
+65,EU,2,ecuador,ESPOL,EC,https://www.espol.edu.ec,false,Error: page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.espol.edu.ec/,,,0,1,,,,,,,,,,,,,,,,,2026-08-15T20:56:04.791Z
+66,EU,2,ecuador,ESPOCH,EC,https://www.espoch.edu.ec,true,,Inicio - ESPOCH｜ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO,es,1,1,2,0,,CookieYes,1,3,70,16,4,50,54,16,0,0,ninguno,4,2026-08-15T20:56:21.950Z
+67,EU,2,ecuador,ESPAM MFL,EC,https://www.espam.edu.ec,true,,ESPAM MFL,es,1,1,0,0,,,0,7,32,14,9,9,21,8,0,3,ninguno,2,2026-08-15T20:56:36.777Z
+68,EU,2,ecuador,ESPE,EC,https://www.espe.edu.ec,true,,ESPE | Universidad de las Fuerzas Armadas | Sangolquí,es,1,1,76,7,__utma __utmc __utmz __utmt __utmb _ga_DNYB2YPXC9 _ga,,0,4,21,12,9,0,1,18,0,2,ninguno,2,2026-08-15T20:57:10.956Z
+69,EU,2,ecuador,UCE,EC,https://www.uce.edu.ec,true,,home - Universidad Central del Ecuador,es,1,1,8,2,YSC VISITOR_INFO1_LIVE,,0,6,92,32,9,51,76,15,0,1,ninguno,5,2026-08-15T20:57:21.222Z
+70,EU,2,ecuador,UCuenca,EC,https://www.ucuenca.edu.ec,true,,Home - UCUENCA,es-ES,1,1,12,8,_ga _ga_23BSZ91CCT pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp,,1,5,61,57,4,0,5,39,0,17,ninguno,4,2026-08-15T20:57:35.961Z
+71,EU,2,ecuador,UG,EC,https://www.ug.edu.ec,true,,"Universidad de Guayaquil – La universidad más grande, importante y gloriosa del país.",es,1,1,2,0,,,0,1,22,0,0,22,22,0,0,0,AA,3,2026-08-15T20:57:46.406Z
+72,EU,2,ecuador,UNL,EC,https://www.unl.edu.ec,true,,Inicio Universidad Nacional de Loja,es,1,1,2,2,_ga_HCDKPL9C20 _ga,CookieYes,0,4,122,115,6,1,14,108,0,0,ninguno,2,2026-08-15T20:58:01.588Z
+73,EU,2,ecuador,UAE,EC,https://www.uagraria.edu.ec,true,,UAE - La Nueva Universidad Agraria,es,1,1,4,4,_ga _gid _gat _ga_5PM2XSRM63,,0,5,30,6,12,12,24,0,0,6,ninguno,3,2026-08-15T20:58:10.914Z
+74,EU,2,ecuador,UTA,EC,https://uta.edu.ec,true,,UTA,es,1,1,0,0,,,0,3,15,6,2,7,9,0,0,6,ninguno,4,2026-08-15T20:58:27.113Z
+75,EU,2,ecuador,UTB,EC,https://utb.edu.ec,true,,Universidad Técnica de Babahoyo | Por ti UTB,es,1,1,9,6,_ga_WNXLYS2MLG _ga _gid _gat_gtag_UA_68893477_2 YSC VISITOR_INFO1_LIVE,,0,7,32,23,9,0,6,21,0,5,ninguno,1,2026-08-15T20:58:37.444Z
+76,EU,2,ecuador,UTC,EC,https://www.utc.edu.ec,true,,Universidad Técnica de Cotopaxi > Home,es-ES,1,1,10,2,YSC VISITOR_INFO1_LIVE,,0,5,40,39,1,0,19,19,0,2,ninguno,2,2026-08-15T20:58:52.419Z
+77,EU,2,ecuador,UTMACH,EC,https://www.utmachala.edu.ec,true,,Universidad Técnica de Machala,es-ec,1,1,0,0,,,0,4,8,2,6,0,7,1,0,0,ninguno,0,2026-08-15T20:59:01.156Z
+78,EU,2,ecuador,UTM,EC,https://www.utm.edu.ec,true,,Universidad Técnica de Manabí - Inicio,es-es,1,1,2,0,,,0,5,39,23,7,9,14,12,0,13,ninguno,2,2026-08-15T20:59:14.885Z
+79,EU,2,ecuador,UTN,EC,https://www.utn.edu.ec,true,,Universidad Técnica del Norte – Ciencia y Técnica al Servicio del Pueblo,es,1,1,3,2,_ga_SBC1J4DHX0 _ga,,0,4,23,9,5,9,15,8,0,0,ninguno,1,2026-08-15T20:59:30.067Z
+80,EU,2,ecuador,UTEQ,EC,https://www.uteq.edu.ec,true,,UTEQ - Universidad Técnica Estatal de Quevedo,es,1,1,3,3,_ga_WVWWZZ7544 _ga _ga_SSTPXREYGZ,,0,5,8,7,0,1,6,2,0,0,ninguno,2,2026-08-15T20:59:38.001Z
+81,EU,2,ecuador,UTELVT,EC,https://www.utelvt.edu.ec,true,,Universidad Técnica Luis Vargas Torres – Universidad Técnica Luis Vargas Torres,es,1,1,0,0,,,0,4,32,6,9,17,27,5,0,0,ninguno,3,2026-08-15T20:59:48.679Z
+82,EU,2,ecuador,UEB,EC,https://www.ueb.edu.ec,true,,Universidad Estatal de Bolívar,es,1,1,2,0,,CookieYes,0,5,55,28,13,14,27,26,0,2,ninguno,3,2026-08-15T21:00:15.641Z
+83,EU,2,ecuador,UNESUM,EC,https://unesum.edu.ec,true,,UNIVERSIDAD ESTATAL DEL SUR DE MANABÍ – UNESUM,es,1,1,1,0,,,0,2,8,8,0,0,1,7,0,0,ninguno,4,2026-08-15T21:00:30.962Z
+84,EU,2,ecuador,UNEMI,EC,https://www.unemi.edu.ec,true,,UNEMI - ¡La Universidad en línea del Ecuador!,es,1,1,2,2,_ga _ga_MQGK6RGL8F,,0,5,34,28,6,0,6,23,0,5,ninguno,4,2026-08-15T21:00:45.663Z
+85,EU,2,ecuador,UEA,EC,https://www.uea.edu.ec,true,,Universidad Estatal Amazónica – Educación con excelencia académica,es,1,1,2,2,_ga_450T1JQNMR _ga,,0,1,17,0,17,0,17,0,0,0,A,4,2026-08-15T21:01:11.055Z
+86,EU,2,ecuador,UPSE,EC,https://www.upse.edu.ec,true,,UPSE,es-es,1,1,2,0,,,0,3,7,1,6,0,4,2,0,1,ninguno,2,2026-08-15T21:01:25.541Z
+87,EU,2,ecuador,ULEAM,EC,https://www.uleam.edu.ec,true,,ULEAM,es,1,1,4,4,_ga_12F9F68E6S _ga _gid _gat_gtag_UA_81009815_1,,0,8,38,20,7,11,20,8,0,10,ninguno,2,2026-08-15T21:01:43.588Z
+88,EU,2,ecuador,UNACH,EC,https://www.unach.edu.ec,true,,Inicio » Universidad Nacional de Chimborazo,es-CO,1,1,5,4,_ga_YQBSJ5PHNG _ga _gid _gat_gtag_UA_133447811_1,,0,6,30,10,18,2,9,21,0,0,ninguno,4,2026-08-15T21:01:54.923Z
+89,EU,2,ecuador,UNAE,EC,https://unae.edu.ec,true,,UNAE,es-ES,1,1,12,7,_ga_5FWX93M6TG YSC VISITOR_INFO1_LIVE _ga_R13W2764LB _ga _gid _gat_gtag_UA_154339291_1,,0,3,14,1,10,3,13,1,0,0,ninguno,2,2026-08-15T21:02:08.229Z
+90,EU,2,ecuador,UPEC,EC,https://upec.edu.ec,true,,UPEC,es,1,1,11,0,,,0,2,27,7,20,0,20,7,0,0,ninguno,5,2026-08-15T21:02:30.122Z
+91,EU,2,ecuador,Yachay Tech,EC,https://yachaytech.edu.ec,true,,Universidad YachayTech – Hacemos ciencia y tecnología,es-EC,1,1,1,0,,,0,5,31,16,1,14,14,12,0,5,ninguno,2,2026-08-15T21:02:50.135Z
+92,EU,2,ecuador,Ikiam,EC,https://www.ikiam.edu.ec,true,,Universidad Regional Amazónica Ikiam,es,1,1,2,2,_ga_HFS94B3LXM _ga,,0,3,41,14,24,3,27,14,0,0,ninguno,3,2026-08-15T21:03:06.202Z
+93,EU,2,ecuador,UArtes,EC,https://www.uartes.edu.ec,true,,Universidad de las Artes - Universidad de las Artes,es-ES,1,1,2,2,_ga_8044E6TKJB _ga,CookieYes,0,4,38,12,12,14,27,11,0,0,ninguno,3,2026-08-15T21:03:28.084Z
+94,EU,2,ecuador,Amawtay Wasi,EC,https://uaw.edu.ec,true,,Inicio UAW - Universidad Amawtay Wasi,es,1,1,2,0,,,0,4,30,3,24,3,29,1,0,0,ninguno,4,2026-08-15T21:03:38.133Z
+95,EU,2,ecuador,USECIPOL,EC,https://usecipol.edu.ec,true,,USECIPOL | Universidad de Seguridad Ciudadana y Ciencias Policiales,es,1,1,0,0,,,0,1,4,0,0,4,4,0,0,0,AA,2,2026-08-15T21:03:45.627Z
+96,EU,2,ecuador,IAEN,EC,https://www.iaen.edu.ec,true,,INICIO - Universidad de Posgrado del Estado,es,1,1,6,2,YSC VISITOR_INFO1_LIVE,,0,3,5,2,1,2,3,0,0,2,ninguno,4,2026-08-15T21:04:02.031Z
+97,EU,2,ecuador,UASB,EC,https://www.uasb.edu.ec,true,,Universidad Andina Simón Bolívar - Bienvenidos al nuevo portal,es,1,1,32,16,_gcl_au _ga_8G7C03T250 pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp _ga_T68NNTWDMD _ga _gid _gat_gtag_UA_64150728_1 _ttp personalization_id _tt_enable_cookie _ttp,IAB-TCF,1,6,41,30,8,3,23,14,0,4,ninguno,4,2026-08-15T21:04:11.567Z
+98,EU,2,ecuador,FLACSO,EC,https://www.flacso.edu.ec,true,,Inicio | FLACSO Ecuador :: Universidad Latinoamericana de Postgrado Líder en Ciencias Sociales,es,1,1,5,4,_ga_KVZM8KVKWH _ga _gid _gat,CookieYes,0,6,114,30,69,15,90,22,0,2,ninguno,3,2026-08-15T21:04:35.226Z
+99,EU,2,ecuador,PUCE,EC,https://www.puce.edu.ec,true,,Pontificia Universidad Católica del Ecuador | PUCE - Quito,es,1,1,0,0,,,0,5,31,12,12,7,15,16,0,0,ninguno,3,2026-08-15T21:04:54.667Z
+100,EU,2,ecuador,UCSG,EC,https://www.ucsg.edu.ec,true,,Error de la base de datos,,1,1,0,0,,,0,1,1,1,0,0,0,0,1,0,ninguno,0,2026-08-15T21:05:01.491Z
+101,EU,2,ecuador,UCACUE,EC,https://www.ucacue.edu.ec,true,,Universidad Católica de Cuenca - UCACUE - Universidad Católica de Cuenca,es,1,1,18,11,_ga_MSV6X9XSF1 _ga _ttp pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp _tt_enable_cookie _ttp,,1,6,38,16,5,17,17,10,0,11,ninguno,6,2026-08-15T21:05:23.301Z
+102,EU,2,ecuador,ULVR,EC,https://www.ulvr.edu.ec,true,,ULVR – Universidad Laica Vicente Rocafuerte de Guayaquil,es,1,1,1,0,,,0,2,13,11,2,0,2,11,0,0,ninguno,2,2026-08-15T21:05:34.110Z
+103,EU,2,ecuador,UTPL,EC,https://www.utpl.edu.ec,true,,¿Qué programas hay en la UTPL?,es,1,1,3,3,_ga _ga_5W6THEE90T _fbp,,0,6,35,9,1,25,30,3,0,2,ninguno,4,2026-08-15T21:05:43.208Z
+104,EU,2,ecuador,UTE,EC,https://ute.edu.ec,true,,"Universidad UTE - La mejor Universidad del Ecuador | Posgrado, Grado, ...",es,1,1,0,0,,,0,3,29,9,5,15,20,9,0,0,ninguno,3,2026-08-15T21:05:59.968Z
+105,EU,2,ecuador,UDA,EC,https://www.uazuay.edu.ec,true,,Universidad del Azuay,es,1,1,2,2,_hjSessionUser_3811066 _hjSession_3811066,,1,4,31,13,12,6,19,12,0,0,ninguno,5,2026-08-15T21:06:17.320Z
+106,EU,2,ecuador,UPS,EC,https://www.ups.edu.ec,true,,Universidad Politécnica Salesiana | UPS Ecuador - UPS,es-ES,1,1,99,11,YSC VISITOR_INFO1_LIVE _gid _gat _gcl_au _ga_G3SXTJRVXE _ga _ttp _fbp _tt_enable_cookie _ttp,,0,4,10,10,0,0,5,2,0,3,ninguno,3,2026-08-15T21:06:31.496Z
+107,EU,2,ecuador,UISEK,EC,https://uisek.edu.ec,true,,UISEK - Ecuador,es,1,1,12,10,_ttp _tt_enable_cookie _ttp _gid _gat_UA-27018080-1 _gat_gtag_UA_120295323_1 _ga_ES4V2WR0X1 _ga _gcl_au _ga_XJR5CJJLR4,,0,5,28,18,10,0,11,11,0,6,ninguno,3,2026-08-15T21:06:40.769Z
+108,EU,2,ecuador,UEES,EC,https://uees.edu.ec,true,,UEES - Universidad Espíritu Santo - Ecuador,es-EC,1,1,23,14,YSC VISITOR_INFO1_LIVE _gcl_au _ga_T4TERSTX4G _gid _gat_UA-172180399-2 _gat_UA-217409406-3 _ga_RG4RVWE64Q _ga personalization_id _ga_STV75W996F _ttp _ga_KMEPWM9403 _fbp,,0,4,30,6,8,16,25,5,0,0,ninguno,0,2026-08-15T21:06:55.238Z
+109,EU,2,ecuador,USFQ,EC,https://www.usfq.edu.ec,true,,Inicio | Universidad San Francisco de Quito - Ecuador,es,1,1,3,3,_ga_G80CBJM3N2 _ga _fbp,,0,6,54,4,16,34,51,2,0,1,ninguno,4,2026-08-15T21:07:07.103Z
+110,EU,2,ecuador,UDLA,EC,https://www.udla.edu.ec,true,,"UDLA | Educación Superior de calidad en Quito, Ecuador | UDLA",es,1,1,11,0,,Cookiebot,0,6,50,14,7,29,37,6,0,7,ninguno,2,2026-08-15T21:07:16.074Z
+111,EU,2,ecuador,UIDE,EC,https://www.uide.edu.ec,true,,Universidad Internacional del Ecuador,es,1,1,7,1,_pin_unauth,CookieYes,1,10,45,30,12,3,8,21,0,16,ninguno,4,2026-08-15T21:07:41.440Z
+112,EU,2,ecuador,UNIANDES,EC,https://www.uniandes.edu.ec,true,,Uniandes | Universidad Regional Autónoma de los Andes,es,1,1,0,0,,,0,4,22,7,15,0,11,9,0,2,ninguno,4,2026-08-15T21:07:59.465Z
+113,EU,2,ecuador,UPACÍFICO,EC,https://upacifico.edu.ec,true,,UPACIFICO Ecuador. Formación Universitaria de calidad,es,1,1,4,3,_gcl_au _ga_4DXVYNQP5Y _ga,,0,2,25,4,21,0,21,4,0,0,ninguno,4,2026-08-15T21:08:10.591Z
+114,EU,2,ecuador,UTI,EC,https://www.indoamerica.edu.ec,true,,"Universidad Indoamérica | Carreras, Posgrados e Innovación EducativaPostula a nuestras carreras de grado y programas de posgrado -",es,1,1,26,18,_ga_0G8LBGW2QF _ga_TY4XSDKKNQ _ga_WHTF7DF7Q5 _gcl_au pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp _ttp _ga _gid _gat_gtag_UA_245920016_1 _tt_enable_cookie _ttp _hjSessionUser_3201143 _hjSession_3201143,,0,4,16,9,6,1,7,7,0,2,ninguno,5,2026-08-15T21:08:22.257Z
+115,EU,2,ecuador,Casa Grande,EC,https://www.casagrande.edu.ec,true,,Inicio | Universidad Casa Grande,es,1,1,5,4,_gcl_au _ga_9X04C12TB4 _ga _fbp,,0,1,10,0,0,10,10,0,0,0,AA,2,2026-08-15T21:08:32.114Z
+116,EU,2,ecuador,UTEG,EC,https://www.uteg.edu.ec,true,,Universidad Tecnológica Empresarial de Guayaquil | UTEG,es-ES,1,1,11,6,pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp,CookieScript,1,4,12,2,3,7,11,1,0,0,ninguno,5,2026-08-15T21:08:50.072Z
+117,EU,2,ecuador,UISRAEL,EC,https://www.uisrael.edu.ec,true,,UISRAEL – Universidad Tecnológica Israel,es,1,1,11,6,pys_session_limit pys_start_session pys_first_visit pysTrafficSource pys_landing_page _fbp,Complianz,1,6,78,16,47,15,68,9,0,1,ninguno,5,2026-08-15T21:09:02.010Z
+118,EU,2,ecuador,UDET,EC,https://www.udet.edu.ec,true,,INICIO - UDET,es,1,1,5,5,_ga_XNE2Q2CKBY _ga_EJ3V1JB3S2 _ga _gid _gat_gtag_UA_214964925_1,,0,6,36,15,8,13,21,11,0,4,ninguno,3,2026-08-15T21:09:15.363Z
+119,EU,2,ecuador,UMET,EC,https://umet.edu.ec,true,,Universidad Metropolitana • Universidad Metropolitana,es-EC,1,1,10,4,_ga _ga_2J1L9P1VMY _gcl_au _fbp,,0,3,20,2,12,6,18,2,0,0,ninguno,2,2026-08-15T21:09:31.381Z
+120,EU,2,ecuador,U. Otavalo,EC,https://www.uotavalo.edu.ec,true,,Universidad de Otavalo,es,1,1,2,0,,,1,2,8,2,0,6,6,0,0,2,ninguno,4,2026-08-15T21:09:47.838Z
+121,EU,2,ecuador,USGP,EC,https://www.sangregorio.edu.ec,true,,Universidad San Gregorio de Portoviejo,es,1,1,18,6,YSC VISITOR_INFO1_LIVE _gcl_au _ttp _tt_enable_cookie _ttp,,0,9,34,12,11,11,22,8,0,4,ninguno,2,2026-08-15T21:09:58.206Z
+122,EU,2,ecuador,U. Hemisferios,EC,https://www.uhemisferios.edu.ec,true,,UHE | Carreras presenciales y online | Quito,es,1,1,12,5,_ga_ZFRLYLC1Y6 _ga _gid _gat_UA-134045233-1 _gcl_au,CookieYes,1,5,77,54,12,11,23,53,0,1,ninguno,4,2026-08-15T21:10:09.786Z
+123,EU,2,ecuador,UNIB.E,EC,https://unibe.edu.ec,true,,UNIB.E,es,1,1,0,0,,,0,4,16,9,7,0,7,5,0,4,ninguno,1,2026-08-15T21:10:27.576Z
+124,EU,2,ecuador,ECOTEC,EC,https://ecotec.edu.ec,true,,"Universidad en Ecuador — Grado, Posgrado y Online | ECOTEC",es-EC,1,1,2,1,_gcl_au,Complianz,1,2,33,0,6,27,33,0,0,0,A,4,2026-08-15T21:10:39.274Z
+125,EU,2,ecuador,UDR,EC,https://udr.edu.ec,true,,Universidad Del Río,es-ES,1,1,4,4,_ga _ga_5HXBYBZBNB _ga_8F7QTS9R25 _ga_WQNLTBSK8V,,0,2,24,15,9,0,0,24,0,0,ninguno,3,2026-08-15T21:10:50.097Z
+126,EU,2,ecuador,UBE,EC,https://ube.edu.ec,true,,Inicio - UBE,en,1,1,1,0,,,1,5,35,10,10,15,29,5,0,1,ninguno,3,2026-08-15T21:11:05.632Z

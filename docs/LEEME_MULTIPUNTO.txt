@@ -1,0 +1,68 @@
+AUDITORIA MULTIPUNTO — paquete de ejecucion
+===========================================
+Version 1.0, 15 de agosto de 2026.
+
+EMPIECE POR AQUI
+----------------
+Lea protocolo_multipunto.pdf de principio a fin ANTES de instalar nada.
+Son 13 paginas y contienen todo lo necesario, incluida la hoja de registro
+que hay que imprimir.
+
+CONTENIDO DEL PAQUETE
+---------------------
+protocolo_multipunto.pdf   Manual de ejecucion en Windows (LEER PRIMERO)
+protocolo_multipunto.tex   Fuente LaTeX del manual, por si hay que editarlo
+auditar_multipunto.js      El auditor. Se ejecuta nueve veces.
+analizar_multipunto.py     El analisis estadistico (McNemar, Cochran Q)
+ejecutar.bat               Lanzador con doble clic, para no teclear
+universidades_EJEMPLO.json Muestra los campos que debe tener su lista real
+
+QUE FALTA POR APORTAR
+---------------------
+universidades.json con los 126 sitios. Debe tener exactamente los campos del
+archivo de ejemplo: id (entero unico), grupo ("mundo" o "ecuador"), sigla,
+pais (codigo ISO de dos letras) y url. Si su lista de agosto de 2026 ya tiene
+esos campos, uselo tal cual.
+
+EL CAMPO 'pais' ES IMPORTANTE: el analisis por subgrupos (--paises DE,FR,...)
+depende de el. Compruebe que este bien en las 63 instituciones del grupo
+"mundo" antes de empezar.
+
+RESUMEN DE ORDENES
+------------------
+Instalacion (una sola vez, en PowerShell como administrador):
+    Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+    winget install --id OpenJS.NodeJS.LTS -e
+    winget install --id Python.Python.3.12 -e
+    mkdir C:\auditoria
+    cd C:\auditoria
+    npm init -y
+    npm install playwright axe-core
+    npx playwright install chromium
+    python -m pip install scipy numpy
+    powercfg /change standby-timeout-ac 0
+
+Prueba piloto (sin VPN, 5 sitios):
+    node auditar_multipunto.js --vantage=EC --run=0 --limit=5
+
+Las nueve ejecuciones (ver el calendario del manual):
+    node auditar_multipunto.js --vantage=EC --run=1
+    node auditar_multipunto.js --vantage=EU --run=1
+    ... y asi hasta --run=3
+
+Analisis:
+    python analizar_multipunto.py
+    python analizar_multipunto.py --paises DE,FR,ES,NL,BE,SE,CH,GB --salida analisis_europa.txt
+    python analizar_multipunto.py --grupo ecuador --salida analisis_ecuador.txt
+
+LOS DOS ERRORES QUE ARRUINARIAN EL ESTUDIO
+------------------------------------------
+1. Dejar activado el bloqueador de rastreadores de la VPN (Mullvad: bloqueadores
+   de contenido DNS; Proton: NetShield). Bloquearia Google Analytics y el pixel
+   de Meta antes de que lleguen al navegador, y usted registraria cero rastreo
+   en todas partes.
+2. Medir el punto EC con la VPN encendida. El punto ecuatoriano tiene que ser
+   su conexion real.
+
+El programa comprueba lo segundo por si solo y avisa. Lo primero no lo puede
+detectar: es responsabilidad suya.

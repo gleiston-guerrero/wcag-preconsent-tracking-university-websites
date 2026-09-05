@@ -1,0 +1,26 @@
+id,vantage,run,grupo,sigla,pais,url,ok,error,title,lang,viewport,https,cookies_pre,rastreo_pre,nombres_rastreo,cmp,banner,ax_violaciones,ax_nodos,nivelA_nodos,nivelAA_nodos,nivelAAA_nodos,Perceptible,Operable,Comprensible,Robusto,max_nivel_sin_fallo_auto,incompletos,fecha
+1,GB,1,mundo,MIT,US,https://www.mit.edu,true,,MIT - Massachusetts Institute of Technology,en,1,1,0,0,,,0,3,8,1,6,1,1,6,0,1,ninguno,4,2026-08-15T21:36:18.381Z
+2,GB,1,mundo,Stanford,US,https://www.stanford.edu,true,,Stanford University,en,1,1,10,4,YSC VISITOR_INFO1_LIVE _ga_Q0JD4PHRZ7 _ga,,0,1,11,0,0,11,11,0,0,0,AA,1,2026-08-15T21:36:25.948Z
+3,GB,1,mundo,Harvard,US,https://www.harvard.edu,true,,Harvard University,en-US,1,1,8,5,_ga_KBLBYHG5EP _ga _gid _gat_UA-2923555-1 _fbp,,0,2,13,0,3,10,13,0,0,0,A,2,2026-08-15T21:36:35.621Z
+4,GB,1,mundo,Oxford,GB,https://www.ox.ac.uk,true,,University of Oxford,en,1,1,6,2,YSC VISITOR_INFO1_LIVE,,1,2,367,166,201,0,0,201,0,166,ninguno,3,2026-08-15T21:36:44.557Z
+5,GB,1,mundo,Cambridge,GB,https://www.cam.ac.uk,true,,University of Cambridge,en,1,1,0,0,,,1,2,6,5,0,1,6,0,0,0,ninguno,2,2026-08-15T21:36:53.280Z
+6,GB,1,mundo,Caltech,US,https://www.caltech.edu,true,,Home - www.caltech.edu,en,1,1,4,2,_ga_7RL83EX4D4 _ga,,0,4,30,5,0,25,28,0,0,2,ninguno,3,2026-08-15T21:37:02.996Z
+7,GB,1,mundo,UC Berkeley,US,https://www.berkeley.edu,true,,"University of California, Berkeley: Home",en-US,1,1,10,5,YSC VISITOR_INFO1_LIVE nmstat _ga_JD06GX6S4V _ga,,0,0,0,0,0,0,0,0,0,0,AAA,2,2026-08-15T21:37:11.140Z
+8,GB,1,mundo,Princeton,US,https://www.princeton.edu,true,,Home | Princeton University,en,1,1,2,2,_ga_92L6B9PQCG _ga,,0,0,0,0,0,0,0,0,0,0,AAA,2,2026-08-15T21:37:19.350Z
+9,GB,1,mundo,Imperial,GB,https://www.imperial.ac.uk,true,,Imperial College London,en-GB,1,1,6,0,,OneTrust,1,2,19,0,15,4,4,15,0,0,A,3,2026-08-15T21:37:34.103Z
+10,GB,1,mundo,U Chicago,US,https://www.uchicago.edu,true,,The University of Chicago,en,1,1,19,9,_ga_2V4M4Z833J _ga _gid _gat_UA-373360-31 _gat_UA-3572058-26 nmstat _ga_DBDWJCS0JR _hjSessionUser_3545609 _hjSession_3545609,,0,1,1,1,0,0,0,0,0,1,ninguno,6,2026-08-15T21:37:43.850Z
+11,GB,1,mundo,ETH Zurich,CH,https://ethz.ch,true,,ETH Zürich - Homepage | ETH Zürich,de,1,1,1,0,,OneTrust,1,2,2,1,0,1,2,0,0,0,ninguno,1,2026-08-15T21:37:54.986Z
+12,GB,1,mundo,Yale,US,https://www.yale.edu,true,,Yale University,en,1,1,7,6,nmstat _ga_D491W728G4 _ga _ga _gid _gat_gtag_UA_991898_23,,0,3,19,5,0,14,17,0,0,2,ninguno,3,2026-08-15T21:38:02.697Z
+13,GB,1,mundo,UPenn,US,https://www.upenn.edu,true,,University of Pennsylvania,en,1,1,4,4,_ga _gid _gat_UA-78054-1 _ga_LL85393RFV,,0,2,4,1,0,3,4,0,0,0,ninguno,4,2026-08-15T21:38:10.467Z
+14,GB,1,mundo,UCL,GB,https://www.ucl.ac.uk,true,,Welcome to UCL | University College London,en,1,1,2,0,,,1,0,0,0,0,0,0,0,0,0,AAA,3,2026-08-15T21:38:18.897Z
+15,GB,1,mundo,Cornell,US,https://www.cornell.edu,true,,Cornell University,en,1,1,9,9,_ga_PMZ19X3F8W _ga __utma __utmc __utmz __utmt __utmb _ga_XJK3YSJ0LV nmstat,,0,1,4,0,0,4,4,0,0,0,AA,5,2026-08-15T21:38:31.984Z
+16,GB,1,mundo,Tsinghua,CN,https://www.tsinghua.edu.cn/en/,true,,Tsinghua University,,1,1,1,0,,,0,10,49,39,6,4,11,32,1,5,ninguno,5,2026-08-15T21:38:44.080Z
+17,GB,1,mundo,Peking,CN,https://english.pku.edu.cn,true,,Peking University,,1,1,0,0,,,0,5,19,18,1,0,2,14,1,2,ninguno,3,2026-08-15T21:39:02.560Z
+18,GB,1,mundo,Johns Hopkins,US,https://www.jhu.edu,true,,Johns Hopkins University,en,1,1,12,5,nmstat _ga_TSX9K66082 _ga _ga_8031WYVC9V personalization_id,,0,3,8,6,0,2,3,5,0,0,ninguno,4,2026-08-15T21:39:12.050Z
+19,GB,1,mundo,Columbia,US,https://www.columbia.edu,true,,Columbia University in the City of New York,en,1,1,15,6,_ga_09H1KYXPLX _ga _gid _gat_gtag_UA_18290390_1 YSC VISITOR_INFO1_LIVE,,1,4,52,2,6,44,51,0,0,1,ninguno,1,2026-08-15T21:39:21.324Z
+20,GB,1,mundo,Toronto,CA,https://www.utoronto.ca,true,,University of Toronto,en,1,1,4,4,_gcl_au _ga _ga_0X74MN6XS3 IDE,,0,1,19,0,0,19,19,0,0,0,AA,3,2026-08-15T21:39:29.571Z
+21,GB,1,mundo,UCLA,US,https://www.ucla.edu,true,,A World Leader in Education and Research Excellence | UCLA,en,1,1,7,2,YSC VISITOR_INFO1_LIVE,,0,1,48,0,0,48,48,0,0,0,AA,3,2026-08-15T21:39:38.840Z
+22,GB,1,mundo,NUS,SG,https://nus.edu.sg,true,,NUS - National University of Singapore,,1,1,7,2,_ga_2T8KTSDET6 _ga,,1,7,60,24,21,15,36,23,1,0,ninguno,2,2026-08-15T21:39:51.825Z
+23,GB,1,mundo,U Tokyo,JP,https://www.u-tokyo.ac.jp/en/,true,,The University of Tokyo,en,1,1,2,2,_ga_DWSZ09TFCH _ga,,0,8,28,11,6,11,15,3,0,10,ninguno,3,2026-08-15T21:40:13.600Z
+24,GB,1,mundo,TUM,DE,https://www.tum.de/en/,true,,Technical University of Munich: The Entrepreneurial University - TUM,en-US,1,1,0,0,,,0,1,23,0,0,23,23,0,0,0,AA,5,2026-08-15T21:40:23.290Z
+25,GB,1,mundo,Melbourne,AU,https://www.unimelb.edu.au,true,,The University of Melbourne - Australia's #1 Ranked University,en,1,1,34,15,utag_main__ss utag_main__st utag_main_ses_id s_nr30 s_tslv s_inv s_ips s_tp s_ppv utag_main_v_id _ga_L55G410M0Q _ga_YE8SEG9T0S _ga _ga_J6RRCK6F9V AMCV_0BFB1E5866E1D2E70A495C3B%40AdobeOrg,,1,1,1,1,0,0,1,0,0,0,ninguno,4,2026-08-15T21:40:32.084Z

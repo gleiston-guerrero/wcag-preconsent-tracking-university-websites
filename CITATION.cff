@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use these data or this code, please cite the Zenodo record."
+title: "WCAG conformance and pre-consent tracking on Ecuadorian and top-ranked university websites: audit dataset, multi-vantage measurements and analysis code"
+abstract: "Data, evidence and code supporting an audit of 126 university home pages: the complete census of the 63 Ecuadorian higher education institutions and a benchmark of 63 institutions drawn from the consensus of three international rankings. The deposit contains the single-pass accessibility and cookie audit of 14 August 2026, the four-vantage replication of the live audit of 15 August 2026, the manual validation of three WCAG success criteria on a subsample of 15 sites, and the analysis code."
+type: dataset
+version: 1.0.0
+date-released: 2026-09-05
+doi: 10.5281/zenodo.XXXXXXX
+license: CC-BY-4.0
+keywords:
+  - web accessibility
+  - WCAG 2.2
+  - axe-core
+  - pre-consent tracking
+  - cookies
+  - geo-differential measurement
+  - higher education
+  - university websites
+  - Ecuador
+authors:
+  - family-names: "Guerrero-Ulloa"
+    given-names: "Gleiston"
+    email: "gguerrero@uteq.edu.ec"
+    orcid: "https://orcid.org/0000-0001-5990-2357"
+    affiliation: "Facultad de Ciencias de la Computacion, Universidad Tecnica Estatal de Quevedo, Quevedo, Ecuador"
+  - family-names: "Zuniga Paredes"
+    given-names: "Andrea"
+    email: "andrear.zuniga@educacion.gob.ec"
+    orcid: "https://orcid.org/0000-0003-4042-1523"
+    affiliation: "Ministerio de Educacion del Ecuador, Quito, Ecuador"
+  - family-names: "Diaz-Macias"
+    given-names: "Efrain"
+    email: "efraindiaz@uteq.edu.ec"
+    orcid: "https://orcid.org/0000-0003-4087-029X"
+    affiliation: "Facultad de Ciencias de la Computacion, Universidad Tecnica Estatal de Quevedo, Quevedo, Ecuador"

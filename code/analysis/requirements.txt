@@ -1,0 +1,8 @@
+# Entorno con el que se produjeron los resultados publicados.
+# Python 3.10.3 en Windows.
+# El codigo puede funcionar con otras versiones; los resultados de la
+# Seccion 5 se comprobaron ademas con Python 3.9.13 y scipy 1.13.1,
+# con salida identica.
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.9

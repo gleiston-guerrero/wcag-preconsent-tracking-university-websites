@@ -1,0 +1,14 @@
+{
+  "name": "auditor-universidades",
+  "version": "1.0.0",
+  "description": "Auditoria WCAG (axe-core) + cookies previas al consentimiento de sitios web universitarios",
+  "private": true,
+  "scripts": {
+    "auditar": "node auditar.js"
+  },
+  "dependencies": {
+    "axe-core": "4.13.0",
+    "playwright": "1.62.1"
+  }
+}
+

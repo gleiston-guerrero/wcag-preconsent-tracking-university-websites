@@ -1,0 +1,85 @@
+{
+  "vantage": "EC",
+  "run": 0,
+  "red": "residencial",
+  "ciudad": null,
+  "version_auditor": "3.0",
+  "inicio": "2026-08-16T03:46:54.373Z",
+  "geolocalizacion": [
+    {
+      "servicio": "https://ipinfo.io/json",
+      "ip": "191.100.122.28",
+      "pais": "EC",
+      "ciudad": "Cuenca",
+      "organizacion": "AS27668 ETAPA EP"
+    },
+    {
+      "servicio": "https://ipapi.co/json/",
+      "error": "SyntaxError: Unexpected end of JSON input"
+    }
+  ],
+  "coincide_con_vantage": true,
+  "controles_de_ubicacion": [
+    {
+      "momento": "inicio",
+      "sitio": 0,
+      "lecturas": [
+        {
+          "servicio": "https://ipinfo.io/json",
+          "ip": "191.100.122.28",
+          "pais": "EC",
+          "ciudad": "Cuenca",
+          "organizacion": "AS27668 ETAPA EP"
+        },
+        {
+          "servicio": "https://ipapi.co/json/",
+          "error": "SyntaxError: Unexpected end of JSON input"
+        }
+      ],
+      "correcta": true
+    },
+    {
+      "momento": "final",
+      "sitio": 5,
+      "lecturas": [
+        {
+          "servicio": "https://ipinfo.io/json",
+          "ip": "191.100.122.28",
+          "pais": "EC",
+          "ciudad": "Cuenca",
+          "organizacion": "AS27668 ETAPA EP"
+        },
+        {
+          "servicio": "https://ipapi.co/json/",
+          "error": "SyntaxError: Unexpected end of JSON input"
+        }
+      ],
+      "correcta": true
+    }
+  ],
+  "configuracion": {
+    "ESPERA_JS_MS": 4000,
+    "TIMEOUT_MS": 45000,
+    "REINTENTOS": 1,
+    "INCLUIR_AAA": true,
+    "MEDIR_COOKIES": true,
+    "USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
+  },
+  "registros_nuevos": [
+    "red_proveedores",
+    "consentimiento_por_defecto",
+    "complejidad",
+    "pila",
+    "rastreo_pre_ext",
+    "incompletos_por_regla"
+  ],
+  "axe_core": "4.13.0",
+  "playwright": "1.62.1",
+  "node": "v24.18.1",
+  "plataforma": "win32 x64",
+  "sitios": 5,
+  "fin": "2026-08-16T03:47:34.410Z",
+  "duracion_min": 1,
+  "exitosos": 5,
+  "fallidos": 0
+}

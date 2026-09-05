@@ -1,0 +1,64 @@
+﻿#,Universidad,Sigla,Tipo,Ciudad,Sitio,Verificacion,Cookies_antes_consentir,Nombres_cookies,Rastreo,CMP_live,Banner_live,Banner_estudio,PolCookies_estudio
+1,Escuela Politécnica Nacional,EPN,Pública,Quito,https://www.epn.edu.ec,Verificado en vivo,2,"_ga_6MFE5HRHXE, _ga",Si,CookieYes,No,No detectable,Sí
+2,Escuela Superior Politécnica del Litoral,ESPOL,Pública,Guayaquil,https://www.espol.edu.ec,Verificado en vivo,4,"TS014590ac, _ga_2QNGYSJLK4, _ga, _gid",Si,CookieYes,Sí,No detectable,Sí
+3,Escuela Superior Politécnica de Chimborazo,ESPOCH,Pública,Riobamba,https://www.espoch.edu.ec,Verificado en vivo,1,cookieyes-consent,No,CookieYes,Sí,No detectable,No
+4,Escuela Superior Politécnica Agropecuaria de Manabí Manuel Félix López,ESPAM MFL,Pública,Calceta,https://www.espam.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+5,Universidad de las Fuerzas Armadas ESPE,ESPE,Pública,Sangolquí,https://www.espe.edu.ec,Verificado en vivo,7,"_ga_DNYB2YPXC9, _ga, __utma, __utmc, __utmz, __utmt, __utmb",Si,CookieYes,No,No detectable,No
+6,Universidad Central del Ecuador,UCE,Pública,Quito,https://www.uce.edu.ec,Pendiente,,,No,,,No detectable,No
+7,Universidad de Cuenca,UCuenca,Pública,Cuenca,https://www.ucuenca.edu.ec,Verificado en vivo,12,"_ga, _ga_23BSZ91CCT, wp-wpml_current_language, pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page",Si,"Cookiebot, CookieYes",Sí,Sí,Sí
+8,Universidad de Guayaquil,UG,Pública,Guayaquil,https://www.ug.edu.ec,Verificado en vivo,2,"pvc_visits[0], srs_unique_visitor",No,CookieYes,Sí,No detectable,No
+9,Universidad Nacional de Loja,UNL,Pública,Loja,https://www.unl.edu.ec,Verificado en vivo,2,"_ga_HCDKPL9C20, _ga",Si,"TrustArc, CookieYes",No,No detectable,No
+10,Universidad Agraria del Ecuador,UAE,Pública,Guayaquil,https://www.uagraria.edu.ec,Verificado en vivo,4,"_ga, _gid, _gat, _ga_5PM2XSRM63",Si,Ninguna,No,No detectable,No
+11,Universidad Técnica de Ambato,UTA,Pública,Ambato,https://uta.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+12,Universidad Técnica de Babahoyo,UTB,Pública,Babahoyo,https://utb.edu.ec,Verificado en vivo,4,"_gid, _gat_gtag_UA_68893477_2, _ga_WNXLYS2MLG, _ga",Si,TrustArc,No,No detectable,No
+13,Universidad Técnica de Cotopaxi,UTC,Pública,Latacunga,https://www.utc.edu.ec,Verificado en vivo,0,0,No,Ninguna,No,No detectable,Sí
+14,Universidad Técnica de Machala,UTMACH,Pública,Machala,https://www.utmachala.edu.ec,Verificado en vivo,0,0,No,Ninguna,No,No detectable,No
+15,Universidad Técnica de Manabí,UTM,Pública,Portoviejo,https://www.utm.edu.ec,Verificado en vivo,1,sppb_user_timezone,No,CookieYes,No,No detectable,No
+16,Universidad Técnica del Norte,UTN,Pública,Ibarra,https://www.utn.edu.ec,Verificado en vivo,2,"_ga_SBC1J4DHX0, _ga",Si,Ninguna,No,No detectable,No
+17,Universidad Técnica Estatal de Quevedo,UTEQ,Pública,Quevedo,https://www.uteq.edu.ec,Verificado en vivo,3,"_ga_WVWWZZ7544, _ga, _ga_SSTPXREYGZ",Si,CookieYes,No,No detectable,No
+18,Universidad Técnica Luis Vargas Torres de Esmeraldas,UTELVT,Pública,Esmeraldas,https://www.utelvt.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+19,Universidad Estatal de Bolívar,UEB,Pública,Guaranda,https://www.ueb.edu.ec,Verificado en vivo,1,XSRF-TOKEN,No,CookieYes,No,No detectable,No
+20,Universidad Estatal del Sur de Manabí,UNESUM,Pública,Jipijapa,https://unesum.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+21,Universidad Estatal de Milagro,UNEMI,Pública,Milagro,https://www.unemi.edu.ec,Verificado en vivo,7,"_ga, _ga_MQGK6RGL8F, _clck, _fbp, _hjSessionUser_3074996, _hjSession_3074996, _clsk",Si,CookieYes,No,No detectable,Sí
+22,Universidad Estatal Amazónica,UEA,Pública,Puyo,https://www.uea.edu.ec,Verificado en vivo,2,"_ga_450T1JQNMR, _ga",Si,CookieYes,No,No detectable,No
+23,Universidad Estatal Península de Santa Elena,UPSE,Pública,La Libertad,https://www.upse.edu.ec,Verificado en vivo,1,sppb_user_timezone,No,CookieYes,No,No detectable,No
+24,Universidad Laica Eloy Alfaro de Manabí,ULEAM,Pública,Manta,https://www.uleam.edu.ec,Verificado en vivo,4,"_gid, _gat_gtag_UA_81009815_1, _ga_12F9F68E6S, _ga",Si,Ninguna,No,No detectable,No
+25,Universidad Nacional de Chimborazo,UNACH,Pública,Riobamba,https://www.unach.edu.ec,Verificado en vivo,5,"_gid, _gat_gtag_UA_133447811_1, _ga_YQBSJ5PHNG, _ga, srs_unique_visitor",Si,Ninguna,No,No detectable,No
+26,Universidad Nacional de Educación,UNAE,Pública,Azogues,https://unae.edu.ec,Verificado en vivo,6,"_ga_5FWX93M6TG, pll_language, _gid, _gat_gtag_UA_154339291_1, _ga_R13W2764LB, _ga",Si,CookieYes,No,No detectable,No
+27,Universidad Politécnica Estatal del Carchi,UPEC,Pública,Tulcán,https://upec.edu.ec,Verificado en vivo,7,"sbjs_migrations, sbjs_current_add, sbjs_first_add, sbjs_current, sbjs_first, sbjs_udata, sbjs_session",Si,CookieYes,No,No detectable,No
+28,Universidad de Investigación de Tecnología Experimental Yachay,Yachay Tech,Pública,Urcuquí,https://yachaytech.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+29,Universidad Regional Amazónica Ikiam,Ikiam,Pública,Tena,https://www.ikiam.edu.ec,Verificado en vivo,2,"_ga_HFS94B3LXM, _ga",Si,CookieYes,No,No detectable,No
+30,Universidad de las Artes,UArtes,Pública,Guayaquil,https://www.uartes.edu.ec,Verificado en vivo,2,"_ga_8044E6TKJB, _ga",Si,CookieYes,No,No detectable,No
+31,Universidad Intercultural de las Nacionalidades y Pueblos Indígenas Amawtay Wasi,Amawtay Wasi,Pública,Quito,https://uaw.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+32,Universidad de Seguridad Ciudadana y Ciencias Policiales,USECIPOL,Pública,Quito,https://usecipol.edu.ec,Verificado en vivo,0,0,No,Ninguna,No,No detectable,No
+33,Instituto de Altos Estudios Nacionales,IAEN,Pública,Quito,https://www.iaen.edu.ec,Verificado en vivo,0,0,No,Ninguna,No,Sí,Sí
+34,"Universidad Andina Simón Bolívar, sede Ecuador",UASB,Pública,Quito,https://www.uasb.edu.ec,Verificado en vivo,22,"_gcl_au, _ga_8G7C03T250, pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page, _fbp",Si,"Cookiebot, TCF, CookieYes",Sí,No detectable,Sí
+35,FLACSO Ecuador,FLACSO,Pública,Quito,https://www.flacso.edu.ec,Verificado en vivo,4,"_ga_KVZM8KVKWH, _ga, _gid, _gat",Si,"TrustArc, CookieYes",No,No detectable,No
+36,Pontificia Universidad Católica del Ecuador,PUCE,Cofinanciada,Quito,https://www.puce.edu.ec,Verificado en vivo,13,"_ga, _ga_H8JQ0KWN0K, _gcl_au, _ga_1TG94HC9HF, _fbp, _tt_enable_cookie, _ttp, _clck, _clsk, _hjSessionUser_4991704",Si,Ninguna,No,No detectable,No
+37,Universidad Católica de Santiago de Guayaquil,UCSG,Cofinanciada,Guayaquil,https://www.ucsg.edu.ec,Verificado en vivo,15,"PHPSESSID, pmpro_visit, sbjs_migrations, sbjs_current_add, sbjs_first_add, sbjs_current, sbjs_first, sbjs_udata, sbjs_session, _ga_Z1DV026L7M",Si,"CookieYes, Complianz",Sí,Sí,Sí
+38,Universidad Católica de Cuenca,UCACUE,Cofinanciada,Cuenca,https://www.ucacue.edu.ec,Verificado en vivo,17,"pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page, _fbp, _ga_MSV6X9XSF1, _ga",Si,"Cookiebot, CookieYes",Sí,No detectable,No
+39,Universidad Laica Vicente Rocafuerte de Guayaquil,ULVR,Cofinanciada,Guayaquil,https://www.ulvr.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+40,Universidad Técnica Particular de Loja,UTPL,Cofinanciada,Loja,https://www.utpl.edu.ec,Verificado en vivo,5,"_fbp, _ga, _ga_5W6THEE90T, _clck, _clsk",Si,Ninguna,No,No detectable,No
+41,Universidad UTE,UTE,Cofinanciada,Quito,https://ute.edu.ec,Verificado en vivo,3,"burst_uid, _ga_GP7MSYBCD5, _ga",Si,CookieYes,No,No detectable,No
+42,Universidad del Azuay,UDA,Cofinanciada,Cuenca,https://www.uazuay.edu.ec,Verificado en vivo,2,"_hjSessionUser_3811066, _hjSession_3811066",Si,TrustArc,Sí,No detectable,No
+43,Universidad Politécnica Salesiana,UPS,Cofinanciada,Cuenca,https://www.ups.edu.ec,Verificado en vivo,17,"_gid, _gat, _gcl_au, _clck, LFR_SESSION_STATE_20102, _ga_G3SXTJRVXE, _ga, _fbp, _tt_enable_cookie, _ttp",Si,Ninguna,No,No detectable,No
+44,Universidad Internacional SEK,UISEK,Autofinanciada,Quito,https://uisek.edu.ec,Verificado en vivo,14,"pvc_visits[0], _tt_enable_cookie, _ttp, _gid, _gat_UA-27018080-1, _gat_gtag_UA_120295323_1, _ga_XJR5CJJLR4, _ga, _ga_ES4V2WR0X1, _gcl_au",Si,Ninguna,No,No detectable,Sí
+45,Universidad de Especialidades Espíritu Santo,UEES,Autofinanciada,Samborondón,https://uees.edu.ec,Verificado en vivo,17,"_gcl_au, _gid, _gat_UA-172180399-2, _gat_UA-217409406-3, _fbp, _ga, _tt_enable_cookie, _ttp, _twpid, _clck",Si,CookieYes,No,No detectable,No
+46,Universidad San Francisco de Quito,USFQ,Autofinanciada,Quito,https://www.usfq.edu.ec,Verificado en vivo,3,"_ga_G80CBJM3N2, _ga, _fbp",Si,TrustArc,No,No detectable,No
+47,Universidad de las Américas,UDLA,Autofinanciada,Quito,https://www.udla.edu.ec,Verificado en vivo,6,"NEXT_LOCALE, rxVisitor, dtSa, dtCookie, rxvt, dtPC",No,"Cookiebot, Usercentrics",Sí,No detectable,No
+48,Universidad Internacional del Ecuador,UIDE,Autofinanciada,Quito,https://www.uide.edu.ec,Verificado en vivo,7,"_uetsid, _uetvid, cookieyes-consent, _pin_unauth, tfpsi, _clck, _clsk",Si,CookieYes,Sí,No detectable,Sí
+49,Universidad Regional Autónoma de los Andes,UNIANDES,Autofinanciada,Ambato,https://www.uniandes.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,Sí
+50,Universidad del Pacífico Escuela de Negocios,UPACÍFICO,Autofinanciada,Guayaquil,https://upacifico.edu.ec,Verificado en vivo,4,"_gcl_au, ma_popup_visitor, _ga_4DXVYNQP5Y, _ga",Si,CookieYes,No,No detectable,No
+51,Universidad Tecnológica Indoamérica,UTI,Autofinanciada,Ambato,https://www.indoamerica.edu.ec,Verificado en vivo,24,"pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page, _fbp, _cs_c, _cs_id",Si,"Cookiebot, CookieYes",No,No detectable,No
+52,Universidad Casa Grande,Casa Grande,Autofinanciada,Guayaquil,https://www.casagrande.edu.ec,Verificado en vivo,4,"_gcl_au, _ga_9X04C12TB4, _ga, _fbp",Si,Ninguna,No,No detectable,No
+53,Universidad Tecnológica Empresarial de Guayaquil,UTEG,Autofinanciada,Guayaquil,https://www.uteg.edu.ec,Verificado en vivo,16,"wp-wpml_current_language, gp_easy_passthrough_session, pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page, pbid",Si,Ninguna,No,No detectable,No
+54,Universidad Tecnológica Israel,UISRAEL,Autofinanciada,Quito,https://www.uisrael.edu.ec,Verificado en vivo,12,"pys_session_limit, pys_start_session, pys_first_visit, pysTrafficSource, pys_landing_page, last_pysTrafficSource, last_pys_landing_page, _fbp, pbid, _ga_V27RS2GGDQ",Si,"Cookiebot, Complianz",Sí,No detectable,Sí
+55,Universidad de Especialidades Turísticas,UDET,Autofinanciada,Quito,https://www.udet.edu.ec,Verificado en vivo,5,"_ga_XNE2Q2CKBY, _gid, _gat_gtag_UA_214964925_1, _ga_EJ3V1JB3S2, _ga",Si,Ninguna,No,No detectable,No
+56,Universidad Metropolitana del Ecuador,UMET,Autofinanciada,Guayaquil,https://umet.edu.ec,Verificado en vivo,9,"random1, random2, random3, random4, pll_language, _gcl_au, _ga, _ga_2J1L9P1VMY, _fbp",Si,CookieYes,No,No detectable,No
+57,Universidad de Otavalo,U. Otavalo,Autofinanciada,Otavalo,https://www.uotavalo.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,No
+58,Universidad San Gregorio de Portoviejo,USGP,Autofinanciada,Portoviejo,https://www.sangregorio.edu.ec,Verificado en vivo,8,"_gcl_au, _tt_enable_cookie, _ttp, ttcsid, ttcsid_x, vk, sk, spvc",Si,Ninguna,No,No detectable,No
+59,Universidad de los Hemisferios,U. Hemisferios,Autofinanciada,Quito,https://www.uhemisferios.edu.ec,Verificado en vivo,11,"PHPSESSID, _ga_ZFRLYLC1Y6, _ga, _gid, _gat_UA-134045233-1, _fbp, _gcl_au, __hstc, hubspotutk, __hssrc",Si,CookieYes,No,Sí,No
+60,Universidad Iberoamericana del Ecuador,UNIB.E,Autofinanciada,Quito,https://unibe.edu.ec,Verificado en vivo,0,0,No,CookieYes,No,No detectable,Sí
+61,Universidad Tecnológica Ecotec,ECOTEC,Autofinanciada,Samborondón,https://ecotec.edu.ec,Verificado en vivo,22,"_gcl_au, cmplz_consent_mode, _ga_MFVR4S8MFR, _ga, pll_language, ft_utm_source, ft_utm_medium, ft_landing, ft_referrer, ft_timestamp",Si,Complianz,Sí,Sí,Sí
+62,Universidad del Río,UDR,Autofinanciada,Guayaquil,https://udr.edu.ec,Verificado en vivo,4,"_ga_5HXBYBZBNB, _ga, _ga_8F7QTS9R25, _ga_WQNLTBSK8V",Si,Ninguna,No,No detectable,No
+63,Universidad Bolivariana del Ecuador,UBE,Autofinanciada,Durán,https://ube.edu.ec,Verificado en vivo,0,0,No,CookieYes,Sí,Sí,Sí

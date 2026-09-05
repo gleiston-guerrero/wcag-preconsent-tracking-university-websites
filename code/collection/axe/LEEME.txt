@@ -1,0 +1,84 @@
+=======================================================================
+ AUDITOR WCAG + PRIVACIDAD DE SITIOS WEB UNIVERSITARIOS  (Windows)
+=======================================================================
+
+QUE HACE
+  Visita las 126 universidades (63 de Ecuador + 63 del mundo), y de cada
+  sitio recoge evidencia REAL y reproducible, sin inventar nada:
+
+  ACCESIBILIDAD (motor axe-core, el estandar profesional):
+    - Violaciones WCAG 2.1/2.2 con su criterio exacto (p.ej. 1.4.3),
+      su principio (Perceptible / Operable / Comprensible / Robusto)
+      y su nivel (A / AA / AAA).
+    - Conteo de nodos afectados por principio y por nivel.
+    - "max nivel sin fallo automatico" (indicativo, ver NOTA 2).
+    - Atributo de idioma, viewport (movil), enlace para saltar al
+      contenido, y numero de comprobaciones que requieren revision humana.
+
+  PRIVACIDAD (estado ANTES de cualquier consentimiento):
+    - Cookies depositadas y cuales son de rastreo (analitica/marketing).
+    - Plataforma de gestion del consentimiento (CMP) detectada.
+    - Presencia de banner de cookies (heuristica).
+
+  Escribe dos archivos:
+    resultados.json  -> detalle completo (esto es lo importante)
+    resultados.csv   -> resumen para abrir en Excel
+
+-----------------------------------------------------------------------
+REQUISITO UNICO: Node.js
+-----------------------------------------------------------------------
+  1) Descarga Node.js LTS desde  https://nodejs.org  e instalalo
+     (Siguiente / Siguiente; deja las opciones por defecto).
+  2) Para comprobar: abre "Windows PowerShell" y escribe:
+        node -v
+     Debe mostrar algo como  v20.x  o  v22.x
+
+-----------------------------------------------------------------------
+PASOS PARA EJECUTAR
+-----------------------------------------------------------------------
+  1) Descomprime esta carpeta (auditor_uni) en, por ejemplo, el Escritorio.
+
+  2) Abre PowerShell DENTRO de la carpeta:
+       - Abre la carpeta en el Explorador de archivos.
+       - Escribe  powershell  en la barra de direcciones y pulsa Enter.
+       (o: clic derecho sobre la carpeta manteniendo Shift ->
+        "Abrir ventana de PowerShell aqui")
+
+  3) Instala las dependencias (una sola vez):
+        npm install
+        npx playwright install chromium
+
+  4) Ejecuta la auditoria:
+        node auditar.js
+
+     Veras el avance sitio por sitio. Tarda aprox. 15-25 minutos.
+     Puedes dejarlo trabajando. Si se corta, vuelve a ejecutar
+        node auditar.js
+     y CONTINUA donde quedo (no repite lo ya hecho).
+
+  5) Al terminar tendras  resultados.json  y  resultados.csv
+     en la misma carpeta. Envia AMBOS de vuelta al chat.
+
+-----------------------------------------------------------------------
+NOTA 1 (privacidad): el script NO hace clic en ningun banner; lee el
+  estado tal cual llega la pagina, que es justo lo que se quiere medir
+  (rastreo previo al consentimiento).
+
+NOTA 2 (conformidad): una herramienta automatica DEMUESTRA el
+  incumplimiento (basta un fallo para romper un nivel) pero NO certifica
+  el cumplimiento pleno, porque ~2/3 de los criterios exigen revision
+  humana. Por eso el campo "max nivel sin fallo automatico" es
+  indicativo del subconjunto verificable por maquina, no un certificado.
+
+NOTA 3 (privacidad de tu equipo): el script solo LEE los sitios
+  publicos; no envia nada a ningun lado. Los resultados quedan en tu
+  carpeta hasta que tu decidas compartirlos.
+
+-----------------------------------------------------------------------
+AJUSTES OPCIONALES (editar auditar.js, arriba del todo)
+-----------------------------------------------------------------------
+  ESPERA_JS_MS  -> subelo a 6000 si tu internet es lento.
+  INCLUIR_AAA   -> ponlo en false si no quieres analizar nivel AAA.
+  universidades.json -> puedes anadir/quitar universidades (id unico,
+                        grupo, sigla, pais, url).
+=======================================================================

@@ -1,0 +1,16 @@
+{
+  "name": "multi-vantage-auditor",
+  "version": "1.0.0",
+  "description": "Multi-vantage WCAG and pre-consent cookie auditor (axe-core + Playwright)",
+  "main": "auditar_multipunto.js",
+  "scripts": { "auditar": "node auditar_multipunto.js" },
+  "keywords": [],
+  "author": "Gleiston Guerrero-Ulloa",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "axe-core": "4.13.0",
+    "playwright": "1.62.1"
+  }
+}
+
