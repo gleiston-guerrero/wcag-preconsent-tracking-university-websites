@@ -85,7 +85,7 @@ def main(dir_datos, dir_salida):
     ds.mkdir(parents=True, exist_ok=True)
 
     raw = json.loads((dd / "resultados.json").read_text(encoding="utf-8"))
-    with (dd / "cookies_126_sitios_v2.csv").open(encoding="utf-8-sig") as f:
+    with (ds / "cookies_126_sitios_v2.csv").open(encoding="utf-8-sig") as f:
         prev = {r["id"]: r for r in csv.DictReader(f)}
 
     filas, sin_clasificar, divergencias = [], {}, []
