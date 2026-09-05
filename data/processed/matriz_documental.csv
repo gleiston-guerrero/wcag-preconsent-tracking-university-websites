@@ -1,0 +1,127 @@
+﻿grupo,\#,Abbr.,C,QS,THE,ARWU,Not.,Frm.,Rts.,DPO,Ckp.,Acc.,Type,Notice,LOPDP,Rights,Transp.
+mundo,1,MIT,US,1,2,3,si,si,si,si,no,si,,,,,
+mundo,2,Stanford,US,3,5,2,si,si,si,si,si,si,,,,,
+mundo,3,Harvard,US,5,5,1,si,no*,no,no,no,si,,,,,
+mundo,4,Oxford,GB,4,1,6,si,si,si,si,si,si,,,,,
+mundo,5,Cambridge,GB,6,3,4,si*,,no,no,si,si,,,,,
+mundo,6,Caltech,US,10,7,9,si,si,no,si,no,si,,,,,
+mundo,7,UC Berkeley,US,17,9,5,si,si,no,si,no,si,,,,,
+mundo,8,Princeton,US,25,3,7,si,si,si,si,no,si,,,,,
+mundo,9,Imperial,GB,2,8,26,si,si,,no,si,si,,,,,
+mundo,10,U Chicago,US,13,15,10,si,,si,si,no,no,,,,,
+mundo,11,ETH Zurich,CH,7,11,22,si,si,si,si,no,si,,,,,
+mundo,12,Yale,US,21,10,11,si,si,,si,no,si,,,,,
+mundo,13,UPenn,US,15,14,14,si,,si,si,no,si,,,,,
+mundo,14,UCL,GB,9,22,14,si,,si,si,si,si,,,,,
+mundo,15,Cornell,US,16,18,12,si,,si,si,no,si,,,,,
+mundo,16,Tsinghua,CN,17,12,18,si,si,si,si,no,no,,,,,
+mundo,17,Peking,CN,14,13,23,,,no,no,no,no,,,,,
+mundo,18,Johns Hopkins,US,24,16,19,si,si,si,si,no,si,,,,,
+mundo,19,Columbia,US,38,20,8,si,si,si,si,si,si,,,,,
+mundo,20,Toronto,CA,29,21,25,si,si,si,si,no,si,,,,,
+mundo,21,UCLA,US,46,18,16,si,si,si,si,no,si,,,,,
+mundo,22,NUS,SG,8,17,56,si,si,si,si,no,no,,,,,
+mundo,23,U Tokyo,JP,36,26,31,si,si,si,no,no,no,,,,,
+mundo,24,TUM,DE,22,27,45,si,si,si,si,no,no,,,,,
+mundo,25,Melbourne,AU,19,37,38,si,si,si,si,no,no,,,,,
+mundo,26,Edinburgh,GB,34,29,37,si,si,si,si,no,si,,,,,
+mundo,27,EPFL,CH,22,35,44,si,si,si,si,no,si,,,,,
+mundo,28,Michigan,US,45,23,33,si,no,no,si,no,no,,,,,
+mundo,29,Northwestern,US,42,30,31,si,,si,si,si,si,,,,,
+mundo,30,Fudan,CN,30,36,41,no,no,no,no,no,no,,,,,
+mundo,31,PSL,FR,28,48,34,si,si,si,si,no,no,,,,,
+mundo,32,HKU,HK,11,33,67,si,si,si,si,no,si,,,,,
+mundo,33,Zhejiang,CN,49,39,24,si,,si,si,no,no,,,,,
+mundo,34,NYU,US,55,31,28,si,si,si,si,no,si,,,,,
+mundo,35,SJTU,CN,47,40,30,no,no,no,no,no,no,,,,,
+mundo,36,KCL,GB,31,38,61,si,,si,si,si,si,,,,,
+mundo,37,UCSD,US,66,47,20,si,si,si,si,no,si,,,,,
+mundo,38,LMU,DE,58,34,42,si,si,si,si,no,si,,,,,
+mundo,39,Duke,US,62,28,46,si,si,si,si,no,si,,,,,
+mundo,40,Manchester,GB,35,56,46,si,si,,si,no,si,,,,,
+mundo,41,UBC,CA,40,45,53,si,si,,si,no,si,,,,,
+mundo,42,Sydney,AU,25,53,72,si,si,si,si,no,si,,,,,
+mundo,43,Paris-Saclay,FR,70,68,13,si,si,si,si,si,si,,,,,
+mundo,44,Kyoto,JP,57,61,46,si,,si,si,no,no,,,,,
+mundo,45,Illinois,US,70,41,53,si,si,si,si,no,si,,,,,
+mundo,46,UT Austin,US,68,50,49,si,si,si,si,no,si,,,,,
+mundo,47,UW,US,--,25,17,si,si,si,si,no,si,,,,,
+mundo,48,NTU,SG,12,31,--,si,si,si,si,no,no,,,,,
+mundo,49,McGill,CA,27,41,--,si,si,si,si,si,si,,,,,
+mundo,50,CUHK,HK,32,41,--,si,si,si,no,no,si,,,,,
+mundo,51,CMU,US,52,24,--,si,si,si,si,no,si,,,,,
+mundo,52,Wisconsin,US,--,53,36,si,si,no,si,si,si,,,,,
+mundo,53,USTC,CN,--,51,40,,si,si,si,no,no,,,,,
+mundo,54,WUSTL,US,--,67,26,si,no,no,si,no,si,,,,,
+mundo,55,Monash,AU,36,58,--,si,si,no,no,no,si,,,,,
+mundo,56,SNU,KR,38,58,--,si,si,si,si,no,no,,,,,
+mundo,57,Heidelberg,DE,--,49,51,si,si,si,si,no,si,,,,,
+mundo,58,HKUST,HK,44,58,--,si,si,si,si,no,si,,,,,
+mundo,59,Karolinska,SE,--,53,50,si,,si,si,si,si,,,,,
+mundo,60,TU Delft,NL,47,57,--,si,si,si,si,si,si,,,,,
+mundo,61,ANU,AU,32,73,--,si,si,,si,no,si,,,,,
+mundo,62,KU Leuven,BE,60,46,--,si,si,si,si,si,si,,,,,
+mundo,63,Queensland,AU,42,--,65,si,si,si,si,no,si,,,,,
+ecuador,1,EPN,,,,,,,,no,,no,P,si,si,si,si
+ecuador,2,ESPOL,,,,,,,,si,,no,P,si,si,si,si
+ecuador,3,ESPOCH,,,,,,,,no,,no,P,no,no,no,si
+ecuador,4,ESPAM MFL,,,,,,,,no,,no,P,no,no,no,si
+ecuador,5,ESPE,,,,,,,,si,,si,P,si,si,si,si
+ecuador,6,UCE,,,,,,,,no,,no,P,nv,no,no,si
+ecuador,7,UCuenca,,,,,,,,no,,no,P,si,si,si,si
+ecuador,8,UG,,,,,,,,si,,no,P,si,si,si,si
+ecuador,9,UNL,,,,,,,,no,,no,P,no,no,no,si
+ecuador,10,UAE,,,,,,,,no,,no,P,no,no,no,si
+ecuador,11,UTA,,,,,,,,nv,,nv,P,si,nv,nv,si
+ecuador,12,UTB,,,,,,,,si,,no,P,si,si,si,si
+ecuador,13,UTC,,,,,,,,no,,no,P,si,no,no,nv
+ecuador,14,UTMACH,,,,,,,,si,,no,P,si,si,si,si
+ecuador,15,UTM,,,,,,,,no,,no,P,no,no,no,si
+ecuador,16,UTN,,,,,,,,no,,no,P,,si,si,si
+ecuador,17,UTEQ,,,,,,,,no,,no,P,,si,no,si
+ecuador,18,UTELVT,,,,,,,,no,,no,P,no,no,no,si
+ecuador,19,UEB,,,,,,,,nv,,si,P,si,nv,nv,si
+ecuador,20,UNESUM,,,,,,,,no,,no,P,,nv,no,si
+ecuador,21,UNEMI,,,,,,,,no,,no,P,si,si,si,si
+ecuador,22,UEA,,,,,,,,no,,no,P,si,no,si,si
+ecuador,23,UPSE,,,,,,,,si,,,P,,si,si,si
+ecuador,24,ULEAM,,,,,,,,no,,no,P,no,no,no,si
+ecuador,25,UNACH,,,,,,,,si,,si,P,si,si,si,si
+ecuador,26,UNAE,,,,,,,,no,,no,P,no,no,no,si
+ecuador,27,UPEC,,,,,,,,no,,no,P,no,,no,si
+ecuador,28,Yachay Tech,,,,,,,,no,,no,P,no,no,no,si
+ecuador,29,Ikiam,,,,,,,,si,,no,P,si,si,si,si
+ecuador,30,UArtes,,,,,,,,si,,no,P,si,si,si,si
+ecuador,31,Amawtay Wasi,,,,,,,,no,,no,P,no,no,no,si
+ecuador,32,USECIPOL$^$,,,,,,,,no,,no,P,,no,no,si
+ecuador,33,IAEN,,,,,,,,no,,si,P,si,si,si,si
+ecuador,34,UASB,,,,,,,,si,,no,P,si,si,si,si
+ecuador,35,FLACSO,,,,,,,,no,,no,P,no,no,no,si
+ecuador,36,PUCE,,,,,,,,si,,no,C,si,si,si,si
+ecuador,37,UCSG,,,,,,,,si,,no,C,si,si,si,si
+ecuador,38,UCACUE,,,,,,,,si,,si,C,si,si,si,si
+ecuador,39,ULVR,,,,,,,,no,,no,C,no,no,no,si
+ecuador,40,UTPL,,,,,,,,si,,no,C,si,si,si,nv
+ecuador,41,UTE,,,,,,,,no,,si,C,si,no,no,nv
+ecuador,42,UDA,,,,,,,,no,,no,C,no,no,no,si
+ecuador,43,UPS,,,,,,,,no,,no,C,si,si,si,si
+ecuador,44,UISEK,,,,,,,,no,,no,A,si,no,si,no
+ecuador,45,UEES,,,,,,,,si,,no,A,si,si,si,no
+ecuador,46,USFQ,,,,,,,,si,,no,A,si,si,si,no
+ecuador,47,UDLA,,,,,,,,si,,no,A,si,si,si,no
+ecuador,48,UIDE,,,,,,,,si,,no,A,si,si,si,si
+ecuador,49,UNIANDES,,,,,,,,no,,no,A,si,no,si,no
+ecuador,50,UPAC\'IFICO,,,,,,,,no,,no,A,nv,no,no,no
+ecuador,51,UTI,,,,,,,,no,,no,A,si,no,si,si
+ecuador,52,Casa Grande,,,,,,,,si,,no,A,si,si,si,no
+ecuador,53,UTEG,,,,,,,,si,,no,A,si,si,si,si
+ecuador,54,UISRAEL,,,,,,,,nv,,nv,A,si,nv,nv,nv
+ecuador,55,UDET,,,,,,,,no,,no,A,no,no,no,no
+ecuador,56,UMET,,,,,,,,nv,,no,A,si,nv,nv,si
+ecuador,57,U.\ Otavalo,,,,,,,,no,,no,A,nv,nv,no,nv
+ecuador,58,USGP,,,,,,,,si,,no,A,si,si,si,si
+ecuador,59,U.\ Hemisferios,,,,,,,,si,,no,A,si,si,si,si
+ecuador,60,UNIB.E,,,,,,,,no,,no,A,si,no,si,no
+ecuador,61,ECOTEC,,,,,,,,si,,no,A,si,si,si,si
+ecuador,62,UDR,,,,,,,,no,,no,A,no,no,no,no
+ecuador,63,UBE,,,,,,,,si,,si,A,si,si,si,no
