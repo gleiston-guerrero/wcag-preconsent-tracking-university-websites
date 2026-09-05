@@ -32,9 +32,9 @@ A third figure exists, the live verification held in the `*_verificacion` column
 
 **Group** (`grupo`): `Ecuador` or `Mundo` in the JSON files; `ecuador` or `mundo` in the derived tables. *Mundo* means the benchmark group.
 
-**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other.
+**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other. The one exception is `matriz_documental.csv`, which carries a position within its group table rather than the global identifier.
 
-**Yes/no**: `yes` or `no` in the derived CSV tables; boolean in the JSON files.
+**Yes/no**: `yes` or `no` in the derived CSV tables; boolean in the JSON files. The documentary matrix uses `si` / `no` instead, since it was transcribed from the article.
 
 **Conformance level** (`nivel`, `max_nivel_sin_fallo`): `A`, `AA` or `AAA`, per WCAG 2.2. The AAA rules were active during the audit; the dominant rule at that level is enhanced contrast, success criterion 1.4.6, requiring a 7:1 ratio.
 
@@ -241,6 +241,32 @@ National: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacion`
 
 Foreign: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
 
+### `matriz_documental.csv` — 126 rows
+
+Documentary indicators, coded by inspecting each institution's first-level privacy notice in August 2026. These are the counts behind Figure 1 of the article. Produced by `extraer_matriz_documental.py`; see the provenance note below.
+
+| Column | Description |
+|---|---|
+| `grupo` | `mundo` (benchmark) or `ecuador`. |
+| `#` | Position within its group table. **Not** the global site `id`. |
+| `Abbr.` | Institutional acronym. Joins to `sigla` in the other tables. |
+| `C` | Country, ISO 3166-1 alpha-2. Benchmark group only. |
+| `QS`, `THE`, `ARWU` | Position in each ranking, `--` if absent from that top 75. Benchmark group only. |
+| `Type` | Public or private. Ecuadorian group only. |
+| `Not.` (benchmark) / `Notice` (Ecuador) | A first-level privacy notice is published. |
+| `Frm.` / `LOPDP` | A specific legal instrument is named. |
+| `Rts.` / `Rights` | Data-subject rights are enumerated. |
+| `DPO` | A privacy contact or data protection officer is identified. |
+| `Ckp.` | A dedicated cookie policy is published. Benchmark group only. |
+| `Acc.` | An accessibility statement or accessibility tools are declared. |
+| `Transp.` | Transparency indicator. Ecuadorian group only. |
+
+Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and empty where the column does not apply to that group. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article.
+
+The two groups were coded with partly different column sets, which is why some columns are empty for one group and not the other. The Ecuadorian group carries between two and six `nv` cells per indicator; the benchmark group carries none. That asymmetry is itself a finding and is invisible in the aggregate percentages.
+
+**Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extraer_matriz_documental.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
+
 ### `sensibilidad_inclusion.csv` — 3 rows
 
 Result of the sensitivity analysis on the inclusion rule of the multi-vantage replication. One row per rule.
@@ -290,6 +316,8 @@ resultados.json + v2 ───────────► reconstruir_cookies.py
 
 data/raw/tracking/ ─────────────► verificar_multipunto.py     (results section)
                                 ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
+
+article appendices (external) ──► extraer_matriz_documental.py ─► matriz_documental.csv
 ```
 
-Files in `data/interim/` are not versioned because `construir_entradas.py` regenerates them from material that is published.
+Files in `data/interim/` are not versioned because `construir_entradas.py` regenerates them from material that is published. The article source is not part of the deposit, which is why the last step above cannot be run from this repository alone.

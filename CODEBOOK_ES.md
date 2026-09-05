@@ -30,9 +30,9 @@ Existe además una tercera cifra, la verificación en vivo que figura en las col
 
 **Grupo** (`grupo`): `Ecuador` o `Mundo` en los archivos JSON; `ecuador` o `mundo` en las tablas derivadas.
 
-**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra.
+**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra. La única excepción es `matriz_documental.csv`, que lleva la posición dentro de la tabla de su grupo y no el identificador global.
 
-**Sí/no**: `yes` o `no` en las tablas CSV derivadas; booleano en los JSON.
+**Sí/no**: `yes` o `no` en las tablas CSV derivadas; booleano en los JSON. La matriz documental usa `si` y `no`, porque se transcribió del artículo.
 
 **Nivel de conformidad** (`nivel`, `max_nivel_sin_fallo`): `A`, `AA` o `AAA`, según WCAG 2.2. Las reglas de nivel AAA estuvieron activas en la auditoría; la regla dominante en ese nivel es contraste mejorado, criterio 1.4.6, que exige una razón de 7:1.
 
@@ -40,7 +40,7 @@ Existe además una tercera cifra, la verificación en vivo que figura en las col
 
 **Punto de observación** (`vantage`, sufijo de nombre de archivo): `EC` Ecuador, `EU` Alemania, `GB` Reino Unido, `US` Estados Unidos. En `tracking_extended/` aparece además `CH`, Suiza.
 
-**Cookie de rastreo**: nombre de cookie que coincide con alguno de los patrones de la taxonomía. La lista original cubría Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu y familias menores. La lista extendida añade el LinkedIn Insight Tag, la familia publicitaria completa de Microsoft, TapAd, StackAdapt, Snapchat y Sourcebuster. Ambas listas están, en forma de expresiones regulares, en `code/analysis/verificar_multipunto.py`, líneas 7 a 18. La extendida gobierna todas las cifras publicadas.
+**Cookie de rastreo**: nombre de cookie que coincide con alguno de los patrones de la taxonomía. La lista original cubría Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu y familias menores. La lista extendida añade el LinkedIn Insight Tag, la familia publicitaria completa de Microsoft, TapAd, StackAdapt, Snapchat y Sourcebuster. Ambas listas, en forma de expresiones regulares, están en `code/analysis/verificar_multipunto.py`, líneas 7 a 18. La extendida gobierna todas las cifras publicadas.
 
 ---
 
@@ -239,6 +239,32 @@ Nacionales: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacio
 
 Extranjeras: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
 
+### `matriz_documental.csv` — 126 filas
+
+Indicadores documentales, codificados inspeccionando el aviso de privacidad de primer nivel de cada institución en agosto de 2026. Son los recuentos que sustentan la Figura 1 del artículo. La produce `extraer_matriz_documental.py`; ver la nota de procedencia más abajo.
+
+| Columna | Descripción |
+|---|---|
+| `grupo` | `mundo` (referencia) o `ecuador`. |
+| `#` | Posición dentro de la tabla de su grupo. **No** es el `id` global del sitio. |
+| `Abbr.` | Sigla de la institución. Enlaza con `sigla` en las demás tablas. |
+| `C` | País, ISO 3166-1 alfa-2. Solo grupo de referencia. |
+| `QS`, `THE`, `ARWU` | Posición en cada ranking, `--` si no está en ese top 75. Solo grupo de referencia. |
+| `Type` | Pública o privada. Solo grupo ecuatoriano. |
+| `Not.` (referencia) / `Notice` (Ecuador) | Publica aviso de privacidad de primer nivel. |
+| `Frm.` / `LOPDP` | Nombra un instrumento legal específico. |
+| `Rts.` / `Rights` | Enumera los derechos de la persona titular de los datos. |
+| `DPO` | Identifica contacto de privacidad o delegado de protección de datos. |
+| `Ckp.` | Publica política de cookies específica. Solo grupo de referencia. |
+| `Acc.` | Declara accesibilidad o herramientas de accesibilidad. |
+| `Transp.` | Indicador de transparencia. Solo grupo ecuatoriano. |
+
+Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y vacío donde la columna no aplica a ese grupo. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo.
+
+Los dos grupos se codificaron con conjuntos de columnas en parte distintos, y por eso algunas quedan vacías en un grupo y no en el otro. El grupo ecuatoriano tiene entre dos y seis celdas `nv` por indicador; el de referencia no tiene ninguna. Esa asimetría es en sí misma un hallazgo y queda invisible en los porcentajes agregados.
+
+**Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extraer_matriz_documental.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
+
 ### `sensibilidad_inclusion.csv` — 3 filas
 
 Resultado del análisis de sensibilidad a la regla de inclusión de la réplica multipunto. Una fila por regla.
@@ -286,8 +312,10 @@ resultados.json + v2 ───────────► reconstruir_cookies.py
                                      ├─► cookies_nombres_sin_clasificar.csv
                                      └─► cookies_divergencias_v2.csv
 
-data/raw/tracking/ ─────────────► verificar_multipunto.py     (seccion multipunto)
+data/raw/tracking/ ─────────────► verificar_multipunto.py     (seccion de resultados)
                                 ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
+
+apendices del articulo (externo) ► extraer_matriz_documental.py ─► matriz_documental.csv
 ```
 
-Los archivos de `data/interim/` no se versionan porque `construir_entradas.py` los regenera desde material que sí está publicado.
+Los archivos de `data/interim/` no se versionan porque `construir_entradas.py` los regenera desde material que sí está publicado. El fuente del artículo no forma parte del depósito, y por eso el último paso del esquema no puede ejecutarse solo con este repositorio.
