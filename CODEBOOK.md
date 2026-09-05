@@ -1,266 +1,270 @@
-# Libro de códigos
+# Codebook
 
-Documenta todos los archivos de datos del depósito. Codificación UTF-8. Los campos vacíos representan ausencia de dato, no cero.
+*Versión en español: [CODEBOOK_ES.md](CODEBOOK_ES.md)*
+
+Documents every data file in the deposit. UTF-8 encoding. Empty fields mean absence of data, not zero.
+
+File names, column names and code comments are in Spanish, the working language of the project. This codebook translates and defines each of them.
 
 ---
 
-## 1. Las dos mediciones
+## 1. The two measurements
 
-El depósito contiene dos mediciones del mismo fenómeno, tomadas con un día de diferencia y con distinto diseño. **Sus cifras de rastreo no son intercambiables.** Antes de cruzar cualquier tabla conviene tener claro de cuál procede.
+The deposit holds two measurements of the same phenomenon, taken a day apart with different designs. **Their tracking figures are not interchangeable.** Before combining any two tables, be clear which one they come from.
 
-| | Pasada única | Réplica multipunto |
+| | Single pass | Multi-vantage replication |
 |---|---|---|
-| Fecha | 14 de agosto de 2026 | 15 de agosto de 2026 |
-| Puntos de observación | uno, Ecuador | cuatro: EC, EU, GB, US |
-| Visitas por sitio | una | tres por punto |
-| Consolidación | ninguna | mayoría sobre las tres pasadas |
-| Sitios | los 126 | 121 con éxito en las doce pasadas |
-| Fuente | `data/raw/accessibility/` | `data/raw/tracking/` |
-| Sustenta | accesibilidad y comparación entre grupos | contraste entre jurisdicciones |
+| Date | 14 August 2026 | 15 August 2026 |
+| Vantage points | one, Ecuador | four: EC, EU, GB, US |
+| Visits per site | one | three per vantage point |
+| Consolidation | none | majority over the three passes |
+| Sites | all 126 | 121 successful in all twelve passes |
+| Source | `data/raw/accessibility/` | `data/raw/tracking/` |
+| Supports | accessibility and between-group comparison | contrast between jurisdictions |
 
-En la pasada única, con la taxonomía extendida, el rastreo previo al consentimiento se observa en 41 de los 63 sitios ecuatorianos y en 43 de los 63 de referencia. En la réplica, sobre los 121 sitios retenidos, se observa en 82 desde Ecuador, 79 desde Estados Unidos, 76 desde Reino Unido y 73 desde Alemania. Ninguna de las dos cifras sustituye a la otra: la primera sostiene la comparación entre grupos, la segunda la comparación del mismo sitio bajo condiciones distintas.
+In the single pass, under the extended taxonomy, pre-consent tracking is observed at 41 of the 63 Ecuadorian sites and 43 of the 63 benchmark sites. In the replication, over the 121 retained sites, it is observed at 82 from Ecuador, 79 from the United States, 76 from the United Kingdom and 73 from Germany. Neither figure replaces the other: the first supports the between-group comparison, the second the within-site comparison across conditions.
 
-Existe además una tercera cifra, la verificación en vivo que figura en las columnas `*_verificacion` de `cookies_126_sitios_v3.csv`, tomada por inspección manual en fechas distintas. Difiere de la medición automatizada en 39 de los 126 sitios. Está documentada en la sección 4.
-
----
-
-## 2. Categorías comunes
-
-**Grupo** (`grupo`): `Ecuador` o `Mundo` en los archivos JSON; `ecuador` o `mundo` en las tablas derivadas.
-
-**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra.
-
-**Sí/no**: `yes` o `no` en las tablas CSV derivadas; booleano en los JSON.
-
-**Nivel de conformidad** (`nivel`, `max_nivel_sin_fallo`): `A`, `AA` o `AAA`, según WCAG 2.2. Las reglas de nivel AAA estuvieron activas en la auditoría; la regla dominante en ese nivel es contraste mejorado, criterio 1.4.6, que exige una razón de 7:1.
-
-**Principio** (`principio`): `Perceptible`, `Operable`, `Comprensible` o `Robusto`, los cuatro principios de WCAG.
-
-**Punto de observación** (`vantage`, sufijo de nombre de archivo): `EC` Ecuador, `EU` Alemania, `GB` Reino Unido, `US` Estados Unidos. En `tracking_extended/` aparece además `CH`, Suiza.
-
-**Cookie de rastreo**: nombre de cookie que coincide con alguno de los patrones de la taxonomía. La lista original cubría Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu y familias menores. La lista extendida añade el LinkedIn Insight Tag, la familia publicitaria completa de Microsoft, TapAd, StackAdapt, Snapchat y Sourcebuster. Ambas listas están, en forma de expresiones regulares, en `code/analysis/verificar_multipunto.py`, líneas 7 a 18. La extendida gobierna todas las cifras publicadas.
+A third figure exists, the live verification held in the `*_verificacion` columns of `cookies_126_sitios_v3.csv`, obtained by manual inspection on other dates. It differs from the automated measurement at 39 of the 126 sites. See section 4.
 
 ---
 
-## 3. Datos crudos
+## 2. Common categories
+
+**Group** (`grupo`): `Ecuador` or `Mundo` in the JSON files; `ecuador` or `mundo` in the derived tables. *Mundo* means the benchmark group.
+
+**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other.
+
+**Yes/no**: `yes` or `no` in the derived CSV tables; boolean in the JSON files.
+
+**Conformance level** (`nivel`, `max_nivel_sin_fallo`): `A`, `AA` or `AAA`, per WCAG 2.2. The AAA rules were active during the audit; the dominant rule at that level is enhanced contrast, success criterion 1.4.6, requiring a 7:1 ratio.
+
+**Principle** (`principio`): `Perceptible`, `Operable`, `Comprensible` (Understandable) or `Robusto` (Robust), the four WCAG principles.
+
+**Vantage point** (`vantage`, file-name suffix): `EC` Ecuador, `EU` Germany, `GB` United Kingdom, `US` United States. `CH`, Switzerland, appears only in `tracking_extended/`.
+
+**Tracking cookie**: a cookie name matching one of the taxonomy patterns. The original list covered Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu and smaller families. The extended list adds the LinkedIn Insight Tag, the full Microsoft advertising family, TapAd, StackAdapt, Snapchat and Sourcebuster. Both lists, as regular expressions, are in `code/analysis/verificar_multipunto.py`, lines 7 to 18. The extended list governs every published figure.
+
+---
+
+## 3. Raw data
 
 ### `data/raw/accessibility/resultados.json`
 
-Lista JSON de 126 objetos, uno por sitio, ordenados por `id`. Es la fuente de verdad de la auditoría de pasada única: todas las tablas de `data/processed/` derivadas de accesibilidad se calculan a partir de este archivo.
+A JSON array of 126 objects, one per site, ordered by `id`. This is the ground truth of the single-pass audit: every accessibility-derived table in `data/processed/` is computed from it.
 
-| Campo | Tipo | Descripción |
+| Field | Type | Description |
 |---|---|---|
-| `id` | entero | Identificador del sitio. |
-| `grupo` | texto | `Ecuador` o `Mundo`. |
-| `sigla` | texto | Sigla de la institución. |
-| `nombre` | texto | Nombre completo. |
-| `pais` | texto | País de la institución. |
-| `url` | texto | Portada auditada. |
-| `ok` | booleano | La página cargó. Verdadero en los 126. |
-| `https` | booleano | Certificado TLS válido. |
-| `axe_version` | texto | Versión del motor. `4.13.0` en los 126. |
-| `fecha` | fecha-hora | Momento de la visita, ISO 8601. |
-| `cookies` | objeto | Ver abajo. |
-| `accesibilidad` | objeto | Ver abajo. |
+| `id` | integer | Site identifier. |
+| `grupo` | text | `Ecuador` or `Mundo`. |
+| `sigla` | text | Institutional acronym. |
+| `nombre` | text | Full name. |
+| `pais` | text | Country of the institution. |
+| `url` | text | Home page audited. |
+| `ok` | boolean | The page loaded. True for all 126. |
+| `https` | boolean | Valid TLS certificate. |
+| `axe_version` | text | Engine version. `4.13.0` for all 126. |
+| `fecha` | datetime | Time of the visit, ISO 8601. |
+| `cookies` | object | See below. |
+| `accesibilidad` | object | See below. |
 
 **`cookies`**
 
-| Campo | Tipo | Descripción |
+| Field | Type | Description |
 |---|---|---|
-| `total_pre` | entero | Cookies presentes antes de cualquier interacción. |
-| `rastreo_pre` | entero | De ellas, cuántas son de rastreo según la taxonomía base. |
-| `nombres_pre` | lista | Nombres de todas las cookies observadas. |
-| `nombres_rastreo` | lista | Nombres clasificados como de rastreo. |
-| `cmp` | lista | Plataformas de gestión del consentimiento detectadas. |
-| `banner` | booleano | Se mostró un aviso de cookies. |
+| `total_pre` | integer | Cookies present before any interaction. |
+| `rastreo_pre` | integer | Of those, how many are tracking cookies under the base taxonomy. |
+| `nombres_pre` | list | Names of all cookies observed. |
+| `nombres_rastreo` | list | Names classified as tracking. |
+| `cmp` | list | Consent management platforms detected. |
+| `banner` | boolean | A cookie notice was displayed. |
 
 **`accesibilidad`**
 
-| Campo | Tipo | Descripción |
+| Field | Type | Description |
 |---|---|---|
-| `title` | texto | Contenido de `<title>`. |
-| `lang` | texto | Atributo `lang` del documento. |
-| `viewport` | booleano | Existe metaetiqueta de viewport. |
-| `skipLink` | booleano | Existe enlace para saltar al contenido. |
-| `violaciones` | entero | Reglas de axe-core con al menos un nodo que falla. |
-| `nodos` | entero | Nodos que fallan, sumados sobre todas las reglas. |
-| `porPrincipio` | objeto | Nodos que fallan por principio WCAG. |
-| `porNivel` | objeto | Nodos que fallan por nivel: `A`, `AA`, `AAA`. |
-| `maxNivelSinFallo` | texto | Nivel más alto sin ningún fallo detectado. |
-| `incompletos` | entero | Comprobaciones que axe-core no pudo resolver y requieren revisión humana. |
-| `passes` | entero | Reglas superadas. |
-| `reglas` | lista | Una entrada por regla incumplida, con `id`, `impacto`, `criterio`, `principio`, `nivel`, `nodos` y `ayuda`. |
+| `title` | text | Contents of `<title>`. |
+| `lang` | text | Document `lang` attribute. |
+| `viewport` | boolean | A viewport meta tag exists. |
+| `skipLink` | boolean | A skip-to-content link exists. |
+| `violaciones` | integer | axe-core rules with at least one failing node. |
+| `nodos` | integer | Failing nodes, summed over all rules. |
+| `porPrincipio` | object | Failing nodes by WCAG principle. |
+| `porNivel` | object | Failing nodes by level: `A`, `AA`, `AAA`. |
+| `maxNivelSinFallo` | text | Highest level with no detected failure. |
+| `incompletos` | integer | Checks axe-core could not resolve, needing human review. |
+| `passes` | integer | Rules passed. |
+| `reglas` | list | One entry per failing rule, with `id`, `impacto` (impact), `criterio` (success criterion), `principio`, `nivel`, `nodos` and `ayuda` (help URL). |
 
 ### `data/raw/accessibility/resultados.csv`
 
-Vista aplanada del JSON anterior, 126 filas, para inspección rápida. Columnas: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. Para análisis, use `estudio_126_sitios.csv`, que es más completa.
+A flattened view of the JSON above, 126 rows, for quick inspection. Columns: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. For analysis use `estudio_126_sitios.csv`, which is more complete.
 
-### `data/raw/tracking/resultados_<PUNTO>_r<N>.json`
+### `data/raw/tracking/resultados_<VANTAGE>_r<N>.json`
 
-Trece archivos, uno por pasada. Misma estructura que `resultados.json`, con dos campos añadidos: `vantage` y `run`. La pasada `GB_r1` está truncada, con 5 053 bytes frente a los 25 000 habituales, porque se abortó al detectar que la VPN no había cambiado de país; se conserva como evidencia y el análisis la excluye.
+Thirteen files, one per pass. Same structure as `resultados.json`, plus two fields: `vantage` and `run`. Pass `GB_r1` is truncated, 5,053 bytes against the usual 25,000, because it aborted when the VPN had not switched country; it is kept as evidence and excluded from the analysis.
 
-### `data/raw/tracking/meta_<PUNTO>_r<N>.json`
+### `data/raw/tracking/meta_<VANTAGE>_r<N>.json`
 
-Un archivo por pasada, con la evidencia de procedencia.
+One file per pass, holding the provenance evidence.
 
-| Campo | Descripción |
+| Field | Description |
 |---|---|
-| `vantage`, `run` | Punto de observación y número de pasada. |
-| `inicio`, `fin`, `duracion_min` | Marcas de tiempo reales de la pasada. |
-| `geolocalizacion` | Lecturas iniciales de `ipinfo.io` e `ipwho.is`: IP, país, ciudad y organización. |
-| `coincide_con_vantage` | La ubicación observada coincide con la declarada. |
-| `controles_de_ubicacion` | Siete comprobaciones por pasada: al inicio, tras los sitios 25, 50, 75, 100 y 125, y al final. Cada una con las dos lecturas y su veredicto. |
-| `configuracion` | Espera para scripts, tiempo límite de carga, reintentos, inclusión de nivel AAA, medición de cookies y cadena de agente de usuario. |
-| `axe_core`, `playwright`, `node`, `plataforma` | Versiones exactas del entorno. |
-| `sitios`, `exitosos`, `fallidos` | Recuentos de la pasada. |
+| `vantage`, `run` | Vantage point and pass number. |
+| `inicio`, `fin`, `duracion_min` | Actual start, end and duration of the pass. |
+| `geolocalizacion` | Initial readings from `ipinfo.io` and `ipwho.is`: IP, country, city and organisation. |
+| `coincide_con_vantage` | The observed location matches the declared one. |
+| `controles_de_ubicacion` | Seven checks per pass: at the start, after sites 25, 50, 75, 100 and 125, and at the end. Each with both readings and its verdict. |
+| `configuracion` | Script wait, load timeout, retries, whether AAA rules were active, whether cookies were measured, and the user-agent string. |
+| `axe_core`, `playwright`, `node`, `plataforma` | Exact environment versions. |
+| `sitios`, `exitosos`, `fallidos` | Counts for the pass. |
 
 ### `data/raw/tracking_extended/`
 
-Cuarenta y ocho archivos de la campaña posterior de cinco puntos, con la misma estructura. **No sustentan ninguna cifra del artículo.** Ver el README.
+Forty-eight files of the later five-vantage campaign, same structure. **They support no figure in the article.** See the README.
 
 ### `data/raw/census/`
 
-`universidades.json` es el censo de los 126 sitios auditados, con sigla, nombre, país y URL. `tops.json` contiene el top 75 de cada edición de ranking empleada. `seleccion63_mundo.json` documenta el consenso entre los tres rankings que define el grupo de referencia.
+`universidades.json` is the census of the 126 audited sites, with acronym, name, country and URL. `tops.json` holds the top 75 of each ranking edition used. `seleccion63_mundo.json` documents the consensus across the three rankings that defines the benchmark group.
 
 ---
 
-## 4. Tablas derivadas
+## 4. Derived tables
 
-### `estudio_126_sitios.csv` — 126 filas, 32 columnas
+### `estudio_126_sitios.csv` — 126 rows, 32 columns
 
-Aplanado canónico de `resultados.json`. Lo produce `estudio.py`.
+Canonical flattening of `resultados.json`, produced by `estudio.py`.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `id`, `grupo`, `sigla`, `universidad`, `pais`, `url` | Identificación del sitio. |
-| `fecha`, `axe_version`, `ok`, `https` | Metadatos de la visita. |
-| `cookies_total_pre` | Cookies antes de consentir. |
-| `cookies_rastreo_pre` | De ellas, de rastreo según la taxonomía base. |
-| `nombres_pre`, `nombres_rastreo` | Nombres, separados por ` \| `. |
-| `cmp`, `banner` | Plataforma de consentimiento y aviso. |
-| `title`, `lang`, `viewport`, `skip_link` | Indicadores estructurales. |
-| `ax_violaciones`, `ax_nodos` | Reglas incumplidas y nodos que fallan. |
-| `nodos_A`, `nodos_AA`, `nodos_AAA` | Nodos que fallan por nivel. |
-| `perceptible`, `operable`, `comprensible`, `robusto` | Nodos que fallan por principio. |
-| `max_nivel_sin_fallo` | Nivel más alto sin fallos. |
-| `incompletos`, `passes` | Comprobaciones no resueltas y reglas superadas. |
+| `id`, `grupo`, `sigla`, `universidad`, `pais`, `url` | Site identification. |
+| `fecha`, `axe_version`, `ok`, `https` | Visit metadata. |
+| `cookies_total_pre` | Cookies before consent. |
+| `cookies_rastreo_pre` | Of those, tracking cookies under the base taxonomy. |
+| `nombres_pre`, `nombres_rastreo` | Names, separated by ` \| `. |
+| `cmp`, `banner` | Consent platform and notice. |
+| `title`, `lang`, `viewport`, `skip_link` | Structural indicators. |
+| `ax_violaciones`, `ax_nodos` | Rules failed and failing nodes. |
+| `nodos_A`, `nodos_AA`, `nodos_AAA` | Failing nodes by level. |
+| `perceptible`, `operable`, `comprensible`, `robusto` | Failing nodes by principle. |
+| `max_nivel_sin_fallo` | Highest level with no failures. |
+| `incompletos`, `passes` | Unresolved checks and rules passed. |
 
-### `estudio_reglas_por_sitio.csv` — 441 filas, 10 columnas
+### `estudio_reglas_por_sitio.csv` — 441 rows, 10 columns
 
-Una fila por sitio y regla incumplida. Producida por el mismo script.
+One row per site and failed rule. Same script.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `id`, `grupo`, `sigla` | Sitio. |
-| `regla` | Identificador de la regla de axe-core, por ejemplo `image-alt`. |
-| `impacto` | Gravedad asignada por axe-core: `minor`, `moderate`, `serious`, `critical`. |
-| `criterio` | Criterio de éxito de WCAG asociado. Vacío si la regla no mapea a ninguno. |
-| `principio`, `nivel` | Principio y nivel del criterio. |
-| `nodos` | Elementos que fallan esa regla en ese sitio. |
-| `ayuda` | URL de la documentación de la regla. |
+| `id`, `grupo`, `sigla` | Site. |
+| `regla` | axe-core rule identifier, for example `image-alt`. |
+| `impacto` | Severity assigned by axe-core: `minor`, `moderate`, `serious`, `critical`. |
+| `criterio` | Associated WCAG success criterion. Empty when the rule maps to none. |
+| `principio`, `nivel` | Principle and level of the criterion. |
+| `nodos` | Elements failing that rule on that site. |
+| `ayuda` | URL of the rule documentation. |
 
-### `cookies_126_sitios_v3.csv` — 126 filas, 24 columnas
+### `cookies_126_sitios_v3.csv` — 126 rows, 24 columns
 
-Tabla de cookies del artículo, con las dos taxonomías en columnas separadas. La produce `reconstruir_cookies.py` a partir de `resultados.json` y de `cookies_126_sitios_v2.csv`.
+The cookie table of the article, with both taxonomies in separate columns. Produced by `reconstruir_cookies.py` from `resultados.json` and `cookies_126_sitios_v2.csv`.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `id`, `grupo`, `sigla`, `universidad`, `sitio` | Identificación. |
-| `fecha` | Momento de la medición automatizada. |
-| `cookies_antes_consentir` | Cookies observadas antes de consentir. |
-| `nombres_cookies` | Nombres, separados por ` \| `. |
-| `n_nombres_listados` | Cuántos nombres hay en el campo anterior. |
-| `rastreo_base` | Rastreo según la taxonomía original. |
-| `rastreo` | Rastreo según la taxonomía extendida. **Esta es la columna que sustenta las cifras del artículo.** |
-| `proveedores_rastreo` | Familias de proveedor reconocidas en ese sitio. |
-| `procedencia_rastreo` | Por qué se clasificó así: qué fuente aportó el dato y qué taxonomía decidió. |
-| `banner_estudio`, `cmp_estudio` | Aviso y plataforma detectados en la medición automatizada. |
-| `pais`, `region`, `ciudad`, `tipo` | Atributos institucionales. |
-| `cmp_verificacion`, `banner_verificacion`, `fuente_verificacion` | Resultados de la verificación manual en vivo, en fecha distinta. |
-| `polcookies_estudio` | Existe política de cookies. |
-| `nota_documental` | Observación cualitativa sobre los documentos publicados por la institución. |
+| `id`, `grupo`, `sigla`, `universidad`, `sitio` | Identification. |
+| `fecha` | Time of the automated measurement. |
+| `cookies_antes_consentir` | Cookies observed before consent. |
+| `nombres_cookies` | Names, separated by ` \| `. |
+| `n_nombres_listados` | How many names the previous field holds. |
+| `rastreo_base` | Tracking under the original taxonomy. |
+| `rastreo` | Tracking under the extended taxonomy. **This is the column behind the article's figures.** |
+| `proveedores_rastreo` | Vendor families recognised on that site. |
+| `procedencia_rastreo` | Why it was classified that way: which source supplied the datum and which taxonomy decided. |
+| `banner_estudio`, `cmp_estudio` | Notice and platform detected in the automated measurement. |
+| `pais`, `region`, `ciudad`, `tipo` | Institutional attributes. |
+| `cmp_verificacion`, `banner_verificacion`, `fuente_verificacion` | Results of the manual live verification, on a different date. |
+| `polcookies_estudio` | A cookie policy exists. |
+| `nota_documental` | Qualitative note on the documents the institution publishes. |
 
-La diferencia entre `rastreo_base` y `rastreo` es de un solo sitio ecuatoriano, que cruza el umbral porque sus únicas cookies coincidentes pertenecen a la familia Sourcebuster, añadida en la lista extendida. El recuento ecuatoriano pasa así de 40 a 41; el de referencia se mantiene en 43.
+The difference between `rastreo_base` and `rastreo` is a single Ecuadorian site, which crosses the threshold because its only matching cookies belong to the Sourcebuster family added in the extended list. The Ecuadorian count therefore rises from 40 to 41; the benchmark count stays at 43.
 
-Las columnas `*_verificacion` proceden de una inspección manual distinta de la medición automatizada. Discrepan de la columna `rastreo` en 39 de los 126 sitios: 34 donde la medición automatizada detecta rastreo y la verificación en vivo no, y 5 en sentido contrario. No es un error de ninguna de las dos: son observaciones en momentos distintos de sitios que cambian. **No mezcle ambas columnas en un mismo recuento.**
+The `*_verificacion` columns come from a manual inspection distinct from the automated measurement. They disagree with the `rastreo` column at 39 of the 126 sites: 34 where the automated measurement detects tracking and the live verification does not, and 5 the other way round. Neither is in error: they are observations at different moments of sites that change. **Do not mix the two columns in a single count.**
 
-### `cookies_126_sitios_v2.csv` — 126 filas
+### `cookies_126_sitios_v2.csv` — 126 rows
 
-Versión previa, entrada necesaria de `reconstruir_cookies.py`. Se publica porque sin ella la v3 no se reproduce. No la use directamente para análisis.
+Earlier version, a required input of `reconstruir_cookies.py`. It is released because without it v3 cannot be reproduced. Do not use it directly for analysis.
 
-### `cookies_nombres_sin_clasificar.csv` — 243 filas
+### `cookies_nombres_sin_clasificar.csv` — 243 rows
 
-Nombres de cookie observados que no coinciden con ninguna familia de la taxonomía, con el número de sitios en que aparecen. Es la evidencia de la decisión taxonómica: permite discutir si algún nombre debió clasificarse como rastreo.
+Observed cookie names matching no family in the taxonomy, with the number of sites where each appears. This is the evidence behind the taxonomic decision: it allows any name to be contested.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `nombre_cookie` | Nombre observado. |
-| `sitios_en_que_aparece` | Número de sitios distintos. |
+| `nombre_cookie` | Observed name. |
+| `sitios_en_que_aparece` | Number of distinct sites. |
 
-### `cookies_divergencias_v2.csv` — 14 filas
+### `cookies_divergencias_v2.csv` — 14 rows
 
-Control de calidad. Sitios donde la tabla v2 listaba nombres de cookie que no aparecen en el JSON crudo, indicio de pérdida de datos en una fase intermedia.
+Quality control. Sites where the v2 table listed cookie names absent from the raw JSON, a sign of data loss at an intermediate stage.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `id`, `sigla`, `grupo` | Sitio. |
-| `nombres_no_presentes_en_crudo` | Nombres afectados. |
+| `id`, `sigla`, `grupo` | Site. |
+| `nombres_no_presentes_en_crudo` | Names affected. |
 
-### `cambios_reconciliacion.csv` — 68 filas
+### `cambios_reconciliacion.csv` — 68 rows
 
-Registro de auditoría de la reconciliación entre el inventario y los informes HTML. Producida por `reconciliar.py`.
+Audit trail of the reconciliation between the inventory and the HTML reports. Produced by `reconciliar.py`.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `sigla` | Institución. |
-| `campo` | Campo modificado. |
-| `antes`, `despues` | Valor anterior y nuevo. |
-| `motivo` | Regla que justificó el cambio. |
+| `sigla` | Institution. |
+| `campo` | Field changed. |
+| `antes`, `despues` | Previous and new value. |
+| `motivo` | Rule that justified the change. |
 
-### `qa_irregularidades.csv` — 228 filas
+### `qa_irregularidades.csv` — 228 rows
 
-Incidencias detectadas en el inventario, con código de tipo y acción sugerida. Producida por `qa_cookies.py`. Se publica como evidencia del control de calidad, no como dato de análisis.
+Issues found in the inventory, with a type code and a suggested action. Produced by `qa_cookies.py`. Released as evidence of quality control, not as analysis data.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `id`, `grupo`, `sigla`, `universidad`, `sitio` | Sitio. |
-| `codigo` | Tipo de incidencia, de `I1` a `I9`. |
-| `irregularidad` | Descripción. |
-| `valor_actual` | Valor que la motivó. |
-| `accion_requerida` | Corrección sugerida. |
+| `id`, `grupo`, `sigla`, `universidad`, `sitio` | Site. |
+| `codigo` | Issue type, `I1` to `I9`. |
+| `irregularidad` | Description. |
+| `valor_actual` | The value that triggered it. |
+| `accion_requerida` | Suggested correction. |
 
-### `reporte_cookies_nacionales.csv` — 63 filas · `reporte_cookies_extranjeras.csv` — 63 filas
+### `reporte_cookies_nacionales.csv` — 63 rows · `reporte_cookies_extranjeras.csv` — 63 rows
 
-Inventarios por grupo, con los campos de la verificación manual. Son entrada de `construir_entradas.py`, que los fusiona para reconstruir la tabla de 126 sitios. Las columnas de cookies de estos archivos corresponden a la **verificación en vivo**, no a la medición automatizada.
+Inventories by group, holding the manual verification fields. They are inputs to `construir_entradas.py`, which merges them to rebuild the 126-site table. The cookie columns of these files come from the **live verification**, not from the automated measurement.
 
-Nacionales: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacion`, `Cookies_antes_consentir`, `Nombres_cookies`, `Rastreo`, `CMP_live`, `Banner_live`, `Banner_estudio`, `PolCookies_estudio`.
+National: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacion`, `Cookies_antes_consentir`, `Nombres_cookies`, `Rastreo`, `CMP_live`, `Banner_live`, `Banner_estudio`, `PolCookies_estudio`.
 
-Extranjeras: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
+Foreign: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
 
-### `sensibilidad_inclusion.csv` — 3 filas
+### `sensibilidad_inclusion.csv` — 3 rows
 
-Resultado del análisis de sensibilidad a la regla de inclusión de la réplica multipunto. Una fila por regla.
+Result of the sensitivity analysis on the inclusion rule of the multi-vantage replication. One row per rule.
 
-| Columna | Descripción |
+| Column | Description |
 |---|---|
-| `regla` | `R3` tres pasadas válidas por punto, la del artículo; `R2` al menos dos; `R1` al menos una. |
-| `n` | Sitios retenidos bajo esa regla. |
-| `Q`, `p_Q` | Q de Cochran sobre los cuatro puntos y su valor p, con 3 grados de libertad. |
-| `marg_EC`, `marg_EU`, `marg_GB`, `marg_US` | Sitios con rastreo en cada punto. |
-| `p_<par>` | Valor p exacto de McNemar de cada par. |
-| `pholm_<par>` | El mismo valor tras la corrección de Holm sobre las seis comparaciones. |
+| `regla` | `R3` three valid passes per vantage point, the article's rule; `R2` at least two; `R1` at least one. |
+| `n` | Sites retained under that rule. |
+| `Q`, `p_Q` | Cochran's Q over the four vantage points and its p value, 3 degrees of freedom. |
+| `marg_EC`, `marg_EU`, `marg_GB`, `marg_US` | Sites with tracking at each vantage point. |
+| `p_<pair>` | Exact McNemar p value for each pair. |
+| `pholm_<pair>` | The same value after Holm correction across the six comparisons. |
 
 ---
 
-## 5. Informes HTML
+## 5. HTML reports
 
-`docs/reports/` contiene cuatro informes navegables generados durante el trabajo de campo. No son datos primarios, pero **sí son entrada del código**: `construir_entradas.py` extrae de `reporte_cookies_combinado.html` y de `anexo_universidades_cookies.html` los datos embebidos en su constante `DATA` de JavaScript, que son necesarios para reproducir la cadena de tablas de cookies. Por eso se publican.
+`docs/reports/` holds four browsable reports produced during fieldwork. They are not primary data, but they **are inputs to the code**: `construir_entradas.py` extracts from `reporte_cookies_combinado.html` and `anexo_universidades_cookies.html` the data embedded in their JavaScript `DATA` constant, which is needed to reproduce the cookie table chain. That is why they are released.
 
 ---
 
-## 6. Cadena de dependencias
+## 6. Dependency chain
 
-Quién produce qué, y a partir de qué.
+What produces what, and from what.
 
 ```
 resultados.json ────────────────────────────► estudio.py
@@ -284,8 +288,8 @@ resultados.json + v2 ───────────► reconstruir_cookies.py
                                      ├─► cookies_nombres_sin_clasificar.csv
                                      └─► cookies_divergencias_v2.csv
 
-data/raw/tracking/ ─────────────► verificar_multipunto.py     (seccion multipunto)
+data/raw/tracking/ ─────────────► verificar_multipunto.py     (results section)
                                 ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
 ```
 
-Los archivos de `data/interim/` no se versionan porque `construir_entradas.py` los regenera desde material que sí está publicado.
+Files in `data/interim/` are not versioned because `construir_entradas.py` regenerates them from material that is published.

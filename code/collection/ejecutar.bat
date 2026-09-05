@@ -183,8 +183,9 @@ echo.
 echo   Revise que los archivos meta_%VANTAGE%_r*.json digan
 echo   "coincide_con_vantage": true
 echo.
-echo   Cuando tenga los tres puntos, ejecute el analisis:
-echo       python analizar_multipunto.py
+echo   Cuando tenga los cuatro puntos, ejecute el analisis:
+echo       cd ..\analysis
+echo       python verificar_multipunto.py
 echo.
 echo   MIRE LA SECCION 1b DEL INFORME. Si algun punto aparece como
 echo   SOSPECHOSO, ese nodo de VPN perdio contenido y hay que repetirlo
