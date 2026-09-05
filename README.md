@@ -45,7 +45,7 @@ code/
                       extended/              instrumento y lanzadores de la campana
                                              de cinco puntos
   analysis/           once scripts; ver "Reproduccion"
-docs/                 protocolo de la campana multipunto, en .tex y .pdf
+docs/
   reports/            cuatro informes HTML de cookies
 figures/              las seis figuras del articulo, en PDF
 CODEBOOK.md           definicion de cada columna de cada tabla
