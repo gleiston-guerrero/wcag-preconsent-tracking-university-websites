@@ -4,7 +4,7 @@
 
 Datos, evidencia y código del artículo *Two barriers to equitable access: WCAG conformance and pre-consent tracking on Ecuadorian and top-ranked university websites*, sometido a *Universal Access in the Information Society* (Springer Nature).
 
-**DOI del depósito:** `10.5281/zenodo.XXXXXXX` *(pendiente hasta la publicación del registro en Zenodo)*
+**DOI del depósito (de concepto, apunta siempre a la última versión):** [10.5281/zenodo.22405998](https://doi.org/10.5281/zenodo.22405998)
 
 ---
 
