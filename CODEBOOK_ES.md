@@ -258,12 +258,17 @@ Indicadores documentales, codificados inspeccionando el aviso de privacidad de p
 | `Ckp.` | Publica política de cookies específica. Solo grupo de referencia. |
 | `Acc.` | Declara accesibilidad o herramientas de accesibilidad. |
 | `Transp.` | Transparencia según la ley ecuatoriana de acceso a la información (LOTAIP). Solo grupo ecuatoriano. **No** es seguridad de transporte. |
+| `nueva_2024` | La institución fue creada en 2024 o después, marcada con doble daga en el apéndice del artículo. Solo grupo ecuatoriano. |
 
-Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y vacío donde la columna no aplica a ese grupo. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo.
+Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y `no_aplica` donde la columna no aplica a ese grupo. Ninguna celda queda vacía. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo. El código `parcial` se usa 25 veces: 18 en el grupo de referencia y 7 en el censo ecuatoriano. En todos los porcentajes que reporta el artículo se agrega con `no`, lo cual es una decisión del análisis y no una propiedad de la codificación; `matriz_documental_long.csv` permite calcular cualquier otra agregación.
 
 Los dos grupos se codificaron con conjuntos de columnas en parte distintos, y por eso algunas quedan vacías en un grupo y no en el otro. El grupo ecuatoriano tiene entre dos y seis celdas `nv` por indicador; el de referencia no tiene ninguna. Esa asimetría es en sí misma un hallazgo y queda invisible en los porcentajes agregados.
 
 **Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extraer_matriz_documental.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
+
+### `matriz_documental_long.csv` — 756 filas
+
+La misma matriz en formato largo, una fila por celda codificada. Columnas: `grupo`, `abbr`, `indicador`, `columna_apendice`, `valor`, `corregida_reverificacion`. Las celdas que no aplican al grupo se omiten en lugar de codificarse, de modo que cada fila lleva una decisión de codificación. Es el formato que hay que usar para cualquier agregación distinta de la que reporta el artículo. Distribución de las 756 celdas codificadas: 451 `si`, 256 `no`, 25 `parcial`, 24 `nv`. Las 24 celdas `nv` pertenecen todas al censo ecuatoriano; el grupo de referencia no tiene ninguna.
 
 ### `tls_deficiencias_agosto2026.csv` — 5 filas
 
@@ -332,7 +337,8 @@ resultados.json + v2 ───────────► reconstruir_cookies.py
 data/raw/tracking/ ─────────────► verificar_multipunto.py     (seccion de resultados)
                                 ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
 
-apendices del articulo (externo) ► extraer_matriz_documental.py ─► matriz_documental.csv
+apendices del articulo (externo) ► extraer_matriz_documental.py ─┬─► matriz_documental.csv
+                                                                 └─► matriz_documental_long.csv
 ```
 
 Los archivos de `data/interim/` no se versionan porque `construir_entradas.py` los regenera desde material que sí está publicado. El fuente del artículo no forma parte del depósito, y por eso el último paso del esquema no puede ejecutarse solo con este repositorio.

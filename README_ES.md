@@ -37,7 +37,7 @@ data/
                         meta_*.json  IP publica, geolocalizacion y versiones por pasada
     tracking_extended/  48 archivos de una campana posterior de cinco puntos,
                         con Suiza, NO analizada en el articulo. Ver mas abajo.
-  processed/          once tablas derivadas; ver CODEBOOK.md
+  processed/          doce tablas derivadas; ver CODEBOOK.md
   interim/            se crea al ejecutar el codigo; no se versiona
 code/
   collection/         auditar.js             auditoria de pasada unica

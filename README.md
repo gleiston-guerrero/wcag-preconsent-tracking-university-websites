@@ -37,7 +37,7 @@ data/
                         meta_*.json  public IP, geolocation and versions per pass
     tracking_extended/  48 files of a later five-vantage campaign, including
                         Switzerland, NOT analysed in the article. See below.
-  processed/          eleven derived tables; see CODEBOOK.md
+  processed/          twelve derived tables; see CODEBOOK.md
   interim/            created when the code runs; not versioned
 code/
   collection/         auditar.js             single-pass audit

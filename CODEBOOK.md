@@ -260,12 +260,17 @@ Documentary indicators, coded by inspecting each institution's first-level priva
 | `Ckp.` | A dedicated cookie policy is published. Benchmark group only. |
 | `Acc.` | An accessibility statement or accessibility tools are declared. |
 | `Transp.` | Transparency under the Ecuadorian access-to-information act (LOTAIP). Ecuadorian group only. It is **not** transport security. |
+| `nueva_2024` | The institution was created in 2024 or later, marked with a double dagger in the article appendix. Ecuadorian group only. |
 
-Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and empty where the column does not apply to that group. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article.
+Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and `no_aplica` where the column does not apply to that group. No cell is empty. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article. The `parcial` code is used 25 times: 18 in the benchmark group and 7 in the Ecuadorian census. It is aggregated with `no` in every percentage reported in the article, which is a decision of the analysis and not a property of the coding; `matriz_documental_long.csv` allows any other aggregation to be computed.
 
 The two groups were coded with partly different column sets, which is why some columns are empty for one group and not the other. The Ecuadorian group carries between two and six `nv` cells per indicator; the benchmark group carries none. That asymmetry is itself a finding and is invisible in the aggregate percentages.
 
 **Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extraer_matriz_documental.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
+
+### `matriz_documental_long.csv` — 756 rows
+
+The same matrix in long form, one row per coded cell. Columns: `grupo`, `abbr`, `indicador`, `columna_apendice`, `valor`, `corregida_reverificacion`. Cells that do not apply to the group are omitted rather than encoded, so every row carries a coding decision. This is the form to use for any aggregation other than the one reported in the article. Distribution of the 756 coded cells: 451 `si`, 256 `no`, 25 `parcial`, 24 `nv`. All 24 `nv` cells belong to the Ecuadorian census; the benchmark group has none.
 
 ### `tls_deficiencias_agosto2026.csv` — 5 rows
 
@@ -334,7 +339,8 @@ resultados.json + v2 ───────────► reconstruir_cookies.py
 data/raw/tracking/ ─────────────► verificar_multipunto.py     (results section)
                                 ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
 
-article appendices (external) ──► extraer_matriz_documental.py ─► matriz_documental.csv
+article appendices (external) ──► extraer_matriz_documental.py ─┬─► matriz_documental.csv
+                                                               └─► matriz_documental_long.csv
 ```
 
 Files in `data/interim/` are not versioned because `construir_entradas.py` regenerates them from material that is published. The article source is not part of the deposit, which is why the last step above cannot be run from this repository alone.

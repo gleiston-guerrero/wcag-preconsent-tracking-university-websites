@@ -1,0 +1,757 @@
+﻿grupo,abbr,indicador,columna_apendice,valor,corregida_reverificacion
+mundo,MIT,aviso_privacidad,Not.,si,no
+mundo,MIT,marco_normativo,Frm.,si,no
+mundo,MIT,derechos,Rts.,si,no
+mundo,MIT,contacto_dpo,DPO,si,no
+mundo,MIT,politica_cookies,Ckp.,no,no
+mundo,MIT,declaracion_accesibilidad,Acc.,si,no
+mundo,Stanford,aviso_privacidad,Not.,si,no
+mundo,Stanford,marco_normativo,Frm.,si,no
+mundo,Stanford,derechos,Rts.,si,no
+mundo,Stanford,contacto_dpo,DPO,si,no
+mundo,Stanford,politica_cookies,Ckp.,si,no
+mundo,Stanford,declaracion_accesibilidad,Acc.,si,no
+mundo,Harvard,aviso_privacidad,Not.,si,no
+mundo,Harvard,marco_normativo,Frm.,no,si
+mundo,Harvard,derechos,Rts.,no,no
+mundo,Harvard,contacto_dpo,DPO,no,no
+mundo,Harvard,politica_cookies,Ckp.,no,no
+mundo,Harvard,declaracion_accesibilidad,Acc.,si,no
+mundo,Oxford,aviso_privacidad,Not.,si,no
+mundo,Oxford,marco_normativo,Frm.,si,no
+mundo,Oxford,derechos,Rts.,si,no
+mundo,Oxford,contacto_dpo,DPO,si,no
+mundo,Oxford,politica_cookies,Ckp.,si,no
+mundo,Oxford,declaracion_accesibilidad,Acc.,si,no
+mundo,Cambridge,aviso_privacidad,Not.,si,si
+mundo,Cambridge,marco_normativo,Frm.,parcial,no
+mundo,Cambridge,derechos,Rts.,no,no
+mundo,Cambridge,contacto_dpo,DPO,no,no
+mundo,Cambridge,politica_cookies,Ckp.,si,no
+mundo,Cambridge,declaracion_accesibilidad,Acc.,si,no
+mundo,Caltech,aviso_privacidad,Not.,si,no
+mundo,Caltech,marco_normativo,Frm.,si,no
+mundo,Caltech,derechos,Rts.,no,no
+mundo,Caltech,contacto_dpo,DPO,si,no
+mundo,Caltech,politica_cookies,Ckp.,no,no
+mundo,Caltech,declaracion_accesibilidad,Acc.,si,no
+mundo,UC Berkeley,aviso_privacidad,Not.,si,no
+mundo,UC Berkeley,marco_normativo,Frm.,si,no
+mundo,UC Berkeley,derechos,Rts.,no,no
+mundo,UC Berkeley,contacto_dpo,DPO,si,no
+mundo,UC Berkeley,politica_cookies,Ckp.,no,no
+mundo,UC Berkeley,declaracion_accesibilidad,Acc.,si,no
+mundo,Princeton,aviso_privacidad,Not.,si,no
+mundo,Princeton,marco_normativo,Frm.,si,no
+mundo,Princeton,derechos,Rts.,si,no
+mundo,Princeton,contacto_dpo,DPO,si,no
+mundo,Princeton,politica_cookies,Ckp.,no,no
+mundo,Princeton,declaracion_accesibilidad,Acc.,si,no
+mundo,Imperial,aviso_privacidad,Not.,si,no
+mundo,Imperial,marco_normativo,Frm.,si,no
+mundo,Imperial,derechos,Rts.,parcial,no
+mundo,Imperial,contacto_dpo,DPO,no,no
+mundo,Imperial,politica_cookies,Ckp.,si,no
+mundo,Imperial,declaracion_accesibilidad,Acc.,si,no
+mundo,U Chicago,aviso_privacidad,Not.,si,no
+mundo,U Chicago,marco_normativo,Frm.,parcial,no
+mundo,U Chicago,derechos,Rts.,si,no
+mundo,U Chicago,contacto_dpo,DPO,si,no
+mundo,U Chicago,politica_cookies,Ckp.,no,no
+mundo,U Chicago,declaracion_accesibilidad,Acc.,no,no
+mundo,ETH Zurich,aviso_privacidad,Not.,si,no
+mundo,ETH Zurich,marco_normativo,Frm.,si,no
+mundo,ETH Zurich,derechos,Rts.,si,no
+mundo,ETH Zurich,contacto_dpo,DPO,si,no
+mundo,ETH Zurich,politica_cookies,Ckp.,no,no
+mundo,ETH Zurich,declaracion_accesibilidad,Acc.,si,no
+mundo,Yale,aviso_privacidad,Not.,si,no
+mundo,Yale,marco_normativo,Frm.,si,no
+mundo,Yale,derechos,Rts.,parcial,no
+mundo,Yale,contacto_dpo,DPO,si,no
+mundo,Yale,politica_cookies,Ckp.,no,no
+mundo,Yale,declaracion_accesibilidad,Acc.,si,no
+mundo,UPenn,aviso_privacidad,Not.,si,no
+mundo,UPenn,marco_normativo,Frm.,parcial,no
+mundo,UPenn,derechos,Rts.,si,no
+mundo,UPenn,contacto_dpo,DPO,si,no
+mundo,UPenn,politica_cookies,Ckp.,no,no
+mundo,UPenn,declaracion_accesibilidad,Acc.,si,no
+mundo,UCL,aviso_privacidad,Not.,si,no
+mundo,UCL,marco_normativo,Frm.,parcial,no
+mundo,UCL,derechos,Rts.,si,no
+mundo,UCL,contacto_dpo,DPO,si,no
+mundo,UCL,politica_cookies,Ckp.,si,no
+mundo,UCL,declaracion_accesibilidad,Acc.,si,no
+mundo,Cornell,aviso_privacidad,Not.,si,no
+mundo,Cornell,marco_normativo,Frm.,parcial,no
+mundo,Cornell,derechos,Rts.,si,no
+mundo,Cornell,contacto_dpo,DPO,si,no
+mundo,Cornell,politica_cookies,Ckp.,no,no
+mundo,Cornell,declaracion_accesibilidad,Acc.,si,no
+mundo,Tsinghua,aviso_privacidad,Not.,si,no
+mundo,Tsinghua,marco_normativo,Frm.,si,no
+mundo,Tsinghua,derechos,Rts.,si,no
+mundo,Tsinghua,contacto_dpo,DPO,si,no
+mundo,Tsinghua,politica_cookies,Ckp.,no,no
+mundo,Tsinghua,declaracion_accesibilidad,Acc.,no,no
+mundo,Peking,aviso_privacidad,Not.,parcial,no
+mundo,Peking,marco_normativo,Frm.,parcial,no
+mundo,Peking,derechos,Rts.,no,no
+mundo,Peking,contacto_dpo,DPO,no,no
+mundo,Peking,politica_cookies,Ckp.,no,no
+mundo,Peking,declaracion_accesibilidad,Acc.,no,no
+mundo,Johns Hopkins,aviso_privacidad,Not.,si,no
+mundo,Johns Hopkins,marco_normativo,Frm.,si,no
+mundo,Johns Hopkins,derechos,Rts.,si,no
+mundo,Johns Hopkins,contacto_dpo,DPO,si,no
+mundo,Johns Hopkins,politica_cookies,Ckp.,no,no
+mundo,Johns Hopkins,declaracion_accesibilidad,Acc.,si,no
+mundo,Columbia,aviso_privacidad,Not.,si,no
+mundo,Columbia,marco_normativo,Frm.,si,no
+mundo,Columbia,derechos,Rts.,si,no
+mundo,Columbia,contacto_dpo,DPO,si,no
+mundo,Columbia,politica_cookies,Ckp.,si,no
+mundo,Columbia,declaracion_accesibilidad,Acc.,si,no
+mundo,Toronto,aviso_privacidad,Not.,si,no
+mundo,Toronto,marco_normativo,Frm.,si,no
+mundo,Toronto,derechos,Rts.,si,no
+mundo,Toronto,contacto_dpo,DPO,si,no
+mundo,Toronto,politica_cookies,Ckp.,no,no
+mundo,Toronto,declaracion_accesibilidad,Acc.,si,no
+mundo,UCLA,aviso_privacidad,Not.,si,no
+mundo,UCLA,marco_normativo,Frm.,si,no
+mundo,UCLA,derechos,Rts.,si,no
+mundo,UCLA,contacto_dpo,DPO,si,no
+mundo,UCLA,politica_cookies,Ckp.,no,no
+mundo,UCLA,declaracion_accesibilidad,Acc.,si,no
+mundo,NUS,aviso_privacidad,Not.,si,no
+mundo,NUS,marco_normativo,Frm.,si,no
+mundo,NUS,derechos,Rts.,si,no
+mundo,NUS,contacto_dpo,DPO,si,no
+mundo,NUS,politica_cookies,Ckp.,no,no
+mundo,NUS,declaracion_accesibilidad,Acc.,no,no
+mundo,U Tokyo,aviso_privacidad,Not.,si,no
+mundo,U Tokyo,marco_normativo,Frm.,si,no
+mundo,U Tokyo,derechos,Rts.,si,no
+mundo,U Tokyo,contacto_dpo,DPO,no,no
+mundo,U Tokyo,politica_cookies,Ckp.,no,no
+mundo,U Tokyo,declaracion_accesibilidad,Acc.,no,no
+mundo,TUM,aviso_privacidad,Not.,si,no
+mundo,TUM,marco_normativo,Frm.,si,no
+mundo,TUM,derechos,Rts.,si,no
+mundo,TUM,contacto_dpo,DPO,si,no
+mundo,TUM,politica_cookies,Ckp.,no,no
+mundo,TUM,declaracion_accesibilidad,Acc.,no,no
+mundo,Melbourne,aviso_privacidad,Not.,si,no
+mundo,Melbourne,marco_normativo,Frm.,si,no
+mundo,Melbourne,derechos,Rts.,si,no
+mundo,Melbourne,contacto_dpo,DPO,si,no
+mundo,Melbourne,politica_cookies,Ckp.,no,no
+mundo,Melbourne,declaracion_accesibilidad,Acc.,no,no
+mundo,Edinburgh,aviso_privacidad,Not.,si,no
+mundo,Edinburgh,marco_normativo,Frm.,si,no
+mundo,Edinburgh,derechos,Rts.,si,no
+mundo,Edinburgh,contacto_dpo,DPO,si,no
+mundo,Edinburgh,politica_cookies,Ckp.,no,no
+mundo,Edinburgh,declaracion_accesibilidad,Acc.,si,no
+mundo,EPFL,aviso_privacidad,Not.,si,no
+mundo,EPFL,marco_normativo,Frm.,si,no
+mundo,EPFL,derechos,Rts.,si,no
+mundo,EPFL,contacto_dpo,DPO,si,no
+mundo,EPFL,politica_cookies,Ckp.,no,no
+mundo,EPFL,declaracion_accesibilidad,Acc.,si,no
+mundo,Michigan,aviso_privacidad,Not.,si,no
+mundo,Michigan,marco_normativo,Frm.,no,no
+mundo,Michigan,derechos,Rts.,no,no
+mundo,Michigan,contacto_dpo,DPO,si,no
+mundo,Michigan,politica_cookies,Ckp.,no,no
+mundo,Michigan,declaracion_accesibilidad,Acc.,no,no
+mundo,Northwestern,aviso_privacidad,Not.,si,no
+mundo,Northwestern,marco_normativo,Frm.,parcial,no
+mundo,Northwestern,derechos,Rts.,si,no
+mundo,Northwestern,contacto_dpo,DPO,si,no
+mundo,Northwestern,politica_cookies,Ckp.,si,no
+mundo,Northwestern,declaracion_accesibilidad,Acc.,si,no
+mundo,Fudan,aviso_privacidad,Not.,no,no
+mundo,Fudan,marco_normativo,Frm.,no,no
+mundo,Fudan,derechos,Rts.,no,no
+mundo,Fudan,contacto_dpo,DPO,no,no
+mundo,Fudan,politica_cookies,Ckp.,no,no
+mundo,Fudan,declaracion_accesibilidad,Acc.,no,no
+mundo,PSL,aviso_privacidad,Not.,si,no
+mundo,PSL,marco_normativo,Frm.,si,no
+mundo,PSL,derechos,Rts.,si,no
+mundo,PSL,contacto_dpo,DPO,si,no
+mundo,PSL,politica_cookies,Ckp.,no,no
+mundo,PSL,declaracion_accesibilidad,Acc.,no,no
+mundo,HKU,aviso_privacidad,Not.,si,no
+mundo,HKU,marco_normativo,Frm.,si,no
+mundo,HKU,derechos,Rts.,si,no
+mundo,HKU,contacto_dpo,DPO,si,no
+mundo,HKU,politica_cookies,Ckp.,no,no
+mundo,HKU,declaracion_accesibilidad,Acc.,si,no
+mundo,Zhejiang,aviso_privacidad,Not.,si,no
+mundo,Zhejiang,marco_normativo,Frm.,parcial,no
+mundo,Zhejiang,derechos,Rts.,si,no
+mundo,Zhejiang,contacto_dpo,DPO,si,no
+mundo,Zhejiang,politica_cookies,Ckp.,no,no
+mundo,Zhejiang,declaracion_accesibilidad,Acc.,no,no
+mundo,NYU,aviso_privacidad,Not.,si,no
+mundo,NYU,marco_normativo,Frm.,si,no
+mundo,NYU,derechos,Rts.,si,no
+mundo,NYU,contacto_dpo,DPO,si,no
+mundo,NYU,politica_cookies,Ckp.,no,no
+mundo,NYU,declaracion_accesibilidad,Acc.,si,no
+mundo,SJTU,aviso_privacidad,Not.,no,no
+mundo,SJTU,marco_normativo,Frm.,no,no
+mundo,SJTU,derechos,Rts.,no,no
+mundo,SJTU,contacto_dpo,DPO,no,no
+mundo,SJTU,politica_cookies,Ckp.,no,no
+mundo,SJTU,declaracion_accesibilidad,Acc.,no,no
+mundo,KCL,aviso_privacidad,Not.,si,no
+mundo,KCL,marco_normativo,Frm.,parcial,no
+mundo,KCL,derechos,Rts.,si,no
+mundo,KCL,contacto_dpo,DPO,si,no
+mundo,KCL,politica_cookies,Ckp.,si,no
+mundo,KCL,declaracion_accesibilidad,Acc.,si,no
+mundo,UCSD,aviso_privacidad,Not.,si,no
+mundo,UCSD,marco_normativo,Frm.,si,no
+mundo,UCSD,derechos,Rts.,si,no
+mundo,UCSD,contacto_dpo,DPO,si,no
+mundo,UCSD,politica_cookies,Ckp.,no,no
+mundo,UCSD,declaracion_accesibilidad,Acc.,si,no
+mundo,LMU,aviso_privacidad,Not.,si,no
+mundo,LMU,marco_normativo,Frm.,si,no
+mundo,LMU,derechos,Rts.,si,no
+mundo,LMU,contacto_dpo,DPO,si,no
+mundo,LMU,politica_cookies,Ckp.,no,no
+mundo,LMU,declaracion_accesibilidad,Acc.,si,no
+mundo,Duke,aviso_privacidad,Not.,si,no
+mundo,Duke,marco_normativo,Frm.,si,no
+mundo,Duke,derechos,Rts.,si,no
+mundo,Duke,contacto_dpo,DPO,si,no
+mundo,Duke,politica_cookies,Ckp.,no,no
+mundo,Duke,declaracion_accesibilidad,Acc.,si,no
+mundo,Manchester,aviso_privacidad,Not.,si,no
+mundo,Manchester,marco_normativo,Frm.,si,no
+mundo,Manchester,derechos,Rts.,parcial,no
+mundo,Manchester,contacto_dpo,DPO,si,no
+mundo,Manchester,politica_cookies,Ckp.,no,no
+mundo,Manchester,declaracion_accesibilidad,Acc.,si,no
+mundo,UBC,aviso_privacidad,Not.,si,no
+mundo,UBC,marco_normativo,Frm.,si,no
+mundo,UBC,derechos,Rts.,parcial,no
+mundo,UBC,contacto_dpo,DPO,si,no
+mundo,UBC,politica_cookies,Ckp.,no,no
+mundo,UBC,declaracion_accesibilidad,Acc.,si,no
+mundo,Sydney,aviso_privacidad,Not.,si,no
+mundo,Sydney,marco_normativo,Frm.,si,no
+mundo,Sydney,derechos,Rts.,si,no
+mundo,Sydney,contacto_dpo,DPO,si,no
+mundo,Sydney,politica_cookies,Ckp.,no,no
+mundo,Sydney,declaracion_accesibilidad,Acc.,si,no
+mundo,Paris-Saclay,aviso_privacidad,Not.,si,no
+mundo,Paris-Saclay,marco_normativo,Frm.,si,no
+mundo,Paris-Saclay,derechos,Rts.,si,no
+mundo,Paris-Saclay,contacto_dpo,DPO,si,no
+mundo,Paris-Saclay,politica_cookies,Ckp.,si,no
+mundo,Paris-Saclay,declaracion_accesibilidad,Acc.,si,no
+mundo,Kyoto,aviso_privacidad,Not.,si,no
+mundo,Kyoto,marco_normativo,Frm.,parcial,no
+mundo,Kyoto,derechos,Rts.,si,no
+mundo,Kyoto,contacto_dpo,DPO,si,no
+mundo,Kyoto,politica_cookies,Ckp.,no,no
+mundo,Kyoto,declaracion_accesibilidad,Acc.,no,no
+mundo,Illinois,aviso_privacidad,Not.,si,no
+mundo,Illinois,marco_normativo,Frm.,si,no
+mundo,Illinois,derechos,Rts.,si,no
+mundo,Illinois,contacto_dpo,DPO,si,no
+mundo,Illinois,politica_cookies,Ckp.,no,no
+mundo,Illinois,declaracion_accesibilidad,Acc.,si,no
+mundo,UT Austin,aviso_privacidad,Not.,si,no
+mundo,UT Austin,marco_normativo,Frm.,si,no
+mundo,UT Austin,derechos,Rts.,si,no
+mundo,UT Austin,contacto_dpo,DPO,si,no
+mundo,UT Austin,politica_cookies,Ckp.,no,no
+mundo,UT Austin,declaracion_accesibilidad,Acc.,si,no
+mundo,UW,aviso_privacidad,Not.,si,no
+mundo,UW,marco_normativo,Frm.,si,no
+mundo,UW,derechos,Rts.,si,no
+mundo,UW,contacto_dpo,DPO,si,no
+mundo,UW,politica_cookies,Ckp.,no,no
+mundo,UW,declaracion_accesibilidad,Acc.,si,no
+mundo,NTU,aviso_privacidad,Not.,si,no
+mundo,NTU,marco_normativo,Frm.,si,no
+mundo,NTU,derechos,Rts.,si,no
+mundo,NTU,contacto_dpo,DPO,si,no
+mundo,NTU,politica_cookies,Ckp.,no,no
+mundo,NTU,declaracion_accesibilidad,Acc.,no,no
+mundo,McGill,aviso_privacidad,Not.,si,no
+mundo,McGill,marco_normativo,Frm.,si,no
+mundo,McGill,derechos,Rts.,si,no
+mundo,McGill,contacto_dpo,DPO,si,no
+mundo,McGill,politica_cookies,Ckp.,si,no
+mundo,McGill,declaracion_accesibilidad,Acc.,si,no
+mundo,CUHK,aviso_privacidad,Not.,si,no
+mundo,CUHK,marco_normativo,Frm.,si,no
+mundo,CUHK,derechos,Rts.,si,no
+mundo,CUHK,contacto_dpo,DPO,no,no
+mundo,CUHK,politica_cookies,Ckp.,no,no
+mundo,CUHK,declaracion_accesibilidad,Acc.,si,no
+mundo,CMU,aviso_privacidad,Not.,si,no
+mundo,CMU,marco_normativo,Frm.,si,no
+mundo,CMU,derechos,Rts.,si,no
+mundo,CMU,contacto_dpo,DPO,si,no
+mundo,CMU,politica_cookies,Ckp.,no,no
+mundo,CMU,declaracion_accesibilidad,Acc.,si,no
+mundo,Wisconsin,aviso_privacidad,Not.,si,no
+mundo,Wisconsin,marco_normativo,Frm.,si,no
+mundo,Wisconsin,derechos,Rts.,no,no
+mundo,Wisconsin,contacto_dpo,DPO,si,no
+mundo,Wisconsin,politica_cookies,Ckp.,si,no
+mundo,Wisconsin,declaracion_accesibilidad,Acc.,si,no
+mundo,USTC,aviso_privacidad,Not.,parcial,no
+mundo,USTC,marco_normativo,Frm.,si,no
+mundo,USTC,derechos,Rts.,si,no
+mundo,USTC,contacto_dpo,DPO,si,no
+mundo,USTC,politica_cookies,Ckp.,no,no
+mundo,USTC,declaracion_accesibilidad,Acc.,no,no
+mundo,WUSTL,aviso_privacidad,Not.,si,no
+mundo,WUSTL,marco_normativo,Frm.,no,no
+mundo,WUSTL,derechos,Rts.,no,no
+mundo,WUSTL,contacto_dpo,DPO,si,no
+mundo,WUSTL,politica_cookies,Ckp.,no,no
+mundo,WUSTL,declaracion_accesibilidad,Acc.,si,no
+mundo,Monash,aviso_privacidad,Not.,si,no
+mundo,Monash,marco_normativo,Frm.,si,no
+mundo,Monash,derechos,Rts.,no,no
+mundo,Monash,contacto_dpo,DPO,no,no
+mundo,Monash,politica_cookies,Ckp.,no,no
+mundo,Monash,declaracion_accesibilidad,Acc.,si,no
+mundo,SNU,aviso_privacidad,Not.,si,no
+mundo,SNU,marco_normativo,Frm.,si,no
+mundo,SNU,derechos,Rts.,si,no
+mundo,SNU,contacto_dpo,DPO,si,no
+mundo,SNU,politica_cookies,Ckp.,no,no
+mundo,SNU,declaracion_accesibilidad,Acc.,no,no
+mundo,Heidelberg,aviso_privacidad,Not.,si,no
+mundo,Heidelberg,marco_normativo,Frm.,si,no
+mundo,Heidelberg,derechos,Rts.,si,no
+mundo,Heidelberg,contacto_dpo,DPO,si,no
+mundo,Heidelberg,politica_cookies,Ckp.,no,no
+mundo,Heidelberg,declaracion_accesibilidad,Acc.,si,no
+mundo,HKUST,aviso_privacidad,Not.,si,no
+mundo,HKUST,marco_normativo,Frm.,si,no
+mundo,HKUST,derechos,Rts.,si,no
+mundo,HKUST,contacto_dpo,DPO,si,no
+mundo,HKUST,politica_cookies,Ckp.,no,no
+mundo,HKUST,declaracion_accesibilidad,Acc.,si,no
+mundo,Karolinska,aviso_privacidad,Not.,si,no
+mundo,Karolinska,marco_normativo,Frm.,parcial,no
+mundo,Karolinska,derechos,Rts.,si,no
+mundo,Karolinska,contacto_dpo,DPO,si,no
+mundo,Karolinska,politica_cookies,Ckp.,si,no
+mundo,Karolinska,declaracion_accesibilidad,Acc.,si,no
+mundo,TU Delft,aviso_privacidad,Not.,si,no
+mundo,TU Delft,marco_normativo,Frm.,si,no
+mundo,TU Delft,derechos,Rts.,si,no
+mundo,TU Delft,contacto_dpo,DPO,si,no
+mundo,TU Delft,politica_cookies,Ckp.,si,no
+mundo,TU Delft,declaracion_accesibilidad,Acc.,si,no
+mundo,ANU,aviso_privacidad,Not.,si,no
+mundo,ANU,marco_normativo,Frm.,si,no
+mundo,ANU,derechos,Rts.,parcial,no
+mundo,ANU,contacto_dpo,DPO,si,no
+mundo,ANU,politica_cookies,Ckp.,no,no
+mundo,ANU,declaracion_accesibilidad,Acc.,si,no
+mundo,KU Leuven,aviso_privacidad,Not.,si,no
+mundo,KU Leuven,marco_normativo,Frm.,si,no
+mundo,KU Leuven,derechos,Rts.,si,no
+mundo,KU Leuven,contacto_dpo,DPO,si,no
+mundo,KU Leuven,politica_cookies,Ckp.,si,no
+mundo,KU Leuven,declaracion_accesibilidad,Acc.,si,no
+mundo,Queensland,aviso_privacidad,Not.,si,no
+mundo,Queensland,marco_normativo,Frm.,si,no
+mundo,Queensland,derechos,Rts.,si,no
+mundo,Queensland,contacto_dpo,DPO,si,no
+mundo,Queensland,politica_cookies,Ckp.,no,no
+mundo,Queensland,declaracion_accesibilidad,Acc.,si,no
+ecuador,EPN,aviso_privacidad,Notice,si,no
+ecuador,EPN,marco_normativo,LOPDP,si,no
+ecuador,EPN,derechos,Rights,si,no
+ecuador,EPN,contacto_dpo,DPO,no,no
+ecuador,EPN,declaracion_accesibilidad,Acc.,no,no
+ecuador,EPN,transparencia_lotaip,Transp.,si,no
+ecuador,ESPOL,aviso_privacidad,Notice,si,no
+ecuador,ESPOL,marco_normativo,LOPDP,si,no
+ecuador,ESPOL,derechos,Rights,si,no
+ecuador,ESPOL,contacto_dpo,DPO,si,no
+ecuador,ESPOL,declaracion_accesibilidad,Acc.,no,no
+ecuador,ESPOL,transparencia_lotaip,Transp.,si,no
+ecuador,ESPOCH,aviso_privacidad,Notice,no,no
+ecuador,ESPOCH,marco_normativo,LOPDP,no,no
+ecuador,ESPOCH,derechos,Rights,no,no
+ecuador,ESPOCH,contacto_dpo,DPO,no,no
+ecuador,ESPOCH,declaracion_accesibilidad,Acc.,no,no
+ecuador,ESPOCH,transparencia_lotaip,Transp.,si,no
+ecuador,ESPAM MFL,aviso_privacidad,Notice,no,no
+ecuador,ESPAM MFL,marco_normativo,LOPDP,no,no
+ecuador,ESPAM MFL,derechos,Rights,no,no
+ecuador,ESPAM MFL,contacto_dpo,DPO,no,no
+ecuador,ESPAM MFL,declaracion_accesibilidad,Acc.,no,no
+ecuador,ESPAM MFL,transparencia_lotaip,Transp.,si,no
+ecuador,ESPE,aviso_privacidad,Notice,si,no
+ecuador,ESPE,marco_normativo,LOPDP,si,no
+ecuador,ESPE,derechos,Rights,si,no
+ecuador,ESPE,contacto_dpo,DPO,si,no
+ecuador,ESPE,declaracion_accesibilidad,Acc.,si,no
+ecuador,ESPE,transparencia_lotaip,Transp.,si,no
+ecuador,UCE,aviso_privacidad,Notice,nv,no
+ecuador,UCE,marco_normativo,LOPDP,no,no
+ecuador,UCE,derechos,Rights,no,no
+ecuador,UCE,contacto_dpo,DPO,no,no
+ecuador,UCE,declaracion_accesibilidad,Acc.,no,no
+ecuador,UCE,transparencia_lotaip,Transp.,si,no
+ecuador,UCuenca,aviso_privacidad,Notice,si,no
+ecuador,UCuenca,marco_normativo,LOPDP,si,no
+ecuador,UCuenca,derechos,Rights,si,no
+ecuador,UCuenca,contacto_dpo,DPO,no,no
+ecuador,UCuenca,declaracion_accesibilidad,Acc.,no,no
+ecuador,UCuenca,transparencia_lotaip,Transp.,si,no
+ecuador,UG,aviso_privacidad,Notice,si,no
+ecuador,UG,marco_normativo,LOPDP,si,no
+ecuador,UG,derechos,Rights,si,no
+ecuador,UG,contacto_dpo,DPO,si,no
+ecuador,UG,declaracion_accesibilidad,Acc.,no,no
+ecuador,UG,transparencia_lotaip,Transp.,si,no
+ecuador,UNL,aviso_privacidad,Notice,no,no
+ecuador,UNL,marco_normativo,LOPDP,no,no
+ecuador,UNL,derechos,Rights,no,no
+ecuador,UNL,contacto_dpo,DPO,no,no
+ecuador,UNL,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNL,transparencia_lotaip,Transp.,si,no
+ecuador,UAE,aviso_privacidad,Notice,no,no
+ecuador,UAE,marco_normativo,LOPDP,no,no
+ecuador,UAE,derechos,Rights,no,no
+ecuador,UAE,contacto_dpo,DPO,no,no
+ecuador,UAE,declaracion_accesibilidad,Acc.,no,no
+ecuador,UAE,transparencia_lotaip,Transp.,si,no
+ecuador,UTA,aviso_privacidad,Notice,si,no
+ecuador,UTA,marco_normativo,LOPDP,nv,no
+ecuador,UTA,derechos,Rights,nv,no
+ecuador,UTA,contacto_dpo,DPO,nv,no
+ecuador,UTA,declaracion_accesibilidad,Acc.,nv,no
+ecuador,UTA,transparencia_lotaip,Transp.,si,no
+ecuador,UTB,aviso_privacidad,Notice,si,no
+ecuador,UTB,marco_normativo,LOPDP,si,no
+ecuador,UTB,derechos,Rights,si,no
+ecuador,UTB,contacto_dpo,DPO,si,no
+ecuador,UTB,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTB,transparencia_lotaip,Transp.,si,no
+ecuador,UTC,aviso_privacidad,Notice,si,no
+ecuador,UTC,marco_normativo,LOPDP,no,no
+ecuador,UTC,derechos,Rights,no,no
+ecuador,UTC,contacto_dpo,DPO,no,no
+ecuador,UTC,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTC,transparencia_lotaip,Transp.,nv,no
+ecuador,UTMACH,aviso_privacidad,Notice,si,no
+ecuador,UTMACH,marco_normativo,LOPDP,si,no
+ecuador,UTMACH,derechos,Rights,si,no
+ecuador,UTMACH,contacto_dpo,DPO,si,no
+ecuador,UTMACH,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTMACH,transparencia_lotaip,Transp.,si,no
+ecuador,UTM,aviso_privacidad,Notice,no,no
+ecuador,UTM,marco_normativo,LOPDP,no,no
+ecuador,UTM,derechos,Rights,no,no
+ecuador,UTM,contacto_dpo,DPO,no,no
+ecuador,UTM,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTM,transparencia_lotaip,Transp.,si,no
+ecuador,UTN,aviso_privacidad,Notice,parcial,no
+ecuador,UTN,marco_normativo,LOPDP,si,no
+ecuador,UTN,derechos,Rights,si,no
+ecuador,UTN,contacto_dpo,DPO,no,no
+ecuador,UTN,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTN,transparencia_lotaip,Transp.,si,no
+ecuador,UTEQ,aviso_privacidad,Notice,parcial,no
+ecuador,UTEQ,marco_normativo,LOPDP,si,no
+ecuador,UTEQ,derechos,Rights,no,no
+ecuador,UTEQ,contacto_dpo,DPO,no,no
+ecuador,UTEQ,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTEQ,transparencia_lotaip,Transp.,si,no
+ecuador,UTELVT,aviso_privacidad,Notice,no,no
+ecuador,UTELVT,marco_normativo,LOPDP,no,no
+ecuador,UTELVT,derechos,Rights,no,no
+ecuador,UTELVT,contacto_dpo,DPO,no,no
+ecuador,UTELVT,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTELVT,transparencia_lotaip,Transp.,si,no
+ecuador,UEB,aviso_privacidad,Notice,si,no
+ecuador,UEB,marco_normativo,LOPDP,nv,no
+ecuador,UEB,derechos,Rights,nv,no
+ecuador,UEB,contacto_dpo,DPO,nv,no
+ecuador,UEB,declaracion_accesibilidad,Acc.,si,no
+ecuador,UEB,transparencia_lotaip,Transp.,si,no
+ecuador,UNESUM,aviso_privacidad,Notice,parcial,no
+ecuador,UNESUM,marco_normativo,LOPDP,nv,no
+ecuador,UNESUM,derechos,Rights,no,no
+ecuador,UNESUM,contacto_dpo,DPO,no,no
+ecuador,UNESUM,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNESUM,transparencia_lotaip,Transp.,si,no
+ecuador,UNEMI,aviso_privacidad,Notice,si,no
+ecuador,UNEMI,marco_normativo,LOPDP,si,no
+ecuador,UNEMI,derechos,Rights,si,no
+ecuador,UNEMI,contacto_dpo,DPO,no,no
+ecuador,UNEMI,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNEMI,transparencia_lotaip,Transp.,si,no
+ecuador,UEA,aviso_privacidad,Notice,si,no
+ecuador,UEA,marco_normativo,LOPDP,no,no
+ecuador,UEA,derechos,Rights,si,no
+ecuador,UEA,contacto_dpo,DPO,no,no
+ecuador,UEA,declaracion_accesibilidad,Acc.,no,no
+ecuador,UEA,transparencia_lotaip,Transp.,si,no
+ecuador,UPSE,aviso_privacidad,Notice,parcial,no
+ecuador,UPSE,marco_normativo,LOPDP,si,no
+ecuador,UPSE,derechos,Rights,si,no
+ecuador,UPSE,contacto_dpo,DPO,si,no
+ecuador,UPSE,declaracion_accesibilidad,Acc.,parcial,no
+ecuador,UPSE,transparencia_lotaip,Transp.,si,no
+ecuador,ULEAM,aviso_privacidad,Notice,no,no
+ecuador,ULEAM,marco_normativo,LOPDP,no,no
+ecuador,ULEAM,derechos,Rights,no,no
+ecuador,ULEAM,contacto_dpo,DPO,no,no
+ecuador,ULEAM,declaracion_accesibilidad,Acc.,no,no
+ecuador,ULEAM,transparencia_lotaip,Transp.,si,no
+ecuador,UNACH,aviso_privacidad,Notice,si,no
+ecuador,UNACH,marco_normativo,LOPDP,si,no
+ecuador,UNACH,derechos,Rights,si,no
+ecuador,UNACH,contacto_dpo,DPO,si,no
+ecuador,UNACH,declaracion_accesibilidad,Acc.,si,no
+ecuador,UNACH,transparencia_lotaip,Transp.,si,no
+ecuador,UNAE,aviso_privacidad,Notice,no,no
+ecuador,UNAE,marco_normativo,LOPDP,no,no
+ecuador,UNAE,derechos,Rights,no,no
+ecuador,UNAE,contacto_dpo,DPO,no,no
+ecuador,UNAE,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNAE,transparencia_lotaip,Transp.,si,no
+ecuador,UPEC,aviso_privacidad,Notice,no,no
+ecuador,UPEC,marco_normativo,LOPDP,parcial,no
+ecuador,UPEC,derechos,Rights,no,no
+ecuador,UPEC,contacto_dpo,DPO,no,no
+ecuador,UPEC,declaracion_accesibilidad,Acc.,no,no
+ecuador,UPEC,transparencia_lotaip,Transp.,si,no
+ecuador,Yachay Tech,aviso_privacidad,Notice,no,no
+ecuador,Yachay Tech,marco_normativo,LOPDP,no,no
+ecuador,Yachay Tech,derechos,Rights,no,no
+ecuador,Yachay Tech,contacto_dpo,DPO,no,no
+ecuador,Yachay Tech,declaracion_accesibilidad,Acc.,no,no
+ecuador,Yachay Tech,transparencia_lotaip,Transp.,si,no
+ecuador,Ikiam,aviso_privacidad,Notice,si,no
+ecuador,Ikiam,marco_normativo,LOPDP,si,no
+ecuador,Ikiam,derechos,Rights,si,no
+ecuador,Ikiam,contacto_dpo,DPO,si,no
+ecuador,Ikiam,declaracion_accesibilidad,Acc.,no,no
+ecuador,Ikiam,transparencia_lotaip,Transp.,si,no
+ecuador,UArtes,aviso_privacidad,Notice,si,no
+ecuador,UArtes,marco_normativo,LOPDP,si,no
+ecuador,UArtes,derechos,Rights,si,no
+ecuador,UArtes,contacto_dpo,DPO,si,no
+ecuador,UArtes,declaracion_accesibilidad,Acc.,no,no
+ecuador,UArtes,transparencia_lotaip,Transp.,si,no
+ecuador,Amawtay Wasi,aviso_privacidad,Notice,no,no
+ecuador,Amawtay Wasi,marco_normativo,LOPDP,no,no
+ecuador,Amawtay Wasi,derechos,Rights,no,no
+ecuador,Amawtay Wasi,contacto_dpo,DPO,no,no
+ecuador,Amawtay Wasi,declaracion_accesibilidad,Acc.,no,no
+ecuador,Amawtay Wasi,transparencia_lotaip,Transp.,si,no
+ecuador,USECIPOL,aviso_privacidad,Notice,parcial,no
+ecuador,USECIPOL,marco_normativo,LOPDP,no,no
+ecuador,USECIPOL,derechos,Rights,no,no
+ecuador,USECIPOL,contacto_dpo,DPO,no,no
+ecuador,USECIPOL,declaracion_accesibilidad,Acc.,no,no
+ecuador,USECIPOL,transparencia_lotaip,Transp.,si,no
+ecuador,IAEN,aviso_privacidad,Notice,si,no
+ecuador,IAEN,marco_normativo,LOPDP,si,no
+ecuador,IAEN,derechos,Rights,si,no
+ecuador,IAEN,contacto_dpo,DPO,no,no
+ecuador,IAEN,declaracion_accesibilidad,Acc.,si,no
+ecuador,IAEN,transparencia_lotaip,Transp.,si,no
+ecuador,UASB,aviso_privacidad,Notice,si,no
+ecuador,UASB,marco_normativo,LOPDP,si,no
+ecuador,UASB,derechos,Rights,si,no
+ecuador,UASB,contacto_dpo,DPO,si,no
+ecuador,UASB,declaracion_accesibilidad,Acc.,no,no
+ecuador,UASB,transparencia_lotaip,Transp.,si,no
+ecuador,FLACSO,aviso_privacidad,Notice,no,no
+ecuador,FLACSO,marco_normativo,LOPDP,no,no
+ecuador,FLACSO,derechos,Rights,no,no
+ecuador,FLACSO,contacto_dpo,DPO,no,no
+ecuador,FLACSO,declaracion_accesibilidad,Acc.,no,no
+ecuador,FLACSO,transparencia_lotaip,Transp.,si,no
+ecuador,PUCE,aviso_privacidad,Notice,si,no
+ecuador,PUCE,marco_normativo,LOPDP,si,no
+ecuador,PUCE,derechos,Rights,si,no
+ecuador,PUCE,contacto_dpo,DPO,si,no
+ecuador,PUCE,declaracion_accesibilidad,Acc.,no,no
+ecuador,PUCE,transparencia_lotaip,Transp.,si,no
+ecuador,UCSG,aviso_privacidad,Notice,si,no
+ecuador,UCSG,marco_normativo,LOPDP,si,no
+ecuador,UCSG,derechos,Rights,si,no
+ecuador,UCSG,contacto_dpo,DPO,si,no
+ecuador,UCSG,declaracion_accesibilidad,Acc.,no,no
+ecuador,UCSG,transparencia_lotaip,Transp.,si,no
+ecuador,UCACUE,aviso_privacidad,Notice,si,no
+ecuador,UCACUE,marco_normativo,LOPDP,si,no
+ecuador,UCACUE,derechos,Rights,si,no
+ecuador,UCACUE,contacto_dpo,DPO,si,no
+ecuador,UCACUE,declaracion_accesibilidad,Acc.,si,no
+ecuador,UCACUE,transparencia_lotaip,Transp.,si,no
+ecuador,ULVR,aviso_privacidad,Notice,no,no
+ecuador,ULVR,marco_normativo,LOPDP,no,no
+ecuador,ULVR,derechos,Rights,no,no
+ecuador,ULVR,contacto_dpo,DPO,no,no
+ecuador,ULVR,declaracion_accesibilidad,Acc.,no,no
+ecuador,ULVR,transparencia_lotaip,Transp.,si,no
+ecuador,UTPL,aviso_privacidad,Notice,si,no
+ecuador,UTPL,marco_normativo,LOPDP,si,no
+ecuador,UTPL,derechos,Rights,si,no
+ecuador,UTPL,contacto_dpo,DPO,si,no
+ecuador,UTPL,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTPL,transparencia_lotaip,Transp.,nv,no
+ecuador,UTE,aviso_privacidad,Notice,si,no
+ecuador,UTE,marco_normativo,LOPDP,no,no
+ecuador,UTE,derechos,Rights,no,no
+ecuador,UTE,contacto_dpo,DPO,no,no
+ecuador,UTE,declaracion_accesibilidad,Acc.,si,no
+ecuador,UTE,transparencia_lotaip,Transp.,nv,no
+ecuador,UDA,aviso_privacidad,Notice,no,no
+ecuador,UDA,marco_normativo,LOPDP,no,no
+ecuador,UDA,derechos,Rights,no,no
+ecuador,UDA,contacto_dpo,DPO,no,no
+ecuador,UDA,declaracion_accesibilidad,Acc.,no,no
+ecuador,UDA,transparencia_lotaip,Transp.,si,no
+ecuador,UPS,aviso_privacidad,Notice,si,no
+ecuador,UPS,marco_normativo,LOPDP,si,no
+ecuador,UPS,derechos,Rights,si,no
+ecuador,UPS,contacto_dpo,DPO,no,no
+ecuador,UPS,declaracion_accesibilidad,Acc.,no,no
+ecuador,UPS,transparencia_lotaip,Transp.,si,no
+ecuador,UISEK,aviso_privacidad,Notice,si,no
+ecuador,UISEK,marco_normativo,LOPDP,no,no
+ecuador,UISEK,derechos,Rights,si,no
+ecuador,UISEK,contacto_dpo,DPO,no,no
+ecuador,UISEK,declaracion_accesibilidad,Acc.,no,no
+ecuador,UISEK,transparencia_lotaip,Transp.,no,no
+ecuador,UEES,aviso_privacidad,Notice,si,no
+ecuador,UEES,marco_normativo,LOPDP,si,no
+ecuador,UEES,derechos,Rights,si,no
+ecuador,UEES,contacto_dpo,DPO,si,no
+ecuador,UEES,declaracion_accesibilidad,Acc.,no,no
+ecuador,UEES,transparencia_lotaip,Transp.,no,no
+ecuador,USFQ,aviso_privacidad,Notice,si,no
+ecuador,USFQ,marco_normativo,LOPDP,si,no
+ecuador,USFQ,derechos,Rights,si,no
+ecuador,USFQ,contacto_dpo,DPO,si,no
+ecuador,USFQ,declaracion_accesibilidad,Acc.,no,no
+ecuador,USFQ,transparencia_lotaip,Transp.,no,no
+ecuador,UDLA,aviso_privacidad,Notice,si,no
+ecuador,UDLA,marco_normativo,LOPDP,si,no
+ecuador,UDLA,derechos,Rights,si,no
+ecuador,UDLA,contacto_dpo,DPO,si,no
+ecuador,UDLA,declaracion_accesibilidad,Acc.,no,no
+ecuador,UDLA,transparencia_lotaip,Transp.,no,no
+ecuador,UIDE,aviso_privacidad,Notice,si,no
+ecuador,UIDE,marco_normativo,LOPDP,si,no
+ecuador,UIDE,derechos,Rights,si,no
+ecuador,UIDE,contacto_dpo,DPO,si,no
+ecuador,UIDE,declaracion_accesibilidad,Acc.,no,no
+ecuador,UIDE,transparencia_lotaip,Transp.,si,no
+ecuador,UNIANDES,aviso_privacidad,Notice,si,no
+ecuador,UNIANDES,marco_normativo,LOPDP,no,no
+ecuador,UNIANDES,derechos,Rights,si,no
+ecuador,UNIANDES,contacto_dpo,DPO,no,no
+ecuador,UNIANDES,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNIANDES,transparencia_lotaip,Transp.,no,no
+ecuador,UPAC\'IFICO,aviso_privacidad,Notice,nv,no
+ecuador,UPAC\'IFICO,marco_normativo,LOPDP,no,no
+ecuador,UPAC\'IFICO,derechos,Rights,no,no
+ecuador,UPAC\'IFICO,contacto_dpo,DPO,no,no
+ecuador,UPAC\'IFICO,declaracion_accesibilidad,Acc.,no,no
+ecuador,UPAC\'IFICO,transparencia_lotaip,Transp.,no,no
+ecuador,UTI,aviso_privacidad,Notice,si,no
+ecuador,UTI,marco_normativo,LOPDP,no,no
+ecuador,UTI,derechos,Rights,si,no
+ecuador,UTI,contacto_dpo,DPO,no,no
+ecuador,UTI,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTI,transparencia_lotaip,Transp.,si,no
+ecuador,Casa Grande,aviso_privacidad,Notice,si,no
+ecuador,Casa Grande,marco_normativo,LOPDP,si,no
+ecuador,Casa Grande,derechos,Rights,si,no
+ecuador,Casa Grande,contacto_dpo,DPO,si,no
+ecuador,Casa Grande,declaracion_accesibilidad,Acc.,no,no
+ecuador,Casa Grande,transparencia_lotaip,Transp.,no,no
+ecuador,UTEG,aviso_privacidad,Notice,si,no
+ecuador,UTEG,marco_normativo,LOPDP,si,no
+ecuador,UTEG,derechos,Rights,si,no
+ecuador,UTEG,contacto_dpo,DPO,si,no
+ecuador,UTEG,declaracion_accesibilidad,Acc.,no,no
+ecuador,UTEG,transparencia_lotaip,Transp.,si,no
+ecuador,UISRAEL,aviso_privacidad,Notice,si,no
+ecuador,UISRAEL,marco_normativo,LOPDP,nv,no
+ecuador,UISRAEL,derechos,Rights,nv,no
+ecuador,UISRAEL,contacto_dpo,DPO,nv,no
+ecuador,UISRAEL,declaracion_accesibilidad,Acc.,nv,no
+ecuador,UISRAEL,transparencia_lotaip,Transp.,nv,no
+ecuador,UDET,aviso_privacidad,Notice,no,no
+ecuador,UDET,marco_normativo,LOPDP,no,no
+ecuador,UDET,derechos,Rights,no,no
+ecuador,UDET,contacto_dpo,DPO,no,no
+ecuador,UDET,declaracion_accesibilidad,Acc.,no,no
+ecuador,UDET,transparencia_lotaip,Transp.,no,no
+ecuador,UMET,aviso_privacidad,Notice,si,no
+ecuador,UMET,marco_normativo,LOPDP,nv,no
+ecuador,UMET,derechos,Rights,nv,no
+ecuador,UMET,contacto_dpo,DPO,nv,no
+ecuador,UMET,declaracion_accesibilidad,Acc.,no,no
+ecuador,UMET,transparencia_lotaip,Transp.,si,no
+ecuador,U.\ Otavalo,aviso_privacidad,Notice,nv,no
+ecuador,U.\ Otavalo,marco_normativo,LOPDP,nv,no
+ecuador,U.\ Otavalo,derechos,Rights,no,no
+ecuador,U.\ Otavalo,contacto_dpo,DPO,no,no
+ecuador,U.\ Otavalo,declaracion_accesibilidad,Acc.,no,no
+ecuador,U.\ Otavalo,transparencia_lotaip,Transp.,nv,no
+ecuador,USGP,aviso_privacidad,Notice,si,no
+ecuador,USGP,marco_normativo,LOPDP,si,no
+ecuador,USGP,derechos,Rights,si,no
+ecuador,USGP,contacto_dpo,DPO,si,no
+ecuador,USGP,declaracion_accesibilidad,Acc.,no,no
+ecuador,USGP,transparencia_lotaip,Transp.,si,no
+ecuador,U.\ Hemisferios,aviso_privacidad,Notice,si,no
+ecuador,U.\ Hemisferios,marco_normativo,LOPDP,si,no
+ecuador,U.\ Hemisferios,derechos,Rights,si,no
+ecuador,U.\ Hemisferios,contacto_dpo,DPO,si,no
+ecuador,U.\ Hemisferios,declaracion_accesibilidad,Acc.,no,no
+ecuador,U.\ Hemisferios,transparencia_lotaip,Transp.,si,no
+ecuador,UNIB.E,aviso_privacidad,Notice,si,no
+ecuador,UNIB.E,marco_normativo,LOPDP,no,no
+ecuador,UNIB.E,derechos,Rights,si,no
+ecuador,UNIB.E,contacto_dpo,DPO,no,no
+ecuador,UNIB.E,declaracion_accesibilidad,Acc.,no,no
+ecuador,UNIB.E,transparencia_lotaip,Transp.,no,no
+ecuador,ECOTEC,aviso_privacidad,Notice,si,no
+ecuador,ECOTEC,marco_normativo,LOPDP,si,no
+ecuador,ECOTEC,derechos,Rights,si,no
+ecuador,ECOTEC,contacto_dpo,DPO,si,no
+ecuador,ECOTEC,declaracion_accesibilidad,Acc.,no,no
+ecuador,ECOTEC,transparencia_lotaip,Transp.,si,no
+ecuador,UDR,aviso_privacidad,Notice,no,no
+ecuador,UDR,marco_normativo,LOPDP,no,no
+ecuador,UDR,derechos,Rights,no,no
+ecuador,UDR,contacto_dpo,DPO,no,no
+ecuador,UDR,declaracion_accesibilidad,Acc.,no,no
+ecuador,UDR,transparencia_lotaip,Transp.,no,no
+ecuador,UBE,aviso_privacidad,Notice,si,no
+ecuador,UBE,marco_normativo,LOPDP,si,no
+ecuador,UBE,derechos,Rights,si,no
+ecuador,UBE,contacto_dpo,DPO,si,no
+ecuador,UBE,declaracion_accesibilidad,Acc.,si,no
+ecuador,UBE,transparencia_lotaip,Transp.,no,no
