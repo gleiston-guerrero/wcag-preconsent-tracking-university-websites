@@ -210,8 +210,8 @@ id,grupo,sigla,regla,impacto,criterio,principio,nivel,nodos,ayuda
 49,ecuador,UNIANDES,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
 49,ecuador,UNIANDES,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
 49,ecuador,UNIANDES,aria-allowed-attr,critical,4.1.2,Robusto,A,2,Elements must only use supported ARIA attributes
-50,ecuador,UPACÍFICO,color-contrast,serious,1.4.3,Perceptible,AA,21,Elements must meet minimum color contrast ratio thresholds
-50,ecuador,UPACÍFICO,link-name,serious,2.4.4,Operable,A,4,Links must have discernible text
+50,ecuador,UPACIFICO,color-contrast,serious,1.4.3,Perceptible,AA,21,Elements must meet minimum color contrast ratio thresholds
+50,ecuador,UPACIFICO,link-name,serious,2.4.4,Operable,A,4,Links must have discernible text
 51,ecuador,UTI,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
 51,ecuador,UTI,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
 51,ecuador,UTI,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
