@@ -14,7 +14,7 @@ The study measures two barriers across 126 university home pages: 63 Ecuadorian 
 
 The deposit holds **two distinct measurements that must not be mixed**:
 
-**Single-pass audit**, 14 August 2026. One visit to each of the 126 sites, from a vantage point in Ecuador. This is the source of every accessibility figure and of the between-group comparison. Canonical file: `data/raw/accessibility/resultados.json`.
+**Single-pass audit**, 14 August 2026. One visit to each of the 126 sites, from a vantage point in Ecuador. This is the source of every accessibility figure and of the between-group comparison. Canonical file: `data/raw/accessibility/results.json`.
 
 **Multi-vantage replication**, 15 August 2026. The same protocol repeated from four geographic locations, with three valid passes at each. This is the source of the contrast between jurisdictions. Files in `data/raw/tracking/`.
 
@@ -27,22 +27,22 @@ The two differ in date, in the set of retained sites and in consolidation rule. 
 ```
 data/
   raw/
-    accessibility/    resultados.json, resultados.csv
+    accessibility/    results.json, results.csv
                       Single pass, 126 sites, 14 August 2026.
-    census/           universidades.json      the 126 audited sites
+    census/           universities.json      the 126 audited sites
                       tops.json               top 75 of each ranking edition
-                      seleccion63_mundo.json  consensus defining the benchmark group
+                      selection63_benchmark.json  consensus defining the benchmark group
     tracking/         39 files of the reported multi-vantage replication:
-                        resultados_{EC,EU,GB,US}_r*.{json,csv}
+                        results_{EC,EU,GB,US}_r*.{json,csv}
                         meta_*.json  public IP, geolocation and versions per pass
     tracking_extended/  48 files of a later five-vantage campaign, including
                         Switzerland, NOT analysed in the article. See below.
   processed/          twelve derived tables; see CODEBOOK.md
   interim/            created when the code runs; not versioned
 code/
-  collection/         auditar.js             single-pass audit
-                      auditar_multipunto.js  audit by vantage point
-                      ejecutar.bat, INSTALAR.bat
+  collection/         audit.js             single-pass audit
+                      audit_multivantage.js  audit by vantage point
+                      run.bat, INSTALL.bat
                       axe/                   dependencies of the single pass
                       extended/              instrument and launchers of the
                                              five-vantage campaign
@@ -88,11 +88,11 @@ Node.js and Python 3. The versions that produced the published results are pinne
 ```bash
 cd code/collection
 npm install
-node auditar.js                                   # single pass
-node auditar_multipunto.js --vantage=EC --run=1   # one pass of one vantage point
+node audit.js                                   # single pass
+node audit_multivantage.js --vantage=EC --run=1   # one pass of one vantage point
 ```
 
-`auditar.js` reads the census and writes its output incrementally; if interrupted, running it again resumes where it stopped. `auditar_multipunto.js` checks the geolocation of the public IP and aborts if it does not match the vantage point given, so the measurement has to be taken from the declared location.
+`audit.js` reads the census and writes its output incrementally; if interrupted, running it again resumes where it stopped. `audit_multivantage.js` checks the geolocation of the public IP and aborts if it does not match the vantage point given, so the measurement has to be taken from the declared location.
 
 ### Analysis
 
@@ -102,20 +102,20 @@ All scripts in `code/analysis/` are run **from that directory** and find their d
 cd code/analysis
 pip install -r requirements.txt
 
-python construir_entradas.py      # rebuilds the intermediate inputs
-python reconciliar.py             # cookies_126_sitios_v2, cambios_reconciliacion
-python qa_cookies.py              # qa_irregularidades
-python reconstruir_cookies.py ../../data/raw/accessibility ../../data/processed
-python estudio.py                 # estudio_126_sitios, estudio_reglas_por_sitio
-python verificar_pasada_unica.py  # association between the two barriers
-python sensibilidad_muestreo.py   # sensitivity of the benchmark group
-python figuras_uais.py            # five of the six figures
+python build_entries.py      # rebuilds the intermediate inputs
+python reconcile.py             # cookies_126_sites_v2, reconciliation_changes
+python qa_cookies.py              # qa_irregularities
+python rebuild_cookies.py ../../data/raw/accessibility ../../data/processed
+python study.py                 # study_126_sitios, study_rules_per_site
+python verify_single_pass.py  # association between the two barriers
+python sensitivity_sampling.py   # sensitivity of the benchmark group
+python figures_uais.py            # five of the six figures
 python fig_vantage.py             # vendor-by-vantage figure
-python verificar_multipunto.py    # the whole multi-vantage results section
-python sensibilidad_inclusion.py ../../data/raw/tracking
+python verify_multivantage.py    # the whole multi-vantage results section
+python sensitivity_inclusion.py ../../data/raw/tracking
 ```
 
-`verificar_multipunto.py` reproduces the multi-vantage results section: proportions per vantage point with Wilson intervals, exact McNemar test for each pair, Holm correction across the six comparisons, Cochran's Q, rendering controls and cookie attribution by vendor. `sensibilidad_inclusion.py` repeats that analysis under the three defensible inclusion rules and shows that the ordering of the vantage points does not depend on that choice.
+`verify_multivantage.py` reproduces the multi-vantage results section: proportions per vantage point with Wilson intervals, exact McNemar test for each pair, Holm correction across the six comparisons, Cochran's Q, rendering controls and cookie attribution by vendor. `sensitivity_inclusion.py` repeats that analysis under the three defensible inclusion rules and shows that the ordering of the vantage points does not depend on that choice.
 
 ### Integrity check
 
@@ -143,7 +143,7 @@ Automated auditing detects a subset of conformance failures. A site with no viol
 
 Five sites fall out of the paired analysis across vantage points because they failed to load on at least one pass. The article names each of them, with the cause and a sensitivity analysis of that exclusion.
 
-The tracking-cookie taxonomy was extended after collection, once the observed cookie names had been inspected, and was applied by reclassifying the stored names, with no re-measurement. `data/processed/cookies_nombres_sin_clasificar.csv` lists the 243 distinct names that match no known family, so that the classification can be contested.
+The tracking-cookie taxonomy was extended after collection, once the observed cookie names had been inspected, and was applied by reclassifying the stored names, with no re-measurement. `data/processed/cookies_unclassified_names.csv` lists the 243 distinct names that match no known family, so that the classification can be contested.
 
 ---
 

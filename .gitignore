@@ -23,3 +23,9 @@ clasificacion_repositorio.csv
 
 data/interim/
 data/interim/
+
+# herramientas locales de mantenimiento
+regenerar_checksums.ps1
+traducir_nombres.py
+completar_traduccion.py
+inventario_git.txt

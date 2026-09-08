@@ -22,7 +22,7 @@ El depósito contiene dos mediciones del mismo fenómeno, tomadas con un día de
 
 En la pasada única, con la taxonomía extendida, el rastreo previo al consentimiento se observa en 41 de los 63 sitios ecuatorianos y en 43 de los 63 de referencia. En la réplica, sobre los 121 sitios retenidos, se observa en 82 desde Ecuador, 79 desde Estados Unidos, 76 desde Reino Unido y 73 desde Alemania. Ninguna de las dos cifras sustituye a la otra: la primera sostiene la comparación entre grupos, la segunda la comparación del mismo sitio bajo condiciones distintas.
 
-Existe además una tercera cifra, la verificación en vivo que figura en las columnas `*_verificacion` de `cookies_126_sitios_v3.csv`, tomada por inspección manual en fechas distintas. Difiere de la medición automatizada en 39 de los 126 sitios. Está documentada en la sección 4.
+Existe además una tercera cifra, la verificación en vivo que figura en las columnas `*_verificacion` de `cookies_126_sites_v3.csv`, tomada por inspección manual en fechas distintas. Difiere de la medición automatizada en 39 de los 126 sitios. Está documentada en la sección 4.
 
 ---
 
@@ -30,7 +30,7 @@ Existe además una tercera cifra, la verificación en vivo que figura en las col
 
 **Grupo** (`grupo`): `Ecuador` o `Mundo` en los archivos JSON; `ecuador` o `mundo` en las tablas derivadas.
 
-**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra. La única excepción es `matriz_documental.csv`, que lleva la posición dentro de la tabla de su grupo y no el identificador global.
+**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra. La única excepción es `documentary_matrix.csv`, que lleva la posición dentro de la tabla de su grupo y no el identificador global.
 
 **Sí/no**: `yes` o `no` en las tablas CSV derivadas; booleano en los JSON. La matriz documental usa `si` y `no`, porque se transcribió del artículo.
 
@@ -40,13 +40,13 @@ Existe además una tercera cifra, la verificación en vivo que figura en las col
 
 **Punto de observación** (`vantage`, sufijo de nombre de archivo): `EC` Ecuador, `EU` Alemania, `GB` Reino Unido, `US` Estados Unidos. En `tracking_extended/` aparece además `CH`, Suiza.
 
-**Cookie de rastreo**: nombre de cookie que coincide con alguno de los patrones de la taxonomía. La lista original cubría Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu y familias menores. La lista extendida añade el LinkedIn Insight Tag, la familia publicitaria completa de Microsoft, TapAd, StackAdapt, Snapchat y Sourcebuster. Ambas listas, en forma de expresiones regulares, están en `code/analysis/verificar_multipunto.py`, líneas 7 a 18. La extendida gobierna todas las cifras publicadas.
+**Cookie de rastreo**: nombre de cookie que coincide con alguno de los patrones de la taxonomía. La lista original cubría Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu y familias menores. La lista extendida añade el LinkedIn Insight Tag, la familia publicitaria completa de Microsoft, TapAd, StackAdapt, Snapchat y Sourcebuster. Ambas listas, en forma de expresiones regulares, están en `code/analysis/verify_multivantage.py`, líneas 7 a 18. La extendida gobierna todas las cifras publicadas.
 
 ---
 
 ## 3. Datos crudos
 
-### `data/raw/accessibility/resultados.json`
+### `data/raw/accessibility/results.json`
 
 Lista JSON de 126 objetos, uno por sitio, ordenados por `id`. Es la fuente de verdad de la auditoría de pasada única: todas las tablas de `data/processed/` derivadas de accesibilidad se calculan a partir de este archivo.
 
@@ -59,7 +59,7 @@ Lista JSON de 126 objetos, uno por sitio, ordenados por `id`. Es la fuente de ve
 | `pais` | texto | País de la institución. |
 | `url` | texto | Portada auditada. |
 | `ok` | booleano | La página cargó. Verdadero en los 126. |
-| `https` | booleano | La página se sirvió por HTTPS. **No** equivale al indicador documental de la Figura 1: ver `tls_deficiencias_agosto2026.csv`. |
+| `https` | booleano | La página se sirvió por HTTPS. **No** equivale al indicador documental de la Figura 1: ver `tls_deficiencies_august2026.csv`. |
 | `axe_version` | texto | Versión del motor. `4.13.0` en los 126. |
 | `fecha` | fecha-hora | Momento de la visita, ISO 8601. |
 | `cookies` | objeto | Ver abajo. |
@@ -93,13 +93,13 @@ Lista JSON de 126 objetos, uno por sitio, ordenados por `id`. Es la fuente de ve
 | `passes` | entero | Reglas superadas. |
 | `reglas` | lista | Una entrada por regla incumplida, con `id`, `impacto`, `criterio`, `principio`, `nivel`, `nodos` y `ayuda`. |
 
-### `data/raw/accessibility/resultados.csv`
+### `data/raw/accessibility/results.csv`
 
-Vista aplanada del JSON anterior, 126 filas, para inspección rápida. Columnas: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. Para análisis, use `estudio_126_sitios.csv`, que es más completa.
+Vista aplanada del JSON anterior, 126 filas, para inspección rápida. Columnas: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. Para análisis, use `study_126_sites.csv`, que es más completa.
 
-### `data/raw/tracking/resultados_<PUNTO>_r<N>.json`
+### `data/raw/tracking/results_<PUNTO>_r<N>.json`
 
-Trece archivos, uno por pasada. Misma estructura que `resultados.json`, con dos campos añadidos: `vantage` y `run`. La pasada `GB_r1` está truncada, con 49 546 bytes frente a los 280 000 habituales, porque se abortó al detectar que la VPN no había cambiado de país; se conserva como evidencia y el análisis la excluye.
+Trece archivos, uno por pasada. Misma estructura que `results.json`, con dos campos añadidos: `vantage` y `run`. La pasada `GB_r1` está truncada, con 49 546 bytes frente a los 280 000 habituales, porque se abortó al detectar que la VPN no había cambiado de país; se conserva como evidencia y el análisis la excluye.
 
 ### `data/raw/tracking/meta_<PUNTO>_r<N>.json`
 
@@ -122,15 +122,15 @@ Cuarenta y ocho archivos de la campaña posterior de cinco puntos, con la misma 
 
 ### `data/raw/census/`
 
-`universidades.json` es el censo de los 126 sitios auditados, con sigla, nombre, país y URL. `tops.json` contiene el top 75 de cada edición de ranking empleada. `seleccion63_mundo.json` documenta el consenso entre los tres rankings que define el grupo de referencia.
+`universities.json` es el censo de los 126 sitios auditados, con sigla, nombre, país y URL. `tops.json` contiene el top 75 de cada edición de ranking empleada. `selection63_benchmark.json` documenta el consenso entre los tres rankings que define el grupo de referencia.
 
 ---
 
 ## 4. Tablas derivadas
 
-### `estudio_126_sitios.csv` — 126 filas, 32 columnas
+### `study_126_sites.csv` — 126 filas, 32 columnas
 
-Aplanado canónico de `resultados.json`. Lo produce `estudio.py`.
+Aplanado canónico de `results.json`. Lo produce `study.py`.
 
 | Columna | Descripción |
 |---|---|
@@ -147,7 +147,7 @@ Aplanado canónico de `resultados.json`. Lo produce `estudio.py`.
 | `max_nivel_sin_fallo` | Nivel más alto sin fallos. |
 | `incompletos`, `passes` | Comprobaciones no resueltas y reglas superadas. |
 
-### `estudio_reglas_por_sitio.csv` — 441 filas, 10 columnas
+### `study_rules_per_site.csv` — 441 filas, 10 columnas
 
 Una fila por sitio y regla incumplida. Producida por el mismo script.
 
@@ -161,9 +161,9 @@ Una fila por sitio y regla incumplida. Producida por el mismo script.
 | `nodos` | Elementos que fallan esa regla en ese sitio. |
 | `ayuda` | URL de la documentación de la regla. |
 
-### `cookies_126_sitios_v3.csv` — 126 filas, 24 columnas
+### `cookies_126_sites_v3.csv` — 126 filas, 24 columnas
 
-Tabla de cookies del artículo, con las dos taxonomías en columnas separadas. La produce `reconstruir_cookies.py` a partir de `resultados.json` y de `cookies_126_sitios_v2.csv`.
+Tabla de cookies del artículo, con las dos taxonomías en columnas separadas. La produce `rebuild_cookies.py` a partir de `results.json` y de `cookies_126_sites_v2.csv`.
 
 | Columna | Descripción |
 |---|---|
@@ -186,11 +186,11 @@ La diferencia entre `rastreo_base` y `rastreo` es de un solo sitio ecuatoriano, 
 
 Las columnas `*_verificacion` proceden de una inspección manual distinta de la medición automatizada. Discrepan de la columna `rastreo` en 39 de los 126 sitios: 34 donde la medición automatizada detecta rastreo y la verificación en vivo no, y 5 en sentido contrario. No es un error de ninguna de las dos: son observaciones en momentos distintos de sitios que cambian. **No mezcle ambas columnas en un mismo recuento.**
 
-### `cookies_126_sitios_v2.csv` — 126 filas
+### `cookies_126_sites_v2.csv` — 126 filas
 
-Versión previa, entrada necesaria de `reconstruir_cookies.py`. Se publica porque sin ella la v3 no se reproduce. No la use directamente para análisis.
+Versión previa, entrada necesaria de `rebuild_cookies.py`. Se publica porque sin ella la v3 no se reproduce. No la use directamente para análisis.
 
-### `cookies_nombres_sin_clasificar.csv` — 243 filas
+### `cookies_unclassified_names.csv` — 243 filas
 
 Nombres de cookie observados que no coinciden con ninguna familia de la taxonomía, con el número de sitios en que aparecen. Es la evidencia de la decisión taxonómica: permite discutir si algún nombre debió clasificarse como rastreo.
 
@@ -199,7 +199,7 @@ Nombres de cookie observados que no coinciden con ninguna familia de la taxonom�
 | `nombre_cookie` | Nombre observado. |
 | `sitios_en_que_aparece` | Número de sitios distintos. |
 
-### `cookies_divergencias_v2.csv` — 14 filas
+### `cookies_divergences_v2.csv` — 14 filas
 
 Control de calidad. Sitios donde la tabla v2 listaba nombres de cookie que no aparecen en el JSON crudo, indicio de pérdida de datos en una fase intermedia.
 
@@ -208,9 +208,9 @@ Control de calidad. Sitios donde la tabla v2 listaba nombres de cookie que no ap
 | `id`, `sigla`, `grupo` | Sitio. |
 | `nombres_no_presentes_en_crudo` | Nombres afectados. |
 
-### `cambios_reconciliacion.csv` — 68 filas
+### `reconciliation_changes.csv` — 68 filas
 
-Registro de auditoría de la reconciliación entre el inventario y los informes HTML. Producida por `reconciliar.py`.
+Registro de auditoría de la reconciliación entre el inventario y los informes HTML. Producida por `reconcile.py`.
 
 | Columna | Descripción |
 |---|---|
@@ -219,7 +219,7 @@ Registro de auditoría de la reconciliación entre el inventario y los informes 
 | `antes`, `despues` | Valor anterior y nuevo. |
 | `motivo` | Regla que justificó el cambio. |
 
-### `qa_irregularidades.csv` — 228 filas
+### `qa_irregularities.csv` — 228 filas
 
 Incidencias detectadas en el inventario, con código de tipo y acción sugerida. Producida por `qa_cookies.py`. Se publica como evidencia del control de calidad, no como dato de análisis.
 
@@ -231,17 +231,17 @@ Incidencias detectadas en el inventario, con código de tipo y acción sugerida.
 | `valor_actual` | Valor que la motivó. |
 | `accion_requerida` | Corrección sugerida. |
 
-### `reporte_cookies_nacionales.csv` — 63 filas · `reporte_cookies_extranjeras.csv` — 63 filas
+### `report_cookies_domestic.csv` — 63 filas · `report_cookies_foreign.csv` — 63 filas
 
-Inventarios por grupo, con los campos de la verificación manual. Son entrada de `construir_entradas.py`, que los fusiona para reconstruir la tabla de 126 sitios. Las columnas de cookies de estos archivos corresponden a la **verificación en vivo**, no a la medición automatizada.
+Inventarios por grupo, con los campos de la verificación manual. Son entrada de `build_entries.py`, que los fusiona para reconstruir la tabla de 126 sitios. Las columnas de cookies de estos archivos corresponden a la **verificación en vivo**, no a la medición automatizada.
 
 Nacionales: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacion`, `Cookies_antes_consentir`, `Nombres_cookies`, `Rastreo`, `CMP_live`, `Banner_live`, `Banner_estudio`, `PolCookies_estudio`.
 
 Extranjeras: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
 
-### `matriz_documental.csv` — 126 filas
+### `documentary_matrix.csv` — 126 filas
 
-Indicadores documentales, codificados inspeccionando el aviso de privacidad de primer nivel de cada institución en agosto de 2026. Son los recuentos que sustentan la Figura 1 del artículo. La produce `extraer_matriz_documental.py`; ver la nota de procedencia más abajo.
+Indicadores documentales, codificados inspeccionando el aviso de privacidad de primer nivel de cada institución en agosto de 2026. Son los recuentos que sustentan la Figura 1 del artículo. La produce `extract_documentary_matrix.py`; ver la nota de procedencia más abajo.
 
 | Columna | Descripción |
 |---|---|
@@ -260,19 +260,19 @@ Indicadores documentales, codificados inspeccionando el aviso de privacidad de p
 | `Transp.` | Transparencia según la ley ecuatoriana de acceso a la información (LOTAIP). Solo grupo ecuatoriano. **No** es seguridad de transporte. |
 | `nueva_2024` | La institución fue creada en 2024 o después, marcada con doble daga en el apéndice del artículo. Solo grupo ecuatoriano. |
 
-Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y `no_aplica` donde la columna no aplica a ese grupo. Ninguna celda queda vacía. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo. El código `parcial` se usa 25 veces: 18 en el grupo de referencia y 7 en el censo ecuatoriano. En todos los porcentajes que reporta el artículo se agrega con `no`, lo cual es una decisión del análisis y no una propiedad de la codificación; `matriz_documental_long.csv` permite calcular cualquier otra agregación.
+Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genérico, `nv` no verificable por este método, y `no_aplica` donde la columna no aplica a ese grupo. Ninguna celda queda vacía. Un asterisco final marca las dos celdas corregidas tras la re-verificación manual que reporta el artículo. El código `parcial` se usa 25 veces: 18 en el grupo de referencia y 7 en el censo ecuatoriano. En todos los porcentajes que reporta el artículo se agrega con `no`, lo cual es una decisión del análisis y no una propiedad de la codificación; `documentary_matrix_long.csv` permite calcular cualquier otra agregación.
 
 Los dos grupos se codificaron con conjuntos de columnas en parte distintos, y por eso algunas quedan vacías en un grupo y no en el otro. El grupo ecuatoriano tiene entre dos y seis celdas `nv` por indicador; el de referencia no tiene ninguna. Esa asimetría es en sí misma un hallazgo y queda invisible en los porcentajes agregados.
 
-**Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extraer_matriz_documental.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
+**Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extract_documentary_matrix.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
 
-### `matriz_documental_long.csv` — 756 filas
+### `documentary_matrix_long.csv` — 756 filas
 
 La misma matriz en formato largo, una fila por celda codificada. Columnas: `grupo`, `abbr`, `indicador`, `columna_apendice`, `valor`, `corregida_reverificacion`. Las celdas que no aplican al grupo se omiten en lugar de codificarse, de modo que cada fila lleva una decisión de codificación. Es el formato que hay que usar para cualquier agregación distinta de la que reporta el artículo. Distribución de las 756 celdas codificadas: 451 `si`, 256 `no`, 25 `parcial`, 24 `nv`. Las 24 celdas `nv` pertenecen todas al censo ecuatoriano; el grupo de referencia no tiene ninguna.
 
-### `tls_deficiencias_agosto2026.csv` — 5 filas
+### `tls_deficiencies_august2026.csv` — 5 filas
 
-Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de resultados.
+Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de results.
 
 | Columna | Descripción |
 |---|---|
@@ -283,11 +283,11 @@ Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la veri
 | `fecha_observacion` | Mes de la observación. |
 | `verificacion_posterior` | Resultado de recomprobar la cadena el 5 de septiembre de 2026. |
 
-**Por qué existe este archivo.** Este indicador se codificó inspeccionando cada sitio en un navegador, no con el auditor automatizado, y ambos no miden lo mismo: el campo `https` del auditor registra que la página se sirvió por HTTPS, y Playwright rechaza de plano un certificado inválido, de modo que una cadena rota aparecería como fallo de carga y no como `https: false`. Por eso `resultados.json` marca `https: true` en los 126 sitios mientras el artículo reporta 58 de 63 para Ecuador.
+**Por qué existe este archivo.** Este indicador se codificó inspeccionando cada sitio en un navegador, no con el auditor automatizado, y ambos no miden lo mismo: el campo `https` del auditor registra que la página se sirvió por HTTPS, y Playwright rechaza de plano un certificado inválido, de modo que una cadena rota aparecería como fallo de carga y no como `https: false`. Por eso `results.json` marca `https: true` en los 126 sitios mientras el artículo reporta 58 de 63 para Ecuador.
 
 Los cinco certificados eran válidos al recomprobarlos el 5 de septiembre de 2026, renovados en el intervalo; queda un rastro residual, y es que el dominio raíz de ESPAM MFL sigue sin resolver y solo responde el host `www`. La observación de agosto no es reproducible hoy, lo cual es una propiedad del objeto medido y no un defecto del registro: los sitios cambian, como advierte el README.
 
-### `sensibilidad_inclusion.csv` — 3 filas
+### `sensitivity_inclusion.csv` — 3 filas
 
 Resultado del análisis de sensibilidad a la regla de inclusión de la réplica multipunto. Una fila por regla.
 
@@ -304,7 +304,7 @@ Resultado del análisis de sensibilidad a la regla de inclusión de la réplica 
 
 ## 5. Informes HTML
 
-`docs/reports/` contiene cuatro informes navegables generados durante el trabajo de campo. No son datos primarios, pero **sí son entrada del código**: `construir_entradas.py` extrae de `reporte_cookies_combinado.html` y de `anexo_universidades_cookies.html` los datos embebidos en su constante `DATA` de JavaScript, que son necesarios para reproducir la cadena de tablas de cookies. Por eso se publican.
+`docs/reports/` contiene cuatro informes navegables generados durante el trabajo de campo. No son datos primarios, pero **sí son entrada del código**: `build_entries.py` extrae de `report_cookies_combined.html` y de `appendix_universities_cookies.html` los datos embebidos en su constante `DATA` de JavaScript, que son necesarios para reproducir la cadena de tablas de cookies. Por eso se publican.
 
 ---
 
@@ -313,32 +313,32 @@ Resultado del análisis de sensibilidad a la regla de inclusión de la réplica 
 Quién produce qué, y a partir de qué.
 
 ```
-resultados.json ────────────────────────────► estudio.py
-                                                 ├─► estudio_126_sitios.csv
-                                                 └─► estudio_reglas_por_sitio.csv
+results.json ────────────────────────────► study.py
+                                                 ├─► study_126_sites.csv
+                                                 └─► study_rules_per_site.csv
 
-reporte_cookies_nacionales.csv   ┐
-reporte_cookies_extranjeras.csv  ├─► construir_entradas.py ─► data/interim/
-reporte_cookies_combinado.html   │                              _comb.json
-anexo_universidades_cookies.html ┘                              _anex.json
-                                                                cookies_126_sitios.csv
+report_cookies_domestic.csv   ┐
+report_cookies_foreign.csv  ├─► build_entries.py ─► data/interim/
+report_cookies_combined.html   │                              _comb.json
+appendix_universities_cookies.html ┘                              _anex.json
+                                                                cookies_126_sites.csv
                                                                      │
-data/interim/ ──────────────────► reconciliar.py ──────────────────┤
-                                     ├─► cookies_126_sitios_v2.csv │
-                                     └─► cambios_reconciliacion.csv│
+data/interim/ ──────────────────► reconcile.py ──────────────────┤
+                                     ├─► cookies_126_sites_v2.csv │
+                                     └─► reconciliation_changes.csv│
                                                                     │
-data/interim/ ──────────────────► qa_cookies.py ─► qa_irregularidades.csv
+data/interim/ ──────────────────► qa_cookies.py ─► qa_irregularities.csv
 
-resultados.json + v2 ───────────► reconstruir_cookies.py
-                                     ├─► cookies_126_sitios_v3.csv
-                                     ├─► cookies_nombres_sin_clasificar.csv
-                                     └─► cookies_divergencias_v2.csv
+results.json + v2 ───────────► rebuild_cookies.py
+                                     ├─► cookies_126_sites_v3.csv
+                                     ├─► cookies_unclassified_names.csv
+                                     └─► cookies_divergences_v2.csv
 
-data/raw/tracking/ ─────────────► verificar_multipunto.py     (seccion de resultados)
-                                ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
+data/raw/tracking/ ─────────────► verify_multivantage.py     (seccion de results)
+                                ► sensitivity_inclusion.py   ─► sensitivity_inclusion.csv
 
-apendices del articulo (externo) ► extraer_matriz_documental.py ─┬─► matriz_documental.csv
-                                                                 └─► matriz_documental_long.csv
+apendices del articulo (externo) ► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
+                                                                 └─► documentary_matrix_long.csv
 ```
 
-Los archivos de `data/interim/` no se versionan porque `construir_entradas.py` los regenera desde material que sí está publicado. El fuente del artículo no forma parte del depósito, y por eso el último paso del esquema no puede ejecutarse solo con este repositorio.
+Los archivos de `data/interim/` no se versionan porque `build_entries.py` los regenera desde material que sí está publicado. El fuente del artículo no forma parte del depósito, y por eso el último paso del esquema no puede ejecutarse solo con este repositorio.

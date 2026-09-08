@@ -2,7 +2,7 @@
 """
 Kappa de Cohen para la validacion manual WCAG.
 
-Entrada : data/wcag_pares_kappa.csv
+Entrada : data/wcag_kappa_pairs.csv
 Salida  : acuerdo observado, acuerdo esperado y kappa, sin ponderar y con
           pesos lineales sobre el orden 0 < P < 1.
 
@@ -59,6 +59,6 @@ def informe(pares, titulo):
 
 
 if __name__ == "__main__":
-    ruta = sys.argv[1] if len(sys.argv) > 1 else "../data/wcag_pares_kappa.csv"
+    ruta = sys.argv[1] if len(sys.argv) > 1 else "../data/wcag_kappa_pairs.csv"
     informe(cargar(ruta, True), "Escenario adoptado: se excluye el par con evidencia contradictoria")
     informe(cargar(ruta, False), "Escenario alternativo: los quince pares tal como se entregaron")

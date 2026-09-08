@@ -24,7 +24,7 @@ The deposit holds two measurements of the same phenomenon, taken a day apart wit
 
 In the single pass, under the extended taxonomy, pre-consent tracking is observed at 41 of the 63 Ecuadorian sites and 43 of the 63 benchmark sites. In the replication, over the 121 retained sites, it is observed at 82 from Ecuador, 79 from the United States, 76 from the United Kingdom and 73 from Germany. Neither figure replaces the other: the first supports the between-group comparison, the second the within-site comparison across conditions.
 
-A third figure exists, the live verification held in the `*_verificacion` columns of `cookies_126_sitios_v3.csv`, obtained by manual inspection on other dates. It differs from the automated measurement at 39 of the 126 sites. See section 4.
+A third figure exists, the live verification held in the `*_verificacion` columns of `cookies_126_sites_v3.csv`, obtained by manual inspection on other dates. It differs from the automated measurement at 39 of the 126 sites. See section 4.
 
 ---
 
@@ -32,7 +32,7 @@ A third figure exists, the live verification held in the `*_verificacion` column
 
 **Group** (`grupo`): `Ecuador` or `Mundo` in the JSON files; `ecuador` or `mundo` in the derived tables. *Mundo* means the benchmark group.
 
-**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other. The one exception is `matriz_documental.csv`, which carries a position within its group table rather than the global identifier.
+**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other. The one exception is `documentary_matrix.csv`, which carries a position within its group table rather than the global identifier.
 
 **Yes/no**: `yes` or `no` in the derived CSV tables; boolean in the JSON files. The documentary matrix uses `si` / `no` instead, since it was transcribed from the article.
 
@@ -42,13 +42,13 @@ A third figure exists, the live verification held in the `*_verificacion` column
 
 **Vantage point** (`vantage`, file-name suffix): `EC` Ecuador, `EU` Germany, `GB` United Kingdom, `US` United States. `CH`, Switzerland, appears only in `tracking_extended/`.
 
-**Tracking cookie**: a cookie name matching one of the taxonomy patterns. The original list covered Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu and smaller families. The extended list adds the LinkedIn Insight Tag, the full Microsoft advertising family, TapAd, StackAdapt, Snapchat and Sourcebuster. Both lists, as regular expressions, are in `code/analysis/verificar_multipunto.py`, lines 7 to 18. The extended list governs every published figure.
+**Tracking cookie**: a cookie name matching one of the taxonomy patterns. The original list covered Google, Meta, TikTok, Microsoft Clarity, Hotjar, Matomo, Baidu and smaller families. The extended list adds the LinkedIn Insight Tag, the full Microsoft advertising family, TapAd, StackAdapt, Snapchat and Sourcebuster. Both lists, as regular expressions, are in `code/analysis/verify_multivantage.py`, lines 7 to 18. The extended list governs every published figure.
 
 ---
 
 ## 3. Raw data
 
-### `data/raw/accessibility/resultados.json`
+### `data/raw/accessibility/results.json`
 
 A JSON array of 126 objects, one per site, ordered by `id`. This is the ground truth of the single-pass audit: every accessibility-derived table in `data/processed/` is computed from it.
 
@@ -61,7 +61,7 @@ A JSON array of 126 objects, one per site, ordered by `id`. This is the ground t
 | `pais` | text | Country of the institution. |
 | `url` | text | Home page audited. |
 | `ok` | boolean | The page loaded. True for all 126. |
-| `https` | boolean | The page was served over HTTPS. **Not** the same as the documentary indicator of Figure 1: see `tls_deficiencias_agosto2026.csv`. |
+| `https` | boolean | The page was served over HTTPS. **Not** the same as the documentary indicator of Figure 1: see `tls_deficiencies_august2026.csv`. |
 | `axe_version` | text | Engine version. `4.13.0` for all 126. |
 | `fecha` | datetime | Time of the visit, ISO 8601. |
 | `cookies` | object | See below. |
@@ -95,13 +95,13 @@ A JSON array of 126 objects, one per site, ordered by `id`. This is the ground t
 | `passes` | integer | Rules passed. |
 | `reglas` | list | One entry per failing rule, with `id`, `impacto` (impact), `criterio` (success criterion), `principio`, `nivel`, `nodos` and `ayuda` (help URL). |
 
-### `data/raw/accessibility/resultados.csv`
+### `data/raw/accessibility/results.csv`
 
-A flattened view of the JSON above, 126 rows, for quick inspection. Columns: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. For analysis use `estudio_126_sitios.csv`, which is more complete.
+A flattened view of the JSON above, 126 rows, for quick inspection. Columns: `id`, `grupo`, `sigla`, `pais`, `url`, `ok`, `error`, `title`, `lang`, `viewport`, `https`, `cookies_pre`, `rastreo_pre`, `nombres_rastreo`, `cmp`, `banner`, `ax_violaciones`, `ax_nodos`, `nivelA_nodos`, `nivelAA_nodos`, `nivelAAA_nodos`, `Perceptible`, `Operable`, `Comprensible`, `Robusto`, `max_nivel_sin_fallo_auto`. For analysis use `study_126_sites.csv`, which is more complete.
 
-### `data/raw/tracking/resultados_<VANTAGE>_r<N>.json`
+### `data/raw/tracking/results_<VANTAGE>_r<N>.json`
 
-Thirteen files, one per pass. Same structure as `resultados.json`, plus two fields: `vantage` and `run`. Pass `GB_r1` is truncated, 49,546 bytes against the usual 280,000, because it aborted when the VPN had not switched country; it is kept as evidence and excluded from the analysis.
+Thirteen files, one per pass. Same structure as `results.json`, plus two fields: `vantage` and `run`. Pass `GB_r1` is truncated, 49,546 bytes against the usual 280,000, because it aborted when the VPN had not switched country; it is kept as evidence and excluded from the analysis.
 
 ### `data/raw/tracking/meta_<VANTAGE>_r<N>.json`
 
@@ -124,15 +124,15 @@ Forty-eight files of the later five-vantage campaign, same structure. **They sup
 
 ### `data/raw/census/`
 
-`universidades.json` is the census of the 126 audited sites, with acronym, name, country and URL. `tops.json` holds the top 75 of each ranking edition used. `seleccion63_mundo.json` documents the consensus across the three rankings that defines the benchmark group.
+`universities.json` is the census of the 126 audited sites, with acronym, name, country and URL. `tops.json` holds the top 75 of each ranking edition used. `selection63_benchmark.json` documents the consensus across the three rankings that defines the benchmark group.
 
 ---
 
 ## 4. Derived tables
 
-### `estudio_126_sitios.csv` — 126 rows, 32 columns
+### `study_126_sites.csv` — 126 rows, 32 columns
 
-Canonical flattening of `resultados.json`, produced by `estudio.py`.
+Canonical flattening of `results.json`, produced by `study.py`.
 
 | Column | Description |
 |---|---|
@@ -149,7 +149,7 @@ Canonical flattening of `resultados.json`, produced by `estudio.py`.
 | `max_nivel_sin_fallo` | Highest level with no failures. |
 | `incompletos`, `passes` | Unresolved checks and rules passed. |
 
-### `estudio_reglas_por_sitio.csv` — 441 rows, 10 columns
+### `study_rules_per_site.csv` — 441 rows, 10 columns
 
 One row per site and failed rule. Same script.
 
@@ -163,9 +163,9 @@ One row per site and failed rule. Same script.
 | `nodos` | Elements failing that rule on that site. |
 | `ayuda` | URL of the rule documentation. |
 
-### `cookies_126_sitios_v3.csv` — 126 rows, 24 columns
+### `cookies_126_sites_v3.csv` — 126 rows, 24 columns
 
-The cookie table of the article, with both taxonomies in separate columns. Produced by `reconstruir_cookies.py` from `resultados.json` and `cookies_126_sitios_v2.csv`.
+The cookie table of the article, with both taxonomies in separate columns. Produced by `rebuild_cookies.py` from `results.json` and `cookies_126_sites_v2.csv`.
 
 | Column | Description |
 |---|---|
@@ -188,11 +188,11 @@ The difference between `rastreo_base` and `rastreo` is a single Ecuadorian site,
 
 The `*_verificacion` columns come from a manual inspection distinct from the automated measurement. They disagree with the `rastreo` column at 39 of the 126 sites: 34 where the automated measurement detects tracking and the live verification does not, and 5 the other way round. Neither is in error: they are observations at different moments of sites that change. **Do not mix the two columns in a single count.**
 
-### `cookies_126_sitios_v2.csv` — 126 rows
+### `cookies_126_sites_v2.csv` — 126 rows
 
-Earlier version, a required input of `reconstruir_cookies.py`. It is released because without it v3 cannot be reproduced. Do not use it directly for analysis.
+Earlier version, a required input of `rebuild_cookies.py`. It is released because without it v3 cannot be reproduced. Do not use it directly for analysis.
 
-### `cookies_nombres_sin_clasificar.csv` — 243 rows
+### `cookies_unclassified_names.csv` — 243 rows
 
 Observed cookie names matching no family in the taxonomy, with the number of sites where each appears. This is the evidence behind the taxonomic decision: it allows any name to be contested.
 
@@ -201,7 +201,7 @@ Observed cookie names matching no family in the taxonomy, with the number of sit
 | `nombre_cookie` | Observed name. |
 | `sitios_en_que_aparece` | Number of distinct sites. |
 
-### `cookies_divergencias_v2.csv` — 14 rows
+### `cookies_divergences_v2.csv` — 14 rows
 
 Quality control. Sites where the v2 table listed cookie names absent from the raw JSON, a sign of data loss at an intermediate stage.
 
@@ -210,9 +210,9 @@ Quality control. Sites where the v2 table listed cookie names absent from the ra
 | `id`, `sigla`, `grupo` | Site. |
 | `nombres_no_presentes_en_crudo` | Names affected. |
 
-### `cambios_reconciliacion.csv` — 68 rows
+### `reconciliation_changes.csv` — 68 rows
 
-Audit trail of the reconciliation between the inventory and the HTML reports. Produced by `reconciliar.py`.
+Audit trail of the reconciliation between the inventory and the HTML reports. Produced by `reconcile.py`.
 
 | Column | Description |
 |---|---|
@@ -221,7 +221,7 @@ Audit trail of the reconciliation between the inventory and the HTML reports. Pr
 | `antes`, `despues` | Previous and new value. |
 | `motivo` | Rule that justified the change. |
 
-### `qa_irregularidades.csv` — 228 rows
+### `qa_irregularities.csv` — 228 rows
 
 Issues found in the inventory, with a type code and a suggested action. Produced by `qa_cookies.py`. Released as evidence of quality control, not as analysis data.
 
@@ -233,17 +233,17 @@ Issues found in the inventory, with a type code and a suggested action. Produced
 | `valor_actual` | The value that triggered it. |
 | `accion_requerida` | Suggested correction. |
 
-### `reporte_cookies_nacionales.csv` — 63 rows · `reporte_cookies_extranjeras.csv` — 63 rows
+### `report_cookies_domestic.csv` — 63 rows · `report_cookies_foreign.csv` — 63 rows
 
-Inventories by group, holding the manual verification fields. They are inputs to `construir_entradas.py`, which merges them to rebuild the 126-site table. The cookie columns of these files come from the **live verification**, not from the automated measurement.
+Inventories by group, holding the manual verification fields. They are inputs to `build_entries.py`, which merges them to rebuild the 126-site table. The cookie columns of these files come from the **live verification**, not from the automated measurement.
 
 National: `#`, `Universidad`, `Sigla`, `Tipo`, `Ciudad`, `Sitio`, `Verificacion`, `Cookies_antes_consentir`, `Nombres_cookies`, `Rastreo`, `CMP_live`, `Banner_live`, `Banner_estudio`, `PolCookies_estudio`.
 
 Foreign: `#`, `Universidad`, `Sigla`, `Pais`, `Region`, `Sitio`, `Cookies_antes_consentir`, `Nombres_cookies`, `CMP_detectada`, `Banner_visible`, `Banner_estudio`, `PolCookies_estudio`.
 
-### `matriz_documental.csv` — 126 rows
+### `documentary_matrix.csv` — 126 rows
 
-Documentary indicators, coded by inspecting each institution's first-level privacy notice in August 2026. These are the counts behind Figure 1 of the article. Produced by `extraer_matriz_documental.py`; see the provenance note below.
+Documentary indicators, coded by inspecting each institution's first-level privacy notice in August 2026. These are the counts behind Figure 1 of the article. Produced by `extract_documentary_matrix.py`; see the provenance note below.
 
 | Column | Description |
 |---|---|
@@ -262,17 +262,17 @@ Documentary indicators, coded by inspecting each institution's first-level priva
 | `Transp.` | Transparency under the Ecuadorian access-to-information act (LOTAIP). Ecuadorian group only. It is **not** transport security. |
 | `nueva_2024` | The institution was created in 2024 or later, marked with a double dagger in the article appendix. Ecuadorian group only. |
 
-Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and `no_aplica` where the column does not apply to that group. No cell is empty. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article. The `parcial` code is used 25 times: 18 in the benchmark group and 7 in the Ecuadorian census. It is aggregated with `no` in every percentage reported in the article, which is a decision of the analysis and not a property of the coding; `matriz_documental_long.csv` allows any other aggregation to be computed.
+Values: `si` present, `no` absent, `parcial` limited scope or a generic framework, `nv` not verifiable by this method, and `no_aplica` where the column does not apply to that group. No cell is empty. A trailing `*` marks the two cells corrected after the manual re-verification reported in the article. The `parcial` code is used 25 times: 18 in the benchmark group and 7 in the Ecuadorian census. It is aggregated with `no` in every percentage reported in the article, which is a decision of the analysis and not a property of the coding; `documentary_matrix_long.csv` allows any other aggregation to be computed.
 
 The two groups were coded with partly different column sets, which is why some columns are empty for one group and not the other. The Ecuadorian group carries between two and six `nv` cells per indicator; the benchmark group carries none. That asymmetry is itself a finding and is invisible in the aggregate percentages.
 
-**Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extraer_matriz_documental.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
+**Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extract_documentary_matrix.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
 
-### `matriz_documental_long.csv` — 756 rows
+### `documentary_matrix_long.csv` — 756 rows
 
 The same matrix in long form, one row per coded cell. Columns: `grupo`, `abbr`, `indicador`, `columna_apendice`, `valor`, `corregida_reverificacion`. Cells that do not apply to the group are omitted rather than encoded, so every row carries a coding decision. This is the form to use for any aggregation other than the one reported in the article. Distribution of the 756 coded cells: 451 `si`, 256 `no`, 25 `parcial`, 24 `nv`. All 24 `nv` cells belong to the Ecuadorian census; the benchmark group has none.
 
-### `tls_deficiencias_agosto2026.csv` — 5 rows
+### `tls_deficiencies_august2026.csv` — 5 rows
 
 The five Ecuadorian sites whose TLS chain was found deficient in the documentary check of August 2026. They are the difference between the 63 sites served over HTTPS and the 58 counted as having a valid certificate in Figure 1 and in the results table.
 
@@ -285,11 +285,11 @@ The five Ecuadorian sites whose TLS chain was found deficient in the documentary
 | `fecha_observacion` | Month of the observation. |
 | `verificacion_posterior` | Result of re-checking the chain on 5 September 2026. |
 
-**Why this file exists.** This indicator was coded by inspecting each site in a browser, not by the automated auditor, and the two do not measure the same thing: the auditor's `https` field records that the page was served over HTTPS, and Playwright rejects an invalid certificate outright, so a broken chain would appear as a load failure rather than as `https: false`. That is why `resultados.json` shows `https: true` for all 126 sites while the article reports 58 of 63 for Ecuador.
+**Why this file exists.** This indicator was coded by inspecting each site in a browser, not by the automated auditor, and the two do not measure the same thing: the auditor's `https` field records that the page was served over HTTPS, and Playwright rejects an invalid certificate outright, so a broken chain would appear as a load failure rather than as `https: false`. That is why `results.json` shows `https: true` for all 126 sites while the article reports 58 of 63 for Ecuador.
 
 All five certificates were valid when re-checked on 5 September 2026, having been renewed in the interval; one residual trace remains, in that the apex domain of ESPAM MFL still does not resolve and only the `www` host does. The August observation is therefore not reproducible today, which is a property of the object measured rather than a defect of the record: sites change, as stated in the README.
 
-### `sensibilidad_inclusion.csv` — 3 rows
+### `sensitivity_inclusion.csv` — 3 rows
 
 Result of the sensitivity analysis on the inclusion rule of the multi-vantage replication. One row per rule.
 
@@ -306,7 +306,7 @@ Result of the sensitivity analysis on the inclusion rule of the multi-vantage re
 
 ## 5. HTML reports
 
-`docs/reports/` holds four browsable reports produced during fieldwork. They are not primary data, but they **are inputs to the code**: `construir_entradas.py` extracts from `reporte_cookies_combinado.html` and `anexo_universidades_cookies.html` the data embedded in their JavaScript `DATA` constant, which is needed to reproduce the cookie table chain. That is why they are released.
+`docs/reports/` holds four browsable reports produced during fieldwork. They are not primary data, but they **are inputs to the code**: `build_entries.py` extracts from `report_cookies_combined.html` and `appendix_universities_cookies.html` the data embedded in their JavaScript `DATA` constant, which is needed to reproduce the cookie table chain. That is why they are released.
 
 ---
 
@@ -315,32 +315,32 @@ Result of the sensitivity analysis on the inclusion rule of the multi-vantage re
 What produces what, and from what.
 
 ```
-resultados.json ────────────────────────────► estudio.py
-                                                 ├─► estudio_126_sitios.csv
-                                                 └─► estudio_reglas_por_sitio.csv
+results.json ────────────────────────────► study.py
+                                                 ├─► study_126_sites.csv
+                                                 └─► study_rules_per_site.csv
 
-reporte_cookies_nacionales.csv   ┐
-reporte_cookies_extranjeras.csv  ├─► construir_entradas.py ─► data/interim/
-reporte_cookies_combinado.html   │                              _comb.json
-anexo_universidades_cookies.html ┘                              _anex.json
-                                                                cookies_126_sitios.csv
+report_cookies_domestic.csv   ┐
+report_cookies_foreign.csv  ├─► build_entries.py ─► data/interim/
+report_cookies_combined.html   │                              _comb.json
+appendix_universities_cookies.html ┘                              _anex.json
+                                                                cookies_126_sites.csv
                                                                      │
-data/interim/ ──────────────────► reconciliar.py ──────────────────┤
-                                     ├─► cookies_126_sitios_v2.csv │
-                                     └─► cambios_reconciliacion.csv│
+data/interim/ ──────────────────► reconcile.py ──────────────────┤
+                                     ├─► cookies_126_sites_v2.csv │
+                                     └─► reconciliation_changes.csv│
                                                                     │
-data/interim/ ──────────────────► qa_cookies.py ─► qa_irregularidades.csv
+data/interim/ ──────────────────► qa_cookies.py ─► qa_irregularities.csv
 
-resultados.json + v2 ───────────► reconstruir_cookies.py
-                                     ├─► cookies_126_sitios_v3.csv
-                                     ├─► cookies_nombres_sin_clasificar.csv
-                                     └─► cookies_divergencias_v2.csv
+results.json + v2 ───────────► rebuild_cookies.py
+                                     ├─► cookies_126_sites_v3.csv
+                                     ├─► cookies_unclassified_names.csv
+                                     └─► cookies_divergences_v2.csv
 
-data/raw/tracking/ ─────────────► verificar_multipunto.py     (results section)
-                                ► sensibilidad_inclusion.py   ─► sensibilidad_inclusion.csv
+data/raw/tracking/ ─────────────► verify_multivantage.py     (results section)
+                                ► sensitivity_inclusion.py   ─► sensitivity_inclusion.csv
 
-article appendices (external) ──► extraer_matriz_documental.py ─┬─► matriz_documental.csv
-                                                               └─► matriz_documental_long.csv
+article appendices (external) ──► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
+                                                               └─► documentary_matrix_long.csv
 ```
 
-Files in `data/interim/` are not versioned because `construir_entradas.py` regenerates them from material that is published. The article source is not part of the deposit, which is why the last step above cannot be run from this repository alone.
+Files in `data/interim/` are not versioned because `build_entries.py` regenerates them from material that is published. The article source is not part of the deposit, which is why the last step above cannot be run from this repository alone.

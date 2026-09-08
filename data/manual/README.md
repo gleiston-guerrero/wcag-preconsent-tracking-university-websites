@@ -15,18 +15,18 @@ and the difference between them is itself a finding.
 
 ### Round 1 — 27 August 2026, evaluators `E01` to `E10`
 
-`wcag_validacion_15_sitios.csv` — 45 rows, one per site and criterion. Each row records
+`wcag_validation_15_sites.csv` — 45 rows, one per site and criterion. Each row records
 the code, the sample size `n`, the number of failures `f`, the evaluator code, the date,
 the duration in minutes, the number of captures and a technical opinion.
 
-`codificacion_manual_15_universidades.csv` — 15 rows, one per site, with the three codes
+`manual_coding_15_universities.csv` — 15 rows, one per site, with the three codes
 side by side and a bound on each. **Every row states `un solo codificador`, a single
 coder**, in all three status columns. It is a record of the first pass and carries no
 inter-coder evidence; it is published for completeness.
 
 ### Round 2 — 1 September 2026, evaluator `R01`
 
-`recodificacion_111.csv`, `recodificacion_143.csv`, `recodificacion_244.csv` — 15 rows
+`recoding_111.csv`, `recoding_143.csv`, `recoding_244.csv` — 15 rows
 each, one per site. Better documented than round 1: they add the UTC extraction stamp,
 the total number of elements detected against the sample examined, the list of failing
 elements and a substantive note per cell. Several of those notes record the decisions
@@ -36,14 +36,14 @@ the context of a link.
 
 ### Partial second coding — 25 August 2026, evaluator `D01`
 
-`wcag_doble_evaluacion_5_sitios.csv` — 15 rows covering five sites, with a justification
+`wcag_double_evaluation_5_sites.csv` — 15 rows covering five sites, with a justification
 per cell and an explicit judgement on whether the evidence supplied supports the code as
 delivered.
 
-`wcag_pares_kappa.csv` — pairs of first and second coding with an agreement column, for
+`wcag_kappa_pairs.csv` — pairs of first and second coding with an agreement column, for
 those five sites.
 
-`wcag_validacion_anonimizado.xlsx` — the round-1 workbook without evaluator names.
+`wcag_validation_anonymised.xlsx` — the round-1 workbook without evaluator names.
 
 ---
 
@@ -72,7 +72,7 @@ trichotomy is not.**
 
 ## The instrument prepared in response
 
-`recodificacion_act_5_sitios_PLANTILLA.csv` and `recodificacion_act_DICCIONARIO.md`
+`act_recoding_5_sites_TEMPLATE.csv` and `act_recoding_DICTIONARY.md`
 
 An empty template and its data dictionary for a third round, anchored in the W3C
 Accessibility Conformance Testing (ACT) Rules, whose format became a W3C Recommendation

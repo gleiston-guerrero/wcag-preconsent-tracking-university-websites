@@ -8,13 +8,13 @@ echo  ANTES DE CONTINUAR: DESCONECTE la VPN. Debe medirse desde su conexion dome
 echo.
 pause
 
-node auditar_multipunto.js --vantage=EC --run=1 --red=residencial --ciudad=Cuenca
+node audit_multivantage.js --vantage=EC --run=1 --red=residencial --ciudad=Cuenca
 if errorlevel 2 goto abortada
 
-node auditar_multipunto.js --vantage=EC --run=2 --red=residencial --ciudad=Cuenca
+node audit_multivantage.js --vantage=EC --run=2 --red=residencial --ciudad=Cuenca
 if errorlevel 2 goto abortada
 
-node auditar_multipunto.js --vantage=EC --run=3 --red=residencial --ciudad=Cuenca
+node audit_multivantage.js --vantage=EC --run=3 --red=residencial --ciudad=Cuenca
 if errorlevel 2 goto abortada
 
 echo.
@@ -25,8 +25,8 @@ goto fin
 echo.
 echo  *** PASADA ABORTADA: la VPN se cayo o cambio de pais. ***
 echo  Reconecte la VPN al pais correcto, BORRE los archivos de la pasada
-echo  abortada (resultados_*.json, resultados_*.csv, meta_*.json) y vuelva
-echo  a ejecutar este mismo archivo.
+echo  abortada (results_*.json, results_*.csv, meta_*.json) y vuelva
+echo  a run este mismo archivo.
 
 :fin
 echo.

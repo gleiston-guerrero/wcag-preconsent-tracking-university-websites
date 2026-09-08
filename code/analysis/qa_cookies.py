@@ -2,8 +2,8 @@
 """Detecta y lista, fila a fila, las irregularidades del inventario de 126 sitios."""
 import csv, sys
 
-ENTRADA = sys.argv[1] if len(sys.argv) > 1 else "trabajo/cookies_126_sitios.csv"
-SALIDA  = sys.argv[2] if len(sys.argv) > 2 else "trabajo/qa_irregularidades.csv"
+ENTRADA = sys.argv[1] if len(sys.argv) > 1 else "work/cookies_126_sites.csv"
+SALIDA  = sys.argv[2] if len(sys.argv) > 2 else "work/qa_irregularities.csv"
 
 R = list(csv.DictReader(open(ENTRADA, encoding="utf-8")))
 
@@ -36,14 +36,14 @@ for r in R:
         add(r, "I3", "Lista de nombres de cookies truncada", f"declaradas {n}, listadas {k}",
             "Recuperar los nombres completos del JSON crudo o declarar el limite de 10 en el libro de codigos")
 
-    # I4 banner: el estudio no lo detecta pero en vivo si aparece
+    # I4 banner: el study no lo detecta pero en vivo si aparece
     if r["banner_estudio"] == "No detectable" and live(r) in ("Si", "Sí"):
-        add(r, "I4", "Sin banner en el estudio pero visible en vivo", f"estudio=No detectable, en vivo={live(r)}, CMP={cmp_(r) or 'sin dato'}",
+        add(r, "I4", "Sin banner en el study pero visible en vivo", f"estudio=No detectable, en vivo={live(r)}, CMP={cmp_(r) or 'sin dato'}",
             "Decidir si 'No detectable' significa ausencia de banner o fallo del detector; si es lo segundo, recodificar como no determinado")
 
-    # I5 banner: el estudio lo detecta pero en vivo no aparece
+    # I5 banner: el study lo detecta pero en vivo no aparece
     if r["banner_estudio"] == "Sí" and live(r) == "No":
-        add(r, "I5", "Banner en el estudio pero ausente en vivo", f"estudio=Si, en vivo=No, CMP={cmp_(r) or 'sin dato'}",
+        add(r, "I5", "Banner en el study pero ausente en vivo", f"estudio=Si, en vivo=No, CMP={cmp_(r) or 'sin dato'}",
             "Comprobar si el sitio retiro el banner entre ambas mediciones y fechar cada observacion por separado")
 
     # I6 sin clasificacion de rastreo

@@ -10,11 +10,11 @@ Datos, evidencia y código del artículo *Two barriers to equitable access: WCAG
 
 ## Qué contiene
 
-El estudio mide dos barreras sobre 126 portadas universitarias: 63 instituciones ecuatorianas, que constituyen el censo completo del sistema, y 63 instituciones de referencia obtenidas del consenso de tres rankings internacionales. La primera barrera es la conformidad con WCAG 2.2, auditada con axe-core 4.13.0 sobre un navegador real. La segunda es el depósito de cookies de rastreo antes de cualquier interacción con una interfaz de consentimiento.
+El study mide dos barreras sobre 126 portadas universitarias: 63 instituciones ecuatorianas, que constituyen el censo completo del sistema, y 63 instituciones de referencia obtenidas del consenso de tres rankings internacionales. La primera barrera es la conformidad con WCAG 2.2, auditada con axe-core 4.13.0 sobre un navegador real. La segunda es el depósito de cookies de rastreo antes de cualquier interacción con una interfaz de consentimiento.
 
 El depósito contiene **dos mediciones distintas que no deben mezclarse**:
 
-**Auditoría de pasada única**, 14 de agosto de 2026. Una sola visita a cada uno de los 126 sitios, desde un punto de observación en Ecuador. Es la fuente de todas las cifras de accesibilidad y de la comparación entre grupos. Archivo canónico: `data/raw/accessibility/resultados.json`.
+**Auditoría de pasada única**, 14 de agosto de 2026. Una sola visita a cada uno de los 126 sitios, desde un punto de observación en Ecuador. Es la fuente de todas las cifras de accesibilidad y de la comparación entre grupos. Archivo canónico: `data/raw/accessibility/results.json`.
 
 **Réplica multipunto**, 15 de agosto de 2026. El mismo protocolo repetido desde cuatro ubicaciones geográficas, con tres pasadas válidas en cada una. Es la fuente del contraste entre jurisdicciones. Archivos en `data/raw/tracking/`.
 
@@ -27,22 +27,22 @@ Las dos difieren en fecha, en conjunto de sitios retenidos y en regla de consoli
 ```
 data/
   raw/
-    accessibility/    resultados.json, resultados.csv
+    accessibility/    results.json, results.csv
                       Pasada única, 126 sitios, 14 de agosto de 2026.
-    census/           universidades.json  censo de los 126 sitios auditados
+    census/           universities.json  censo de los 126 sitios auditados
                       tops.json           top 75 de cada edicion de ranking
-                      seleccion63_mundo.json  consenso que define el grupo de referencia
+                      selection63_benchmark.json  consenso que define el grupo de referencia
     tracking/         39 archivos de la replica multipunto reportada:
-                        resultados_{EC,EU,GB,US}_r*.{json,csv}
+                        results_{EC,EU,GB,US}_r*.{json,csv}
                         meta_*.json  IP publica, geolocalizacion y versiones por pasada
     tracking_extended/  48 archivos de una campana posterior de cinco puntos,
                         con Suiza, NO analizada en el articulo. Ver mas abajo.
   processed/          doce tablas derivadas; ver CODEBOOK.md
-  interim/            se crea al ejecutar el codigo; no se versiona
+  interim/            se crea al run el codigo; no se versiona
 code/
-  collection/         auditar.js             auditoria de pasada unica
-                      auditar_multipunto.js  auditoria por punto de observacion
-                      ejecutar.bat, INSTALAR.bat
+  collection/         audit.js             auditoria de pasada unica
+                      audit_multivantage.js  auditoria por punto de observacion
+                      run.bat, INSTALL.bat
                       axe/                   dependencias de la pasada unica
                       extended/              instrumento y lanzadores de la campana
                                              de cinco puntos
@@ -79,18 +79,18 @@ Cada `meta_*.json` registra siete verificaciones de ubicación por pasada, al in
 
 ## Reproducción
 
-Node.js y Python 3. Las versiones con las que se produjeron los resultados publicados están fijadas en `code/collection/package.json` (axe-core 4.13.0, Playwright 1.62.1, Node v24.18.1) y en `code/analysis/requirements.txt` (Python 3.10.3, NumPy 2.2.6, SciPy 1.15.3, Matplotlib 3.10.9).
+Node.js y Python 3. Las versiones con las que se produjeron los results publicados están fijadas en `code/collection/package.json` (axe-core 4.13.0, Playwright 1.62.1, Node v24.18.1) y en `code/analysis/requirements.txt` (Python 3.10.3, NumPy 2.2.6, SciPy 1.15.3, Matplotlib 3.10.9).
 
 ### Recolección
 
 ```bash
 cd code/collection
 npm install
-node auditar.js                                   # pasada unica
-node auditar_multipunto.js --vantage=EC --run=1   # una pasada de un punto
+node audit.js                                   # pasada unica
+node audit_multivantage.js --vantage=EC --run=1   # una pasada de un punto
 ```
 
-`auditar.js` lee el censo y escribe la salida de forma incremental; si se interrumpe, al volver a ejecutarlo continúa donde quedó. `auditar_multipunto.js` comprueba la geolocalización de la IP y aborta si no coincide con el punto indicado, de modo que la medición debe hacerse realmente desde la ubicación declarada.
+`audit.js` lee el censo y escribe la salida de forma incremental; si se interrumpe, al volver a ejecutarlo continúa donde quedó. `audit_multivantage.js` comprueba la geolocalización de la IP y aborta si no coincide con el punto indicado, de modo que la medición debe hacerse realmente desde la ubicación declarada.
 
 ### Análisis
 
@@ -100,20 +100,20 @@ Los scripts de `code/analysis/` se ejecutan **desde esa carpeta** y encuentran l
 cd code/analysis
 pip install -r requirements.txt
 
-python construir_entradas.py      # reconstruye las entradas intermedias
-python reconciliar.py             # cookies_126_sitios_v2, cambios_reconciliacion
-python qa_cookies.py              # qa_irregularidades
-python reconstruir_cookies.py ../../data/raw/accessibility ../../data/processed
-python estudio.py                 # estudio_126_sitios, estudio_reglas_por_sitio
-python verificar_pasada_unica.py  # asociacion entre las dos barreras
-python sensibilidad_muestreo.py   # sensibilidad del grupo de referencia
-python figuras_uais.py            # cinco de las seis figuras
+python build_entries.py      # reconstruye las entradas intermedias
+python reconcile.py             # cookies_126_sites_v2, reconciliation_changes
+python qa_cookies.py              # qa_irregularities
+python rebuild_cookies.py ../../data/raw/accessibility ../../data/processed
+python study.py                 # study_126_sitios, study_rules_per_site
+python verify_single_pass.py  # asociacion entre las dos barreras
+python sensitivity_sampling.py   # sensibilidad del grupo de referencia
+python figures_uais.py            # cinco de las seis figuras
 python fig_vantage.py             # figura de proveedores por punto de observacion
-python verificar_multipunto.py    # toda la seccion de resultados multipunto
-python sensibilidad_inclusion.py ../../data/raw/tracking
+python verify_multivantage.py    # toda la seccion de results multipunto
+python sensitivity_inclusion.py ../../data/raw/tracking
 ```
 
-`verificar_multipunto.py` reproduce la sección de resultados multipunto: proporciones por punto de observación con intervalos de Wilson, prueba exacta de McNemar para cada par, corrección de Holm sobre las seis comparaciones, Q de Cochran, controles de renderizado y atribución de cookies por proveedor. `sensibilidad_inclusion.py` repite ese análisis bajo las tres reglas de inclusión defendibles y comprueba que la ordenación de los puntos no depende de esa elección.
+`verify_multivantage.py` reproduce la sección de results multipunto: proporciones por punto de observación con intervalos de Wilson, prueba exacta de McNemar para cada par, corrección de Holm sobre las seis comparaciones, Q de Cochran, controles de renderizado y atribución de cookies por proveedor. `sensitivity_inclusion.py` repite ese análisis bajo las tres reglas de inclusión defendibles y comprueba que la ordenación de los puntos no depende de esa elección.
 
 ### Verificación de integridad
 
@@ -141,7 +141,7 @@ La auditoría automatizada detecta un subconjunto de los fallos de conformidad. 
 
 Cinco sitios quedaron fuera del análisis pareado entre puntos de observación por no cargar en al menos una pasada. Están nombrados uno a uno en el artículo, junto con la causa y un análisis de sensibilidad frente a esa exclusión.
 
-La taxonomía de cookies de rastreo se amplió después de la recolección, tras inspeccionar los nombres efectivamente observados, y se aplicó reclasificando los nombres ya almacenados, sin volver a medir. `data/processed/cookies_nombres_sin_clasificar.csv` recoge los 243 nombres distintos que no coinciden con ninguna familia conocida, para que la clasificación pueda discutirse.
+La taxonomía de cookies de rastreo se amplió después de la recolección, tras inspeccionar los nombres efectivamente observados, y se aplicó reclasificando los nombres ya almacenados, sin volver a medir. `data/processed/cookies_unclassified_names.csv` recoge los 243 nombres distintos que no coinciden con ninguna familia conocida, para que la clasificación pueda discutirse.
 
 ---
 
