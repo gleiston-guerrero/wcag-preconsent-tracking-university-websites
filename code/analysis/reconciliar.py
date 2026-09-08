@@ -1,17 +1,10 @@
 # -*- coding: utf-8 -*-
 """Reconcilia el inventario de 126 sitios con los datos embebidos en los informes HTML."""
-import csv, json, re, sys
-from pathlib import Path
+import csv, json, re
 
-# Rutas por argumento. Por defecto, relativas a la raiz del repositorio si el
-# script se ejecuta desde code/analysis/.
-INTERIM = Path(sys.argv[1] if len(sys.argv) > 1 else "../../data/interim")
-SALIDA  = Path(sys.argv[2] if len(sys.argv) > 2 else "../../data/processed")
-SALIDA.mkdir(parents=True, exist_ok=True)
-
-comb = json.load(open(INTERIM / "_comb.json", encoding="utf-8"))
-anex = json.load(open(INTERIM / "_anex.json", encoding="utf-8"))
-R    = list(csv.DictReader(open(INTERIM / "cookies_126_sitios.csv", encoding="utf-8")))
+comb = json.load(open("trabajo/_comb.json"))
+anex = json.load(open("trabajo/_anex.json"))
+R    = list(csv.DictReader(open("trabajo/cookies_126_sitios.csv", encoding="utf-8")))
 cm = {r["sigla"]: r for r in comb}
 am = {r["sigla"]: r for r in anex}
 assert len(comb) == len(anex) == len(R) == 126
@@ -105,9 +98,9 @@ for o in OUT:
         CAMBIOS.append([o[I_SIG], "rastreo", ant, base,
                         "las cookies coinciden con la lista RASTREO de auditar.js"])
 
-with open(SALIDA / "cookies_126_sitios_v2.csv", "w", newline="", encoding="utf-8") as fh:
+with open("trabajo/cookies_126_sitios_v2.csv", "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh); w.writerow(H); w.writerows(OUT)
-with open(SALIDA / "cambios_reconciliacion.csv", "w", newline="", encoding="utf-8") as fh:
+with open("trabajo/cambios_reconciliacion.csv", "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh); w.writerow(["sigla","campo","antes","despues","motivo"]); w.writerows(CAMBIOS)
 
 from collections import Counter

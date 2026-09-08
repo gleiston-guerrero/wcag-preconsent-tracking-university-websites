@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 """Aplana resultados.json en dos tablas canonicas."""
-import csv, json, sys
-from pathlib import Path
+import csv, json
 
-ENTRADA = Path(sys.argv[1] if len(sys.argv) > 1 else "../../data/raw/accessibility/resultados.json")
-SALIDA  = Path(sys.argv[2] if len(sys.argv) > 2 else "../../data/processed")
-SALIDA.mkdir(parents=True, exist_ok=True)
-
-d = json.load(open(ENTRADA, encoding="utf-8"))
+d = json.load(open("p1/resultados.json", encoding="utf-8"))
 d.sort(key=lambda r: r["id"])
 assert len(d) == 126 and all(r["ok"] for r in d)
 
@@ -40,7 +35,7 @@ for r in d:
                    x["nivel"] or "", x["nodos"], x["ayuda"]])
 
 for nom, H, R in (("estudio_126_sitios", H1, R1), ("estudio_reglas_por_sitio", H2, R2)):
-    with open(SALIDA / f"{nom}.csv", "w", newline="", encoding="utf-8") as fh:
+    with open(f"trabajo/{nom}.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh); w.writerow(H); w.writerows(R)
 
 print("estudio_126_sitios.csv     :", len(R1), "filas,", len(H1), "columnas")

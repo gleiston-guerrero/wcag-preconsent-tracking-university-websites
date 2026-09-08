@@ -1,0 +1,16 @@
+﻿id,sigla,criterio,evaluador_primera_cod,codigo_primera,n_primera,f_primera,evaluador_segunda_cod,codigo_segunda,acuerdo,entra_en_kappa,motivo_exclusion
+7,UC Berkeley,1.1.1,E01,0,10,7,D01,1,0,si,
+7,UC Berkeley,1.4.3,E01,1,7,0,D01,1,1,si,
+7,UC Berkeley,2.4.4,E01,1,9,0,D01,1,1,si,
+14,UCL,1.1.1,E01,1,5,0,D01,0,0,si,
+14,UCL,1.4.3,E01,1,4,0,D01,1,1,si,
+14,UCL,2.4.4,E01,P,16,2,D01,1,0,si,
+83,UNESUM,1.1.1,E08,0,27,6,D01,0,1,si,
+83,UNESUM,1.4.3,E08,P,18,1,D01,P,1,si,
+83,UNESUM,2.4.4,E08,0,25,8,D01,0,1,si,
+95,USECIPOL,1.1.1,E02,0,17,7,D01,0,1,si,
+95,USECIPOL,1.4.3,E02,1,25,0,D01,1,1,si,
+95,USECIPOL,2.4.4,E02,1,25,0,D01,1,1,si,
+96,IAEN,1.1.1,E03,0,7,2,D01,0,1,si,
+96,IAEN,1.4.3,E03,0,16,4,D01,1,0,si,
+96,IAEN,2.4.4,E03,P,18,2,D01,1,,no,"La captura de la segunda evaluacion muestra un enlace cuyo unico texto es 'Clic aqui', lo que descarta el codigo 1 declarado; el par se retira por evidencia contradictoria."
