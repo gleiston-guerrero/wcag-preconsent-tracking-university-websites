@@ -1,0 +1,4 @@
+bloque,abbr,group,criterion,act_rule,selector,element_n_R02,element_n_R04,outcome_R02,outcome_R04,measured_R02,measured_R04
+A_mecanicas,Cornell,mundo,1.4.3,afw4f7,div > form.search-main > div.container > label.offscreen,97,97,falla,cumple,1.00:1,9.81:1
+A_mecanicas,UTI,ecuador,2.4.4,c487ae,div.pp-tiles-posts-right > div.pp-tiled-post > div.pp-tiled-post-bg > a.pp-post-link,45,42,cumple,falla,,
+A_mecanicas,UTI,ecuador,2.4.4,c487ae,div.has_ae_slider > div.elementor-element > div.elementor-widget-container > a,16,16,falla,cumple,,

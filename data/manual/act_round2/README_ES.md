@@ -95,19 +95,80 @@ Deliberadamente no contiene ningún ejemplo de los quince sitios en evaluación.
 Ningún sitio satisface los tres. Las ocho instituciones ecuatorianas fallan los
 tres.
 
-El acuerdo con la primera ronda, sobre las 45 celdas de sitio por criterio que
-comparten, es del 62,2 % con una kappa de Cohen de 0,201. **Esa cifra no estima la
-fiabilidad entre codificadores.** Los 17 desacuerdos van todos en la misma
-dirección, de cumple a falla, que es la firma de un cambio de instrumento y no de
-un desacuerdo entre codificadores: la enumeración exhaustiva encuentra fallos que
-el muestreo proporcional no encuentra. La cifra se reporta como análisis de
-sensibilidad del procedimiento de codificación.
+## Reproducibilidad del instrumento
 
-## Advertencia sobre reproducibilidad
+Esta ronda tiene dos codificaciones independientes: `recoding/`, del 8 de
+septiembre de 2026 (`R02`), y `recoding_evaluator2/`, del 9 de septiembre
+(`R04`). `code/analysis/acuerdo_act.py` las compara y escribe
+`data/processed/act_agreement_summary.csv` y
+`act_agreement_disagreements.csv`.
 
-Ejecuciones repetidas del mismo sitio el mismo día difieren en uno a cuatro
-elementos aplicables en páginas con carruseles o contenido rotatorio. Ningún
-veredicto cambió en ninguna repetición. Los recuentos de elementos *no aplicables*
-son volátiles y dependen de la tecnología del sitio —un solo sitio aportó 249
-filas de no aplicable únicamente por un widget de traducción— y no deben
-compararse entre sitios.
+Sobre las tres reglas que deciden mecánicamente —`23a2a8`, `afw4f7` y
+`c487ae`— las dos codificaciones coinciden en 3 186 de 3 189 comparaciones por
+elemento: **99,9 % de acuerdo, kappa de Cohen 0,996 con IC 95 % [0,991, 1,000]**,
+con idéntica prevalencia de `cumple`, el 86,7 % en ambas. El acuerdo sobre qué
+elementos son aplicables es del 99,1 % con kappa 0,981.
+
+**Esto estima la reproducibilidad del instrumento entre operadores
+independientes, no la fiabilidad entre codificadores.** En estas tres reglas el
+evaluador solo ejecuta el script; la regla decide sola.
+
+Los tres desacuerdos están listados en `act_agreement_disagreements.csv` y
+explican el mecanismo de la variación. Uno es una etiqueta fuera de pantalla de
+Cornell, `label.offscreen`, cuyo contraste se computó como 1,00:1 en una
+ejecución y 9,81:1 en la otra: un ratio de 1,00:1 significa que texto y fondo
+son del mismo color, de modo que el desacuerdo está en la frontera de lo que
+cuenta como carácter visible, que es donde la regla `afw4f7` deja de aplicar.
+Los otros dos son enlaces de UTI dentro de contenido rotatorio, una rejilla de
+entradas y un carrusel, cuyo nombre accesible depende de qué elemento ocupaba la
+casilla al medir. **Los dos van en direcciones opuestas**, de modo que la
+variación no tiene sesgo sistemático.
+
+A nivel de sitio, las dos codificaciones devuelven el mismo veredicto en las 34
+de las 45 celdas de sitio por criterio que ambas pueden decidir, incluidas las
+tres únicas en las que un sitio *sí* satisface un criterio: 1.4.3 en
+Northwestern, UC Berkeley y UCL. Las 11 celdas restantes contienen filas
+remitidas al juicio humano que una de las dos codificaciones no ha resuelto
+todavía.
+
+## Emparejamiento de elementos, y qué queda fuera
+
+Las dos codificaciones enumeran los elementos por separado y las portadas
+cambian de un día para otro, de modo que `element_n` no designa el mismo
+elemento en las dos. La comparación empareja por sigla, criterio, regla y
+selector. Emparejan 7 037 elementos; quedan sin pareja 799 filas de `R02` y 98
+de `R04`.
+
+La mayor parte de ese hueco no es una diferencia de codificación. **607 de las
+799 filas sin pareja de `R02` son filas de elementos no aplicables**, que no
+entran en ningún cálculo de acuerdo ni pueden cambiar un veredicto, y **504 de
+ellas pertenecen a un único widget de traducción** cuya lista de idiomas se
+renderizó en la ejecución del 8 de septiembre y no en la del 9: ese widget
+aporta 259 filas en IAEN y 264 en UTI en `R02`, frente a 7 y 12 en `R04`.
+
+Lo que el hueco sí deja fuera son **129 filas de `R02` y 47 de `R04` que llevan
+un resultado definitivo**: elementos que una ejecución vio y la otra no. El
+acuerdo anterior se calcula, por tanto, sobre el 96,1 % de las filas decididas
+de `R02` y el 98,5 % de las de `R04`.
+
+Dos de las once celdas sin cerrar lo están por ese motivo y no por desacuerdo:
+en Cornell 2.4.4 y en UTI 1.1.1, `R02` encontró un elemento que falla y `R04` no
+llegó a verlo; en IAEN 2.4.4 ocurre lo contrario. Un veredicto de sitio puede
+así diferir entre dos codificaciones sin que ningún codificador discrepe.
+
+## Fiabilidad entre codificadores: todavía no estimada
+
+Las filas que las reglas remiten al juicio humano —318 de `qt1vmo`, 1 016 de
+`5effbb` y 17 de `fd3a94`— siguen marcadas `REVISAR` en `recoding_evaluator2/`.
+Hasta que un segundo evaluador las resuelva con
+`../instruments/resolver_r04.py`, esta ronda no permite estimar fiabilidad entre
+codificadores, y no se reporta ninguna.
+
+La ronda 1 y esta ronda no comparten instrumento: la primera codificaba cada
+sitio muestreando elementos y juzgando una proporción, y ésta enumera todos los
+elementos aplicables bajo reglas ACT. Las diferencias entre ambas sobre las 45
+celdas que comparten reflejan ese cambio de instrumento —la enumeración
+exhaustiva encuentra fallos que el muestreo proporcional no encuentra— y no un
+desacuerdo entre personas. Por eso no se reporta ningún estadístico de acuerdo
+para esa comparación: mediría el cambio de instrumento, no el acuerdo entre
+codificadores.

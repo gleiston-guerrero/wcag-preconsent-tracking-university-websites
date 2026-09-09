@@ -88,18 +88,77 @@ example from the fifteen sites under evaluation.
 
 No site satisfies all three. All eight Ecuadorian institutions fail all three.
 
-Agreement with the first round, over the 45 site-by-criterion cells they share,
-is 62.2% with a Cohen's kappa of 0.201. **That figure does not estimate
-inter-coder reliability.** All 17 disagreements run in the same direction, from
-pass to fail, which is the signature of a change of instrument rather than of
-disagreement between coders: exhaustive enumeration finds failures that
-proportional sampling does not. The figure is reported as a sensitivity analysis
-of the coding procedure.
+## Reproducibility of the instrument
 
-## Reproducibility caveat
+This round has two independent codings: `recoding/`, of 8 September 2026
+(`R02`), and `recoding_evaluator2/`, of 9 September (`R04`).
+`code/analysis/acuerdo_act.py` compares them and writes
+`data/processed/act_agreement_summary.csv` and
+`act_agreement_disagreements.csv`.
 
-Repeated runs of the same site on the same day differ by one to four applicable
-elements on pages with carousels or rotating content. No verdict changed across
-any repetition. Counts of *inapplicable* elements are volatile and depend on the
-site's technology — one site contributed 249 inapplicable rows from a translation
-widget alone — and should not be compared across sites.
+On the three rules the rule decides mechanically — `23a2a8`, `afw4f7` and
+`c487ae` — the two codings agree on 3 186 of 3 189 element-level comparisons:
+**99.9 per cent agreement, Cohen's kappa 0.996 with a 95 per cent CI of
+[0.991, 1.000]**, with an identical prevalence of `cumple`, 86.7 per cent in
+both. Agreement on which elements the rules apply to is 99.1 per cent with a
+kappa of 0.981.
+
+**This estimates the reproducibility of the instrument across independent
+operators, not inter-coder reliability.** On these three rules the evaluator only
+runs the script; the rule decides on its own.
+
+The three disagreements are listed in `act_agreement_disagreements.csv` and they
+show the mechanism of the variation. One is an off-screen label at Cornell,
+`label.offscreen`, whose contrast computed as 1.00:1 in one run and 9.81:1 in the
+other: a ratio of 1.00:1 means text and background are the same colour, so the
+disagreement sits on the boundary of what counts as a visible character, which is
+where rule `afw4f7` stops applying. The other two are links at UTI inside
+rotating content, a tiled post grid and a carousel, whose accessible name depends
+on which item occupied the slot at the moment of measurement. **The two run in
+opposite directions**, so the variation carries no systematic bias.
+
+At site level, the two codings return the same verdict in all 34 of the 45
+site-by-criterion cells that both can decide, including the only three in which a
+site *does* satisfy a criterion: SC 1.4.3 at Northwestern, UC Berkeley and UCL.
+The remaining 11 cells hold rows referred to human judgement that one of the two
+codings has not yet resolved.
+
+## Element matching, and what it leaves out
+
+The two codings enumerate elements independently and the home pages change from
+one day to the next, so `element_n` does not designate the same element in both.
+The comparison matches on abbreviation, criterion, rule and selector. 7 037
+elements match; 799 rows of `R02` and 98 of `R04` have no counterpart.
+
+Most of that gap is not a coding difference. **607 of the 799 unmatched rows of
+`R02` are rows for inapplicable elements**, which enter no agreement calculation
+and can change no verdict, and **504 of them belong to a single translation
+widget** whose language list was rendered in the 8 September run and not in the
+9 September one: that widget contributes 259 rows at IAEN and 264 at UTI in
+`R02`, against 7 and 12 in `R04`.
+
+What the gap does leave out is **129 rows of `R02` and 47 of `R04` that carry a
+definite outcome**: elements one run saw and the other did not. The agreement
+above is therefore computed over 96.1 per cent of the decided rows of `R02` and
+98.5 per cent of those of `R04`.
+
+Two of the eleven open cells are open for that reason and not through
+disagreement: at Cornell SC 2.4.4 and at UTI SC 1.1.1, `R02` found a failing
+element that `R04` did not see; at IAEN SC 2.4.4 the reverse happens. A site
+verdict can therefore differ between two codings without any coder disagreeing.
+
+## Inter-coder reliability: not yet estimated
+
+The rows that the rules refer to human judgement — 318 under `qt1vmo`, 1 016
+under `5effbb` and 17 under `fd3a94` — are still marked `REVISAR` in
+`recoding_evaluator2/`. Until a second evaluator resolves them with
+`../instruments/resolver_r04.py`, this round does not support an estimate of
+inter-coder reliability, and none is reported.
+
+Round 1 and this round do not share an instrument: the first coded each site by
+sampling elements and judging a proportion, and this one enumerates every
+applicable element under ACT rules. The differences between them over the 45
+cells they share reflect that change of instrument — exhaustive enumeration finds
+failures that proportional sampling does not — and not a disagreement between
+people. No agreement statistic is reported for that comparison, because it would
+measure the change of instrument rather than agreement between coders.
