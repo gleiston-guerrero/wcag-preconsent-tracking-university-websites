@@ -64,7 +64,7 @@ const SITIO = Object.assign({ id: '', grupo: '', sigla: '' },
 if (!clave) console.warn('AVISO: este dominio no esta en la submuestra de 15 sitios. Rellene id, grupo y sigla a mano en el CSV.');
 else console.log(`Sitio reconocido: ${SITIO.sigla} (id ${SITIO.id}, grupo ${SITIO.grupo})`);
 
-const EVALUADOR = 'R03';   // <-- PONGA AQUI SU CODIGO DE EVALUADOR ANTES DE EJECUTAR
+const EVALUADOR = 'RXX';   // <-- PONGA AQUI SU CODIGO DE EVALUADOR ANTES DE EJECUTAR
 const FECHA = new Date().toISOString().slice(0, 10);
 const filas = [];
 

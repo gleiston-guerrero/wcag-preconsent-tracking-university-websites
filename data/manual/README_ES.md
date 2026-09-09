@@ -116,7 +116,10 @@ Cuarenta y cinco capturas de pantalla, quince por criterio, en `1.1.1/`, `1.4.3/
 ## Códigos de evaluador
 
 `E01`–`E10` en la primera ronda de codificación, `D01` en la segunda codificación parcial,
-y `R01`, `R02` y `R03` en las rondas de recodificación y ACT. Ningún archivo de esta
+`R01` en la recodificación manual del primer autor, `R02` en la recogida ACT del 8 de
+septiembre, `R03` en la resolución asistida de los elementos de imagen de `qt1vmo`, y `R04`
+en la codificación independiente del segundo evaluador. Cada código designa una sola
+codificación. Ningún archivo de esta
 carpeta identifica a un evaluador: ninguno lleva el nombre, el correo electrónico ni una
 ruta local de nadie del equipo investigador. Existen versiones con nombres de evaluador,
 pero no forman parte de este depósito.

@@ -31,3 +31,5 @@ inventario_git.txt
 
 # carpeta que crea la app de escritorio; no forma parte del deposito
 Claude outputs/
+data/manual/others/
+.commitmsg

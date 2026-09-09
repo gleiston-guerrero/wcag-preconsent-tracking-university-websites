@@ -76,10 +76,11 @@ el navegador registra la autorización igualmente. Vuelva a pegar el script.
 **Antes de la primera ejecución**, cambie en el script la línea:
 
 ```javascript
-const EVALUADOR = 'R03';   // <-- PONGA AQUI SU CODIGO DE EVALUADOR
+const EVALUADOR = 'RXX';   // <-- PONGA AQUI SU CODIGO DE EVALUADOR
 ```
 
-Use siempre el mismo código en los quince sitios. **No escriba su nombre**: la
+Use el código que se le haya asignado para esta ronda (`R04`), y el mismo en los quince
+sitios. **No escriba su nombre**: la
 codificación se publica y los evaluadores se identifican por código.
 
 **5. Espere a que termine.** Tarda entre veinte segundos y un minuto. Verá en la

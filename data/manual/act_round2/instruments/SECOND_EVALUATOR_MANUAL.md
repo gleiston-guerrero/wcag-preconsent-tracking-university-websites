@@ -75,10 +75,11 @@ browser registers the authorisation anyway. Paste the script again.
 **Before the first run**, change this line in the script:
 
 ```javascript
-const EVALUADOR = 'R03';   // <-- PUT YOUR EVALUATOR CODE HERE
+const EVALUADOR = 'RXX';   // <-- PUT YOUR EVALUATOR CODE HERE
 ```
 
-Always use the same code on all fifteen sites. **Do not write your name**: the
+Use the code you were given for this round (`R04`), and use the same one on all fifteen
+sites. **Do not write your name**: the
 coding is published and evaluators are identified by code.
 
 **5. Wait for it to finish.** It takes between twenty seconds and a minute. You

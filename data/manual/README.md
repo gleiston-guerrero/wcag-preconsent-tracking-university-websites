@@ -114,8 +114,10 @@ by institution. They are the evidence behind round 1 and round 2.
 
 ## Evaluator codes
 
-`E01`–`E10` for the first coding round, `D01` for the partial second coding, and `R01`,
-`R02` and `R03` for the recoding and ACT rounds. No file in this folder identifies an
+`E01`–`E10` for the first coding round, `D01` for the partial second coding, `R01` for
+the first author's manual recoding, `R02` for the ACT collection of 8 September, `R03` for
+the assisted resolution of the `qt1vmo` image elements, and `R04` for the independent
+second evaluator. Each code designates one coding and one only. No file in this folder identifies an
 evaluator: none carries the name, the e-mail address or a local file path of anyone on the
 research team. Versions carrying evaluator names exist but are not part of this deposit.
 
