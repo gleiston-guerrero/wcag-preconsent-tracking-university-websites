@@ -51,7 +51,7 @@ each: 232 passed, 113 failed. Every failure was determined against the image
 itself, downloaded and examined.
 
 Coding for this file was carried out with the assistance of a generative AI
-system and reviewed by the first author, as recorded in the `evaluador_cod`
+system and reviewed by the first author, as recorded in the `evaluator_code`
 column. It is therefore **not** one of the two independent human codings used to
 estimate inter-coder agreement.
 
@@ -59,6 +59,10 @@ estimate inter-coder agreement.
 
 The subset of rows whose outcome determines a site-level verdict, extracted for
 review.
+
+Column names in every CSV of this folder are in English; the coded **values** stay in
+Spanish (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), which is the
+vocabulary the CODEBOOK defines.
 
 ## instruments/
 

@@ -1,4 +1,4 @@
-﻿id,sigla,criterio,evaluador_primera_cod,codigo_primera,n_primera,f_primera,evaluador_segunda_cod,codigo_segunda,acuerdo,entra_en_kappa,motivo_exclusion
+﻿id,abbr,criterion,first_evaluator_code,first_code,first_n,first_f,second_evaluator_code,second_code,agreement,in_kappa,exclusion_reason
 7,UC Berkeley,1.1.1,E01,0,10,7,D01,1,0,si,
 7,UC Berkeley,1.4.3,E01,1,7,0,D01,1,1,si,
 7,UC Berkeley,2.4.4,E01,1,9,0,D01,1,1,si,

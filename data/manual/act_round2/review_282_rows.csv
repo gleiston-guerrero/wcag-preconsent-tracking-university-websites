@@ -1,4 +1,4 @@
-﻿sigla,id,grupo,criterio,regla_act,elemento_n,selector,nombre_accesible,src_o_href,contexto_programatico,aviso,resultado_RELLENAR,justificacion_RELLENAR
+﻿abbr,id,group,criterion,act_rule,element_n,selector,accessible_name,src_or_href,programmatic_context,warning,outcome_TOFILL,justification_TOFILL
 UC Berkeley,7,mundo,1.1.1,qt1vmo,2,div.title > h1 > a.logo > img,UC Berkeley home,rkeley.edu/wp-content/themes/berkeleygateway/img/logo-berkeley.svg?v=3,,,,
 UC Berkeley,7,mundo,1.1.1,qt1vmo,3,div.column > div.column__image > div.bg-image-wrap > img,A photo of a researcher in a white lab coat and hairnet sitting at a desk looking into a large microscope.,erkeley.edu/wp-content/uploads/2025/06/afo_235b-scaled-1-2048x1362.jpg,,,,
 UC Berkeley,7,mundo,1.1.1,qt1vmo,4,div.column > div.column__image > div.bg-image-wrap > img,A scientist wearing a blue lab coat that reads,berkeley.edu/wp-content/uploads/2025/06/83A5230-scaled-1-2048x1366.jpg,,,,

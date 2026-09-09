@@ -2,7 +2,7 @@
 """
 Kappa de Cohen para la validacion manual WCAG.
 
-Entrada : data/wcag_kappa_pairs.csv
+Entrada : ../../data/manual/wcag_kappa_pairs.csv
 Salida  : acuerdo observado, acuerdo esperado y kappa, sin ponderar y con
           pesos lineales sobre el orden 0 < P < 1.
 
@@ -38,9 +38,9 @@ def cargar(ruta, solo_admisibles=True):
     pares = []
     with open(ruta, encoding="utf-8") as fh:
         for fila in csv.DictReader(fh):
-            if solo_admisibles and fila["entra_en_kappa"] != "si":
+            if solo_admisibles and fila["in_kappa"] != "si":
                 continue
-            pares.append((fila["codigo_primera"], fila["codigo_segunda"]))
+            pares.append((fila["first_code"], fila["second_code"]))
     return pares
 
 
@@ -59,6 +59,6 @@ def informe(pares, titulo):
 
 
 if __name__ == "__main__":
-    ruta = sys.argv[1] if len(sys.argv) > 1 else "../data/wcag_kappa_pairs.csv"
+    ruta = sys.argv[1] if len(sys.argv) > 1 else "../../data/manual/wcag_kappa_pairs.csv"
     informe(cargar(ruta, True), "Escenario adoptado: se excluye el par con evidencia contradictoria")
     informe(cargar(ruta, False), "Escenario alternativo: los quince pares tal como se entregaron")

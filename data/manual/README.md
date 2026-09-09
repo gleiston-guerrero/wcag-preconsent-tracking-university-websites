@@ -9,6 +9,10 @@ The folder holds **two rounds of coding by different evaluators**, plus the inst
 prepared for a third. They must not be merged: each round used a different coding scheme,
 and the difference between them is itself a finding.
 
+Column names in every CSV of this folder are in English. The coded **values** stay in
+Spanish (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `1`/`P`/`0`, `REVISAR`), which is
+the vocabulary the CODEBOOK defines.
+
 ---
 
 ## Coding rounds
@@ -24,10 +28,12 @@ side by side and a bound on each. **Every row states `un solo codificador`, a si
 coder**, in all three status columns. It is a record of the first pass and carries no
 inter-coder evidence; it is published for completeness.
 
-### Round 2 — 1 September 2026, evaluator `R01`
+### Round 2 — 1–2 September 2026, evaluator `R01`
 
 `recoding_111.csv`, `recoding_143.csv`, `recoding_244.csv` — 15 rows
-each, one per site. Better documented than round 1: they add the UTC extraction stamp,
+each, one per site. The session ran from the morning of 1 September into the early hours of
+2 September; `extraction_utc` carries the UTC stamp of each reading and `date` the day it
+belongs to. Better documented than round 1: they add the UTC extraction stamp,
 the total number of elements detected against the sample examined, the list of failing
 elements and a substantive note per cell. Several of those notes record the decisions
 that turned out to drive the disagreement, such as the exclusion of visually hidden text

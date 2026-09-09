@@ -5,20 +5,22 @@ por sitio y regla; el evaluador añade tantas filas como elementos aplicables en
 
 | Columna | Qué se escribe |
 |---|---|
-| `id`, `grupo`, `sigla`, `url` | Identificación del sitio, ya rellenada |
-| `criterio` | 1.1.1, 1.4.3 o 2.4.4 |
-| `regla_act` | Identificador de seis caracteres de la regla ACT |
-| `regla_nombre` | Nombre oficial de la regla, ya rellenado |
-| `elemento_n` | Número correlativo del elemento dentro de la regla y el sitio |
-| `selector_o_descripcion` | Selector CSS o descripción que permita volver al elemento |
-| `aplicable` | `si` o `no`. **La decide la regla, no el evaluador.** Si `no`, deje `resultado` vacío y explique en `observacion` cuál de las exclusiones de la regla se aplica |
-| `resultado` | `cumple` o `falla`. Sin categoría intermedia |
-| `valor_medido` | Solo para 1.4.3: ratio de contraste con dos decimales. Vacío en los demás |
-| `contexto_programatico` | Solo para 2.4.4 (`5effbb`): párrafo, elemento de lista o celda con encabezado que aporta el contexto. Un elemento envolvente genérico **no** es contexto |
-| `evaluador_cod` | Código del evaluador. No escriba nombres |
-| `fecha` | AAAA-MM-DD |
-| `captura` | Nombre del fichero de evidencia |
-| `observacion` | Justificación breve. Obligatoria cuando `aplicable=no` o `resultado=falla` |
+| `id`, `group`, `abbr`, `url` | Identificación del sitio, ya rellenada |
+| `criterion` | 1.1.1, 1.4.3 o 2.4.4 |
+| `act_rule` | Identificador de seis caracteres de la regla ACT |
+| `rule_name` | Nombre oficial de la regla, ya rellenado |
+| `element_n` | Número correlativo del elemento dentro de la regla y el sitio |
+| `selector_or_description` | Selector CSS o descripción que permita volver al elemento |
+| `applicable` | `si` o `no`. **La decide la regla, no el evaluador.** Si `no`, deje `outcome` vacío y explique en `notes` cuál de las exclusiones de la regla se aplica |
+| `outcome` | `cumple` o `falla`. Sin categoría intermedia |
+| `measured_value` | Solo para 1.4.3: ratio de contraste con dos decimales. Vacío en los demás |
+| `programmatic_context` | Solo para 2.4.4 (`5effbb`): párrafo, elemento de lista o celda con encabezado que aporta el contexto. Un elemento envolvente genérico **no** es contexto |
+| `evaluator_code` | Código del evaluador. No escriba nombres |
+| `date` | AAAA-MM-DD |
+| `capture` | Nombre del fichero de evidencia |
+| `notes` | Justificación breve. Obligatoria cuando `applicable=no` o `outcome=falla` |
+
+> Los **nombres de columna** están en inglés, en línea con el resto del depósito. Los **valores** siguen en español (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), que es el vocabulario que define el CODEBOOK.
 
 ## Cómo se agrega al nivel de sitio
 

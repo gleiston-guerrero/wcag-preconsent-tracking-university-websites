@@ -1,4 +1,4 @@
-﻿id,grupo,sigla,url,criterio,regla_act,regla_nombre,elemento_n,selector_o_descripcion,aplicable,resultado,valor_medido,contexto_programatico,evaluador_cod,fecha,captura,observacion
+﻿id,group,abbr,url,criterion,act_rule,rule_name,element_n,selector_or_description,applicable,outcome,measured_value,programmatic_context,evaluator_code,date,capture,notes
 7,mundo,UC Berkeley,https://www.berkeley.edu,1.1.1,23a2a8,Image has non-empty accessible name,,,,,,,,,,
 7,mundo,UC Berkeley,https://www.berkeley.edu,1.1.1,qt1vmo,Image accessible name is descriptive,,,,,,,,,,
 7,mundo,UC Berkeley,https://www.berkeley.edu,1.1.1,e88epe,Image not in the accessibility tree is decorative,,,,,,,,,,
