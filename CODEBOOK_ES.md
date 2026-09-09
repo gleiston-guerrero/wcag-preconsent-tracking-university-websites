@@ -272,7 +272,7 @@ La misma matriz en formato largo, una fila por celda codificada. Columnas: `grup
 
 ### `tls_deficiencies_august2026.csv` — 5 filas
 
-Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de results.
+Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de resultados.
 
 | Columna | Descripción |
 |---|---|

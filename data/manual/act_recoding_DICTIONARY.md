@@ -1,65 +1,67 @@
-# Hoja de recodificación ACT — diccionario de columnas
+# ACT recoding sheet — column dictionary
 
-Una fila **por elemento aplicable**, no por sitio. La plantilla trae una fila de arranque
-por sitio y regla; el evaluador añade tantas filas como elementos aplicables encuentre.
+*Versión en español: [act_recoding_DICTIONARY_ES.md](act_recoding_DICTIONARY_ES.md)*
 
-| Columna | Qué se escribe |
+One row **per applicable element**, not per site. The template carries one starter row
+per site and rule; the evaluator adds as many rows as there are applicable elements.
+
+| Column | What to write |
 |---|---|
-| `id`, `group`, `abbr`, `url` | Identificación del sitio, ya rellenada |
-| `criterion` | 1.1.1, 1.4.3 o 2.4.4 |
-| `act_rule` | Identificador de seis caracteres de la regla ACT |
-| `rule_name` | Nombre oficial de la regla, ya rellenado |
-| `element_n` | Número correlativo del elemento dentro de la regla y el sitio |
-| `selector_or_description` | Selector CSS o descripción que permita volver al elemento |
-| `applicable` | `si` o `no`. **La decide la regla, no el evaluador.** Si `no`, deje `outcome` vacío y explique en `notes` cuál de las exclusiones de la regla se aplica |
-| `outcome` | `cumple` o `falla`. Sin categoría intermedia |
-| `measured_value` | Solo para 1.4.3: ratio de contraste con dos decimales. Vacío en los demás |
-| `programmatic_context` | Solo para 2.4.4 (`5effbb`): párrafo, elemento de lista o celda con encabezado que aporta el contexto. Un elemento envolvente genérico **no** es contexto |
-| `evaluator_code` | Código del evaluador. No escriba nombres |
-| `date` | AAAA-MM-DD |
-| `capture` | Nombre del fichero de evidencia |
-| `notes` | Justificación breve. Obligatoria cuando `applicable=no` o `outcome=falla` |
+| `id`, `group`, `abbr`, `url` | Site identification, already filled in |
+| `criterion` | 1.1.1, 1.4.3 or 2.4.4 |
+| `act_rule` | Six-character identifier of the ACT rule |
+| `rule_name` | Official name of the rule, already filled in |
+| `element_n` | Sequential number of the element within the rule and the site |
+| `selector_or_description` | CSS selector or a description that allows the element to be found again |
+| `applicable` | `si` or `no`. **The rule decides this, not the evaluator.** If `no`, leave `outcome` empty and state in `notes` which of the rule's exclusions applies |
+| `outcome` | `cumple` or `falla`. There is no intermediate category |
+| `measured_value` | For 1.4.3 only: contrast ratio to two decimal places. Empty for the others |
+| `programmatic_context` | For 2.4.4 (`5effbb`) only: the paragraph, list item or table cell with its header that supplies the context. A generic wrapping element is **not** context |
+| `evaluator_code` | Evaluator code. Do not write names |
+| `date` | YYYY-MM-DD |
+| `capture` | File name of the evidence |
+| `notes` | Brief justification. Required when `applicable=no` or `outcome=falla` |
 
-> Los **nombres de columna** están en inglés, en línea con el resto del depósito. Los **valores** siguen en español (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), que es el vocabulario que define el CODEBOOK.
+> **Column names** are in English, in line with the rest of the deposit. **Values** remain in Spanish (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), which is the vocabulary the CODEBOOK defines.
 
-## Cómo se agrega al nivel de sitio
+## How this aggregates to the site level
 
-Un criterio **no se satisface** en un sitio si algún elemento aplicable de alguna de sus
-reglas tiene `resultado=falla`. Si todos los elementos aplicables cumplen, se satisface.
-Si no hay ningún elemento aplicable, el criterio es `no aplicable` para ese sitio.
+A criterion is **not satisfied** at a site if any applicable element of any of its rules
+has `outcome=falla`. If every applicable element passes, it is satisfied. If there is no
+applicable element at all, the criterion is `not applicable` for that site.
 
-No se calcula proporción de fallos ni se fija tamaño de muestra: se examinan todos los
-elementos aplicables. Eso elimina a la vez la categoría parcial y la discusión sobre el
-muestreo, que fueron las dos fuentes de desacuerdo entre los codificadores anteriores.
+No proportion of failures is computed and no sample size is fixed: every applicable
+element is examined. That removes both the partial category and the argument about
+sampling, which were the two sources of disagreement between the earlier coders.
 
-## Umbrales y exclusiones, por regla
+## Thresholds and exclusions, rule by rule
 
-**afw4f7, contraste.** Aplica a cualquier carácter *visible* de un nodo de texto. Umbral:
-4,5:1, o 3,0:1 para texto de gran tamaño. Inaplicable: ascendiente deshabilitado, etiqueta
-de un control deshabilitado, texto puramente decorativo, texto que no expresa nada en
-lenguaje humano. El texto oculto visualmente no es un carácter visible y por tanto queda
-fuera de la regla: **no se excluye por criterio del evaluador, se excluye por definición**.
+**afw4f7, contrast.** Applies to any *visible* character of a text node. Threshold:
+4.5:1, or 3.0:1 for large text. Inapplicable: a disabled ancestor, the label of a
+disabled control, purely decorative text, text that expresses nothing in human language.
+Visually hidden text is not a visible character and therefore falls outside the rule:
+**it is not excluded by the evaluator's judgement, it is excluded by definition**.
 
-**23a2a8, nombre accesible de imagen.** Aplica a `img` y a elementos con rol semántico
-`img`, salvo los programáticamente ocultos. Cumple si el nombre accesible no está vacío,
-o si el rol es `none` o `presentation`.
+**23a2a8, image accessible name.** Applies to `img` and to elements with the semantic
+role `img`, except those that are programmatically hidden. Passes if the accessible name
+is not empty, or if the role is `none` or `presentation`.
 
-**qt1vmo, nombre descriptivo.** Aplica a `img`, `canvas` y `svg` visibles con nombre
-accesible no vacío. Inaplicable si un ascendiente está nombrado por el autor, o si la
-petición de la imagen no está completamente disponible. Cumple si el nombre sirve un
-propósito equivalente al contenido no textual.
+**qt1vmo, descriptive name.** Applies to visible `img`, `canvas` and `svg` with a
+non-empty accessible name. Inapplicable if an ancestor is named by the author, or if the
+image request is not fully available. Passes if the name serves a purpose equivalent to
+the non-text content.
 
-**e88epe, imagen decorativa.** Una imagen fuera del árbol de accesibilidad se trata como
-decorativa.
+**e88epe, decorative image.** An image outside the accessibility tree is treated as
+decorative.
 
-**c487ae, nombre de enlace.** Aplica a todo enlace incluido en el árbol de accesibilidad.
-Cumple si el nombre accesible no está vacío.
+**c487ae, link name.** Applies to every link included in the accessibility tree. Passes
+if the accessible name is not empty.
 
-**5effbb, enlace descriptivo en contexto.** Aplica a todo enlace del árbol de accesibilidad
-con nombre accesible no vacío. Cumple si el nombre, junto con su *contexto de enlace
-determinado programáticamente*, describe el propósito del enlace. Ese contexto es una lista
-cerrada de WCAG: párrafo, elemento de lista, celda de tabla con su encabezado. Un `div` o un
-`article` que envuelve la página **no** es contexto.
+**5effbb, link is descriptive in context.** Applies to every link in the accessibility
+tree with a non-empty accessible name. Passes if the name, together with its
+*programmatically determined link context*, describes the purpose of the link. That
+context is a closed list fixed by WCAG: paragraph, list item, table cell with its header.
+A `div` or an `article` wrapping the page is **not** context.
 
-**fd3a94, enlaces de nombre idéntico.** Enlaces con nombre accesible idéntico en el mismo
-contexto deben servir un propósito equivalente.
+**fd3a94, links with identical names.** Links with an identical accessible name in the
+same context must serve an equivalent purpose.

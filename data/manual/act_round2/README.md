@@ -1,5 +1,7 @@
 # ACT round: element-level recoding of three WCAG success criteria
 
+*Versión en español: [README_ES.md](README_ES.md)*
+
 Second coding round on the 15-site subsample, 8 September 2026. Where the first
 round (`../wcag_validation_15_sites.csv`, `../recoding_*.csv`) coded each
 site by sampling elements and judging a proportion, this round codes **every

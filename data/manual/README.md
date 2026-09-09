@@ -1,5 +1,7 @@
 # Manual validation of three WCAG success criteria
 
+*Versión en español: [README_ES.md](README_ES.md)*
+
 Manual verification of the automated audit for three success criteria on a subsample of
 15 sites: seven from the benchmark group and eight from the Ecuadorian census. The
 criteria are **1.1.1** non-text content, **1.4.3** contrast (minimum) and **2.4.4** link
@@ -72,7 +74,10 @@ extremes rather than between conforming and non-conforming. The coders saw the s
 and differed on where the threshold of *partial* lay. **The dichotomy is reliable; the
 trichotomy is not.**
 
-`kappa_wcag.py` in `code/analysis/` reproduces these figures.
+`kappa_wcag.py`, in `code/analysis/`, computes the kappa of the five double-coded sites of
+`wcag_kappa_pairs.csv`: 0.517 excluding the pair with contradictory evidence and 0.457
+including it. The figures in the table above, which compare round 1 with round 2 over the
+45 cells, are not produced by any deposited script.
 
 ---
 
