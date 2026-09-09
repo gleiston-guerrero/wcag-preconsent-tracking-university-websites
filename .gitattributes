@@ -1,0 +1,3 @@
+* -text
+docs/reports/*.html linguist-documentation
+code/collection/extended/** linguist-vendored

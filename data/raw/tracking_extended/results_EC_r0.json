@@ -1,0 +1,1056 @@
+[
+  {
+    "id": 1,
+    "grupo": "mundo",
+    "sigla": "MIT",
+    "pais": "US",
+    "url": "https://www.mit.edu",
+    "nombre": "Massachusetts Institute of Technology",
+    "vantage": "EC",
+    "run": 0,
+    "red": "residencial",
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "rastreo_pre_ext": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "nombres_rastreo_ext": [],
+      "cmp": [],
+      "banner": false
+    },
+    "consentimiento_por_defecto": {
+      "gtag_consent_default": false,
+      "gtag_consent_default_con_region": false,
+      "regiones_declaradas": [],
+      "uet_consent": false,
+      "clarity_consent": false,
+      "fragmentos": []
+    },
+    "complejidad": {
+      "elementos": 380,
+      "nodos_totales": 950,
+      "profundidad_max": 16,
+      "imagenes": 7,
+      "enlaces": 74,
+      "controles": 3,
+      "iframes": 0,
+      "longitud_texto": 2598
+    },
+    "accesibilidad": {
+      "title": "MIT - Massachusetts Institute of Technology",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 3,
+      "nodos": 8,
+      "nodos_por_mil_elementos": 21.05,
+      "porPrincipio": {
+        "Perceptible": 1,
+        "Operable": 6,
+        "Comprensible": 0,
+        "Robusto": 1
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 6,
+        "AAA": 1
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 4,
+      "incompletos_nodos": 24,
+      "incompletos_por_regla": [
+        {
+          "id": "color-contrast",
+          "criterio": "1.4.3",
+          "nivel": "AA",
+          "nodos": 18
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "criterio": "1.4.6",
+          "nivel": "AAA",
+          "nodos": 3
+        },
+        {
+          "id": "target-size",
+          "criterio": "2.5.8",
+          "nivel": "AA",
+          "nodos": 2
+        },
+        {
+          "id": "identical-links-same-purpose",
+          "criterio": "2.4.9",
+          "nivel": "AAA",
+          "nodos": 1
+        }
+      ],
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 6,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "aria-allowed-attr",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Elements must only use supported ARIA attributes"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 1,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "red_proveedores": [
+      {
+        "proveedor": "Google Tag Manager",
+        "peticion_emitida": true,
+        "peticiones": 1,
+        "respuestas": 1,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.googletagmanager.com"
+        ],
+        "ejemplos": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-M8MGV4P"
+        ]
+      }
+    ],
+    "dominios_terceros": [
+      "use.typekit.net",
+      "p.typekit.net",
+      "www.googletagmanager.com"
+    ],
+    "n_dominios_terceros": 3,
+    "pila": {
+      "servidor": "Apache",
+      "x_powered_by": null,
+      "x_generator": null,
+      "cdn": [],
+      "cms": [
+        "Drupal"
+      ],
+      "cabeceras_crudas": {
+        "accept-ranges": "bytes",
+        "akamai-grn": "0.1c6727b5.1786852016.677ac9c9",
+        "cache-control": "public, max-age=3261, s-maxage=3600",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-length": "11575",
+        "content-security-policy": "frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu",
+        "content-type": "text/html",
+        "date": "Sun, 16 Aug 2026 03:46:56 GMT",
+        "etag": "\"bb64-6590dfc345940\"",
+        "last-modified": "Sat, 15 Aug 2026 04:01:01 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=600",
+        "vary": "Accept-Encoding",
+        "x-frame-options": "SAMEORIGIN"
+      }
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.mit.edu/",
+    "fecha": "2026-08-16T03:47:01.636Z"
+  },
+  {
+    "id": 2,
+    "grupo": "mundo",
+    "sigla": "Stanford",
+    "pais": "US",
+    "url": "https://www.stanford.edu",
+    "nombre": "Stanford University",
+    "vantage": "EC",
+    "run": 0,
+    "red": "residencial",
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 10,
+      "rastreo_pre": 4,
+      "rastreo_pre_ext": 8,
+      "nombres_pre": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "_ga_Q0JD4PHRZ7",
+        "_ga",
+        "__Secure-YNID",
+        "__Secure-ROLLOUT_TOKEN",
+        "su_pseudo_id",
+        "su_session_id",
+        "_cs_id"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "_ga_Q0JD4PHRZ7",
+        "_ga"
+      ],
+      "nombres_rastreo_ext": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "_ga_Q0JD4PHRZ7",
+        "_ga",
+        "__Secure-YNID",
+        "__Secure-ROLLOUT_TOKEN",
+        "_cs_id"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "consentimiento_por_defecto": {
+      "gtag_consent_default": false,
+      "gtag_consent_default_con_region": false,
+      "regiones_declaradas": [],
+      "uet_consent": false,
+      "clarity_consent": false,
+      "fragmentos": []
+    },
+    "complejidad": {
+      "elementos": 1370,
+      "nodos_totales": 1820,
+      "profundidad_max": 22,
+      "imagenes": 25,
+      "enlaces": 153,
+      "controles": 13,
+      "iframes": 0,
+      "longitud_texto": 8123
+    },
+    "accesibilidad": {
+      "title": "Stanford University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 11,
+      "nodos_por_mil_elementos": 8.03,
+      "porPrincipio": {
+        "Perceptible": 11,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 11
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 1,
+      "incompletos_nodos": 2,
+      "incompletos_por_regla": [
+        {
+          "id": "color-contrast",
+          "criterio": "1.4.3",
+          "nivel": "AA",
+          "nodos": 2
+        }
+      ],
+      "passes": 34,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 11,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "red_proveedores": [
+      {
+        "proveedor": "YouTube",
+        "peticion_emitida": true,
+        "peticiones": 11,
+        "respuestas": 11,
+        "respuestas_con_set_cookie": 2,
+        "capa_sugerida": "cookie_establecida",
+        "hosts": [
+          "www.youtube.com",
+          "i.ytimg.com"
+        ],
+        "ejemplos": [
+          "https://www.youtube.com/embed/tgNDNeveCog?preload=metadata&enablejsapi=1&cc_load_policy=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&color=white",
+          "https://www.youtube.com/s/player/b0d2d49a/www-player.css",
+          "https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.hmdSdlM46Pc.L.W.O/am=AAAAQA/d=1/br=1/rs=AGKMywFLCbyM7Tp8LiBbmmME1kCPYRWAWw/m=root,base"
+        ]
+      },
+      {
+        "proveedor": "Google Ads",
+        "peticion_emitida": true,
+        "peticiones": 4,
+        "respuestas": 4,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "googleads.g.doubleclick.net",
+          "static.doubleclick.net",
+          "www.google.com"
+        ],
+        "ejemplos": [
+          "https://googleads.g.doubleclick.net/pagead/id",
+          "https://static.doubleclick.net/instream/ad_status.js",
+          "https://googleads.g.doubleclick.net/pagead/id?slf_rd=1"
+        ]
+      },
+      {
+        "proveedor": "ContentSquare",
+        "peticion_emitida": true,
+        "peticiones": 2,
+        "respuestas": 2,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "t.contentsquare.net"
+        ],
+        "ejemplos": [
+          "https://t.contentsquare.net/uxa/deb31d7b75181.js",
+          "https://t.contentsquare.net/settings/945748.json?r=1985391"
+        ]
+      },
+      {
+        "proveedor": "Google Tag Manager",
+        "peticion_emitida": true,
+        "peticiones": 1,
+        "respuestas": 1,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.googletagmanager.com"
+        ],
+        "ejemplos": [
+          "https://www.googletagmanager.com/gtag/js?id=G-Q0JD4PHRZ7"
+        ]
+      },
+      {
+        "proveedor": "Google Analytics",
+        "peticion_emitida": true,
+        "peticiones": 1,
+        "respuestas": 1,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.google-analytics.com"
+        ],
+        "ejemplos": [
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-Q0JD4PHRZ7&gtm=45je68c1v9252975318za200zd9252975318&_p=1786852024711&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=523969259.1786852025&frm=0&ngs=1&pscdl="
+        ]
+      }
+    ],
+    "dominios_terceros": [
+      "t.contentsquare.net",
+      "www.googletagmanager.com",
+      "a2-us.storyblok.com",
+      "www.youtube.com",
+      "a-us.storyblok.com",
+      "fonts.gstatic.com",
+      "googleads.g.doubleclick.net",
+      "static.doubleclick.net",
+      "i.ytimg.com",
+      "www.google-analytics.com",
+      "www.google.com",
+      "jnn-pa.googleapis.com"
+    ],
+    "n_dominios_terceros": 12,
+    "pila": {
+      "servidor": "Netlify",
+      "x_powered_by": "Next.js",
+      "x_generator": null,
+      "cdn": [],
+      "cms": [],
+      "cabeceras_crudas": {
+        "age": "303",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "cache-status": "\"Netlify Edge\"; hit; ttl=597",
+        "content-encoding": "br",
+        "content-security-policy": "default-src 'self'; script-src 'nonce-s2CBOXEquPOxxWjLZ9hESjt3o2H1AClI' 'unsafe-eval' 'strict-dynamic' 'unsafe-inline' 'self' https: http: 'self' 'strict-dynamic' https://*.googletagmanager.com https://www.googletagmanager.com https://tagmanager.google.com https://www.googleadservices.com https://pagead2.googlesyndicati[...]; style-src 'self' 'unsafe-inline' https: https://fonts.googleapis.com https://googletagmanager.com https://tagmanager.google.com; img-src 'self' blob: data: https: https://a-us.storyblok.com https://a2-us.storyblok.com https://a.storyblok.com https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://google.com https://ssl.gstatic.com https://www.gstatic.com; font-src 'self' data: https://fonts.gstatic.com https://*.contentsquare.net; connect-src 'self' https://*.netlify.app https://api.storyblok.com https://cdn.storyblok.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://pagead2.googlesyndication.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://google.com https://*.contentsquare.net; media-src 'self' https://a-us.storyblok.com https://a2-us.storyblok.com https://a.storyblok.com blob:; frame-src https://www.youtube.com https://youtube.com https://app.netlify.com https://www.googletagmanager.com https://*.contentsquare.net https://k.ba.contentsquare.net; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests; report-uri /.netlify/functions/__csp-violations",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 16 Aug 2026 03:47:03 GMT",
+        "etag": "W/\"psc5tp1z0cfz2b-df\"",
+        "link": "</_next/static/media/47df9ba1c7236d3b-s.p.137759vg1sbmi.woff2?dpl=b032b6146edb9f833361e1670034fb8ac35ba449ffaf0cf2dc54546dcde20cc1366137646636373232376236306630303037306461303330>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/60d78e3f57927495-s.p.3wpf_k_4rh3gf.woff2?dpl=b032b6146edb9f833361e1670034fb8ac35ba449ffaf0cf2dc54546dcde20cc1366137646636373232376236306630303037306461303330>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/EdictDisplayVariableItalicVF-s.p.1ce647svi1ahw.woff2?dpl=b032b6146edb9f833361e1670034fb8ac35ba449ffaf0cf2dc54546dcde20cc1366137646636373232376236306630303037306461303330>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/EdictDisplayVariableRomanVF-s.p.2dc6b11lxf86j.woff2?dpl=b032b6146edb9f833361e1670034fb8ac35ba449ffaf0cf2dc54546dcde20cc1366137646636373232376236306630303037306461303330>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </_next/static/media/stanford-s.p.30khdl1a2d_br.woff2?dpl=b032b6146edb9f833361e1670034fb8ac35ba449ffaf0cf2dc54546dcde20cc1366137646636373232376236306630303037306461303330>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+        "netlify-vary": "query=__nextDataReq|_rsc,header=x-nextjs-data|x-next-debug-logging|next-router-prefetch|next-router-segment-prefetch|next-router-state-tree|next-url|rsc,cookie=__prerender_bypass|__next_preview_data",
+        "permissions-policy": "vibrate=(), geolocation=(self), midi=(), notifications=(), push=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=()",
+        "referrer-policy": "origin-when-cross-origin",
+        "server": "Netlify",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding, Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-debug-csp-nonce": "invoked",
+        "x-frame-options": "DENY",
+        "x-nextjs-date": "Sun, 16 Aug 2026 03:42:41 GMT",
+        "x-nextjs-prerender": "1",
+        "x-nextjs-stale-time": "300",
+        "x-nf-request-id": "01M04AW7DT7PVVM5GAEF28NF0F",
+        "x-powered-by": "Next.js"
+      }
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.stanford.edu/",
+    "fecha": "2026-08-16T03:47:09.268Z"
+  },
+  {
+    "id": 3,
+    "grupo": "mundo",
+    "sigla": "Harvard",
+    "pais": "US",
+    "url": "https://www.harvard.edu",
+    "nombre": "Harvard University",
+    "vantage": "EC",
+    "run": 0,
+    "red": "residencial",
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 8,
+      "rastreo_pre": 5,
+      "rastreo_pre_ext": 5,
+      "nombres_pre": [
+        "",
+        "_parsely_session",
+        "_parsely_visitor",
+        "_gid",
+        "_gat_UA-2923555-1",
+        "_ga_KBLBYHG5EP",
+        "_ga",
+        "_fbp"
+      ],
+      "nombres_rastreo": [
+        "_gid",
+        "_gat_UA-2923555-1",
+        "_ga_KBLBYHG5EP",
+        "_ga",
+        "_fbp"
+      ],
+      "nombres_rastreo_ext": [
+        "_gid",
+        "_gat_UA-2923555-1",
+        "_ga_KBLBYHG5EP",
+        "_ga",
+        "_fbp"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "consentimiento_por_defecto": {
+      "gtag_consent_default": false,
+      "gtag_consent_default_con_region": false,
+      "regiones_declaradas": [],
+      "uet_consent": false,
+      "clarity_consent": false,
+      "fragmentos": []
+    },
+    "complejidad": {
+      "elementos": 1139,
+      "nodos_totales": 2834,
+      "profundidad_max": 27,
+      "imagenes": 20,
+      "enlaces": 163,
+      "controles": 39,
+      "iframes": 0,
+      "longitud_texto": 6087
+    },
+    "accesibilidad": {
+      "title": "Harvard University",
+      "lang": "en-US",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 13,
+      "nodos_por_mil_elementos": 11.41,
+      "porPrincipio": {
+        "Perceptible": 13,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 3,
+        "AAA": 10
+      },
+      "maxNivelSinFallo": "A",
+      "incompletos": 2,
+      "incompletos_nodos": 42,
+      "incompletos_por_regla": [
+        {
+          "id": "color-contrast",
+          "criterio": "1.4.3",
+          "nivel": "AA",
+          "nodos": 38
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "criterio": "1.4.6",
+          "nivel": "AAA",
+          "nodos": 4
+        }
+      ],
+      "passes": 29,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 10,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "color-contrast",
+          "impacto": "serious",
+          "criterio": "1.4.3",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 3,
+          "ayuda": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    "red_proveedores": [
+      {
+        "proveedor": "Google Ads",
+        "peticion_emitida": true,
+        "peticiones": 11,
+        "respuestas": 9,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "cse.google.com",
+          "www.google.com",
+          "clients1.google.com",
+          "stats.g.doubleclick.net",
+          "pagead2.googlesyndication.com"
+        ],
+        "ejemplos": [
+          "https://cse.google.com/cse.js?cx=006776768860476326824:n4rl30fjc-e",
+          "https://www.google.com/cse/static/element/93e57cb47c499c53/cse_element__en.js?usqp=CAM%3D",
+          "https://www.google.com/cse/static/element/93e57cb47c499c53/default_v6+en.css"
+        ]
+      },
+      {
+        "proveedor": "Google Analytics",
+        "peticion_emitida": true,
+        "peticiones": 4,
+        "respuestas": 4,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.google-analytics.com",
+          "analytics.google.com"
+        ],
+        "ejemplos": [
+          "https://www.google-analytics.com/analytics.js",
+          "https://www.google-analytics.com/j/collect?v=1&_v=j102&aip=1&a=1794812087&t=pageview&_s=1&dl=https%3A%2F%2Fwww.harvard.edu%2F&ul=es-us&dt=Harvard%20University&sr=1280x720&vp=1280x720&_u=YEBAAEABAAAAAC",
+          "https://www.google-analytics.com/j/collect?v=1&_v=j102&aip=1&a=1794812087&t=pageview&_s=1&dl=https%3A%2F%2Fwww.harvard.edu%2F&ul=es-us&dt=Harvard%20University&sr=1280x720&vp=1280x720&_u=YEBAAEABAAAAAC"
+        ]
+      },
+      {
+        "proveedor": "Meta",
+        "peticion_emitida": true,
+        "peticiones": 3,
+        "respuestas": 3,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "connect.facebook.net",
+          "www.facebook.com"
+        ],
+        "ejemplos": [
+          "https://connect.facebook.net/en_US/fbevents.js",
+          "https://connect.facebook.net/signals/config/116026588849778?v=2.9.379&r=stable&domain=www.harvard.edu&hme=b1ada4403c1587912a3e4330d3fd81e912d36218952fb8107c4c850599826428&ex_m=113%2C218%2C164%2C25%2C7",
+          "https://www.facebook.com/tr/?id=116026588849778&ev=PageView&dl=https%3A%2F%2Fwww.harvard.edu&rl=&if=false&ts=1786852032273&iw=false&sw=1280&sh=720&v=2.9.379&r=stable&ec=0&o=4124&aems=0%3B0&fbp=fb.1.17"
+        ]
+      },
+      {
+        "proveedor": "Google Tag Manager",
+        "peticion_emitida": true,
+        "peticiones": 2,
+        "respuestas": 2,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.googletagmanager.com"
+        ],
+        "ejemplos": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-5SGSF6G",
+          "https://www.googletagmanager.com/gtag/js?id=G-KBLBYHG5EP&cx=c&gtm=4e68c1"
+        ]
+      }
+    ],
+    "dominios_terceros": [
+      "cdn.parsely.com",
+      "stats.wp.com",
+      "cse.google.com",
+      "www.googletagmanager.com",
+      "news.harvard.edu",
+      "www.google.com",
+      "p1.parsely.com",
+      "pixel.wp.com",
+      "www.google-analytics.com",
+      "connect.facebook.net",
+      "clients1.google.com",
+      "analytics.google.com",
+      "stats.g.doubleclick.net",
+      "www.google.com.ec",
+      "www.facebook.com",
+      "ep1.adtrafficquality.google",
+      "ep2.adtrafficquality.google",
+      "pagead2.googlesyndication.com"
+    ],
+    "n_dominios_terceros": 18,
+    "pila": {
+      "servidor": "nginx",
+      "x_powered_by": null,
+      "x_generator": null,
+      "cdn": [],
+      "cms": [
+        "WordPress"
+      ],
+      "cabeceras_crudas": {
+        "accept-ranges": "bytes",
+        "cache-control": "max-age=300, must-revalidate",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Sun, 16 Aug 2026 03:47:11 GMT",
+        "host-header": "a9130478a60e5f9135f765b23f26593b",
+        "link": "<https://www.harvard.edu/wp-json/>; rel=\"https://api.w.org/\", <https://www.harvard.edu/wp-json/wp/v2/pages/6392>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://www.harvard.edu/>; rel=shortlink",
+        "server": "nginx",
+        "vary": "Accept-Encoding",
+        "x-cache": "STALE",
+        "x-rq": "mia7 0 30 9980"
+      }
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.harvard.edu/",
+    "fecha": "2026-08-16T03:47:16.004Z"
+  },
+  {
+    "id": 4,
+    "grupo": "mundo",
+    "sigla": "Oxford",
+    "pais": "GB",
+    "url": "https://www.ox.ac.uk",
+    "nombre": "University of Oxford",
+    "vantage": "EC",
+    "run": 0,
+    "red": "residencial",
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 6,
+      "rastreo_pre": 2,
+      "rastreo_pre_ext": 5,
+      "nombres_pre": [
+        "cf_clearance",
+        "__Secure-YNID",
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "__Secure-ROLLOUT_TOKEN"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE"
+      ],
+      "nombres_rastreo_ext": [
+        "__Secure-YNID",
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "__Secure-ROLLOUT_TOKEN"
+      ],
+      "cmp": [],
+      "banner": true
+    },
+    "consentimiento_por_defecto": {
+      "gtag_consent_default": false,
+      "gtag_consent_default_con_region": false,
+      "regiones_declaradas": [],
+      "uet_consent": false,
+      "clarity_consent": false,
+      "fragmentos": []
+    },
+    "complejidad": {
+      "elementos": 2165,
+      "nodos_totales": 5829,
+      "profundidad_max": 26,
+      "imagenes": 46,
+      "enlaces": 317,
+      "controles": 53,
+      "iframes": 1,
+      "longitud_texto": 7027
+    },
+    "accesibilidad": {
+      "title": "University of Oxford",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 0,
+      "nodos": 0,
+      "nodos_por_mil_elementos": 0,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "AAA",
+      "incompletos": 4,
+      "incompletos_nodos": 8,
+      "incompletos_por_regla": [
+        {
+          "id": "target-size",
+          "criterio": "2.5.8",
+          "nivel": "AA",
+          "nodos": 4
+        },
+        {
+          "id": "identical-links-same-purpose",
+          "criterio": "2.4.9",
+          "nivel": "AAA",
+          "nodos": 2
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "criterio": "1.4.6",
+          "nivel": "AAA",
+          "nodos": 1
+        },
+        {
+          "id": "color-contrast",
+          "criterio": "1.4.3",
+          "nivel": "AA",
+          "nodos": 1
+        }
+      ],
+      "passes": 31,
+      "reglas": []
+    },
+    "red_proveedores": [
+      {
+        "proveedor": "Google Tag Manager",
+        "peticion_emitida": true,
+        "peticiones": 2,
+        "respuestas": 2,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.googletagmanager.com"
+        ],
+        "ejemplos": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-TDB29T",
+          "https://www.googletagmanager.com/gtag/js?id=G-KJYGZYJMYR&cx=c&gtm=4e68c1"
+        ]
+      },
+      {
+        "proveedor": "YouTube",
+        "peticion_emitida": true,
+        "peticiones": 2,
+        "respuestas": 2,
+        "respuestas_con_set_cookie": 1,
+        "capa_sugerida": "cookie_establecida",
+        "hosts": [
+          "www.youtube.com"
+        ],
+        "ejemplos": [
+          "https://www.youtube.com/iframe_api",
+          "https://www.youtube.com/s/player/b0d2d49a/www-widgetapi.vflset/www-widgetapi.js"
+        ]
+      },
+      {
+        "proveedor": "Google Analytics",
+        "peticion_emitida": true,
+        "peticiones": 1,
+        "respuestas": 1,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.google-analytics.com"
+        ],
+        "ejemplos": [
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-KJYGZYJMYR&gtm=45je68c1v882579884z86704063za20gzb6704063zd6704063&_p=1786852037698&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&_eu=AAAAAGAC&are"
+        ]
+      },
+      {
+        "proveedor": "Google Ads",
+        "peticion_emitida": true,
+        "peticiones": 1,
+        "respuestas": 1,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "pagead2.googlesyndication.com"
+        ],
+        "ejemplos": [
+          "https://pagead2.googlesyndication.com/ccm/collect?rcb=19&frm=0&apvc=1&ae=g&en=page_view&dl=https%3A%2F%2Fwww.ox.ac.uk%2F&scrsrc=www.googletagmanager.com&rnd=493633020.1786852039&navt=n&npa=1&ep.ads_da"
+        ]
+      }
+    ],
+    "dominios_terceros": [
+      "www.googletagmanager.com",
+      "assets-oxweb.admin.ox.ac.uk",
+      "static.cloudflareinsights.com",
+      "unpkg.com",
+      "cc.cdn.civiccomputing.com",
+      "apikeys.civiccomputing.com",
+      "www.google-analytics.com",
+      "www.youtube.com",
+      "pagead2.googlesyndication.com"
+    ],
+    "n_dominios_terceros": 9,
+    "pila": {
+      "servidor": "cloudflare",
+      "x_powered_by": null,
+      "x_generator": "Drupal 11 (https://www.drupal.org)",
+      "cdn": [
+        "Cloudflare"
+      ],
+      "cms": [
+        "generator: Drupal 11 (https://www.drupal.org)",
+        "Drupal"
+      ],
+      "cabeceras_crudas": {
+        "age": "50369",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "max-age=86400, public",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a2bd74f4283f3155-GYE",
+        "content-encoding": "br",
+        "content-language": "en",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Sun, 16 Aug 2026 03:47:17 GMT",
+        "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "from-origin": "same",
+        "last-modified": "Sat, 15 Aug 2026 13:47:47 GMT",
+        "server": "cloudflare",
+        "server-timing": "cfCacheStatus;desc=\"HIT\", cfEdge;dur=13,cfOrigin;dur=0",
+        "strict-transport-security": "max-age=2592000",
+        "traceresponse": "00-18cbfea647922a2746de5404d59cd28d-34b4b33f51df9c8a-01",
+        "vary": "Cookie, accept-encoding",
+        "x-content-type-options": "nosniff",
+        "x-debug-info": "eyJyZXRyaWVzIjowfQ==",
+        "x-drupal-cache": "MISS",
+        "x-drupal-dynamic-cache": "UNCACHEABLE (poor cacheability)",
+        "x-generator": "Drupal 11 (https://www.drupal.org)",
+        "x-platform-cluster": "ialzpvgkb3moi-main-bvxea6i",
+        "x-platform-processor": "2efpm7xa77iilc4t65lz7icjay",
+        "x-platform-router": "fylsqh3at2kohyay3fizzsxvxi"
+      }
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.ox.ac.uk/",
+    "fecha": "2026-08-16T03:47:22.469Z"
+  },
+  {
+    "id": 5,
+    "grupo": "mundo",
+    "sigla": "Cambridge",
+    "pais": "GB",
+    "url": "https://www.cam.ac.uk",
+    "nombre": "University of Cambridge",
+    "vantage": "EC",
+    "run": 0,
+    "red": "residencial",
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "rastreo_pre_ext": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "nombres_rastreo_ext": [],
+      "cmp": [],
+      "banner": true
+    },
+    "consentimiento_por_defecto": {
+      "gtag_consent_default": false,
+      "gtag_consent_default_con_region": false,
+      "regiones_declaradas": [],
+      "uet_consent": false,
+      "clarity_consent": false,
+      "fragmentos": []
+    },
+    "complejidad": {
+      "elementos": 529,
+      "nodos_totales": 1356,
+      "profundidad_max": 24,
+      "imagenes": 22,
+      "enlaces": 71,
+      "controles": 8,
+      "iframes": 2,
+      "longitud_texto": 3303
+    },
+    "accesibilidad": {
+      "title": "University of Cambridge",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 6,
+      "nodos_por_mil_elementos": 11.34,
+      "porPrincipio": {
+        "Perceptible": 6,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 5,
+        "AA": 0,
+        "AAA": 1
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 2,
+      "incompletos_nodos": 8,
+      "incompletos_por_regla": [
+        {
+          "id": "color-contrast",
+          "criterio": "1.4.3",
+          "nivel": "AA",
+          "nodos": 5
+        },
+        {
+          "id": "identical-links-same-purpose",
+          "criterio": "2.4.9",
+          "nivel": "AAA",
+          "nodos": 3
+        }
+      ],
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "image-alt",
+          "impacto": "critical",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 5,
+          "ayuda": "Images must have alternative text"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 1,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "red_proveedores": [
+      {
+        "proveedor": "Google Tag Manager",
+        "peticion_emitida": true,
+        "peticiones": 3,
+        "respuestas": 3,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.googletagmanager.com"
+        ],
+        "ejemplos": [
+          "https://www.googletagmanager.com/gtm.js?id=GTM-NV99KVN",
+          "https://www.googletagmanager.com/gtag/js?id=G-P8Q1QT5W4K&cx=c&gtm=4e68c1",
+          "https://www.googletagmanager.com/gtag/js?id=G-KV2LE1CRC2&cx=c&gtm=4e68c1"
+        ]
+      },
+      {
+        "proveedor": "Google Analytics",
+        "peticion_emitida": true,
+        "peticiones": 2,
+        "respuestas": 2,
+        "respuestas_con_set_cookie": 0,
+        "capa_sugerida": "proveedor_no_devuelve_set_cookie",
+        "hosts": [
+          "www.google-analytics.com"
+        ],
+        "ejemplos": [
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-KV2LE1CRC2&gtm=45je68c1v9233869043z8812940145za20gzb812940145zd812940145&_p=1786852044858&gcs=G100&gcd=13p3p3p3p7l1&npa=1&dma_cps=-&dma=0&gdid=dMDA",
+          "https://www.google-analytics.com/g/collect?v=2&tid=G-P8Q1QT5W4K&gtm=45je68c1v872528107z8812940145za20gzb812940145zd812940145&_p=1786852044858&gcs=G100&gcd=13p3p3p3p7l1&npa=1&dma_cps=-&dma=0&gdid=dMDAw"
+        ]
+      }
+    ],
+    "dominios_terceros": [
+      "fonts.googleapis.com",
+      "use.fontawesome.com",
+      "www.googletagmanager.com",
+      "fonts.gstatic.com",
+      "cc.cdn.civiccomputing.com",
+      "apikeys.civiccomputing.com",
+      "js-agent.newrelic.com",
+      "www.google-analytics.com",
+      "bam.nr-data.net"
+    ],
+    "n_dominios_terceros": 9,
+    "pila": {
+      "servidor": "nginx",
+      "x_powered_by": null,
+      "x_generator": "Drupal 10 (https://www.drupal.org)",
+      "cdn": [
+        "Fastly/Varnish"
+      ],
+      "cms": [
+        "generator: Drupal 10 (https://www.drupal.org)",
+        "Drupal"
+      ],
+      "cabeceras_crudas": {
+        "accept-ranges": "bytes",
+        "age": "24",
+        "cache-control": "max-age=300, public",
+        "content-encoding": "gzip",
+        "content-language": "en",
+        "content-length": "38078",
+        "content-security-policy": "report-uri /report-csp-violation; upgrade-insecure-requests",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Sun, 16 Aug 2026 03:47:24 GMT",
+        "etag": "W/\"1786840106\"",
+        "expires": "Sun, 19 Nov 1978 05:00:00 GMT",
+        "last-modified": "Sun, 16 Aug 2026 00:28:26 GMT",
+        "permissions-policy": "autoplay=*, camera=self, fullscreen=*, geolocation=*, microphone=self, picture-in-picture=*, web-share=self",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "nginx",
+        "strict-transport-security": "max-age=2592000, max-age=31622400; includeSubDomains; preload",
+        "vary": "Accept-Encoding, Cookie, Cookie, Cookie",
+        "via": "1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish",
+        "x-cache": "HIT, HIT, MISS, MISS",
+        "x-cache-hits": "47, 0, 0, 0",
+        "x-content-type-options": "nosniff",
+        "x-drupal-cache": "HIT",
+        "x-drupal-dynamic-cache": "MISS",
+        "x-frame-options": "SAMEORIGIN",
+        "x-generator": "Drupal 10 (https://www.drupal.org)",
+        "x-pantheon-styx-hostname": "styx-eu-a-6975d949c6-rw7ht",
+        "x-served-by": "cache-ams-eham8680069-AMS, cache-lim-spjc1280042-LIM, cache-lim-spjc1280031-LIM, cache-lim-spjc1280031-LIM",
+        "x-styx-req-id": "ee8f684c-990b-11f1-81b2-8af82f18845b",
+        "x-timer": "S1786852044.350595,VS0,VE194"
+      }
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.cam.ac.uk/",
+    "fecha": "2026-08-16T03:47:29.752Z"
+  }
+]

@@ -1,0 +1,64 @@
+﻿#,Universidad,Sigla,Pais,Region,Sitio,Cookies_antes_consentir,Nombres_cookies,CMP_detectada,Banner_visible,Banner_estudio,PolCookies_estudio
+1,Massachusetts Institute of Technology,MIT,EE.UU.,EE.UU.,https://www.mit.edu,0,,Ninguna,No,No detectable,No
+2,Stanford University,Stanford,EE.UU.,EE.UU.,https://www.stanford.edu,1,_cs_id,Ninguna,No,No detectable,Sí
+3,Harvard University,Harvard,EE.UU.,EE.UU.,https://www.harvard.edu,0,,Ninguna,No,No detectable,No
+4,University of Oxford,Oxford,Reino Unido,Reino Unido,https://www.ox.ac.uk,0,,Ninguna,No,No detectable,Sí
+5,University of Cambridge,Cambridge,Reino Unido,Reino Unido,https://www.cam.ac.uk,0,,Ninguna,No,No detectable,Sí
+6,California Institute of Technology,Caltech,EE.UU.,EE.UU.,https://www.caltech.edu,0,,TrustArc,No,No detectable,No
+7,"University of California, Berkeley",UC Berkeley,EE.UU.,EE.UU.,https://www.berkeley.edu,1,nmstat,Ninguna,No,No detectable,No
+8,Princeton University,Princeton,EE.UU.,EE.UU.,https://www.princeton.edu,0,,"TrustArc, CookieYes",No,No detectable,No
+9,Imperial College London,Imperial,Reino Unido,Reino Unido,https://www.imperial.ac.uk,6,AWSALBTG | AWSALBTGCORS | AWSALB | AWSALBCORS | ARRAffinity-WindowsWF | OptanonConsent,OneTrust,Si,No detectable,Sí
+10,University of Chicago,U Chicago,EE.UU.,EE.UU.,https://www.uchicago.edu,8,ApplicationGatewayAffinityCORS | ApplicationGatewayAffinity | shell#lang | dismissed-alerts | www#lang | nmstat | _hjSessionUser | _hjSession,CookieYes,No,No detectable,No
+11,ETH Zurich,ETH Zurich,Suiza,Europa cont.,https://ethz.ch,0,,CookieYes,No,No detectable,No
+12,Yale University,Yale,EE.UU.,EE.UU.,https://www.yale.edu,2,adaptive_image | nmstat,TrustArc,No,No detectable,No
+13,University of Pennsylvania,UPenn,EE.UU.,EE.UU.,https://www.upenn.edu,0,,TrustArc,No,No detectable,No
+14,University College London,UCL,Reino Unido,Reino Unido,https://www.ucl.ac.uk,0,,TrustArc,Si,No detectable,Sí
+15,Cornell University,Cornell,EE.UU.,EE.UU.,https://www.cornell.edu,6,__utma | __utmc | __utmz | __utmt | __utmb | nmstat,Ninguna,No,No detectable,No
+16,Tsinghua University,Tsinghua,China,China,https://www.tsinghua.edu.cn/en/,0,,Ninguna,No,No detectable,No
+17,Peking University,Peking,China,China,https://english.pku.edu.cn,3,Hm_lvt | Hm_lpvt | HMACCOUNT,Ninguna,No,No detectable,No
+18,Johns Hopkins University,Johns Hopkins,EE.UU.,EE.UU.,https://www.jhu.edu,2,_twpid | nmstat,Ninguna,No,No detectable,No
+19,Columbia University,Columbia,EE.UU.,EE.UU.,https://www.columbia.edu,0,,TrustArc,Si,No detectable,Sí
+20,University of Toronto,Toronto,Canadá,Canadá,https://www.utoronto.ca,0,,"TrustArc, CookieYes",No,No detectable,No
+21,"University of California, Los Angeles",UCLA,EE.UU.,EE.UU.,https://www.ucla.edu,1,XSRF-TOKEN,Ninguna,No,No detectable,No
+22,National University of Singapore,NUS,Singapur,Asia (otros),https://nus.edu.sg,3,incap_ses_79 | sf-prs-ss | sf-prs-lu,TrustArc,Si,No detectable,No
+23,The University of Tokyo,U Tokyo,Japón,Asia (otros),https://www.u-tokyo.ac.jp/en/,0,,Ninguna,No,No detectable,No
+24,Technical University of Munich,TUM,Alemania,Europa cont.,https://www.tum.de/en/,0,,TrustArc,No,No detectable,No
+25,The University of Melbourne,Melbourne,Australia,Australia,https://www.unimelb.edu.au,22,optimizelyEndUserId | previousPageUrl | campaign_name | global_segmentation_cookie | utag_main__ss | utag_main__st | utag_main_ses_id | homepage | gpv_Page | gpv_Page_url,TrustArc,Si,Sí,No
+26,University of Edinburgh,Edinburgh,Reino Unido,Reino Unido,https://www.ed.ac.uk,0,,Ninguna,No,No detectable,No
+27,EPFL,EPFL,Suiza,Europa cont.,https://www.epfl.ch/en/,0,,Ninguna,No,No detectable,No
+28,University of Michigan-Ann Arbor,Michigan,EE.UU.,EE.UU.,https://umich.edu,1,um_privacy_consent,Ninguna,No,Sí,No
+29,Northwestern University,Northwestern,EE.UU.,EE.UU.,https://www.northwestern.edu,0,,"TrustArc, CookieYes",No,Sí,Sí
+30,Fudan University,Fudan,China,China,https://www.fudan.edu.cn/en/,0,,Ninguna,No,No detectable,No
+31,PSL University,PSL,Francia,Europa cont.,https://www.psl.eu/en,1,cookiesession1,TrustArc,Si,Sí,No
+32,University of Hong Kong,HKU,Hong Kong,Hong Kong,https://www.hku.hk,6,highcontra | __utma | __utmc | __utmz | __utmt | __utmb,Ninguna,No,No detectable,No
+33,Zhejiang University,Zhejiang,China,China,https://www.zju.edu.cn/english/,0,,Ninguna,No,No detectable,No
+34,New York University,NYU,EE.UU.,EE.UU.,https://www.nyu.edu,2,osano_consentmanager_uuid | osano_consentmanager,Osano,No,No detectable,No
+35,Shanghai Jiao Tong University,SJTU,China,China,https://www.sjtu.edu.cn,0,,Ninguna,No,No detectable,No
+36,King's College London,KCL,Reino Unido,Reino Unido,https://www.kcl.ac.uk,1,OptanonConsent,OneTrust,Si,No detectable,Sí
+37,"University of California, San Diego",UCSD,EE.UU.,EE.UU.,https://www.ucsd.edu,0,,Ninguna,No,No detectable,No
+38,LMU Munich,LMU,Alemania,Europa cont.,https://www.lmu.de,0,,Ninguna,No,No detectable,No
+39,Duke University,Duke,EE.UU.,EE.UU.,https://www.duke.edu,0,,Ninguna,Si,No detectable,No
+40,University of Manchester,Manchester,Reino Unido,Reino Unido,https://www.manchester.ac.uk,1,OptanonConsent,OneTrust,No,No detectable,No
+41,University of British Columbia,UBC,Canadá,Canadá,https://www.ubc.ca,0,,Ninguna,No,No detectable,No
+42,The University of Sydney,Sydney,Australia,Australia,https://www.sydney.edu.au,25,AMCVS_AdobeOrg | gpv_Page | at_check | s_ecid | mbox | AMCV_AdobeOrg | _hjSessionUser | _hjSession | _scid | _scid_r,Ninguna,No,No detectable,No
+43,Université Paris-Saclay,Paris-Saclay,Francia,Europa cont.,https://www.universite-paris-saclay.fr/en,2,contrast | saclay-tac,"TrustArc, Tarteaucitron",Si,No detectable,Sí
+44,Kyoto University,Kyoto,Japón,Asia (otros),https://www.kyoto-u.ac.jp/en,0,,TrustArc,No,No detectable,No
+45,University of Illinois Urbana-Champaign,Illinois,EE.UU.,EE.UU.,https://illinois.edu,2,searchstax_session_id | ms_visitorid,OneTrust,No,No detectable,No
+46,The University of Texas at Austin,UT Austin,EE.UU.,EE.UU.,https://www.utexas.edu,0,,"TrustArc, CookieYes",No,No detectable,No
+47,University of Washington,UW,EE.UU.,EE.UU.,https://www.washington.edu,0,,Ninguna,No,No detectable,No
+48,Nanyang Technological University,NTU,Singapur,Asia (otros),https://www.ntu.edu.sg,0,,TrustArc,No,No detectable,No
+49,McGill University,McGill,Canadá,Canadá,https://www.mcgill.ca,1,cookie-agreed-version,TrustArc,Si,No detectable,Sí
+50,The Chinese University of Hong Kong,CUHK,Hong Kong,Hong Kong,https://www.cuhk.edu.hk/english/index.html,2,_fbp | show1stPhoto_en,Ninguna,No,No detectable,No
+51,Carnegie Mellon University,CMU,EE.UU.,EE.UU.,https://www.cmu.edu,0,,TrustArc,No,No detectable,No
+52,University of Wisconsin-Madison,Wisconsin,EE.UU.,EE.UU.,https://www.wisc.edu,0,,Ninguna,Si,No detectable,Sí
+53,University of Science and Technology of China,USTC,China,China,https://en.ustc.edu.cn,3,Hm_lvt | Hm_lpvt | HMACCOUNT,Ninguna,No,No detectable,No
+54,Washington University in St. Louis,WUSTL,EE.UU.,EE.UU.,https://washu.edu,0,,TrustArc,No,No detectable,No
+55,Monash University,Monash,Australia,Australia,https://www.monash.edu,2,AWSALB | AWSALBCORS,Ninguna,No,No detectable,No
+56,Seoul National University,SNU,Corea del Sur,Asia (otros),https://en.snu.ac.kr,0,,Ninguna,No,No detectable,No
+57,Heidelberg University,Heidelberg,Alemania,Europa cont.,https://www.uni-heidelberg.de/en,0,,Ninguna,No,No detectable,No
+58,Hong Kong University of Science and Technology,HKUST,Hong Kong,Hong Kong,https://hkust.edu.hk/,0,,TrustArc,No,No detectable,No
+59,Karolinska Institutet,Karolinska,Suecia,Europa cont.,https://ki.se/en,1,TS01b184ef,TrustArc,Si,No detectable,Sí
+60,Delft University of Technology,TU Delft,Países Bajos,Europa cont.,https://www.tudelft.nl/en/,0,,"Cookiebot, Usercentrics",Si,No detectable,Sí
+61,Australian National University,ANU,Australia,Australia,https://www.anu.edu.au/,0,,OneTrust,No,No detectable,No
+62,KU Leuven,KU Leuven,Bélgica,Europa cont.,https://www.kuleuven.be/english/,3,TFC_ffbae7d2 | TFC_fbfdc4f4 | OptanonConsent,"OneTrust, TrustArc",Si,No detectable,Sí
+63,The University of Queensland,Queensland,Australia,Australia,https://www.uq.edu.au/,0,,TrustArc,No,No detectable,No

@@ -1,0 +1,442 @@
+id,grupo,sigla,regla,impacto,criterio,principio,nivel,nodos,ayuda
+1,mundo,MIT,target-size,serious,2.5.8,Operable,AA,6,"All touch targets must be 24px large, or leave sufficient space"
+1,mundo,MIT,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+1,mundo,MIT,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+2,mundo,Stanford,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,11,Elements must meet enhanced color contrast ratio thresholds
+3,mundo,Harvard,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,10,Elements must meet enhanced color contrast ratio thresholds
+3,mundo,Harvard,color-contrast,serious,1.4.3,Perceptible,AA,3,Elements must meet minimum color contrast ratio thresholds
+5,mundo,Cambridge,image-alt,critical,1.1.1,Perceptible,A,5,Images must have alternative text
+5,mundo,Cambridge,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+6,mundo,Caltech,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,25,Elements must meet enhanced color contrast ratio thresholds
+6,mundo,Caltech,aria-input-field-name,serious,4.1.2,Robusto,A,2,ARIA input fields must have an accessible name
+6,mundo,Caltech,aria-required-children,critical,1.3.1,Perceptible,A,2,Certain ARIA roles must contain particular children
+6,mundo,Caltech,link-in-text-block,serious,1.4.1,Perceptible,A,1,Links must be distinguishable without relying on color
+9,mundo,Imperial,target-size,serious,2.5.8,Operable,AA,15,"All touch targets must be 24px large, or leave sufficient space"
+9,mundo,Imperial,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,4,Elements must meet enhanced color contrast ratio thresholds
+10,mundo,U Chicago,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+11,mundo,ETH Zurich,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+11,mundo,ETH Zurich,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+12,mundo,Yale,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,14,Elements must meet enhanced color contrast ratio thresholds
+12,mundo,Yale,aria-required-children,critical,1.3.1,Perceptible,A,3,Certain ARIA roles must contain particular children
+13,mundo,UPenn,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+13,mundo,UPenn,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+15,mundo,Cornell,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,5,Elements must meet enhanced color contrast ratio thresholds
+15,mundo,Cornell,aria-prohibited-attr,serious,4.1.2,Robusto,A,1,Elements must only use permitted ARIA attributes
+16,mundo,Tsinghua,link-name,serious,2.4.4,Operable,A,27,Links must have discernible text
+16,mundo,Tsinghua,image-alt,critical,1.1.1,Perceptible,A,5,Images must have alternative text
+16,mundo,Tsinghua,target-size,serious,2.5.8,Operable,AA,5,"All touch targets must be 24px large, or leave sufficient space"
+16,mundo,Tsinghua,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,4,Elements must meet enhanced color contrast ratio thresholds
+16,mundo,Tsinghua,nested-interactive,serious,4.1.2,Robusto,A,3,Interactive controls must not be nested
+16,mundo,Tsinghua,aria-input-field-name,serious,4.1.2,Robusto,A,1,ARIA input fields must have an accessible name
+16,mundo,Tsinghua,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+16,mundo,Tsinghua,input-button-name,critical,4.1.2,Robusto,A,1,Input buttons must have discernible text
+16,mundo,Tsinghua,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+16,mundo,Tsinghua,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+17,mundo,Peking,link-name,serious,2.4.4,Operable,A,14,Links must have discernible text
+17,mundo,Peking,aria-prohibited-attr,serious,4.1.2,Robusto,A,2,Elements must only use permitted ARIA attributes
+17,mundo,Peking,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+17,mundo,Peking,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+17,mundo,Peking,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+18,mundo,Johns Hopkins,link-name,serious,2.4.4,Operable,A,4,Links must have discernible text
+18,mundo,Johns Hopkins,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,2,Elements must meet enhanced color contrast ratio thresholds
+18,mundo,Johns Hopkins,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+19,mundo,Columbia,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,44,Elements must meet enhanced color contrast ratio thresholds
+19,mundo,Columbia,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
+19,mundo,Columbia,nested-interactive,serious,4.1.2,Robusto,A,1,Interactive controls must not be nested
+19,mundo,Columbia,role-img-alt,serious,1.1.1,Perceptible,A,1,"[role=""img""] and [role=""image""] elements must have alternative text"
+20,mundo,Toronto,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,19,Elements must meet enhanced color contrast ratio thresholds
+21,mundo,UCLA,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,64,Elements must meet enhanced color contrast ratio thresholds
+22,mundo,NUS,link-name,serious,2.4.4,Operable,A,22,Links must have discernible text
+22,mundo,NUS,color-contrast,serious,1.4.3,Perceptible,AA,19,Elements must meet minimum color contrast ratio thresholds
+22,mundo,NUS,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,15,Elements must meet enhanced color contrast ratio thresholds
+22,mundo,NUS,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+22,mundo,NUS,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+22,mundo,NUS,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+22,mundo,NUS,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+23,mundo,U Tokyo,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,11,Elements must meet enhanced color contrast ratio thresholds
+23,mundo,U Tokyo,aria-hidden-focus,serious,4.1.2,Robusto,A,7,ARIA hidden element must not be focusable or contain focusable elements
+23,mundo,U Tokyo,color-contrast,serious,1.4.3,Perceptible,AA,3,Elements must meet minimum color contrast ratio thresholds
+23,mundo,U Tokyo,target-size,serious,2.5.8,Operable,AA,3,"All touch targets must be 24px large, or leave sufficient space"
+23,mundo,U Tokyo,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+23,mundo,U Tokyo,aria-input-field-name,serious,4.1.2,Robusto,A,1,ARIA input fields must have an accessible name
+23,mundo,U Tokyo,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+23,mundo,U Tokyo,nested-interactive,serious,4.1.2,Robusto,A,1,Interactive controls must not be nested
+24,mundo,TUM,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,23,Elements must meet enhanced color contrast ratio thresholds
+25,mundo,Melbourne,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+26,mundo,Edinburgh,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,36,Elements must meet enhanced color contrast ratio thresholds
+26,mundo,Edinburgh,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+27,mundo,EPFL,color-contrast,serious,1.4.3,Perceptible,AA,85,Elements must meet minimum color contrast ratio thresholds
+27,mundo,EPFL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,15,Elements must meet enhanced color contrast ratio thresholds
+27,mundo,EPFL,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+28,mundo,Michigan,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,8,Elements must meet enhanced color contrast ratio thresholds
+28,mundo,Michigan,target-size,serious,2.5.8,Operable,AA,5,"All touch targets must be 24px large, or leave sufficient space"
+30,mundo,Fudan,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,23,Elements must meet enhanced color contrast ratio thresholds
+30,mundo,Fudan,image-alt,critical,1.1.1,Perceptible,A,14,Images must have alternative text
+30,mundo,Fudan,link-name,serious,2.4.4,Operable,A,3,Links must have discernible text
+30,mundo,Fudan,color-contrast,serious,1.4.3,Perceptible,AA,2,Elements must meet minimum color contrast ratio thresholds
+30,mundo,Fudan,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+30,mundo,Fudan,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+31,mundo,PSL,color-contrast,serious,1.4.3,Perceptible,AA,11,Elements must meet minimum color contrast ratio thresholds
+31,mundo,PSL,link-name,serious,2.4.4,Operable,A,7,Links must have discernible text
+31,mundo,PSL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,5,Elements must meet enhanced color contrast ratio thresholds
+31,mundo,PSL,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+31,mundo,PSL,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+32,mundo,HKU,color-contrast,serious,1.4.3,Perceptible,AA,13,Elements must meet minimum color contrast ratio thresholds
+32,mundo,HKU,aria-input-field-name,serious,4.1.2,Robusto,A,3,ARIA input fields must have an accessible name
+32,mundo,HKU,nested-interactive,serious,4.1.2,Robusto,A,3,Interactive controls must not be nested
+32,mundo,HKU,aria-allowed-attr,critical,4.1.2,Robusto,A,2,Elements must only use supported ARIA attributes
+32,mundo,HKU,aria-valid-attr-value,critical,4.1.2,Robusto,A,2,ARIA attributes must conform to valid values
+32,mundo,HKU,list,serious,1.3.1,Perceptible,A,2,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+32,mundo,HKU,aria-toggle-field-name,serious,4.1.2,Robusto,A,1,ARIA toggle fields must have an accessible name
+32,mundo,HKU,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+33,mundo,Zhejiang,link-name,serious,2.4.4,Operable,A,12,Links must have discernible text
+33,mundo,Zhejiang,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+33,mundo,Zhejiang,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+34,mundo,NYU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,2,Elements must meet enhanced color contrast ratio thresholds
+35,mundo,SJTU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,38,Elements must meet enhanced color contrast ratio thresholds
+35,mundo,SJTU,color-contrast,serious,1.4.3,Perceptible,AA,4,Elements must meet minimum color contrast ratio thresholds
+35,mundo,SJTU,image-alt,critical,1.1.1,Perceptible,A,4,Images must have alternative text
+35,mundo,SJTU,frame-title,serious,4.1.2,Robusto,A,1,Frames must have an accessible name
+35,mundo,SJTU,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+36,mundo,KCL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,40,Elements must meet enhanced color contrast ratio thresholds
+36,mundo,KCL,aria-valid-attr,critical,4.1.2,Robusto,A,1,ARIA attributes must conform to valid names
+37,mundo,UCSD,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,35,Elements must meet enhanced color contrast ratio thresholds
+37,mundo,UCSD,target-size,serious,2.5.8,Operable,AA,7,"All touch targets must be 24px large, or leave sufficient space"
+37,mundo,UCSD,aria-hidden-focus,serious,4.1.2,Robusto,A,2,ARIA hidden element must not be focusable or contain focusable elements
+38,mundo,LMU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+39,mundo,Duke,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+41,mundo,UBC,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,13,Elements must meet enhanced color contrast ratio thresholds
+41,mundo,UBC,target-size,serious,2.5.8,Operable,AA,5,"All touch targets must be 24px large, or leave sufficient space"
+42,mundo,Sydney,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,13,Elements must meet enhanced color contrast ratio thresholds
+42,mundo,Sydney,color-contrast,serious,1.4.3,Perceptible,AA,1,Elements must meet minimum color contrast ratio thresholds
+42,mundo,Sydney,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+43,mundo,Paris-Saclay,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+43,mundo,Paris-Saclay,aria-valid-attr,critical,4.1.2,Robusto,A,1,ARIA attributes must conform to valid names
+44,mundo,Kyoto,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
+44,mundo,Kyoto,color-contrast,serious,1.4.3,Perceptible,AA,1,Elements must meet minimum color contrast ratio thresholds
+45,mundo,Illinois,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+46,mundo,UT Austin,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,25,Elements must meet enhanced color contrast ratio thresholds
+47,mundo,UW,target-size,serious,2.5.8,Operable,AA,7,"All touch targets must be 24px large, or leave sufficient space"
+47,mundo,UW,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+47,mundo,UW,aria-hidden-focus,serious,4.1.2,Robusto,A,1,ARIA hidden element must not be focusable or contain focusable elements
+48,mundo,NTU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+48,mundo,NTU,link-name,serious,2.4.4,Operable,A,6,Links must have discernible text
+48,mundo,NTU,target-size,serious,2.5.8,Operable,AA,3,"All touch targets must be 24px large, or leave sufficient space"
+48,mundo,NTU,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+49,mundo,McGill,aria-progressbar-name,serious,1.1.1,Perceptible,A,1,ARIA progressbar nodes must have an accessible name
+49,mundo,McGill,color-contrast,serious,1.4.3,Perceptible,AA,1,Elements must meet minimum color contrast ratio thresholds
+49,mundo,McGill,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+50,mundo,CUHK,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,30,Elements must meet enhanced color contrast ratio thresholds
+50,mundo,CUHK,target-size,serious,2.5.8,Operable,AA,9,"All touch targets must be 24px large, or leave sufficient space"
+50,mundo,CUHK,aria-input-field-name,serious,4.1.2,Robusto,A,2,ARIA input fields must have an accessible name
+50,mundo,CUHK,aria-required-children,critical,1.3.1,Perceptible,A,2,Certain ARIA roles must contain particular children
+50,mundo,CUHK,link-name,serious,2.4.4,Operable,A,2,Links must have discernible text
+50,mundo,CUHK,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+51,mundo,CMU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,2,Elements must meet enhanced color contrast ratio thresholds
+51,mundo,CMU,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+52,mundo,Wisconsin,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,45,Elements must meet enhanced color contrast ratio thresholds
+53,mundo,USTC,link-name,serious,2.4.4,Operable,A,7,Links must have discernible text
+53,mundo,USTC,image-alt,critical,1.1.1,Perceptible,A,2,Images must have alternative text
+53,mundo,USTC,html-has-lang,serious,3.1.1,Comprensible,A,1,<html> element must have a lang attribute
+53,mundo,USTC,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+53,mundo,USTC,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+54,mundo,WUSTL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,21,Elements must meet enhanced color contrast ratio thresholds
+54,mundo,WUSTL,link-name,serious,2.4.4,Operable,A,4,Links must have discernible text
+54,mundo,WUSTL,aria-valid-attr,critical,4.1.2,Robusto,A,1,ARIA attributes must conform to valid names
+55,mundo,Monash,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,17,Elements must meet enhanced color contrast ratio thresholds
+55,mundo,Monash,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+56,mundo,SNU,color-contrast,serious,1.4.3,Perceptible,AA,13,Elements must meet minimum color contrast ratio thresholds
+56,mundo,SNU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,8,Elements must meet enhanced color contrast ratio thresholds
+56,mundo,SNU,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+57,mundo,Heidelberg,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,67,Elements must meet enhanced color contrast ratio thresholds
+57,mundo,Heidelberg,aria-prohibited-attr,serious,4.1.2,Robusto,A,1,Elements must only use permitted ARIA attributes
+58,mundo,HKUST,list,serious,1.3.1,Perceptible,A,8,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+58,mundo,HKUST,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+58,mundo,HKUST,aria-roles,critical,4.1.2,Robusto,A,2,ARIA roles used must conform to valid values
+58,mundo,HKUST,link-name,serious,2.4.4,Operable,A,2,Links must have discernible text
+58,mundo,HKUST,scrollable-region-focusable,serious,2.1.1,Operable,A,2,Scrollable region must have keyboard access
+58,mundo,HKUST,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+59,mundo,Karolinska,aria-allowed-attr,critical,4.1.2,Robusto,A,2,Elements must only use supported ARIA attributes
+59,mundo,Karolinska,target-size,serious,2.5.8,Operable,AA,2,"All touch targets must be 24px large, or leave sufficient space"
+59,mundo,Karolinska,aria-valid-attr-value,critical,4.1.2,Robusto,A,1,ARIA attributes must conform to valid values
+59,mundo,Karolinska,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+59,mundo,Karolinska,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+60,mundo,TU Delft,color-contrast,serious,1.4.3,Perceptible,AA,17,Elements must meet minimum color contrast ratio thresholds
+60,mundo,TU Delft,target-size,serious,2.5.8,Operable,AA,5,"All touch targets must be 24px large, or leave sufficient space"
+60,mundo,TU Delft,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+61,mundo,ANU,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+62,mundo,KU Leuven,color-contrast,serious,1.4.3,Perceptible,AA,3,Elements must meet minimum color contrast ratio thresholds
+62,mundo,KU Leuven,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+62,mundo,KU Leuven,listitem,serious,1.3.1,Perceptible,A,1,<li> elements must be contained in a <ul> or <ol>
+63,mundo,Queensland,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,12,Elements must meet enhanced color contrast ratio thresholds
+63,mundo,Queensland,link-in-text-block,serious,1.4.1,Perceptible,A,1,Links must be distinguishable without relying on color
+64,ecuador,EPN,color-contrast,serious,1.4.3,Perceptible,AA,2,Elements must meet minimum color contrast ratio thresholds
+64,ecuador,EPN,document-title,serious,2.4.2,Operable,A,1,Documents must have <title> element to aid in navigation
+64,ecuador,EPN,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+65,ecuador,ESPOL,color-contrast,serious,1.4.3,Perceptible,AA,57,Elements must meet minimum color contrast ratio thresholds
+65,ecuador,ESPOL,target-size,serious,2.5.8,Operable,AA,10,"All touch targets must be 24px large, or leave sufficient space"
+65,ecuador,ESPOL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+65,ecuador,ESPOL,button-name,critical,4.1.2,Robusto,A,2,Buttons must have discernible text
+66,ecuador,ESPOCH,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,50,Elements must meet enhanced color contrast ratio thresholds
+66,ecuador,ESPOCH,link-name,serious,2.4.4,Operable,A,16,Links must have discernible text
+66,ecuador,ESPOCH,color-contrast,serious,1.4.3,Perceptible,AA,4,Elements must meet minimum color contrast ratio thresholds
+67,ecuador,ESPAM MFL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+67,ecuador,ESPAM MFL,color-contrast,serious,1.4.3,Perceptible,AA,9,Elements must meet minimum color contrast ratio thresholds
+67,ecuador,ESPAM MFL,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
+67,ecuador,ESPAM MFL,button-name,critical,4.1.2,Robusto,A,3,Buttons must have discernible text
+67,ecuador,ESPAM MFL,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+67,ecuador,ESPAM MFL,link-in-text-block,serious,1.4.1,Perceptible,A,1,Links must be distinguishable without relying on color
+67,ecuador,ESPAM MFL,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+68,ecuador,ESPE,link-name,serious,2.4.4,Operable,A,9,Links must have discernible text
+68,ecuador,ESPE,target-size,serious,2.5.8,Operable,AA,9,"All touch targets must be 24px large, or leave sufficient space"
+68,ecuador,ESPE,aria-command-name,serious,4.1.2,Robusto,A,2,ARIA commands must have an accessible name
+69,ecuador,UCE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,65,Elements must meet enhanced color contrast ratio thresholds
+69,ecuador,UCE,color-contrast,serious,1.4.3,Perceptible,AA,15,Elements must meet minimum color contrast ratio thresholds
+69,ecuador,UCE,link-name,serious,2.4.4,Operable,A,15,Links must have discernible text
+69,ecuador,UCE,scrollable-region-focusable,serious,2.1.1,Operable,A,2,Scrollable region must have keyboard access
+70,ecuador,UCuenca,link-name,serious,2.4.4,Operable,A,39,Links must have discernible text
+70,ecuador,UCuenca,button-name,critical,4.1.2,Robusto,A,9,Buttons must have discernible text
+70,ecuador,UCuenca,aria-allowed-attr,critical,4.1.2,Robusto,A,8,Elements must only use supported ARIA attributes
+70,ecuador,UCuenca,color-contrast,serious,1.4.3,Perceptible,AA,4,Elements must meet minimum color contrast ratio thresholds
+70,ecuador,UCuenca,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+71,ecuador,UG,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,22,Elements must meet enhanced color contrast ratio thresholds
+72,ecuador,UNL,link-name,serious,2.4.4,Operable,A,108,Links must have discernible text
+72,ecuador,UNL,image-alt,critical,1.1.1,Perceptible,A,7,Images must have alternative text
+72,ecuador,UNL,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
+72,ecuador,UNL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+73,ecuador,UAE,color-contrast,serious,1.4.3,Perceptible,AA,15,Elements must meet minimum color contrast ratio thresholds
+73,ecuador,UAE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,13,Elements must meet enhanced color contrast ratio thresholds
+73,ecuador,UAE,nested-interactive,serious,4.1.2,Robusto,A,4,Interactive controls must not be nested
+73,ecuador,UAE,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+73,ecuador,UAE,frame-title,serious,4.1.2,Robusto,A,1,Frames must have an accessible name
+74,ecuador,UTA,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+74,ecuador,UTA,aria-allowed-attr,critical,4.1.2,Robusto,A,6,Elements must only use supported ARIA attributes
+74,ecuador,UTA,color-contrast,serious,1.4.3,Perceptible,AA,2,Elements must meet minimum color contrast ratio thresholds
+75,ecuador,UTB,link-name,serious,2.4.4,Operable,A,17,Links must have discernible text
+75,ecuador,UTB,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+75,ecuador,UTB,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
+75,ecuador,UTB,frame-title,serious,4.1.2,Robusto,A,3,Frames must have an accessible name
+75,ecuador,UTB,aria-input-field-name,serious,4.1.2,Robusto,A,1,ARIA input fields must have an accessible name
+75,ecuador,UTB,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+75,ecuador,UTB,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+76,ecuador,UTC,link-name,serious,2.4.4,Operable,A,19,Links must have discernible text
+76,ecuador,UTC,image-alt,critical,1.1.1,Perceptible,A,17,Images must have alternative text
+76,ecuador,UTC,frame-title,serious,4.1.2,Robusto,A,2,Frames must have an accessible name
+76,ecuador,UTC,color-contrast,serious,1.4.3,Perceptible,AA,1,Elements must meet minimum color contrast ratio thresholds
+76,ecuador,UTC,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+77,ecuador,UTMACH,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+77,ecuador,UTMACH,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+77,ecuador,UTMACH,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+77,ecuador,UTMACH,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+78,ecuador,UTM,aria-hidden-focus,serious,4.1.2,Robusto,A,13,ARIA hidden element must not be focusable or contain focusable elements
+78,ecuador,UTM,link-name,serious,2.4.4,Operable,A,10,Links must have discernible text
+78,ecuador,UTM,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+78,ecuador,UTM,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+78,ecuador,UTM,target-size,serious,2.5.8,Operable,AA,2,"All touch targets must be 24px large, or leave sufficient space"
+79,ecuador,UTN,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+79,ecuador,UTN,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
+79,ecuador,UTN,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+79,ecuador,UTN,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+80,ecuador,UTEQ,aria-hidden-focus,serious,4.1.2,Robusto,A,103,ARIA hidden element must not be focusable or contain focusable elements
+80,ecuador,UTEQ,listitem,serious,1.3.1,Perceptible,A,3,<li> elements must be contained in a <ul> or <ol>
+80,ecuador,UTEQ,list,serious,1.3.1,Perceptible,A,2,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+80,ecuador,UTEQ,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+80,ecuador,UTEQ,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+81,ecuador,UTELVT,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,17,Elements must meet enhanced color contrast ratio thresholds
+81,ecuador,UTELVT,color-contrast,serious,1.4.3,Perceptible,AA,9,Elements must meet minimum color contrast ratio thresholds
+81,ecuador,UTELVT,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+81,ecuador,UTELVT,link-in-text-block,serious,1.4.1,Perceptible,A,1,Links must be distinguishable without relying on color
+82,ecuador,UEB,link-name,serious,2.4.4,Operable,A,26,Links must have discernible text
+82,ecuador,UEB,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,14,Elements must meet enhanced color contrast ratio thresholds
+82,ecuador,UEB,color-contrast,serious,1.4.3,Perceptible,AA,13,Elements must meet minimum color contrast ratio thresholds
+82,ecuador,UEB,aria-prohibited-attr,serious,4.1.2,Robusto,A,1,Elements must only use permitted ARIA attributes
+82,ecuador,UEB,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+83,ecuador,UNESUM,link-name,serious,2.4.4,Operable,A,7,Links must have discernible text
+83,ecuador,UNESUM,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+84,ecuador,UNEMI,link-name,serious,2.4.4,Operable,A,23,Links must have discernible text
+84,ecuador,UNEMI,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
+84,ecuador,UNEMI,nested-interactive,serious,4.1.2,Robusto,A,3,Interactive controls must not be nested
+84,ecuador,UNEMI,aria-input-field-name,serious,4.1.2,Robusto,A,1,ARIA input fields must have an accessible name
+84,ecuador,UNEMI,frame-title,serious,4.1.2,Robusto,A,1,Frames must have an accessible name
+85,ecuador,UEA,color-contrast,serious,1.4.3,Perceptible,AA,17,Elements must meet minimum color contrast ratio thresholds
+86,ecuador,UPSE,color-contrast,serious,1.4.3,Perceptible,AA,4,Elements must meet minimum color contrast ratio thresholds
+86,ecuador,UPSE,target-size,serious,2.5.8,Operable,AA,2,"All touch targets must be 24px large, or leave sufficient space"
+86,ecuador,UPSE,aria-hidden-focus,serious,4.1.2,Robusto,A,1,ARIA hidden element must not be focusable or contain focusable elements
+87,ecuador,ULEAM,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+87,ecuador,ULEAM,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
+87,ecuador,ULEAM,color-contrast,serious,1.4.3,Perceptible,AA,7,Elements must meet minimum color contrast ratio thresholds
+87,ecuador,ULEAM,nested-interactive,serious,4.1.2,Robusto,A,5,Interactive controls must not be nested
+87,ecuador,ULEAM,button-name,critical,4.1.2,Robusto,A,3,Buttons must have discernible text
+87,ecuador,ULEAM,aria-required-children,critical,1.3.1,Perceptible,A,2,Certain ARIA roles must contain particular children
+87,ecuador,ULEAM,aria-input-field-name,serious,4.1.2,Robusto,A,1,ARIA input fields must have an accessible name
+87,ecuador,ULEAM,frame-title,serious,4.1.2,Robusto,A,1,Frames must have an accessible name
+88,ecuador,UNACH,target-size,serious,2.5.8,Operable,AA,12,"All touch targets must be 24px large, or leave sufficient space"
+88,ecuador,UNACH,link-name,serious,2.4.4,Operable,A,9,Links must have discernible text
+88,ecuador,UNACH,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+88,ecuador,UNACH,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,2,Elements must meet enhanced color contrast ratio thresholds
+88,ecuador,UNACH,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+88,ecuador,UNACH,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+89,ecuador,UNAE,color-contrast,serious,1.4.3,Perceptible,AA,10,Elements must meet minimum color contrast ratio thresholds
+89,ecuador,UNAE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+89,ecuador,UNAE,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+90,ecuador,UPEC,color-contrast,serious,1.4.3,Perceptible,AA,20,Elements must meet minimum color contrast ratio thresholds
+90,ecuador,UPEC,link-name,serious,2.4.4,Operable,A,7,Links must have discernible text
+90,ecuador,UPEC,aria-hidden-focus,serious,4.1.2,Robusto,A,3,ARIA hidden element must not be focusable or contain focusable elements
+91,ecuador,Yachay Tech,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,14,Elements must meet enhanced color contrast ratio thresholds
+91,ecuador,Yachay Tech,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+91,ecuador,Yachay Tech,button-name,critical,4.1.2,Robusto,A,4,Buttons must have discernible text
+91,ecuador,Yachay Tech,aria-prohibited-attr,serious,4.1.2,Robusto,A,1,Elements must only use permitted ARIA attributes
+91,ecuador,Yachay Tech,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+92,ecuador,Ikiam,color-contrast,serious,1.4.3,Perceptible,AA,24,Elements must meet minimum color contrast ratio thresholds
+92,ecuador,Ikiam,link-name,serious,2.4.4,Operable,A,14,Links must have discernible text
+92,ecuador,Ikiam,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+93,ecuador,UArtes,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,14,Elements must meet enhanced color contrast ratio thresholds
+93,ecuador,UArtes,color-contrast,serious,1.4.3,Perceptible,AA,12,Elements must meet minimum color contrast ratio thresholds
+93,ecuador,UArtes,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+93,ecuador,UArtes,target-size,serious,2.5.8,Operable,AA,7,"All touch targets must be 24px large, or leave sufficient space"
+93,ecuador,UArtes,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+94,ecuador,Amawtay Wasi,color-contrast,serious,1.4.3,Perceptible,AA,24,Elements must meet minimum color contrast ratio thresholds
+94,ecuador,Amawtay Wasi,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+94,ecuador,Amawtay Wasi,image-alt,critical,1.1.1,Perceptible,A,2,Images must have alternative text
+94,ecuador,Amawtay Wasi,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+95,ecuador,USECIPOL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,4,Elements must meet enhanced color contrast ratio thresholds
+96,ecuador,IAEN,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,2,Elements must meet enhanced color contrast ratio thresholds
+96,ecuador,IAEN,frame-title,serious,4.1.2,Robusto,A,2,Frames must have an accessible name
+96,ecuador,IAEN,color-contrast,serious,1.4.3,Perceptible,AA,1,Elements must meet minimum color contrast ratio thresholds
+97,ecuador,UASB,link-name,serious,2.4.4,Operable,A,13,Links must have discernible text
+97,ecuador,UASB,image-alt,critical,1.1.1,Perceptible,A,12,Images must have alternative text
+97,ecuador,UASB,color-contrast,serious,1.4.3,Perceptible,AA,8,Elements must meet minimum color contrast ratio thresholds
+97,ecuador,UASB,select-name,critical,4.1.2,Robusto,A,4,Select element must have an accessible name
+97,ecuador,UASB,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+97,ecuador,UASB,scrollable-region-focusable,serious,2.1.1,Operable,A,1,Scrollable region must have keyboard access
+98,ecuador,FLACSO,link-name,serious,2.4.4,Operable,A,20,Links must have discernible text
+98,ecuador,FLACSO,color-contrast,serious,1.4.3,Perceptible,AA,17,Elements must meet minimum color contrast ratio thresholds
+98,ecuador,FLACSO,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+99,ecuador,PUCE,link-name,serious,2.4.4,Operable,A,12,Links must have discernible text
+99,ecuador,PUCE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,7,Elements must meet enhanced color contrast ratio thresholds
+99,ecuador,PUCE,color-contrast,serious,1.4.3,Perceptible,AA,7,Elements must meet minimum color contrast ratio thresholds
+99,ecuador,PUCE,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
+99,ecuador,PUCE,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+100,ecuador,UCSG,link-name,serious,2.4.4,Operable,A,6,Links must have discernible text
+100,ecuador,UCSG,target-size,serious,2.5.8,Operable,AA,2,"All touch targets must be 24px large, or leave sufficient space"
+100,ecuador,UCSG,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+100,ecuador,UCSG,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+101,ecuador,UCACUE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,17,Elements must meet enhanced color contrast ratio thresholds
+101,ecuador,UCACUE,nested-interactive,serious,4.1.2,Robusto,A,9,Interactive controls must not be nested
+101,ecuador,UCACUE,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+101,ecuador,UCACUE,target-size,serious,2.5.8,Operable,AA,5,"All touch targets must be 24px large, or leave sufficient space"
+101,ecuador,UCACUE,aria-tab-name,serious,4.1.2,Robusto,A,1,ARIA tab nodes must have an accessible name
+101,ecuador,UCACUE,aria-valid-attr-value,critical,4.1.2,Robusto,A,1,ARIA attributes must conform to valid values
+102,ecuador,ULVR,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+102,ecuador,ULVR,color-contrast,serious,1.4.3,Perceptible,AA,2,Elements must meet minimum color contrast ratio thresholds
+103,ecuador,UTPL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,25,Elements must meet enhanced color contrast ratio thresholds
+103,ecuador,UTPL,image-alt,critical,1.1.1,Perceptible,A,5,Images must have alternative text
+103,ecuador,UTPL,link-name,serious,2.4.4,Operable,A,2,Links must have discernible text
+103,ecuador,UTPL,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+103,ecuador,UTPL,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+103,ecuador,UTPL,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+104,ecuador,UTE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,15,Elements must meet enhanced color contrast ratio thresholds
+104,ecuador,UTE,link-name,serious,2.4.4,Operable,A,9,Links must have discernible text
+104,ecuador,UTE,color-contrast,serious,1.4.3,Perceptible,AA,5,Elements must meet minimum color contrast ratio thresholds
+105,ecuador,UDA,color-contrast,serious,1.4.3,Perceptible,AA,12,Elements must meet minimum color contrast ratio thresholds
+105,ecuador,UDA,link-name,serious,2.4.4,Operable,A,12,Links must have discernible text
+105,ecuador,UDA,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,6,Elements must meet enhanced color contrast ratio thresholds
+105,ecuador,UDA,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+106,ecuador,UPS,aria-input-field-name,serious,4.1.2,Robusto,A,3,ARIA input fields must have an accessible name
+106,ecuador,UPS,aria-required-children,critical,1.3.1,Perceptible,A,3,Certain ARIA roles must contain particular children
+106,ecuador,UPS,link-name,serious,2.4.4,Operable,A,2,Links must have discernible text
+106,ecuador,UPS,list,serious,1.3.1,Perceptible,A,2,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+107,ecuador,UISEK,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+107,ecuador,UISEK,color-contrast,serious,1.4.3,Perceptible,AA,10,Elements must meet minimum color contrast ratio thresholds
+107,ecuador,UISEK,select-name,critical,4.1.2,Robusto,A,5,Select element must have an accessible name
+107,ecuador,UISEK,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+107,ecuador,UISEK,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+108,ecuador,UEES,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,16,Elements must meet enhanced color contrast ratio thresholds
+108,ecuador,UEES,color-contrast,serious,1.4.3,Perceptible,AA,8,Elements must meet minimum color contrast ratio thresholds
+108,ecuador,UEES,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+108,ecuador,UEES,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+109,ecuador,USFQ,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,34,Elements must meet enhanced color contrast ratio thresholds
+109,ecuador,USFQ,color-contrast,serious,1.4.3,Perceptible,AA,15,Elements must meet minimum color contrast ratio thresholds
+109,ecuador,USFQ,image-alt,critical,1.1.1,Perceptible,A,2,Images must have alternative text
+109,ecuador,USFQ,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+109,ecuador,USFQ,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+109,ecuador,USFQ,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+110,ecuador,UDLA,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,32,Elements must meet enhanced color contrast ratio thresholds
+110,ecuador,UDLA,color-contrast,serious,1.4.3,Perceptible,AA,7,Elements must meet minimum color contrast ratio thresholds
+110,ecuador,UDLA,button-name,critical,4.1.2,Robusto,A,6,Buttons must have discernible text
+110,ecuador,UDLA,link-name,serious,2.4.4,Operable,A,6,Links must have discernible text
+110,ecuador,UDLA,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+110,ecuador,UDLA,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+111,ecuador,UIDE,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+111,ecuador,UIDE,target-size,serious,2.5.8,Operable,AA,10,"All touch targets must be 24px large, or leave sufficient space"
+111,ecuador,UIDE,aria-allowed-attr,critical,4.1.2,Robusto,A,7,Elements must only use supported ARIA attributes
+111,ecuador,UIDE,button-name,critical,4.1.2,Robusto,A,5,Buttons must have discernible text
+111,ecuador,UIDE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,3,Elements must meet enhanced color contrast ratio thresholds
+111,ecuador,UIDE,select-name,critical,4.1.2,Robusto,A,3,Select element must have an accessible name
+111,ecuador,UIDE,color-contrast,serious,1.4.3,Perceptible,AA,2,Elements must meet minimum color contrast ratio thresholds
+111,ecuador,UIDE,link-in-text-block,serious,1.4.1,Perceptible,A,2,Links must be distinguishable without relying on color
+111,ecuador,UIDE,aria-hidden-focus,serious,4.1.2,Robusto,A,1,ARIA hidden element must not be focusable or contain focusable elements
+111,ecuador,UIDE,aria-required-children,critical,1.3.1,Perceptible,A,1,Certain ARIA roles must contain particular children
+112,ecuador,UNIANDES,color-contrast,serious,1.4.3,Perceptible,AA,11,Elements must meet minimum color contrast ratio thresholds
+112,ecuador,UNIANDES,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+112,ecuador,UNIANDES,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
+112,ecuador,UNIANDES,aria-allowed-attr,critical,4.1.2,Robusto,A,2,Elements must only use supported ARIA attributes
+113,ecuador,UPACIFICO,color-contrast,serious,1.4.3,Perceptible,AA,21,Elements must meet minimum color contrast ratio thresholds
+113,ecuador,UPACIFICO,link-name,serious,2.4.4,Operable,A,4,Links must have discernible text
+114,ecuador,UTI,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
+114,ecuador,UTI,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
+114,ecuador,UTI,target-size,serious,2.5.8,Operable,AA,4,"All touch targets must be 24px large, or leave sufficient space"
+114,ecuador,UTI,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,1,Elements must meet enhanced color contrast ratio thresholds
+114,ecuador,UTI,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+115,ecuador,Casa Grande,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,10,Elements must meet enhanced color contrast ratio thresholds
+116,ecuador,UTEG,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,9,Elements must meet enhanced color contrast ratio thresholds
+116,ecuador,UTEG,color-contrast,serious,1.4.3,Perceptible,AA,8,Elements must meet minimum color contrast ratio thresholds
+116,ecuador,UTEG,link-name,serious,2.4.4,Operable,A,8,Links must have discernible text
+116,ecuador,UTEG,image-alt,critical,1.1.1,Perceptible,A,6,Images must have alternative text
+116,ecuador,UTEG,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+116,ecuador,UTEG,link-in-text-block,serious,1.4.1,Perceptible,A,1,Links must be distinguishable without relying on color
+116,ecuador,UTEG,target-size,serious,2.5.8,Operable,AA,1,"All touch targets must be 24px large, or leave sufficient space"
+117,ecuador,UISRAEL,color-contrast,serious,1.4.3,Perceptible,AA,44,Elements must meet minimum color contrast ratio thresholds
+117,ecuador,UISRAEL,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,15,Elements must meet enhanced color contrast ratio thresholds
+117,ecuador,UISRAEL,role-img-alt,serious,1.1.1,Perceptible,A,9,"[role=""img""] and [role=""image""] elements must have alternative text"
+117,ecuador,UISRAEL,link-name,serious,2.4.4,Operable,A,6,Links must have discernible text
+117,ecuador,UISRAEL,target-size,serious,2.5.8,Operable,AA,3,"All touch targets must be 24px large, or leave sufficient space"
+117,ecuador,UISRAEL,aria-allowed-attr,critical,4.1.2,Robusto,A,1,Elements must only use supported ARIA attributes
+118,ecuador,UDET,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,13,Elements must meet enhanced color contrast ratio thresholds
+118,ecuador,UDET,link-name,serious,2.4.4,Operable,A,11,Links must have discernible text
+118,ecuador,UDET,color-contrast,serious,1.4.3,Perceptible,AA,7,Elements must meet minimum color contrast ratio thresholds
+118,ecuador,UDET,select-name,critical,4.1.2,Robusto,A,3,Select element must have an accessible name
+118,ecuador,UDET,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+118,ecuador,UDET,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+119,ecuador,UMET,color-contrast,serious,1.4.3,Perceptible,AA,11,Elements must meet minimum color contrast ratio thresholds
+119,ecuador,UMET,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,6,Elements must meet enhanced color contrast ratio thresholds
+119,ecuador,UMET,link-name,serious,2.4.4,Operable,A,1,Links must have discernible text
+120,ecuador,U. Otavalo,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,6,Elements must meet enhanced color contrast ratio thresholds
+120,ecuador,U. Otavalo,aria-hidden-focus,serious,4.1.2,Robusto,A,2,ARIA hidden element must not be focusable or contain focusable elements
+121,ecuador,USGP,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,11,Elements must meet enhanced color contrast ratio thresholds
+121,ecuador,USGP,color-contrast,serious,1.4.3,Perceptible,AA,9,Elements must meet minimum color contrast ratio thresholds
+121,ecuador,USGP,link-name,serious,2.4.4,Operable,A,6,Links must have discernible text
+121,ecuador,USGP,frame-title,serious,4.1.2,Robusto,A,2,Frames must have an accessible name
+121,ecuador,USGP,target-size,serious,2.5.8,Operable,AA,2,"All touch targets must be 24px large, or leave sufficient space"
+121,ecuador,USGP,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+121,ecuador,USGP,image-alt,critical,1.1.1,Perceptible,A,1,Images must have alternative text
+121,ecuador,USGP,label,critical,4.1.2,Robusto,A,1,Form elements must have labels
+121,ecuador,USGP,list,serious,1.3.1,Perceptible,A,1,"<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+122,ecuador,U. Hemisferios,link-name,serious,2.4.4,Operable,A,53,Links must have discernible text
+122,ecuador,U. Hemisferios,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,11,Elements must meet enhanced color contrast ratio thresholds
+122,ecuador,U. Hemisferios,color-contrast,serious,1.4.3,Perceptible,AA,11,Elements must meet minimum color contrast ratio thresholds
+122,ecuador,U. Hemisferios,button-name,critical,4.1.2,Robusto,A,1,Buttons must have discernible text
+122,ecuador,U. Hemisferios,meta-viewport,moderate,1.4.4,Perceptible,AA,1,Zooming and scaling must not be disabled
+123,ecuador,UNIB.E,color-contrast,serious,1.4.3,Perceptible,AA,7,Elements must meet minimum color contrast ratio thresholds
+123,ecuador,UNIB.E,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+123,ecuador,UNIB.E,select-name,critical,4.1.2,Robusto,A,3,Select element must have an accessible name
+123,ecuador,UNIB.E,frame-title,serious,4.1.2,Robusto,A,1,Frames must have an accessible name
+124,ecuador,ECOTEC,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,27,Elements must meet enhanced color contrast ratio thresholds
+124,ecuador,ECOTEC,color-contrast,serious,1.4.3,Perceptible,AA,6,Elements must meet minimum color contrast ratio thresholds
+125,ecuador,UDR,link-name,serious,2.4.4,Operable,A,15,Links must have discernible text
+125,ecuador,UDR,target-size,serious,2.5.8,Operable,AA,9,"All touch targets must be 24px large, or leave sufficient space"
+126,ecuador,UBE,color-contrast-enhanced,serious,1.4.6,Perceptible,AAA,15,Elements must meet enhanced color contrast ratio thresholds
+126,ecuador,UBE,color-contrast,serious,1.4.3,Perceptible,AA,10,Elements must meet minimum color contrast ratio thresholds
+126,ecuador,UBE,link-name,serious,2.4.4,Operable,A,5,Links must have discernible text
+126,ecuador,UBE,image-alt,critical,1.1.1,Perceptible,A,4,Images must have alternative text
+126,ecuador,UBE,aria-prohibited-attr,serious,4.1.2,Robusto,A,1,Elements must only use permitted ARIA attributes

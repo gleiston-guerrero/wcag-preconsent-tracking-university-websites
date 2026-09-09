@@ -1,0 +1,2039 @@
+[
+  {
+    "id": 1,
+    "grupo": "mundo",
+    "sigla": "MIT",
+    "pais": "US",
+    "url": "https://www.mit.edu",
+    "nombre": "Massachusetts Institute of Technology",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "MIT - Massachusetts Institute of Technology",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 3,
+      "nodos": 8,
+      "porPrincipio": {
+        "Perceptible": 1,
+        "Operable": 6,
+        "Comprensible": 0,
+        "Robusto": 1
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 6,
+        "AAA": 1
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 4,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 6,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "aria-allowed-attr",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Elements must only use supported ARIA attributes"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 1,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.mit.edu/",
+    "fecha": "2026-08-15T21:36:18.381Z"
+  },
+  {
+    "id": 2,
+    "grupo": "mundo",
+    "sigla": "Stanford",
+    "pais": "US",
+    "url": "https://www.stanford.edu",
+    "nombre": "Stanford University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 10,
+      "rastreo_pre": 4,
+      "nombres_pre": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "_ga_Q0JD4PHRZ7",
+        "_ga",
+        "_cs_id",
+        "su_pseudo_id",
+        "su_session_id",
+        "__Secure-YNID",
+        "__Secure-ROLLOUT_TOKEN"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "_ga_Q0JD4PHRZ7",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Stanford University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 11,
+      "porPrincipio": {
+        "Perceptible": 11,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 11
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 1,
+      "passes": 34,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 11,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.stanford.edu/",
+    "fecha": "2026-08-15T21:36:25.948Z"
+  },
+  {
+    "id": 3,
+    "grupo": "mundo",
+    "sigla": "Harvard",
+    "pais": "US",
+    "url": "https://www.harvard.edu",
+    "nombre": "Harvard University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 8,
+      "rastreo_pre": 5,
+      "nombres_pre": [
+        "",
+        "_parsely_session",
+        "_parsely_visitor",
+        "_ga_KBLBYHG5EP",
+        "_ga",
+        "_gid",
+        "_gat_UA-2923555-1",
+        "_fbp"
+      ],
+      "nombres_rastreo": [
+        "_ga_KBLBYHG5EP",
+        "_ga",
+        "_gid",
+        "_gat_UA-2923555-1",
+        "_fbp"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Harvard University",
+      "lang": "en-US",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 13,
+      "porPrincipio": {
+        "Perceptible": 13,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 3,
+        "AAA": 10
+      },
+      "maxNivelSinFallo": "A",
+      "incompletos": 2,
+      "passes": 29,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 10,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "color-contrast",
+          "impacto": "serious",
+          "criterio": "1.4.3",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 3,
+          "ayuda": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.harvard.edu/",
+    "fecha": "2026-08-15T21:36:35.621Z"
+  },
+  {
+    "id": 4,
+    "grupo": "mundo",
+    "sigla": "Oxford",
+    "pais": "GB",
+    "url": "https://www.ox.ac.uk",
+    "nombre": "University of Oxford",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 6,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "cf_clearance",
+        "__Secure-YNID",
+        "YSC",
+        "__Secure-ROLLOUT_TOKEN",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE"
+      ],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "University of Oxford",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 367,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 201,
+        "Comprensible": 0,
+        "Robusto": 166
+      },
+      "porNivel": {
+        "A": 166,
+        "AA": 201,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 3,
+      "passes": 33,
+      "reglas": [
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 201,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 166,
+          "ayuda": "ARIA attributes must conform to valid values"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.ox.ac.uk/",
+    "fecha": "2026-08-15T21:36:44.557Z"
+  },
+  {
+    "id": 5,
+    "grupo": "mundo",
+    "sigla": "Cambridge",
+    "pais": "GB",
+    "url": "https://www.cam.ac.uk",
+    "nombre": "University of Cambridge",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "University of Cambridge",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 6,
+      "porPrincipio": {
+        "Perceptible": 6,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 5,
+        "AA": 0,
+        "AAA": 1
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 2,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "image-alt",
+          "impacto": "critical",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 5,
+          "ayuda": "Images must have alternative text"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 1,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.cam.ac.uk/",
+    "fecha": "2026-08-15T21:36:53.280Z"
+  },
+  {
+    "id": 6,
+    "grupo": "mundo",
+    "sigla": "Caltech",
+    "pais": "US",
+    "url": "https://www.caltech.edu",
+    "nombre": "California Institute of Technology",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 4,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "__cf_bm",
+        "__cf_bm",
+        "_ga_7RL83EX4D4",
+        "_ga"
+      ],
+      "nombres_rastreo": [
+        "_ga_7RL83EX4D4",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Home - www.caltech.edu",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 4,
+      "nodos": 30,
+      "porPrincipio": {
+        "Perceptible": 28,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 2
+      },
+      "porNivel": {
+        "A": 5,
+        "AA": 0,
+        "AAA": 25
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 3,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 25,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "aria-input-field-name",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 2,
+          "ayuda": "ARIA input fields must have an accessible name"
+        },
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 2,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        },
+        {
+          "id": "link-in-text-block",
+          "impacto": "serious",
+          "criterio": "1.4.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Links must be distinguishable without relying on color"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.caltech.edu/",
+    "fecha": "2026-08-15T21:37:02.996Z"
+  },
+  {
+    "id": 7,
+    "grupo": "mundo",
+    "sigla": "UC Berkeley",
+    "pais": "US",
+    "url": "https://www.berkeley.edu",
+    "nombre": "University of California, Berkeley",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 10,
+      "rastreo_pre": 5,
+      "nombres_pre": [
+        "__cf_bm",
+        "__Secure-YNID",
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "__Secure-ROLLOUT_TOKEN",
+        "nmstat",
+        "__cf_bm",
+        "_ga_JD06GX6S4V",
+        "_ga"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "nmstat",
+        "_ga_JD06GX6S4V",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "University of California, Berkeley: Home",
+      "lang": "en-US",
+      "viewport": true,
+      "violaciones": 0,
+      "nodos": 0,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "AAA",
+      "incompletos": 2,
+      "passes": 30,
+      "reglas": []
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.berkeley.edu/",
+    "fecha": "2026-08-15T21:37:11.140Z"
+  },
+  {
+    "id": 8,
+    "grupo": "mundo",
+    "sigla": "Princeton",
+    "pais": "US",
+    "url": "https://www.princeton.edu",
+    "nombre": "Princeton University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 2,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "_ga_92L6B9PQCG",
+        "_ga"
+      ],
+      "nombres_rastreo": [
+        "_ga_92L6B9PQCG",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Home | Princeton University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 0,
+      "nodos": 0,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "AAA",
+      "incompletos": 2,
+      "passes": 28,
+      "reglas": []
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.princeton.edu/",
+    "fecha": "2026-08-15T21:37:19.350Z"
+  },
+  {
+    "id": 9,
+    "grupo": "mundo",
+    "sigla": "Imperial",
+    "pais": "GB",
+    "url": "https://www.imperial.ac.uk",
+    "nombre": "Imperial College London",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 6,
+      "rastreo_pre": 0,
+      "nombres_pre": [
+        "AWSALBTG",
+        "AWSALBTGCORS",
+        "AWSALB",
+        "AWSALBCORS",
+        "ARRAffinity-WindowsWF",
+        "OptanonConsent"
+      ],
+      "nombres_rastreo": [],
+      "cmp": [
+        "OneTrust"
+      ],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "Imperial College London",
+      "lang": "en-GB",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 19,
+      "porPrincipio": {
+        "Perceptible": 4,
+        "Operable": 15,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 15,
+        "AAA": 4
+      },
+      "maxNivelSinFallo": "A",
+      "incompletos": 3,
+      "passes": 32,
+      "reglas": [
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 15,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 4,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.imperial.ac.uk/",
+    "fecha": "2026-08-15T21:37:34.103Z"
+  },
+  {
+    "id": 10,
+    "grupo": "mundo",
+    "sigla": "U Chicago",
+    "pais": "US",
+    "url": "https://www.uchicago.edu",
+    "nombre": "University of Chicago",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 19,
+      "rastreo_pre": 9,
+      "nombres_pre": [
+        "ApplicationGatewayAffinityCORS",
+        "ApplicationGatewayAffinity",
+        "shell#lang",
+        "ASP.NET_SessionId",
+        "SC_ANALYTICS_GLOBAL_COOKIE",
+        "sxa_site",
+        "_ga_2V4M4Z833J",
+        "_ga",
+        "_gid",
+        "_gat_UA-373360-31",
+        "_gat_UA-3572058-26",
+        "dismissed-alerts",
+        "www#lang",
+        "nmstat",
+        "_ga_DBDWJCS0JR",
+        "AWSALB",
+        "AWSALBCORS",
+        "_hjSessionUser_3545609",
+        "_hjSession_3545609"
+      ],
+      "nombres_rastreo": [
+        "_ga_2V4M4Z833J",
+        "_ga",
+        "_gid",
+        "_gat_UA-373360-31",
+        "_gat_UA-3572058-26",
+        "nmstat",
+        "_ga_DBDWJCS0JR",
+        "_hjSessionUser_3545609",
+        "_hjSession_3545609"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "The University of Chicago",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 1,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 1
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 6,
+      "passes": 24,
+      "reglas": [
+        {
+          "id": "aria-allowed-attr",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Elements must only use supported ARIA attributes"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.uchicago.edu/",
+    "fecha": "2026-08-15T21:37:43.850Z"
+  },
+  {
+    "id": 11,
+    "grupo": "mundo",
+    "sigla": "ETH Zurich",
+    "pais": "CH",
+    "url": "https://ethz.ch",
+    "nombre": "ETH Zurich",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 1,
+      "rastreo_pre": 0,
+      "nombres_pre": [
+        "OptanonConsent"
+      ],
+      "nombres_rastreo": [],
+      "cmp": [
+        "OneTrust"
+      ],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "ETH Zürich - Homepage | ETH Zürich",
+      "lang": "de",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 2,
+      "porPrincipio": {
+        "Perceptible": 2,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 0,
+        "AAA": 1
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 1,
+      "passes": 31,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 1,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "image-alt",
+          "impacto": "critical",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Images must have alternative text"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://ethz.ch/de.html",
+    "fecha": "2026-08-15T21:37:54.986Z"
+  },
+  {
+    "id": 12,
+    "grupo": "mundo",
+    "sigla": "Yale",
+    "pais": "US",
+    "url": "https://www.yale.edu",
+    "nombre": "Yale University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 7,
+      "rastreo_pre": 6,
+      "nombres_pre": [
+        "adaptive_image",
+        "nmstat",
+        "_ga_D491W728G4",
+        "_ga",
+        "_ga",
+        "_gid",
+        "_gat_gtag_UA_991898_23"
+      ],
+      "nombres_rastreo": [
+        "nmstat",
+        "_ga_D491W728G4",
+        "_ga",
+        "_ga",
+        "_gid",
+        "_gat_gtag_UA_991898_23"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Yale University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 3,
+      "nodos": 19,
+      "porPrincipio": {
+        "Perceptible": 17,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 2
+      },
+      "porNivel": {
+        "A": 5,
+        "AA": 0,
+        "AAA": 14
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 3,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 14,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 3,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        },
+        {
+          "id": "aria-hidden-focus",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 2,
+          "ayuda": "ARIA hidden element must not be focusable or contain focusable elements"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.yale.edu/",
+    "fecha": "2026-08-15T21:38:02.697Z"
+  },
+  {
+    "id": 13,
+    "grupo": "mundo",
+    "sigla": "UPenn",
+    "pais": "US",
+    "url": "https://www.upenn.edu",
+    "nombre": "University of Pennsylvania",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 4,
+      "rastreo_pre": 4,
+      "nombres_pre": [
+        "_ga",
+        "_gid",
+        "_gat_UA-78054-1",
+        "_ga_LL85393RFV"
+      ],
+      "nombres_rastreo": [
+        "_ga",
+        "_gid",
+        "_gat_UA-78054-1",
+        "_ga_LL85393RFV"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "University of Pennsylvania",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 2,
+      "nodos": 4,
+      "porPrincipio": {
+        "Perceptible": 4,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 0,
+        "AAA": 3
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 4,
+      "passes": 29,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 3,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.upenn.edu/",
+    "fecha": "2026-08-15T21:38:10.467Z"
+  },
+  {
+    "id": 14,
+    "grupo": "mundo",
+    "sigla": "UCL",
+    "pais": "GB",
+    "url": "https://www.ucl.ac.uk",
+    "nombre": "University College London",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 2,
+      "rastreo_pre": 0,
+      "nombres_pre": [
+        "__cf_bm",
+        "__cf_bm"
+      ],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "Welcome to UCL | University College London",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 0,
+      "nodos": 0,
+      "porPrincipio": {
+        "Perceptible": 0,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "AAA",
+      "incompletos": 3,
+      "passes": 30,
+      "reglas": []
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.ucl.ac.uk/",
+    "fecha": "2026-08-15T21:38:18.897Z"
+  },
+  {
+    "id": 15,
+    "grupo": "mundo",
+    "sigla": "Cornell",
+    "pais": "US",
+    "url": "https://www.cornell.edu",
+    "nombre": "Cornell University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 9,
+      "rastreo_pre": 9,
+      "nombres_pre": [
+        "_ga_PMZ19X3F8W",
+        "_ga",
+        "__utma",
+        "__utmc",
+        "__utmz",
+        "__utmt",
+        "__utmb",
+        "_ga_XJK3YSJ0LV",
+        "nmstat"
+      ],
+      "nombres_rastreo": [
+        "_ga_PMZ19X3F8W",
+        "_ga",
+        "__utma",
+        "__utmc",
+        "__utmz",
+        "__utmt",
+        "__utmb",
+        "_ga_XJK3YSJ0LV",
+        "nmstat"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Cornell University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 4,
+      "porPrincipio": {
+        "Perceptible": 4,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 4
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 5,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 4,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.cornell.edu/",
+    "fecha": "2026-08-15T21:38:31.984Z"
+  },
+  {
+    "id": 16,
+    "grupo": "mundo",
+    "sigla": "Tsinghua",
+    "pais": "CN",
+    "url": "https://www.tsinghua.edu.cn/en/",
+    "nombre": "Tsinghua University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 1,
+      "rastreo_pre": 0,
+      "nombres_pre": [
+        "JSESSIONID"
+      ],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Tsinghua University",
+      "lang": null,
+      "viewport": true,
+      "violaciones": 10,
+      "nodos": 49,
+      "porPrincipio": {
+        "Perceptible": 11,
+        "Operable": 32,
+        "Comprensible": 1,
+        "Robusto": 5
+      },
+      "porNivel": {
+        "A": 39,
+        "AA": 6,
+        "AAA": 4
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 5,
+      "passes": 24,
+      "reglas": [
+        {
+          "id": "link-name",
+          "impacto": "serious",
+          "criterio": "2.4.4",
+          "principio": "Operable",
+          "nivel": "A",
+          "nodos": 27,
+          "ayuda": "Links must have discernible text"
+        },
+        {
+          "id": "image-alt",
+          "impacto": "critical",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 5,
+          "ayuda": "Images must have alternative text"
+        },
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 5,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 4,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "nested-interactive",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 3,
+          "ayuda": "Interactive controls must not be nested"
+        },
+        {
+          "id": "aria-input-field-name",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "ARIA input fields must have an accessible name"
+        },
+        {
+          "id": "html-has-lang",
+          "impacto": "serious",
+          "criterio": "3.1.1",
+          "principio": "Comprensible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "<html> element must have a lang attribute"
+        },
+        {
+          "id": "input-button-name",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Input buttons must have discernible text"
+        },
+        {
+          "id": "list",
+          "impacto": "serious",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        },
+        {
+          "id": "meta-viewport",
+          "impacto": "moderate",
+          "criterio": "1.4.4",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 1,
+          "ayuda": "Zooming and scaling must not be disabled"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.tsinghua.edu.cn/en/",
+    "fecha": "2026-08-15T21:38:44.080Z"
+  },
+  {
+    "id": 17,
+    "grupo": "mundo",
+    "sigla": "Peking",
+    "pais": "CN",
+    "url": "https://english.pku.edu.cn",
+    "nombre": "Peking University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Peking University",
+      "lang": null,
+      "viewport": true,
+      "violaciones": 5,
+      "nodos": 19,
+      "porPrincipio": {
+        "Perceptible": 2,
+        "Operable": 14,
+        "Comprensible": 1,
+        "Robusto": 2
+      },
+      "porNivel": {
+        "A": 18,
+        "AA": 1,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 3,
+      "passes": 21,
+      "reglas": [
+        {
+          "id": "link-name",
+          "impacto": "serious",
+          "criterio": "2.4.4",
+          "principio": "Operable",
+          "nivel": "A",
+          "nodos": 14,
+          "ayuda": "Links must have discernible text"
+        },
+        {
+          "id": "aria-prohibited-attr",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 2,
+          "ayuda": "Elements must only use permitted ARIA attributes"
+        },
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        },
+        {
+          "id": "html-has-lang",
+          "impacto": "serious",
+          "criterio": "3.1.1",
+          "principio": "Comprensible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "<html> element must have a lang attribute"
+        },
+        {
+          "id": "meta-viewport",
+          "impacto": "moderate",
+          "criterio": "1.4.4",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 1,
+          "ayuda": "Zooming and scaling must not be disabled"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://english.pku.edu.cn/",
+    "fecha": "2026-08-15T21:39:02.560Z"
+  },
+  {
+    "id": 18,
+    "grupo": "mundo",
+    "sigla": "Johns Hopkins",
+    "pais": "US",
+    "url": "https://www.jhu.edu",
+    "nombre": "Johns Hopkins University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 12,
+      "rastreo_pre": 5,
+      "nombres_pre": [
+        "__cf_bm",
+        "nmstat",
+        "cf_clearance",
+        "__cf_bm",
+        "_twpid",
+        "_ga_TSX9K66082",
+        "_ga",
+        "_ga_8031WYVC9V",
+        "personalization_id",
+        "__cf_bm",
+        "muc_ads",
+        "__cf_bm"
+      ],
+      "nombres_rastreo": [
+        "nmstat",
+        "_ga_TSX9K66082",
+        "_ga",
+        "_ga_8031WYVC9V",
+        "personalization_id"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Johns Hopkins University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 3,
+      "nodos": 8,
+      "porPrincipio": {
+        "Perceptible": 3,
+        "Operable": 5,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 6,
+        "AA": 0,
+        "AAA": 2
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 4,
+      "passes": 34,
+      "reglas": [
+        {
+          "id": "link-name",
+          "impacto": "serious",
+          "criterio": "2.4.4",
+          "principio": "Operable",
+          "nivel": "A",
+          "nodos": 5,
+          "ayuda": "Links must have discernible text"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 2,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "list",
+          "impacto": "serious",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.jhu.edu/",
+    "fecha": "2026-08-15T21:39:12.050Z"
+  },
+  {
+    "id": 19,
+    "grupo": "mundo",
+    "sigla": "Columbia",
+    "pais": "US",
+    "url": "https://www.columbia.edu",
+    "nombre": "Columbia University",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 15,
+      "rastreo_pre": 6,
+      "nombres_pre": [
+        "isColumbiaSites",
+        "_ga_09H1KYXPLX",
+        "_ga",
+        "_gid",
+        "_gat_gtag_UA_18290390_1",
+        "__Secure-YNID",
+        "YSC",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "__Secure-ROLLOUT_TOKEN",
+        "__cf_bm",
+        "BIGipServer~CUIT~varnish-prod-ci.cc.columbia.edu-128.59.44.80.443-pool",
+        "cf_clearance",
+        "__cf_bm",
+        "vuid"
+      ],
+      "nombres_rastreo": [
+        "_ga_09H1KYXPLX",
+        "_ga",
+        "_gid",
+        "_gat_gtag_UA_18290390_1",
+        "YSC",
+        "VISITOR_INFO1_LIVE"
+      ],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "Columbia University in the City of New York",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 4,
+      "nodos": 52,
+      "porPrincipio": {
+        "Perceptible": 51,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 1
+      },
+      "porNivel": {
+        "A": 2,
+        "AA": 6,
+        "AAA": 44
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 1,
+      "passes": 35,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 44,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "color-contrast",
+          "impacto": "serious",
+          "criterio": "1.4.3",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 6,
+          "ayuda": "Elements must meet minimum color contrast ratio thresholds"
+        },
+        {
+          "id": "nested-interactive",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Interactive controls must not be nested"
+        },
+        {
+          "id": "role-img-alt",
+          "impacto": "serious",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "[role=\"img\"] and [role=\"image\"] elements must have alternative text"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.columbia.edu/",
+    "fecha": "2026-08-15T21:39:21.324Z"
+  },
+  {
+    "id": 20,
+    "grupo": "mundo",
+    "sigla": "Toronto",
+    "pais": "CA",
+    "url": "https://www.utoronto.ca",
+    "nombre": "University of Toronto",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 4,
+      "rastreo_pre": 4,
+      "nombres_pre": [
+        "_gcl_au",
+        "_ga",
+        "_ga_0X74MN6XS3",
+        "IDE"
+      ],
+      "nombres_rastreo": [
+        "_gcl_au",
+        "_ga",
+        "_ga_0X74MN6XS3",
+        "IDE"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "University of Toronto",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 19,
+      "porPrincipio": {
+        "Perceptible": 19,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 19
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 3,
+      "passes": 30,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 19,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.utoronto.ca/",
+    "fecha": "2026-08-15T21:39:29.571Z"
+  },
+  {
+    "id": 21,
+    "grupo": "mundo",
+    "sigla": "UCLA",
+    "pais": "US",
+    "url": "https://www.ucla.edu",
+    "nombre": "University of California, Los Angeles",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 7,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "XSRF-TOKEN",
+        "__Secure-YNID",
+        "YSC",
+        "__Secure-ROLLOUT_TOKEN",
+        "VISITOR_INFO1_LIVE",
+        "VISITOR_PRIVACY_METADATA",
+        "gateway_session"
+      ],
+      "nombres_rastreo": [
+        "YSC",
+        "VISITOR_INFO1_LIVE"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "A World Leader in Education and Research Excellence | UCLA",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 48,
+      "porPrincipio": {
+        "Perceptible": 48,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 48
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 3,
+      "passes": 27,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 48,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.ucla.edu/",
+    "fecha": "2026-08-15T21:39:38.840Z"
+  },
+  {
+    "id": 22,
+    "grupo": "mundo",
+    "sigla": "NUS",
+    "pais": "SG",
+    "url": "https://nus.edu.sg",
+    "nombre": "National University of Singapore",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 7,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "visid_incap_1988262",
+        "incap_ses_656_1988262",
+        "nlbi_1988262",
+        "_ga_2T8KTSDET6",
+        "_ga",
+        "sf-prs-ss",
+        "sf-prs-lu"
+      ],
+      "nombres_rastreo": [
+        "_ga_2T8KTSDET6",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "NUS - National University of Singapore",
+      "lang": null,
+      "viewport": true,
+      "violaciones": 7,
+      "nodos": 60,
+      "porPrincipio": {
+        "Perceptible": 36,
+        "Operable": 23,
+        "Comprensible": 1,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 24,
+        "AA": 21,
+        "AAA": 15
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 2,
+      "passes": 26,
+      "reglas": [
+        {
+          "id": "link-name",
+          "impacto": "serious",
+          "criterio": "2.4.4",
+          "principio": "Operable",
+          "nivel": "A",
+          "nodos": 22,
+          "ayuda": "Links must have discernible text"
+        },
+        {
+          "id": "color-contrast",
+          "impacto": "serious",
+          "criterio": "1.4.3",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 19,
+          "ayuda": "Elements must meet minimum color contrast ratio thresholds"
+        },
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 15,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "html-has-lang",
+          "impacto": "serious",
+          "criterio": "3.1.1",
+          "principio": "Comprensible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "<html> element must have a lang attribute"
+        },
+        {
+          "id": "image-alt",
+          "impacto": "critical",
+          "criterio": "1.1.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Images must have alternative text"
+        },
+        {
+          "id": "meta-viewport",
+          "impacto": "moderate",
+          "criterio": "1.4.4",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 1,
+          "ayuda": "Zooming and scaling must not be disabled"
+        },
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 1,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://nus.edu.sg/",
+    "fecha": "2026-08-15T21:39:51.825Z"
+  },
+  {
+    "id": 23,
+    "grupo": "mundo",
+    "sigla": "U Tokyo",
+    "pais": "JP",
+    "url": "https://www.u-tokyo.ac.jp/en/",
+    "nombre": "The University of Tokyo",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 2,
+      "rastreo_pre": 2,
+      "nombres_pre": [
+        "_ga_DWSZ09TFCH",
+        "_ga"
+      ],
+      "nombres_rastreo": [
+        "_ga_DWSZ09TFCH",
+        "_ga"
+      ],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "The University of Tokyo",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 8,
+      "nodos": 28,
+      "porPrincipio": {
+        "Perceptible": 15,
+        "Operable": 3,
+        "Comprensible": 0,
+        "Robusto": 10
+      },
+      "porNivel": {
+        "A": 11,
+        "AA": 6,
+        "AAA": 11
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 3,
+      "passes": 35,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 11,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        },
+        {
+          "id": "aria-hidden-focus",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 7,
+          "ayuda": "ARIA hidden element must not be focusable or contain focusable elements"
+        },
+        {
+          "id": "color-contrast",
+          "impacto": "serious",
+          "criterio": "1.4.3",
+          "principio": "Perceptible",
+          "nivel": "AA",
+          "nodos": 3,
+          "ayuda": "Elements must meet minimum color contrast ratio thresholds"
+        },
+        {
+          "id": "target-size",
+          "impacto": "serious",
+          "criterio": "2.5.8",
+          "principio": "Operable",
+          "nivel": "AA",
+          "nodos": 3,
+          "ayuda": "All touch targets must be 24px large, or leave sufficient space"
+        },
+        {
+          "id": "aria-allowed-attr",
+          "impacto": "critical",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Elements must only use supported ARIA attributes"
+        },
+        {
+          "id": "aria-input-field-name",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "ARIA input fields must have an accessible name"
+        },
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        },
+        {
+          "id": "nested-interactive",
+          "impacto": "serious",
+          "criterio": "4.1.2",
+          "principio": "Robusto",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Interactive controls must not be nested"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.u-tokyo.ac.jp/en/",
+    "fecha": "2026-08-15T21:40:13.600Z"
+  },
+  {
+    "id": 24,
+    "grupo": "mundo",
+    "sigla": "TUM",
+    "pais": "DE",
+    "url": "https://www.tum.de/en/",
+    "nombre": "Technical University of Munich",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 0,
+      "rastreo_pre": 0,
+      "nombres_pre": [],
+      "nombres_rastreo": [],
+      "cmp": [],
+      "banner": false
+    },
+    "accesibilidad": {
+      "title": "Technical University of Munich: The Entrepreneurial University - TUM",
+      "lang": "en-US",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 23,
+      "porPrincipio": {
+        "Perceptible": 23,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 0,
+        "AA": 0,
+        "AAA": 23
+      },
+      "maxNivelSinFallo": "AA",
+      "incompletos": 5,
+      "passes": 31,
+      "reglas": [
+        {
+          "id": "color-contrast-enhanced",
+          "impacto": "serious",
+          "criterio": "1.4.6",
+          "principio": "Perceptible",
+          "nivel": "AAA",
+          "nodos": 23,
+          "ayuda": "Elements must meet enhanced color contrast ratio thresholds"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.tum.de/en/",
+    "fecha": "2026-08-15T21:40:23.290Z"
+  },
+  {
+    "id": 25,
+    "grupo": "mundo",
+    "sigla": "Melbourne",
+    "pais": "AU",
+    "url": "https://www.unimelb.edu.au",
+    "nombre": "The University of Melbourne",
+    "vantage": "GB",
+    "run": 1,
+    "ok": true,
+    "https": true,
+    "cookies": {
+      "total_pre": 34,
+      "rastreo_pre": 15,
+      "nombres_pre": [
+        "dxp-sessionid",
+        "__cf_bm",
+        "optimizelyEndUserId",
+        "previousPageUrl",
+        "campaign_name",
+        "global_segmentation_cookie",
+        "utag_main__ss",
+        "utag_main__st",
+        "utag_main_ses_id",
+        "homepage",
+        "traffic_source",
+        "gpv_Page",
+        "gpv_Page_url",
+        "s_nr30",
+        "s_tslv",
+        "s_inv",
+        "s_ips",
+        "s_tp",
+        "s_ppv",
+        "https://www.unimelb.edu.au_oeu1786830026880r0.3532670179479045$$17791710119$$session_state",
+        "utag_main_v_id",
+        "optimizelySession",
+        "_ga_L55G410M0Q",
+        "TAPID",
+        "_ga_YE8SEG9T0S",
+        "demdex",
+        "_ga",
+        "_ga_J6RRCK6F9V",
+        "kndctr_0BFB1E5866E1D2E70A495C3B_AdobeOrg_identity",
+        "kndctr_0BFB1E5866E1D2E70A495C3B_AdobeOrg_cluster",
+        "AMCV_0BFB1E5866E1D2E70A495C3B%40AdobeOrg",
+        "__cf_bm",
+        "AWSALB",
+        "AWSALBCORS"
+      ],
+      "nombres_rastreo": [
+        "utag_main__ss",
+        "utag_main__st",
+        "utag_main_ses_id",
+        "s_nr30",
+        "s_tslv",
+        "s_inv",
+        "s_ips",
+        "s_tp",
+        "s_ppv",
+        "utag_main_v_id",
+        "_ga_L55G410M0Q",
+        "_ga_YE8SEG9T0S",
+        "_ga",
+        "_ga_J6RRCK6F9V",
+        "AMCV_0BFB1E5866E1D2E70A495C3B%40AdobeOrg"
+      ],
+      "cmp": [],
+      "banner": true
+    },
+    "accesibilidad": {
+      "title": "The University of Melbourne - Australia's #1 Ranked University",
+      "lang": "en",
+      "viewport": true,
+      "violaciones": 1,
+      "nodos": 1,
+      "porPrincipio": {
+        "Perceptible": 1,
+        "Operable": 0,
+        "Comprensible": 0,
+        "Robusto": 0
+      },
+      "porNivel": {
+        "A": 1,
+        "AA": 0,
+        "AAA": 0
+      },
+      "maxNivelSinFallo": "ninguno",
+      "incompletos": 4,
+      "passes": 33,
+      "reglas": [
+        {
+          "id": "aria-required-children",
+          "impacto": "critical",
+          "criterio": "1.3.1",
+          "principio": "Perceptible",
+          "nivel": "A",
+          "nodos": 1,
+          "ayuda": "Certain ARIA roles must contain particular children"
+        }
+      ]
+    },
+    "axe_version": "4.13.0",
+    "url_final": "https://www.unimelb.edu.au/",
+    "fecha": "2026-08-15T21:40:32.084Z"
+  }
+]
