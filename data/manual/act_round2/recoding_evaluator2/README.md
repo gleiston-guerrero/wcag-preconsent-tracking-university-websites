@@ -47,6 +47,40 @@ still marked `REVISAR` and the site verdicts are therefore provisional. Those ro
 can only add failures, never remove them, so the verdicts recorded here are lower
 bounds.
 
+## Closing the judgement rows
+
+The collector leaves marked `REVISAR` the rows that the ACT rules refer to human
+judgement: 1 351 of the 7 135. `../instruments/resolver_r04.py` extracts them to a
+plain-text worksheet and merges the evaluator's decisions back into these files,
+recomputing the site verdicts.
+
+It extracts only the **318 rows that still decide a site verdict**, 203 of SC 1.1.1
+and 115 of SC 2.4.4. Where a criterion already fails at a site through another
+element, no pending row of that site can change the verdict, so those rows stay
+marked. This is the policy the first coding follows. It is stated here because it
+has a cost: an evaluator who receives only those rows can infer which sites were
+still open. The alternative, all 1 351 rows, is four times the work and changes no
+reported figure.
+
+## A limitation of the collector
+
+`act_recode_evaluator2.js` caps the length of the `notes` field and truncates it
+from the left. When an image's accessible name is long, what is lost is the
+beginning of the image address. Of the 203 rows of SC 1.1.1 that decide a verdict,
+44 carry a complete address, 34 can be reconstructed from the site's host and
+verified, 70 are truncated beyond recovery, and 55 carry none because the image is
+a CSS background or an inline svg.
+
+A reconstruction is accepted only when the fragment received is an exact suffix of
+the reconstructed address; where it is not, the worksheet says the address was
+truncated and gives the element's selector instead. Nothing is guessed.
+
+Rule `qt1vmo` requires the judgement to be made against the image, so those rows
+cannot be closed from the worksheet alone. `../instruments/act_images.js` is the
+pass that collects the uncropped address, the `srcset`, the CSS background and the
+rendered dimensions; it produced `../image_evidence/` for the first coding and it
+is the route for these rows too.
+
 ## Reproducibility caveat
 
 The same caveat as the first coding applies. Repeated runs of the same site on the
