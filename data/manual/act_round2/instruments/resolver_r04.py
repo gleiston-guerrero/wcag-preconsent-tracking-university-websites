@@ -35,6 +35,7 @@ from collections import Counter, defaultdict
 from urllib.parse import urlparse
 
 DIR = "recoding"
+DIR_EV = "image_evidence"
 HOJAS = {"1.1.1": "hoja_r04_111.txt", "2.4.4": "hoja_r04_244.txt"}
 VALIDOS = ("cumple", "falla")
 
@@ -129,6 +130,46 @@ def pendientes_que_deciden(filas):
             and not falla[(r["abbr"], r["criterion"])]]
 
 
+def cargar_evidencia():
+    """La pasada de imagenes (act_images.js) recoge la direccion sin recortar. Se
+    indexa por tres claves porque las dos pasadas enumeran los elementos por
+    separado y la numeracion no siempre coincide: la pagina cambia entre
+    ejecuciones por carruseles y carga diferida."""
+    if not os.path.isdir(DIR_EV):
+        return None
+    filas = []
+    for f in sorted(glob.glob(os.path.join(DIR_EV, "*.csv"))):
+        with io.open(f, encoding="utf-8-sig", newline="") as fh:
+            filas += list(csv.DictReader(fh))
+    if not filas:
+        return None
+    idx = {"n": {}, "sel": defaultdict(list), "nom": defaultdict(list)}
+    for r in filas:
+        idx["n"][(r["abbr"], r["element_n"])] = r
+        idx["sel"][(r["abbr"], r["selector"])].append(r)
+        idx["nom"][(r["abbr"], r["accessible_name"].strip())].append(r)
+    idx["_n"] = len(filas)
+    return idx
+
+
+def buscar_evidencia(idx, fila, nombre):
+    """Devuelve (registro, via) o (None, None). Cascada: numero de elemento,
+    despues selector, despues nombre accesible."""
+    if not idx:
+        return None, None
+    e = idx["n"].get((fila["abbr"], fila["element_n"]))
+    if e:
+        return e, "elemento"
+    c = idx["sel"].get((fila["abbr"], fila["selector_or_description"]), [])
+    c2 = [x for x in c if x["accessible_name"].strip() == nombre]
+    if c2 or c:
+        return (c2 or c)[0], "selector"
+    c = idx["nom"].get((fila["abbr"], nombre), [])
+    if c:
+        return c[0], "nombre"
+    return None, None
+
+
 def url_imagen(src, url_sitio):
     """El recolector recorta la nota por la izquierda, de modo que la direccion de
     la imagen puede llegar sin esquema ni servidor. Se reconstruye a partir del
@@ -162,6 +203,11 @@ def generar():
     if not dec:
         sys.exit("no queda ninguna fila pendiente que decida un veredicto.")
     estados = Counter()
+    evidencia = cargar_evidencia()
+    if evidencia:
+        print("evidencia de imagen: %d filas en %s/" % (evidencia["_n"], DIR_EV))
+    else:
+        print("sin %s/: la direccion de imagen saldra de la nota, que viene recortada" % DIR_EV)
     for crit, nombre in HOJAS.items():
         sub = [r for r in dec if r["criterion"] == crit]
         if not sub:
@@ -179,8 +225,22 @@ def generar():
                 for d in [x.strip() for x in destinos.split("|") if x.strip()]:
                     s.write("   -> %s\n" % d)
             elif r["act_rule"] == "qt1vmo":
-                s.write("nombre    : %s\n" % campo(notas, "nombre"))
-                u, estado = url_imagen(campo(notas, "src"), r["url"])
+                nom = campo(notas, "nombre")
+                s.write("nombre    : %s\n" % nom)
+                ev, via = buscar_evidencia(evidencia, r, nom)
+                if ev and ev["full_src"].strip():
+                    u, estado = ev["full_src"].strip(), "completa"
+                    if ev.get("css_width"):
+                        s.write("mostrada  : %sx%s px" % (ev["css_width"], ev["css_height"]))
+                        if ev.get("natural_width"):
+                            s.write("   (original %sx%s)" % (ev["natural_width"], ev["natural_height"]))
+                        s.write("\n")
+                    if ev.get("containing_link", "").strip():
+                        s.write("enlace    : %s\n" % ev["containing_link"].strip())
+                    if ev.get("nearby_text", "").strip():
+                        s.write("texto     : %s\n" % ev["nearby_text"].strip()[:160])
+                else:
+                    u, estado = url_imagen(campo(notas, "src"), r["url"])
                 if estado == "completa":
                     s.write("imagen    : %s\n" % u)
                 elif estado == "reconstruida":
@@ -214,11 +274,13 @@ def generar():
         if malas:
             print("\n   AVISO: %d de %d bloques no traen una direccion utilizable."
                   % (malas, sum(estados.values())))
-            print("   El recolector recorta la nota por la izquierda y la direccion se pierde")
-            print("   cuando el nombre accesible es largo. Para juzgar 1.1.1 contra la imagen,")
-            print("   como exige la regla, ejecute antes ../instruments/act_images.js en los")
-            print("   sitios afectados: recoge la direccion sin recortar, el srcset, el fondo")
-            print("   CSS y las dimensiones. Es el instrumento previsto para esto.")
+            if evidencia:
+                print("   Son elementos sin direccion propia, fondo CSS o svg en linea, o que la")
+                print("   pasada de imagenes no llego a ver. Localicelos por su selector.")
+            else:
+                print("   Ejecute ../instruments/act_images.js en los sitios afectados y vuelva a")
+                print("   generar la hoja: recoge la direccion sin recortar, el srcset, el fondo")
+                print("   CSS y las dimensiones. Es el instrumento previsto para esto.")
 
 
 def leer_hoja(nombre):
