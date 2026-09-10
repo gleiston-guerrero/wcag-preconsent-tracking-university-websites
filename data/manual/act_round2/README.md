@@ -48,14 +48,25 @@ images on one site were empty placeholder svgs rather than photographs.
 
 ## qt1vmo_345_resolved.csv
 
-The 345 applicable elements with their outcome and a written justification for
-each: 232 passed, 113 failed. Every failure was determined against the image
-itself, downloaded and examined.
+The 349 applicable elements with their outcome and a written justification for
+each: 236 passed, 113 failed. Every failure was determined against the image
+itself, downloaded and examined. The file name keeps the count it had when it
+was first deposited.
 
-Coding for this file was carried out with the assistance of a generative AI
-system and reviewed by the first author, as recorded in the `evaluator_code`
-column. It is therefore **not** one of the two independent human codings used to
-estimate inter-coder agreement.
+The file holds two provenances, recorded per row in the `evaluator_code`
+column. 345 rows were coded with the assistance of a generative AI system and
+reviewed by the first author, and are therefore **not** one of the two
+independent human codings used to estimate inter-coder agreement. The remaining
+four rows, images 27 to 30 of the social-media grid at Cornell, were resolved by
+the first author alone. They were the last rows in this coding able to decide a
+site verdict: closing them leaves no cell of the fifteen-by-three matrix open,
+so the verdict table above is complete rather than provisional.
+
+`code/analysis/comprobar_brecha.py` consolidates this file, `review_282_rows.csv`
+and `recoding/` into the site verdicts and compares them with the automated
+audit. `code/analysis/inventario_revisar.py` reports what remains marked
+`REVISAR` and separates the rows that could still decide a verdict from those
+that cannot.
 
 ## review_282_rows.csv
 

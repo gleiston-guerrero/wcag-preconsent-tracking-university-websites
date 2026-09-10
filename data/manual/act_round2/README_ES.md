@@ -51,15 +51,27 @@ lugar de fotografías.
 
 ## qt1vmo_345_resolved.csv
 
-Los 345 elementos aplicables con su resultado y una justificación escrita para
-cada uno: 232 cumplen, 113 fallan. Cada fallo se determinó contra la imagen misma,
-descargada y examinada.
+Los 349 elementos aplicables con su resultado y una justificación escrita para
+cada uno: 236 cumplen, 113 fallan. Cada fallo se determinó contra la imagen misma,
+descargada y examinada. El nombre del archivo conserva el recuento que tenía
+cuando se depositó por primera vez.
 
-La codificación de este archivo se realizó con la asistencia de un sistema de
-inteligencia artificial generativa y fue revisada por el primer autor, según
-consta en la columna `evaluator_code`. Por tanto **no** es una de las dos
-codificaciones humanas independientes que se usan para estimar el acuerdo entre
-codificadores.
+El archivo reúne dos procedencias, registradas fila a fila en la columna
+`evaluator_code`. 345 filas se codificaron con la asistencia de un sistema de
+inteligencia artificial generativa y fueron revisadas por el primer autor, de modo
+que **no** son una de las dos codificaciones humanas independientes que se usan
+para estimar el acuerdo entre codificadores. Las cuatro restantes, las imágenes 27
+a 30 de la rejilla de redes sociales de Cornell, las resolvió el primer autor por
+sí solo. Eran las últimas filas de esta codificación capaces de decidir un
+veredicto de sitio: al cerrarlas no queda abierta ninguna celda de la matriz de
+quince por tres, de modo que la tabla de veredictos de arriba es completa y no
+provisional.
+
+`code/analysis/comprobar_brecha.py` consolida este archivo, `review_282_rows.csv`
+y `recoding/` en los veredictos de sitio y los compara con la auditoría
+automatizada. `code/analysis/inventario_revisar.py` informa de lo que sigue
+marcado `REVISAR` y separa las filas que aún podrían decidir un veredicto de las
+que no.
 
 ## review_282_rows.csv
 
