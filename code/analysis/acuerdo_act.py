@@ -189,10 +189,11 @@ def plegar_resoluciones(filas):
                     continue
                 total += 1
                 crit = (r.get("criterion") or "1.1.1").strip()
+                cod = (r.get("evaluator_code") or "").strip() or "sin codigo"
                 por_elem[(r["abbr"], crit, r["act_rule"],
-                          r["element_n"].strip())] = (o, nombre)
+                          r["element_n"].strip())] = (o, nombre, cod)
                 por_nombre[(r["abbr"], crit, r["act_rule"], r[sel].strip(),
-                            (r.get("accessible_name") or "").strip())] = (o, nombre)
+                            (r.get("accessible_name") or "").strip())] = (o, nombre, cod)
     n = 0
     for f in filas:
         if f["outcome"].strip() != "REVISAR":
@@ -202,7 +203,7 @@ def plegar_resoluciones(filas):
               f["selector_or_description"].strip(), nombre_de_nota(f["notes"]))
         hit = por_elem.get(ke) or por_nombre.get(kn)
         if hit:
-            f["outcome"], f["_resuelto_en"] = hit[0], hit[1]
+            f["outcome"], f["_resuelto_en"], f["_codigo"] = hit[0], hit[1], hit[2]
             n += 1
     print("  R02  %5d de %d resoluciones trasladadas a las filas REVISAR"
           % (n, total))
@@ -342,6 +343,45 @@ def bloque(titulo, explicacion, pares, reglas, resumen, desacuerdos, etiqueta):
             })
 
 
+def desglose_procedencia(pares, resumen, desacuerdos):
+    """Separa el bloque de juicio segun quien decidio el lado de la primera
+    codificacion. No es un detalle: solo el subconjunto decidido por una persona
+    distinta del segundo evaluador puede llamarse fiabilidad entre codificadores.
+    El resto se compara contra una resolucion asistida y se informa como acuerdo.
+    """
+    comp = [(x, y) for x, y in pares
+            if x["act_rule"] in JUICIO
+            and x["outcome"].strip() in DEFINITIVOS
+            and y["outcome"].strip() in DEFINITIVOS]
+    grupos = defaultdict(list)
+    for x, y in comp:
+        grupos[x.get("_codigo") or "decidido al recoger"].append((x, y))
+
+    print("\n" + "-" * 78)
+    print("  DESGLOSE POR PROCEDENCIA DEL LADO R02")
+    print("-" * 78)
+    print("  Solo el grupo decidido por una persona distinta del segundo evaluador")
+    print("  sostiene una fiabilidad entre codificadores. El grupo asistido se")
+    print("  informa como acuerdo y nunca como coeficiente entre codificadores.")
+    print()
+    for cod in sorted(grupos):
+        s = grupos[cod]
+        res = kappa_cohen([(x["outcome"].strip(), y["outcome"].strip()) for x, y in s])
+        reglas = ", ".join(sorted({x["act_rule"] for x, _ in s}))
+        crits = ", ".join(sorted({x["criterion"] for x, _ in s}))
+        etiqueta = ("FIABILIDAD ENTRE CODIFICADORES" if cod == "R02"
+                    else "acuerdo, procedencia asistida" if cod == "R03"
+                    else "acuerdo, procedencia no acreditada")
+        print("  R02=%-12s %s" % (cod, fmt(res)))
+        print("        %s | criterios %s | reglas %s" % (etiqueta, crits, reglas))
+        resumen.append({"bloque": "B_juicio_procedencia", "estrato": "R02=" + cod,
+                        "n": res["n"], "acuerdo": "%.4f" % res["po"],
+                        "kappa": "" if res["kappa"] is None else "%.4f" % res["kappa"],
+                        "ic_inf": "" if res["ic"] is None else "%.4f" % res["ic"][0],
+                        "ic_sup": "" if res["ic"] is None else "%.4f" % res["ic"][1],
+                        "nota": (etiqueta + ("; " + res["nota"] if res["nota"] else ""))})
+
+
 def veredictos(filas):
     """falla si algun elemento aplicable falla; pendiente si queda REVISAR."""
     falla, rev, sitios = defaultdict(bool), defaultdict(int), {}
@@ -418,12 +458,14 @@ def main():
             "NO si dos personas juzgan igual."],
            pares, MECANICAS, resumen, desac, "A_mecanicas")
 
-    bloque("BLOQUE B - reglas de juicio: fiabilidad entre codificadores",
+    bloque("BLOQUE B - reglas de juicio: acuerdo, con procedencia mezclada",
            ["Reglas qt1vmo, 5effbb y fd3a94. La regla remite al juicio humano.",
-            "Esta es la cifra que responde a la pregunta por la fiabilidad entre",
-            "codificadores. Requiere que las dos codificaciones hayan resuelto sus",
-            "filas REVISAR."],
+            "El total de este bloque NO es una fiabilidad entre codificadores: el",
+            "lado R02 sale de sus ficheros de resolucion, y una parte de ellos se",
+            "resolvio con asistencia de IA. El desglose por procedencia, al final",
+            "del bloque, separa lo que si sostiene ese coeficiente de lo que no."],
            pares, JUICIO, resumen, desac, "B_juicio")
+    desglose_procedencia(pares, resumen, desac)
 
     print("\n" + "=" * 78)
     print("BLOQUE C - veredictos de sitio: 15 sitios x 3 criterios")

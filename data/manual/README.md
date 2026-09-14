@@ -77,11 +77,12 @@ instrument: round 1 sampled elements at each site and judged a proportion, and r
 enumerates every applicable element under ACT rules. The figures above therefore quantify
 how far the change of instrument moved the verdicts. They are not an estimate of
 inter-coder reliability, and must not be read as one. What the ACT round supports is
-reported in `act_round2/README.md`: a two-operator reproducibility figure for the
-mechanical rules, and, for the judgement rules, an agreement figure that is not an
-inter-coder coefficient either, because the side it is compared against is an assisted
-resolution rather than a second human coding. **No inter-coder reliability coefficient is
-reported anywhere in this deposit.**
+reported in `act_round2/README.md`, split by what each figure measures: a two-operator
+reproducibility figure for the mechanical rules; an inter-coder reliability estimate for
+the judgement rules of SC 2.4.4 alone, over 62 link elements at one site, too imprecise
+to establish or refute reliability; and, for SC 1.1.1, an agreement figure that is **not**
+an inter-coder coefficient, because the side it is compared against is an assisted
+resolution rather than a second human coding.
 
 On the five sites coded by all three evaluators, the same pattern holds and no single
 coder is the outlier: `R01` against round 1 gives 0.375 in three categories and 0.737
@@ -153,9 +154,9 @@ by institution. They are the evidence behind round 1 and round 2.
 the first author's manual recoding, `R02` for the ACT collection of 8 September, `R03` for
 the assisted resolution of the `qt1vmo` image elements, and `R04` for the independent
 second evaluator. Each code designates one coding and one only. One file is an exception
-and says so in its own section: the 81 filled rows of `act_round2/review_282_rows.csv`
-carry no evaluator code, because the worksheet was filled in without recording who filled
-it. No file in this folder identifies an
+and says so in its own section: the worksheet `act_round2/review_282_rows.csv` was filled
+in without recording who filled it, and its 81 resolved rows were given the code `R02` on
+14 September 2026 on the first author's attestation rather than at the time of coding. No file in this folder identifies an
 evaluator: none carries the name, the e-mail address or a local file path of anyone on the
 research team. Versions carrying evaluator names exist but are not part of this deposit.
 

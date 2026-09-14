@@ -10,9 +10,10 @@ independently by a second evaluator on 9 September 2026 with
 This is not a third round and not a re-measurement. It is the second of two
 independent codings of one round, and it is what makes the reproducibility of the
 ACT instrument across two operators measurable. On the rules that refer the
-decision to human judgement the comparison runs against an assisted resolution
-rather than a second human coding, so no inter-coder coefficient is reported;
-`../README.md` sets out why. The evaluator worked from
+decision to human judgement only part of the comparison is human against human —
+62 link elements under SC 2.4.4 — while the SC 1.1.1 side runs against an assisted
+resolution and therefore supports no inter-coder coefficient; `../README.md` sets
+out both. The evaluator worked from
 `../instruments/SECOND_EVALUATOR_MANUAL.md` and did not see the first coding, the
 earlier rounds or the draft of the article.
 

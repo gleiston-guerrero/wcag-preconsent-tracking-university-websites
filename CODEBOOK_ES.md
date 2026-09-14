@@ -306,7 +306,7 @@ Acuerdo entre las dos codificaciones independientes de la ronda ACT, `data/manua
 
 | Columna | Descripción |
 |---|---|
-| `bloque` | `A_mecanicas` las tres reglas que decide la propia regla; `B_juicio` las tres reglas que remiten la decisión a una persona; `C_veredictos` las 45 celdas de sitio por criterio. |
+| `bloque` | `A_mecanicas` las tres reglas que decide la propia regla; `B_juicio` las tres reglas que remiten la decisión a una persona; `B_juicio_procedencia` las mismas comparaciones separadas según quién decidió el lado de `recoding/`; `C_veredictos` las 45 celdas de sitio por criterio. |
 | `estrato` | El estrato dentro del bloque: una regla, un criterio de conformidad, `TOTAL` o `45 celdas`. |
 | `n` | Comparaciones del estrato. En `A` y `B`, pares de elementos emparejados con resultado definitivo en las dos codificaciones; en `C`, celdas. |
 | `acuerdo` | Acuerdo observado, en proporción. |
@@ -314,7 +314,7 @@ Acuerdo entre las dos codificaciones independientes de la ronda ACT, `data/manua
 | `ic_inf`, `ic_sup` | IC del 95 % de la kappa, error estándar asintótico, recortado a [−1, 1]. Vacíos siempre que `kappa` lo esté. |
 | `nota` | Por qué falta la kappa o por qué es inestable: no definida con una sola categoría, no reportada por debajo de 10 pares, inestable con una categoría minoritaria por debajo del 5 %, poco fiable por debajo de n = 30. |
 
-`bloque` es lo que separa dos cosas distintas. `A_mecanicas` mide la reproducibilidad del instrumento entre dos operadores. `B_juicio` es una cifra de acuerdo y **no** un coeficiente entre codificadores: el lado `R02` viene de la resolución asistida y no de un segundo juicio humano. `data/manual/act_round2/README_ES.md` lo enuncia y da la sensibilidad de cada cifra a la regla de exclusión y a la clave de emparejamiento.
+`bloque` es lo que mantiene separadas tres cosas distintas. `A_mecanicas` mide la reproducibilidad del instrumento entre dos operadores. `B_juicio` es una cifra de acuerdo sobre procedencia mezclada y **no** un coeficiente entre codificadores. `B_juicio_procedencia` la separa: la fila `R02=R02`, 62 comparaciones de enlaces del criterio 2.4.4, es la única estimación de fiabilidad entre codificadores del depósito, y su intervalo incluye el cero; la fila `R02=R03`, 168 comparaciones de imágenes del criterio 1.1.1, es acuerdo contra la resolución asistida y no es un coeficiente de fiabilidad. `data/manual/act_round2/README_ES.md` lo enuncia y da la sensibilidad de cada cifra a la regla de exclusión y a la clave de emparejamiento.
 
 ### `act_agreement_disagreements.csv` — 56 filas
 

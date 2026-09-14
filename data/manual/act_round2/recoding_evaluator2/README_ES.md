@@ -10,9 +10,10 @@ de septiembre de 2026 con `../instruments/act_recode_evaluator2.js`.
 No es una tercera ronda ni una repetición de la medición. Es la segunda de dos
 codificaciones independientes de una misma ronda, y es lo que permite medir la
 reproducibilidad del instrumento ACT entre dos operadores. En las reglas que
-remiten la decisión al juicio humano la comparación corre contra una resolución
-asistida y no contra una segunda codificación humana, de modo que no se reporta
-ningún coeficiente entre codificadores; `../README_ES.md` expone por qué. El
+remiten la decisión al juicio humano solo una parte de la comparación es humana
+contra humana —62 elementos de enlace del criterio 2.4.4—, mientras que el lado
+de 1.1.1 corre contra una resolución asistida y no sostiene, por tanto, ningún
+coeficiente entre codificadores; `../README_ES.md` expone las dos. El
 evaluador trabajó a partir de
 `../instruments/SECOND_EVALUATOR_MANUAL_ES.md` y no vio la primera codificación,
 ni las rondas anteriores, ni el borrador del artículo.

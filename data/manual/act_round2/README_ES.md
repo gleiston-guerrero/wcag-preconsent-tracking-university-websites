@@ -86,12 +86,14 @@ matriz de quince por tres. `code/analysis/inventario_revisar.py` lo informa dire
 de las filas que siguen marcadas `REVISAR` en la primera codificación, ninguna decide un
 veredicto. Resolverlas añadiría completitud al depósito, no evidencia al artículo.
 
-**Estas filas no llevan columna `evaluator_code`.** El archivo se extrajo como
-hoja de trabajo con las columnas de resultado y justificación vacías, y los 81
-resultados se rellenaron sin registrar quién los rellenó. El depósito no puede,
-por tanto, dar fe de su procedencia, y 62 de ellos entran en la comparación de
-las reglas de juicio de más abajo. Es una de las razones por las que esa
-comparación no se etiqueta como fiabilidad entre codificadores.
+El archivo se extrajo como hoja de trabajo con las columnas de resultado y
+justificación vacías, y no llevaba columna `evaluator_code`: los 81 resultados se
+rellenaron sin registrar quién los rellenó. La columna se añadió el 14 de
+septiembre de 2026 y se fijó en **`R02`** para esas 81 filas, por atestación del
+investigador principal de que esa codificación las resolvió. Es una atestación
+hecha después, no un código escrito en su momento, y aquí queda registrada como
+tal porque 62 de esas filas son las únicas comparaciones por elemento de esta
+ronda que sostienen una estimación de fiabilidad entre codificadores.
 
 Los nombres de columna de todos los CSV de esta carpeta están en inglés; los
 **valores** codificados siguen en español (`mundo`/`ecuador`, `si`/`no`,
@@ -217,25 +219,40 @@ estimación de fiabilidad entre codificadores, y el depósito no reporta ninguna
 
 La razón es la procedencia del otro lado. En estas tres reglas el resultado de
 `recoding/` no se decidió al recoger, sino después, en `qt1vmo_345_resolved.csv`
-y `review_282_rows.csv`. De las 230 comparaciones por elemento disponibles, el
-lado de `recoding/` viene de esos archivos en todos los casos sin excepción:
-**168 de las filas codificadas `R03`, la resolución hecha con la asistencia de un
-sistema de IA generativa y revisada por el investigador principal, y 62 de
-`review_282_rows.csv`, cuyas filas no llevan ningún código de evaluador.**
-Ninguna de las 230 es un segundo juicio *humano* independiente del mismo
-elemento.
+y `review_282_rows.csv`. Las 230 comparaciones se parten, por tanto, en dos, y
+`code/analysis/acuerdo_act.py` las imprime por separado porque responden a
+preguntas distintas:
 
-Así que lo que sigue es el acuerdo entre una codificación humana y una resolución
-asistida revisada por el investigador principal. Merece reportarse, y aquí se
-reporta, pero hay que leerlo por lo que es. Un coeficiente de fiabilidad entre
-codificadores para las reglas de juicio exigiría que un codificador humano
-decidiera de nuevo esos 230 elementos sin el archivo asistido delante. Hasta que
-eso ocurra, la única cifra de fiabilidad que esta ronda sostiene es la
-reproducibilidad del instrumento en las reglas mecánicas, más arriba.
+| Lado `recoding/` decidido por | n | Criterio | Acuerdo | Kappa | Qué es |
+|---|---|---|---|---|---|
+| `R02`, un codificador humano | 62 | 2.4.4 | 82,3 % | 0,178 [−0,262, 0,619] | fiabilidad entre codificadores |
+| `R03`, la resolución asistida | 168 | 1.1.1 | 76,2 % | 0,390 [0,225, 0,555] | acuerdo, no entre codificadores |
 
-En las tres reglas que remiten la decisión al juicio humano —`qt1vmo`, `5effbb`,
-`fd3a94`— los dos lados coinciden en 179 de 230 comparaciones por elemento:
-**77,8 % de acuerdo, kappa de Cohen 0,363 con IC del 95 % de [0,209, 0,518]**.
+**Solo la primera fila es una estimación de fiabilidad entre codificadores, y es
+estrecha.** Las 62 comparaciones son enlaces de un único sitio, UCL, bajo las
+reglas `5effbb` y `fd3a94`; 49 de las 62 son `cumple` en las dos codificaciones,
+una prevalencia del 83,9 % en `R02` y del 91,9 % en `R04`. Con esa prevalencia y
+esa n el coeficiente casi no informa: su intervalo va de −0,26 a 0,62 e incluye
+el cero, de modo que **no establece la fiabilidad, pero tampoco la refuta.** La
+cifra interpretable es el acuerdo observado, el 82,3 %, y descansa en los enlaces
+de un solo sitio y no en la muestra.
+
+La segunda fila es el acuerdo entre una codificación humana y una resolución
+asistida revisada por el investigador principal. Merece reportarse y aquí se
+reporta, pero no es fiabilidad entre codificadores y no se ofrece como tal. Un
+coeficiente para 1.1.1 exigiría que un codificador humano decidiera de nuevo esos
+168 elementos de imagen sin el archivo asistido delante.
+
+El código `R02` de las 81 filas resueltas de `review_282_rows.csv` se añadió el
+14 de septiembre de 2026 por atestación del investigador principal, que declara
+que esa codificación las resolvió. La columna no se escribió cuando se rellenó la
+hoja, y el depósito registra la atestación como atestación.
+
+Tomadas en conjunto, en las tres reglas que remiten la decisión al juicio humano
+—`qt1vmo`, `5effbb`, `fd3a94`— los dos lados coinciden en 179 de 230
+comparaciones por elemento: **77,8 % de acuerdo, kappa de Cohen 0,363 con IC del
+95 % de [0,209, 0,518]**. Ese total mezcla las dos procedencias anteriores y se
+reporta por completitud, no como coeficiente de fiabilidad.
 
 | Regla | n | Acuerdo | Kappa | IC 95% |
 |---|---|---|---|---|
@@ -345,15 +362,35 @@ una cifra del artículo, y las dos caen en 1.1.1: `R04` encuentra 12 de los 15
 sitios fallando ese criterio donde `R02` encuentra 14.
 
 La celda de ECOTEC arrastra una advertencia más, que el depósito registra en
-lugar de resolver. Los dos logotipos en cuestión son archivos blancos sobre
-blanco cuyos nombres terminan en `-white`; el evaluador informó de que varias
-imágenes de esa clase no se veían en la página y solo podían verse abriendo el
-archivo, pero no precisó cuáles, de modo que **no** se añadieron a la regla de
-exclusión. Si se hubieran excluido, a ninguna de las dos codificaciones le
-quedaría un elemento que falle en esa celda y las dos coincidirían, al precio de
-que el sitio dejase de fallar 1.1.1. `exclusiones_R04.tsv` contiene, por tanto,
-solo los bloques que el evaluador o el investigador principal identificaron de
-forma positiva, y este párrafo enuncia cuál habría sido la alternativa.
+lugar de resolver. El evaluador ha confirmado después que los dos logotipos en
+cuestión están entre las imágenes que se renderizaban en blanco sobre fondo
+blanco, visibles en la página solo con esfuerzo y con claridad al abrir el propio
+archivo. Esa confirmación cierra un punto abierto de
+`recoding_evaluator2/nota_incidencias.txt`: es la razón por la que el evaluador no
+marcó nada como no visible.
+
+Eso no convierte estos bloques en un defecto del recolector, y por eso **no**
+están en `exclusiones_R04.tsv`. Ese archivo tiene un solo fundamento: que el
+recolector puso ante el evaluador el texto equivocado. Aquí no lo hizo: el nombre
+accesible y la dirección de la imagen son los del propio elemento. Lo que
+pregunta la regla `qt1vmo` es si el nombre sirve un propósito equivalente al de
+la imagen, y cuán conspicua sea la imagen en la página no forma parte de esa
+pregunta. Las dos codificaciones pudieron ver la imagen: `R03` la juzgó desde el
+archivo descargado y `R04` desde la página con esfuerzo. Excluir estos bloques
+retiraría el único desacuerdo que toca una cifra del artículo, y por un
+fundamento que la regla de exclusión no contempla, de modo que el depósito
+enuncia la consecuencia en lugar de tomarla.
+
+La consecuencia merece enunciarse con claridad, porque es la mayor dependencia
+individual del censo de 1.1.1. El veredicto de ECOTEC en 1.1.1 descansa por
+entero en estos dos elementos en **las dos** codificaciones. Si se dejaran de
+lado —con el criterio de que un evaluador que no puede ver con facilidad el
+contenido no textual no puede juzgar su nombre accesible—, a ninguna de las dos
+codificaciones le quedaría un elemento que falle en esa celda, las dos
+coincidirían y el sitio dejaría de fallar 1.1.1: el censo ecuatoriano de ese
+criterio pasaría a 7 de 8 en lugar de 8 de 8, y el recuento de la brecha de la
+§4.5 del artículo bajaría una celda. Es una decisión de los autores y, si se
+toma, cambia una cifra reportada y no solo una estimación de fiabilidad.
 
 La ronda 1 y esta ronda no comparten instrumento: la primera codificaba cada
 sitio muestreando elementos y juzgando una proporción, y ésta enumera todos los

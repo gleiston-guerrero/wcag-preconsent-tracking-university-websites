@@ -81,12 +81,14 @@ fifteen-by-three matrix. `code/analysis/inventario_revisar.py` reports this dire
 the rows still marked `REVISAR` in the first coding, none can decide a verdict. Resolving
 them would add completeness to the deposit, not evidence to the article.
 
-**These rows carry no `evaluator_code` column.** The file was extracted as a
-worksheet with the outcome and justification columns empty, and the 81 outcomes
-were filled in without recording who filled them. The deposit therefore cannot
-attest their provenance, and 62 of them enter the comparison on the judgement
-rules below. This is one of the reasons that comparison is not labelled
-inter-coder reliability.
+The file was extracted as a worksheet with the outcome and justification columns
+empty, and it carried no `evaluator_code` column: the 81 outcomes were filled in
+without recording who filled them. The column was added on 14 September 2026 and
+set to **`R02`** for those 81 rows, on the first author's attestation that the
+`R02` coding resolved them. It is an attestation made after the fact, not a code
+written at the time, and it is recorded here as such because 62 of those rows are
+the only element-level comparisons in this round that support an inter-coder
+reliability estimate.
 
 Column names in every CSV of this folder are in English; the coded **values** stay in
 Spanish (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), which is the
@@ -206,25 +208,40 @@ estimate of inter-coder reliability, and the deposit does not report one.**
 
 The reason is the provenance of the other side. On these three rules the outcome
 in `recoding/` was not decided at collection; it was decided later, in
-`qt1vmo_345_resolved.csv` and `review_282_rows.csv`. Of the 230 element-level
-comparisons available, the `recoding/` side comes from those files in every
-single case: **168 from the rows coded `R03`, the resolution carried out with the
-assistance of a generative AI system and reviewed by the first author, and 62
-from `review_282_rows.csv`, whose rows carry no evaluator code at all.** Not one
-of the 230 is a second independent *human* judgement of the same element.
+`qt1vmo_345_resolved.csv` and `review_282_rows.csv`. The 230 comparisons
+therefore split in two, and `code/analysis/acuerdo_act.py` prints them apart
+because they answer different questions:
 
-So what follows is the agreement between one human coding and an assisted
-resolution reviewed by the first author. That is worth reporting, and it is
-reported here, but it must be read for what it is. An inter-coder reliability
-coefficient for the judgement rules would require a human coder to decide those
-230 elements again without the assisted file in front of them. Until that
-happens, the only reliability figure this round supports is the reproducibility
-of the instrument on the mechanical rules, above.
+| `recoding/` side decided by | n | Criterion | Agreement | Kappa | What it is |
+|---|---|---|---|---|---|
+| `R02`, a human coder | 62 | 2.4.4 | 82.3% | 0.178 [−0.262, 0.619] | inter-coder reliability |
+| `R03`, the assisted resolution | 168 | 1.1.1 | 76.2% | 0.390 [0.225, 0.555] | agreement, not inter-coder |
 
-On the three rules that refer the decision to human judgement — `qt1vmo`,
-`5effbb`, `fd3a94` — the two sides agree on 179 of 230 element-level
-comparisons: **77.8 per cent agreement, Cohen's kappa 0.363 with a 95 per cent CI
-of [0.209, 0.518]**.
+**Only the first row is an inter-coder reliability estimate, and it is a narrow
+one.** All 62 of those comparisons are links at a single site, UCL, under rules
+`5effbb` and `fd3a94`; 49 of the 62 are `cumple` in both codings, a prevalence of
+83.9 per cent in `R02` and 91.9 per cent in `R04`. At that prevalence and that n
+the coefficient carries almost no information: its interval runs from −0.26 to
+0.62 and includes zero, so **it does not establish reliability, and it does not
+refute it either.** The observed agreement, 82.3 per cent, is the interpretable
+figure, and it rests on one site's links rather than on the sample.
+
+The second row is the agreement between one human coding and an assisted
+resolution reviewed by the first author. It is worth reporting and it is reported
+here, but it is not inter-coder reliability and is not offered as such. A
+coefficient for SC 1.1.1 would require a human coder to decide those 168 image
+elements again without the assisted file in front of them.
+
+The `R02` code on the 81 resolved rows of `review_282_rows.csv` was added on 14
+September 2026 on the first author's attestation that that coding resolved them.
+The column was not written at the time the worksheet was filled in, and the
+deposit records the attestation as an attestation.
+
+Taken together, across all three rules that refer the decision to human
+judgement — `qt1vmo`, `5effbb`, `fd3a94` — the two sides agree on 179 of 230
+element-level comparisons: **77.8 per cent agreement, Cohen's kappa 0.363 with a
+95 per cent CI of [0.209, 0.518]**. That total mixes the two provenances above
+and is reported for completeness, not as a reliability coefficient.
 
 | Rule | n | Agreement | Kappa | CI 95% |
 |---|---|---|---|---|
@@ -332,15 +349,33 @@ of the article, and both fall inside SC 1.1.1: `R04` finds 12 of the 15 sites
 failing that criterion where `R02` finds 14.
 
 The ECOTEC cell carries a further caveat that the deposit records rather than
-resolves. The two logos in question are white-on-white files whose names end in
-`-white`; the evaluator reported that several images of this kind were not visible
-on the page and could only be seen by opening the file, but did not confirm which,
-so they were **not** added to the exclusion rule. Had they been excluded, neither
-coding would have had a failing element left in that cell and the two would
-agree — at the cost of the site no longer failing SC 1.1.1 at all.
-`exclusiones_R04.tsv` therefore contains only the blocks the evaluator or the
-first author identified positively, and this paragraph states what the
-alternative would have been.
+resolves. The evaluator has since confirmed that the two logos in question are
+among the images that rendered white on a white ground, visible on the page only
+with effort and plainly when the file itself is opened. That confirmation closes
+an open point of `recoding_evaluator2/nota_incidencias.txt`: it is why the
+evaluator marked nothing as non-visible.
+
+It does not make these blocks a defect of the collector, and they are therefore
+**not** in `exclusiones_R04.tsv`. That file has one ground and one only: the
+collector put the wrong text in front of the evaluator. Here it did not — the
+accessible name and the image address are both the element's own. What rule
+`qt1vmo` asks is whether the name serves a purpose equivalent to the image, and
+how conspicuous the image is on the page is not part of that question. Both
+codings could see the image: `R03` judged it from the downloaded file, `R04` from
+the page with effort. Excluding these blocks would remove the one disagreement
+that touches a figure of the article, on a ground the exclusion rule does not
+provide, so the deposit states the consequence instead of taking it.
+
+The consequence is worth stating plainly, because it is the largest single
+dependency in the SC 1.1.1 census. The ECOTEC 1.1.1 verdict rests entirely on
+these two elements in **both** codings. Were they set aside — on the view that an
+evaluator who cannot readily see the non-text content cannot judge its accessible
+name — neither coding would have a failing element left in that cell, the two
+would agree, and the site would no longer fail SC 1.1.1: the Ecuadorian census
+for that criterion would read 7 of 8 rather than 8 of 8, and the gap count of
+§4.5 of the article would fall by one cell. That is a judgement for the authors
+and, if it is taken, it changes a reported figure rather than only a reliability
+estimate.
 
 Round 1 and this round do not share an instrument: the first coded each site by
 sampling elements and judging a proportion, and this one enumerates every

@@ -308,7 +308,7 @@ Agreement between the two independent codings of the ACT round, `data/manual/act
 
 | Column | Description |
 |---|---|
-| `bloque` | `A_mecanicas` the three rules the rule decides on its own; `B_juicio` the three rules that refer the decision to a person; `C_veredictos` the 45 site-by-criterion cells. |
+| `bloque` | `A_mecanicas` the three rules the rule decides on its own; `B_juicio` the three rules that refer the decision to a person; `B_juicio_procedencia` the same comparisons split by who decided the `recoding/` side; `C_veredictos` the 45 site-by-criterion cells. |
 | `estrato` | The stratum within the block: a rule, a success criterion, `TOTAL`, or `45 celdas`. |
 | `n` | Comparisons in the stratum. For `A` and `B`, matched element pairs with a definite outcome in both; for `C`, cells. |
 | `acuerdo` | Observed agreement, proportion. |
@@ -316,7 +316,7 @@ Agreement between the two independent codings of the ACT round, `data/manual/act
 | `ic_inf`, `ic_sup` | 95% CI of kappa, asymptotic SE, clamped to [−1, 1]. Empty whenever `kappa` is. |
 | `nota` | Why kappa is absent or unstable: undefined with a single category, not reported below 10 pairs, unstable with a minority category under 5%, unreliable below n = 30. |
 
-`bloque` is what separates two different things. `A_mecanicas` measures the reproducibility of the instrument across two operators. `B_juicio` is an agreement figure and **not** an inter-coder coefficient: the `R02` side of it comes from the assisted resolution, not from a second human judgement. `data/manual/act_round2/README.md` states this and gives the sensitivity of every figure to the exclusion rule and to the matching key.
+`bloque` is what keeps three different things apart. `A_mecanicas` measures the reproducibility of the instrument across two operators. `B_juicio` is an agreement figure over mixed provenance and **not** an inter-coder coefficient. `B_juicio_procedencia` splits it: the `R02=R02` row, 62 link comparisons under SC 2.4.4, is the only inter-coder reliability estimate in the deposit, and its interval includes zero; the `R02=R03` row, 168 image comparisons under SC 1.1.1, is agreement against the assisted resolution and is not a reliability coefficient. `data/manual/act_round2/README.md` states this and gives the sensitivity of every figure to the exclusion rule and to the matching key.
 
 ### `act_agreement_disagreements.csv` — 56 rows
 

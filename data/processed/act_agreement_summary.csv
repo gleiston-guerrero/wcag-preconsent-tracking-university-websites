@@ -12,4 +12,6 @@ B_juicio,regla qt1vmo,168,0.7619,0.3896,0.2245,0.5548,
 B_juicio,criterio 1.1.1,168,0.7619,0.3896,0.2245,0.5548,
 B_juicio,criterio 2.4.4,62,0.8226,0.1783,-0.2621,0.6187,
 B_juicio,TOTAL,230,0.7783,0.3634,0.2093,0.5175,
+B_juicio_procedencia,R02=R02,62,0.8226,0.1783,-0.2621,0.6187,FIABILIDAD ENTRE CODIFICADORES
+B_juicio_procedencia,R02=R03,168,0.7619,0.3896,0.2245,0.5548,"acuerdo, procedencia asistida"
 C_veredictos,45 celdas,45,0.9556,0.7761,0.4728,1.0000,excluye 0 celdas con REVISAR sin resolver
