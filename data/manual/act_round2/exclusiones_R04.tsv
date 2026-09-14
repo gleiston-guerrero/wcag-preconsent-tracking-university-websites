@@ -1,0 +1,33 @@
+grupo	hoja	bloque	abbr	element_n	act_rule	nombre_en_la_hoja	selector	motivo
+A	111	056	HKUST	36	qt1vmo	.st0{fill:none;stroke:#CC9900;stroke-width:55	#Layer_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	161	UPS	20	qt1vmo	.a { fill: #fff; stroke-width: 0px; }	#ico_3	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	171	UPS	78	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	172	UPS	80	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	173	UPS	82	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	174	UPS	84	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	176	UPS	86	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	178	UPS	88	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	179	UPS	90	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	180	UPS	92	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	182	UPS	94	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	183	UPS	96	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	185	UPS	98	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	186	UPS	100	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	187	UPS	102	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	188	UPS	104	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+A	111	198	UPS	159	qt1vmo	.a { fill: #fff; stroke-width: 0px; }	#ico_3	la linea nombre contiene el style de un svg en linea; el nombre accesible real es vacio
+B	111	085	UNESUM	49	qt1vmo	CalendarioAcademicoPI2026	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	086	UNESUM	50	qt1vmo	C.agropecuaria	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	087	UNESUM	51	qt1vmo	Clases Espejo UCH	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	088	UNESUM	52	qt1vmo	MovilidadUBE	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	089	UNESUM	53	qt1vmo	Clase ESPE 2026	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	090	UNESUM	54	qt1vmo	Taller Internacional-2	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	091	UNESUM	55	qt1vmo	XII Seminario Cientifico	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	092	UNESUM	56	qt1vmo	4FeriaInternacional	div.swiper-wrapper > div.swiper-slide > a > div.elementor-ca	la linea imagen corresponde a otro elemento de la pagina
+B	111	171	UPS	78	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea imagen corresponde a otro elemento de la pagina
+B	111	172	UPS	80	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea imagen corresponde a otro elemento de la pagina
+B	111	173	UPS	82	qt1vmo	.st0{fill:#003772;}	#Capa_1	la linea imagen corresponde a otro elemento de la pagina
+B	111	200	UPS	161	qt1vmo	linkedin	#ico_5	la linea imagen corresponde a otro elemento de la pagina
+B	111	201	UPS	162	qt1vmo	pinterest copia	#ico_6	la linea imagen corresponde a otro elemento de la pagina
+B	111	202	UPS	163	qt1vmo	ius	div.row > div.col-12 > a.bg-blue > svg	la linea imagen corresponde a otro elemento de la pagina
+B	111	203	UPS	164	qt1vmo	universia	div.row > div.col-12 > a.bg-blue > svg	la linea imagen corresponde a otro elemento de la pagina

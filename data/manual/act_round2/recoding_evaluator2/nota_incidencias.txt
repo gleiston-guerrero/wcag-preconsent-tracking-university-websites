@@ -1,0 +1,51 @@
+NOTA DE INCIDENCIAS - codificacion R04, resolucion de filas de juicio
+=====================================================================
+
+Como se elaboro esta nota: la compilo el investigador principal a partir de tres fuentes y sin anadir juicios nuevos ni cambiar ningun resultado: (a) las justificaciones escritas por R04 en hoja_r04_111.txt y hoja_r04_244.txt, citadas literalmente entre comillas; (b) el registro de la herramienta, registro_R04.tsv; (c) observaciones que R04 comunico de palabra al investigador principal, marcadas como [comunicado por R04].
+Revisada y conforme por R04 (fecha y firma o iniciales en el acta interna, no en este archivo): ____________________
+
+Evaluador (codigo): R04
+Fechas de trabajo: 11 de septiembre de 2026, de 01:43 a 06:59 segun el registro (hoja 111 durante toda la sesion; hoja 244 entre 03:49 y 04:42), con una pausa de 41 minutos; correccion posterior del bloque 114 de la hoja 244 el mismo dia.
+Navegador y version: [pendiente de completar por R04]
+Extensiones activas (si hubo alguna): [pendiente de completar por R04]
+
+
+1. BLOQUES QUE NO PUDE JUZGAR
+-----------------------------------------------------------------------
+Ninguno. No marque ningun bloque como no-visible.
+[comunicado por R04] Algunas imagenes se veian blancas, como el negativo de otra imagen; con un poco de esfuerzo se podian ver y por eso no las marque no-visible. No preciso los numeros de bloque.
+
+
+2. CASOS EN QUE LA REGLA NO ENCAJABA BIEN
+-----------------------------------------------------------------------
+   hoja / bloque / por que
+
+   111 / 172, 173, 174, 176, 178, 179, 180, 182, 183, 185, 186, 187, 188, 198 / El nombre de la hoja era codigo CSS: "El nombre es un css. Puede que no tomó bien los datos."
+   111 / 056 / El nombre de la hoja era codigo CSS: "El nombre es inentendible para el humano."
+   111 / 104 / El nombre no coincide con el nombre del archivo de la imagen: "Pero el nombre de la imagen es PeriodoAcademicoII2026, no PeriodoAcademicoI2026."
+   111 / 042 / Duda sobre la imagen: "El realidad no reconozco la imagen. Pero es un edificio con bandas que no se ve nada."
+   111 / 116 / Duda sobre la imagen: "No lo conozco pero alguién está en un podcast"
+   111 / 144 / Duda sobre la respuesta: "Aunque no sé si son de diferentes departamentos, pero si están los 4."
+   244 / 114 / Primero registre cumple por error y lo corregi a falla: "perdón era f no c".
+
+
+3. CAMBIOS EN LAS PAGINAS
+-----------------------------------------------------------------------
+111 / 079 a 106 (UNESUM) / Contenido rotatorio en un carrusel. [comunicado por R04] Para ver las imagenes del carrusel y emparejar cada nombre con su imagen use la galeria generada con galeria_carrusel.js (extrae de la pagina cada imagen con su nombre accesible y su direccion; no evalua nada). Entre las 05:18 y las 05:28 volvi a decidir 13 bloques (079, 080, 084, 086, 087, 088, 089, 090, 091, 092, 093, 094, 095); 8 pasaron de falla a cumple (084, 087, 088, 090, 091, 092, 093, 095) y 5 conservaron el resultado.
+111 / 046 (HKUST) / El elemento no se veia en la pagina: "Aunque no se ve la imagen en la página. Y es un background."
+[comunicado por R04] Las imagenes que se veian blancas del apartado 1 tampoco se veian en el sitio web; solo se veian al abrirlas como imagen.
+
+
+4. CUALQUIER OTRA COSA
+-----------------------------------------------------------------------
+Tiempo: 318 bloques en una sesion de unas cinco horas; el registro contiene 331 anotaciones porque 13 bloques se decidieron dos veces (apartado 3).
+Cambios hechos fuera de la herramienta, que por eso no constan en el registro: 111/144 de falla a cumple; 111/200 y 111/201 de cumple a falla; 244/114 de cumple a falla.
+Normalizacion de formato hecha por el investigador principal: en 244/114 R04 escribio "RESULTADO: f"; se sustituyo por la palabra admitida "falla", que es la que R04 indica en su justificacion anterior ("perdón era f no c"). No se cambio ningun otro caracter de las hojas.
+
+
+5. OBSERVACIONES DEL INVESTIGADOR PRINCIPAL (no son de R04)
+-----------------------------------------------------------------------
+Defecto del recolector en el nombre: en 111 / 056, 161, 171, 172, 173, 174, 176, 178, 179, 180, 182, 183, 185, 186, 187, 188 y 198 la linea "nombre" contiene el texto del elemento style interno de un SVG en linea; en Chromium 141 el nombre accesible calculado para un SVG equivalente es vacio.
+Defecto del recolector en la imagen: en 111 / 171, 172, 173, 200, 201, 202 y 203 (UPS) y 085 a 092 (UNESUM; 085 probable) la linea "imagen" corresponde a otro elemento de la pagina; en UNESUM los nombres de archivo coinciden con los nombres de otras diapositivas del carrusel.
+Posibles imagenes blancas del apartado 1: los archivos de 111 / 002, 003 y 004 (ECOTEC) se llaman qs-logo-white, the-logo-white e innovatec-logo-white; R04 no lo confirmo.
+Estos bloques se tratan con una regla de exclusion fijada antes de calcular la kappa y aplicada por igual a las dos codificaciones (exclusiones_R04.tsv).

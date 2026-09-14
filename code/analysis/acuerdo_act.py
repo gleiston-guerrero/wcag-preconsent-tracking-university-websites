@@ -47,6 +47,7 @@ import glob
 import io
 import math
 import os
+import re as _re
 import sys
 from collections import Counter, defaultdict
 
@@ -59,10 +60,24 @@ R04 = os.path.join(_RAIZ, "data", "manual", "act_round2",
                    "recoding_evaluator2", "recoding")
 SALIDA = os.path.join(_RAIZ, "data", "processed")
 
+# Las filas de juicio de la primera codificacion no se resolvieron dentro de
+# recoding/ sino en estos dos ficheros. Sin plegarlos, el bloque B compara la
+# segunda codificacion contra filas que siguen marcadas REVISAR y sale vacio
+# aunque las dos codificaciones hayan decidido el mismo elemento.
+RESOLUCIONES_R02 = (("qt1vmo_345_resolved.csv", "outcome", "selector"),
+                    ("review_282_rows.csv", "outcome_TOFILL", "selector"))
+EXCLUSIONES = os.path.join(_RAIZ, "data", "manual", "act_round2",
+                           "exclusiones_R04.tsv")
+
 MECANICAS = ("23a2a8", "afw4f7", "c487ae")
 JUICIO = ("qt1vmo", "5effbb", "fd3a94")
 CRITERIOS = ("1.1.1", "1.4.3", "2.4.4")
 DEFINITIVOS = ("cumple", "falla")
+
+# Numero minimo de pares por debajo del cual no se informa ninguna kappa. Es un
+# umbral declarado, no una regla estadistica: sirve para que no se publique un
+# coeficiente calculado sobre un punado de observaciones.
+N_MINIMO_KAPPA = 10
 
 
 # --------------------------------------------------------------------------- #
@@ -75,6 +90,9 @@ def kappa_cohen(pares):
     categoria: el acuerdo esperado es 1 y el denominador se anula. En ese caso se
     informa del acuerdo observado y se dice que la kappa no aplica, en lugar de
     devolver un cero o un uno enganosos.
+
+    Tampoco se informa por debajo de N_MINIMO_KAPPA pares: con un punado de
+    observaciones el coeficiente no es interpretable.
 
     El intervalo es la aproximacion asintotica habitual,
     SE = sqrt(po(1-po) / (n(1-pe)^2)), valida con n grande.
@@ -92,6 +110,13 @@ def kappa_cohen(pares):
     if abs(1 - pe) < 1e-12:
         return {"n": n, "po": po, "kappa": None, "ic": None, "matriz": dict(m),
                 "nota": "kappa no definida: una sola categoria en ambas codificaciones"}
+    # Con muy pocos pares la kappa y su intervalo no informan de nada: una sola
+    # discrepancia mueve el coeficiente de extremo a extremo. Por debajo del
+    # minimo declarado no se publica ningun valor; se deja el acuerdo observado y
+    # el n, que si son interpretables.
+    if n < N_MINIMO_KAPPA:
+        return {"n": n, "po": po, "kappa": None, "ic": None, "matriz": dict(m),
+                "nota": "kappa no informada: n < %d pares" % N_MINIMO_KAPPA}
     k = (po - pe) / (1 - pe)
     se = math.sqrt(po * (1 - po) / (n * (1 - pe) ** 2))
     # El intervalo asintotico puede salirse de [-1, 1] con muestras pequenas o
@@ -139,6 +164,75 @@ def cargar(directorio, etiqueta):
     print("  %-4s %5d filas  %2d sitios  %s"
           % (etiqueta, len(filas), len({r["abbr"] for r in filas}), directorio))
     return filas
+
+
+def plegar_resoluciones(filas):
+    """Escribe en las filas REVISAR de la primera codificacion el resultado que
+    esta en sus ficheros de resolucion. No inventa nada: solo traslada un
+    veredicto ya emitido al sitio donde el emparejamiento lo busca."""
+    base = os.path.join(_RAIZ, "data", "manual", "act_round2")
+    # Dos claves. element_n es exacta DENTRO de la primera codificacion, porque
+    # los ficheros de resolucion salieron de sus propias filas de la misma
+    # pasada: no hay ninguna colision. La inestabilidad de la numeracion solo
+    # afecta a comparar una pasada con otra, no a esto. El selector mas el
+    # nombre accesible queda como respaldo.
+    por_elem, por_nombre = {}, {}
+    total = 0
+    for nombre, col, sel in RESOLUCIONES_R02:
+        ruta = os.path.join(base, nombre)
+        if not os.path.isfile(ruta):
+            continue
+        with io.open(ruta, encoding="utf-8-sig", newline="") as fh:
+            for r in csv.DictReader(fh):
+                o = (r.get(col) or "").strip()
+                if o not in DEFINITIVOS:
+                    continue
+                total += 1
+                crit = (r.get("criterion") or "1.1.1").strip()
+                por_elem[(r["abbr"], crit, r["act_rule"],
+                          r["element_n"].strip())] = (o, nombre)
+                por_nombre[(r["abbr"], crit, r["act_rule"], r[sel].strip(),
+                            (r.get("accessible_name") or "").strip())] = (o, nombre)
+    n = 0
+    for f in filas:
+        if f["outcome"].strip() != "REVISAR":
+            continue
+        ke = (f["abbr"], f["criterion"], f["act_rule"], f["element_n"].strip())
+        kn = (f["abbr"], f["criterion"], f["act_rule"],
+              f["selector_or_description"].strip(), nombre_de_nota(f["notes"]))
+        hit = por_elem.get(ke) or por_nombre.get(kn)
+        if hit:
+            f["outcome"], f["_resuelto_en"] = hit[0], hit[1]
+            n += 1
+    print("  R02  %5d de %d resoluciones trasladadas a las filas REVISAR"
+          % (n, total))
+    if n < total:
+        print("       %d resoluciones no corresponden a ninguna fila de recoding/;"
+              % (total - n))
+        print("       quedan fuera del emparejamiento; se documentan en")
+        print("       data/manual/act_round2/README.md")
+    return n
+
+
+def nombre_de_nota(nota):
+    m = _re.search(r'nombre:\s*"([^"]*)"', nota or "")
+    return m.group(1).strip() if m else ""
+
+
+def cargar_exclusiones():
+    """Elementos que el instrumento presento con informacion defectuosa. La
+    regla se fija antes de calcular y se aplica por igual a las dos
+    codificaciones: excluir un elemento retira el par completo."""
+    if not os.path.isfile(EXCLUSIONES):
+        return set()
+    fuera = set()
+    with io.open(EXCLUSIONES, encoding="utf-8-sig", newline="") as fh:
+        for r in csv.DictReader(fh, delimiter="\t"):
+            fuera.add((r["abbr"].strip(), r["act_rule"].strip(),
+                       r["element_n"].strip()))
+    print("  exclusiones     %5d elementos con defecto documentado del recolector"
+          % len(fuera))
+    return fuera
 
 
 def clave(r):
@@ -271,6 +365,14 @@ def main():
     print("-" * 78)
     a = cargar(R02, "R02")
     b = cargar(R04, "R04")
+    plegar_resoluciones(a)
+    fuera = cargar_exclusiones()
+    if fuera:
+        antes = len(a) + len(b)
+        a = [r for r in a if (r["abbr"], r["act_rule"], r["element_n"]) not in fuera]
+        b = [r for r in b if (r["abbr"], r["act_rule"], r["element_n"]) not in fuera]
+        print("  excluidas       %5d filas de las dos codificaciones"
+              % (antes - len(a) - len(b)))
 
     pares, sa, sb = emparejar(a, b)
     print("\nEmparejamiento por sigla + criterio + regla + selector:")

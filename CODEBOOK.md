@@ -302,6 +302,35 @@ Result of the sensitivity analysis on the inclusion rule of the multi-vantage re
 | `p_<pair>` | Exact McNemar p value for each pair. |
 | `pholm_<pair>` | The same value after Holm correction across the six comparisons. |
 
+### `act_agreement_summary.csv` — 14 rows
+
+Agreement between the two independent codings of the ACT round, `data/manual/act_round2/recoding/` (`R02`) and `recoding_evaluator2/` (`R04`). Written by `code/analysis/acuerdo_act.py`. One row per stratum.
+
+| Column | Description |
+|---|---|
+| `bloque` | `A_mecanicas` the three rules the rule decides on its own; `B_juicio` the three rules that refer the decision to a person; `C_veredictos` the 45 site-by-criterion cells. |
+| `estrato` | The stratum within the block: a rule, a success criterion, `TOTAL`, or `45 celdas`. |
+| `n` | Comparisons in the stratum. For `A` and `B`, matched element pairs with a definite outcome in both; for `C`, cells. |
+| `acuerdo` | Observed agreement, proportion. |
+| `kappa` | Cohen's kappa. **Empty when no coefficient is reported**, in which case `nota` says why. |
+| `ic_inf`, `ic_sup` | 95% CI of kappa, asymptotic SE, clamped to [−1, 1]. Empty whenever `kappa` is. |
+| `nota` | Why kappa is absent or unstable: undefined with a single category, not reported below 10 pairs, unstable with a minority category under 5%, unreliable below n = 30. |
+
+`bloque` is what separates two different things. `A_mecanicas` measures the reproducibility of the instrument across two operators. `B_juicio` is an agreement figure and **not** an inter-coder coefficient: the `R02` side of it comes from the assisted resolution, not from a second human judgement. `data/manual/act_round2/README.md` states this and gives the sensitivity of every figure to the exclusion rule and to the matching key.
+
+### `act_agreement_disagreements.csv` — 56 rows
+
+Every disagreement behind the previous table, one row each, so that any figure in it can be traced to the elements that produced it.
+
+| Column | Description |
+|---|---|
+| `bloque` | As above. |
+| `abbr`, `group`, `criterion`, `act_rule` | Institution, `mundo`/`ecuador`, success criterion, ACT rule. |
+| `selector` | CSS selector of the element, as the collector recorded it. Two selectors joined by `;` for the paired rules `fd3a94` and `5effbb`. Empty in `C_veredictos` rows, which are not element-level. |
+| `element_n_R02`, `element_n_R04` | Element number in each coding. They do not designate the same element across codings; the pairing is by selector. |
+| `outcome_R02`, `outcome_R04` | `cumple` / `falla` in each coding. |
+| `measured_R02`, `measured_R04` | The measured value where the rule has one, that is the contrast ratio under `afw4f7`. Empty otherwise. |
+
 ---
 
 ## 5. HTML reports

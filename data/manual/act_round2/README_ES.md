@@ -86,12 +86,31 @@ matriz de quince por tres. `code/analysis/inventario_revisar.py` lo informa dire
 de las filas que siguen marcadas `REVISAR` en la primera codificación, ninguna decide un
 veredicto. Resolverlas añadiría completitud al depósito, no evidencia al artículo.
 
-El subconjunto de filas cuyo resultado determina un veredicto de sitio, extraído
-para revisión.
+**Estas filas no llevan columna `evaluator_code`.** El archivo se extrajo como
+hoja de trabajo con las columnas de resultado y justificación vacías, y los 81
+resultados se rellenaron sin registrar quién los rellenó. El depósito no puede,
+por tanto, dar fe de su procedencia, y 62 de ellos entran en la comparación de
+las reglas de juicio de más abajo. Es una de las razones por las que esa
+comparación no se etiqueta como fiabilidad entre codificadores.
 
 Los nombres de columna de todos los CSV de esta carpeta están en inglés; los
 **valores** codificados siguen en español (`mundo`/`ecuador`, `si`/`no`,
 `cumple`/`falla`, `REVISAR`), que es el vocabulario que define el CODEBOOK.
+
+## exclusiones_R04.tsv
+
+Los bloques que quedan fuera de la estimación entre codificadores porque el
+recolector, y no el codificador, puso ante el evaluador el texto equivocado.
+Separado por tabuladores, una fila por bloque afectado: `grupo` (`A` para el
+defecto del style del svg, `B` para la imagen equivocada), `hoja` y `bloque` tal
+como los vio el evaluador, `abbr`, `element_n`, `act_rule`, `nombre_en_la_hoja`
+(el texto que se mostró de hecho), `selector` y `motivo` en palabras. Treinta y
+dos filas que cubren veintinueve bloques distintos; tres bloques llevan los dos
+defectos y aparecen dos veces.
+
+La regla la aplica `code/analysis/acuerdo_act.py` a las dos codificaciones por
+igual, y la sección de fiabilidad entre codificadores, más abajo, dice cuánto
+vale el coeficiente con ella y sin ella.
 
 ## instruments/
 
@@ -117,6 +136,11 @@ Deliberadamente no contiene ningún ejemplo de los quince sitios en evaluación.
 
 Ningún sitio satisface los tres. Las ocho instituciones ecuatorianas fallan los
 tres.
+
+Son los veredictos de la primera codificación, `recoding/` con sus resoluciones.
+La segunda codificación devuelve la misma tabla en 1.4.3 y 2.4.4 y difiere en dos
+celdas de 1.1.1; la sección de fiabilidad entre codificadores, más abajo, las
+nombra y dice qué cambian.
 
 ## Reproducibilidad del instrumento
 
@@ -147,12 +171,10 @@ entradas y un carrusel, cuyo nombre accesible depende de qué elemento ocupaba l
 casilla al medir. **Los dos van en direcciones opuestas**, de modo que la
 variación no tiene sesgo sistemático.
 
-A nivel de sitio, las dos codificaciones devuelven el mismo veredicto en las 34
-de las 45 celdas de sitio por criterio que ambas pueden decidir, incluidas las
-tres únicas en las que un sitio *sí* satisface un criterio: 1.4.3 en
-Northwestern, UC Berkeley y UCL. Las 11 celdas restantes contienen filas
-remitidas al juicio humano que una de las dos codificaciones no ha resuelto
-todavía.
+A nivel de sitio las dos codificaciones deciden ya las 45 celdas, y la
+comparación se reporta más abajo, bajo fiabilidad entre codificadores, que es
+donde corresponde: los veredictos de sitio en 1.1.1 y 2.4.4 descansan en el
+juicio humano y no son una propiedad del instrumento por sí solo.
 
 ## Emparejamiento de elementos, y qué queda fuera
 
@@ -174,18 +196,164 @@ un resultado definitivo**: elementos que una ejecución vio y la otra no. El
 acuerdo anterior se calcula, por tanto, sobre el 96,1 % de las filas decididas
 de `R02` y el 98,5 % de las de `R04`.
 
-Dos de las once celdas sin cerrar lo están por ese motivo y no por desacuerdo:
-en Cornell 2.4.4 y en UTI 1.1.1, `R02` encontró un elemento que falla y `R04` no
-llegó a verlo; en IAEN 2.4.4 ocurre lo contrario. Un veredicto de sitio puede
-así diferir entre dos codificaciones sin que ningún codificador discrepe.
+Tres celdas deben su veredicto a un elemento que solo vio una de las
+codificaciones, y no a que ningún codificador discrepe: en Cornell 2.4.4 y en
+UTI 1.1.1, `R02` encontró un elemento que falla y `R04` no llegó a verlo; en
+IAEN 2.4.4 ocurre lo contrario. En las tres la otra codificación llegó al mismo
+veredicto por otros elementos, de modo que ninguna aparece como diferencia; pero
+un veredicto de sitio *puede* diferir entre dos codificaciones sin que ningún
+codificador discrepe, y eso es una propiedad de la ronda, no de los
+codificadores.
 
-## Fiabilidad entre codificadores: todavía no estimada
+## Las reglas de juicio: acuerdo, y por qué no es fiabilidad entre codificadores
 
-Las filas que las reglas remiten al juicio humano —318 de `qt1vmo`, 1 016 de
-`5effbb` y 17 de `fd3a94`— siguen marcadas `REVISAR` en `recoding_evaluator2/`.
-Hasta que un segundo evaluador las resuelva con
-`../instruments/resolver_r04.py`, esta ronda no permite estimar fiabilidad entre
-codificadores, y no se reporta ninguna.
+El segundo evaluador resolvió las filas de juicio el 11 de septiembre de 2026 con
+`instruments/resolver_r04.py`: las 318 filas que aún podían decidir un veredicto
+de sitio, 235 `cumple` y 83 `falla`, cada una con su justificación escrita en el
+propio campo `notes` de la fila. `recoding_evaluator2/README_ES.md` describe ese
+trabajo y su registro. Eso cierra la ronda y hace posible por primera vez una
+comparación en las reglas de juicio. **No convierte esa comparación en una
+estimación de fiabilidad entre codificadores, y el depósito no reporta ninguna.**
+
+La razón es la procedencia del otro lado. En estas tres reglas el resultado de
+`recoding/` no se decidió al recoger, sino después, en `qt1vmo_345_resolved.csv`
+y `review_282_rows.csv`. De las 230 comparaciones por elemento disponibles, el
+lado de `recoding/` viene de esos archivos en todos los casos sin excepción:
+**168 de las filas codificadas `R03`, la resolución hecha con la asistencia de un
+sistema de IA generativa y revisada por el investigador principal, y 62 de
+`review_282_rows.csv`, cuyas filas no llevan ningún código de evaluador.**
+Ninguna de las 230 es un segundo juicio *humano* independiente del mismo
+elemento.
+
+Así que lo que sigue es el acuerdo entre una codificación humana y una resolución
+asistida revisada por el investigador principal. Merece reportarse, y aquí se
+reporta, pero hay que leerlo por lo que es. Un coeficiente de fiabilidad entre
+codificadores para las reglas de juicio exigiría que un codificador humano
+decidiera de nuevo esos 230 elementos sin el archivo asistido delante. Hasta que
+eso ocurra, la única cifra de fiabilidad que esta ronda sostiene es la
+reproducibilidad del instrumento en las reglas mecánicas, más arriba.
+
+En las tres reglas que remiten la decisión al juicio humano —`qt1vmo`, `5effbb`,
+`fd3a94`— los dos lados coinciden en 179 de 230 comparaciones por elemento:
+**77,8 % de acuerdo, kappa de Cohen 0,363 con IC del 95 % de [0,209, 0,518]**.
+
+| Regla | n | Acuerdo | Kappa | IC 95% |
+|---|---|---|---|---|
+| `qt1vmo` (1.1.1) | 168 | 76,2 % | 0,390 | [0,225, 0,555] |
+| `5effbb` (2.4.4) | 61 | 83,6 % | 0,212 | [−0,235, 0,659] |
+| `fd3a94` (2.4.4) | 1 | 0,0 % | no se reporta, n < 10 | — |
+| **Las tres** | **230** | **77,8 %** | **0,363** | **[0,209, 0,518]** |
+
+La matriz de confusión es casi simétrica: 30 filas `cumple` en `R02` y `falla` en
+`R04`, 21 al contrario. La prevalencia de `cumple` es del 79,6 % en `R02` y del
+75,7 % en `R04`. Con una categoría que domina en ese grado, la kappa queda
+deprimida respecto del acuerdo observado —la paradoja de Feinstein y Cicchetti—,
+y por eso se dan las dos cifras junto a la prevalencia.
+
+**Sea lo que sea esta cifra, no es el 0,996 de más arriba.** En las reglas
+mecánicas el evaluador ejecuta un script y decide la regla, de modo que lo que se
+mide es si el instrumento devuelve lo mismo en dos manos. En estas tres reglas la
+regla se detiene y pregunta si un nombre sirve un propósito equivalente al de una
+imagen, o si el propósito de un enlace puede determinarse a partir de su nombre y
+su contexto. Esa pregunta se responde con 0,363, un acuerdo *aceptable* en la
+lectura convencional del coeficiente y nada más. Reportar solo la cifra mecánica
+describiría mal la ronda; reportar ésta como fiabilidad entre codificadores la
+describiría mal en el otro sentido.
+
+### La regla de exclusión
+
+Veintinueve bloques de elemento quedan fuera de esta estimación, enumerados con
+su motivo en `exclusiones_R04.tsv`. Los veintinueve son bloques en los que el
+recolector, y no el codificador, puso ante el evaluador el texto equivocado: en
+diecisiete la línea `nombre` lleva el texto del elemento `style` de un svg en
+línea en lugar del nombre accesible, y en quince la línea `imagen` apunta a otro
+elemento de la página; tres bloques están en los dos grupos. Los dos defectos
+están documentados en `recoding_evaluator2/nota_incidencias.txt`, el primero por
+el evaluador y el segundo por el investigador principal.
+
+La regla se fijó antes de computar el coeficiente, se aplica igual a las dos
+codificaciones y retira 57 filas. No es un filtro sobre el desacuerdo: de hecho
+*baja* el coeficiente, porque los bloques excluidos son de los que las dos
+codificaciones coincidían.
+
+### Resoluciones sin fila donde aterrizar
+
+`code/analysis/acuerdo_act.py` traslada las resoluciones a las filas `REVISAR` de
+`recoding/` antes de comparar nada, emparejando primero por `element_n` —exacto
+dentro de una misma pasada, porque los archivos de resolución salieron de esas
+mismas filas— y con el selector más el nombre accesible como respaldo. 402 de las
+430 resoluciones aterrizan en una fila. **Las 28 restantes no corresponden a
+ninguna fila de `recoding/`**: 13 en IAEN, 7 en UNESUM, 4 en HKUST, 3 en UTI y 1
+en UTPL, todas de `qt1vmo`, 19 `falla` y 9 `cumple`. En 21 el selector no aparece
+en `recoding/` para ese sitio y esa regla; en las otras 7 sí aparece, pero no
+coinciden ni el número de elemento ni el nombre accesible, que es la firma del
+contenido rotatorio.
+
+Se dejan fuera de la comparación en lugar de forzarlas sobre una fila, y ningún
+veredicto de sitio depende de ellas: los cinco sitios fallan 1.1.1 en las dos
+codificaciones por otros elementos. El recuento se imprime en cada ejecución.
+
+### Cuánto depende la cifra de esas decisiones
+
+| Variante | n | Acuerdo | Kappa |
+|---|---|---|---|
+| Como se reporta | 230 | 77,8 % | 0,363 [0,209, 0,518] |
+| Sin la regla de exclusión | 258 | 76,7 % | 0,432 [0,306, 0,558] |
+| Emparejando también por `element_n` | 220 | 77,3 % | 0,355 [0,198, 0,512] |
+
+En las tres, el acuerdo se mantiene entre el 76,7 y el 77,8 % y la kappa entre
+0,355 y 0,432. La cifra de nivel de sitio es idéntica en las tres.
+
+Una cota distinta y más estrecha: en 8 de los 318 bloques el nombre accesible que
+se mostró al evaluador venía recortado a 120 caracteres. Siete se decidieron
+`cumple`, y en ellos el fragmento mostrado ya era descriptivo y el nombre
+completo solo lo prolonga; el octavo perdió dos caracteres. Ninguna decisión
+depende del recorte. `recoding_evaluator2/README_ES.md` da el detalle.
+
+### Veredictos de sitio
+
+La comparación a nivel de sitio no depende en absoluto del emparejamiento de
+elementos, y es el nivel en el que el artículo hace sus afirmaciones. Las dos
+codificaciones deciden las 45 celdas de sitio por criterio y devuelven el mismo
+veredicto en **43 de 45: 95,6 %, kappa 0,776 con IC de [0,473, 1,000]**. Los
+criterios 1.4.3 y 2.4.4 son idénticos celda a celda, incluidas las tres celdas en
+las que un sitio *sí* satisface un criterio, 1.4.3 en Northwestern, UC Berkeley y
+UCL.
+
+La advertencia de procedencia anterior rige también aquí, y de forma desigual:
+las quince celdas de 1.4.3 descansan solo en la regla mecánica, de modo que esa
+fila de la comparación es una reproducción limpia entre dos operadores, mientras
+que las celdas de 1.1.1 y 2.4.4 heredan su veredicto de `recoding/` de la
+resolución asistida.
+
+Los dos desacuerdos están en 1.1.1, regla `qt1vmo`, y en los dos `R02` lee
+`falla` donde `R04` lee `cumple`:
+
+- **UC Berkeley**, una imagen cuyo nombre accesible es `"A scientist wearing a
+  blue lab coat that reads"` —el texto alternativo de la propia página, que se
+  corta a mitad de frase—. `R02` leyó el nombre incompleto como fallo; `R04`
+  anotó *«el nombre es lo que la imagen muestra»*. El nombre completo está en
+  `image_evidence/` y tiene 46 caracteres: el nombre termina realmente ahí.
+- **ECOTEC**, dos logotipos de reconocimiento, `qs-logo-white` e
+  `innovatec-logo-white`, cuyos nombres accesibles nombran la distinción y no el
+  logotipo (`"Reconocimiento QS Stars de Universidad ECOTEC"`, `"World University
+  Rankings América y el Caribe"`). `R04` anotó *«el nombre dice más que la
+  imagen»* y los leyó como satisfactorios.
+
+Estas dos celdas son el único lugar en el que la segunda codificación cambiaría
+una cifra del artículo, y las dos caen en 1.1.1: `R04` encuentra 12 de los 15
+sitios fallando ese criterio donde `R02` encuentra 14.
+
+La celda de ECOTEC arrastra una advertencia más, que el depósito registra en
+lugar de resolver. Los dos logotipos en cuestión son archivos blancos sobre
+blanco cuyos nombres terminan en `-white`; el evaluador informó de que varias
+imágenes de esa clase no se veían en la página y solo podían verse abriendo el
+archivo, pero no precisó cuáles, de modo que **no** se añadieron a la regla de
+exclusión. Si se hubieran excluido, a ninguna de las dos codificaciones le
+quedaría un elemento que falle en esa celda y las dos coincidirían, al precio de
+que el sitio dejase de fallar 1.1.1. `exclusiones_R04.tsv` contiene, por tanto,
+solo los bloques que el evaluador o el investigador principal identificaron de
+forma positiva, y este párrafo enuncia cuál habría sido la alternativa.
 
 La ronda 1 y esta ronda no comparten instrumento: la primera codificaba cada
 sitio muestreando elementos y juzgando una proporción, y ésta enumera todos los

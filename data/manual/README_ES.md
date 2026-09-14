@@ -78,9 +78,12 @@ la columna `code` de `wcag_validation_15_sites.csv` y la ronda 2 de la columna `
 muestreaba elementos en cada sitio y juzgaba una proporción, y la ronda 2 enumera todos los
 elementos aplicables bajo reglas ACT. Las cifras anteriores cuantifican, por tanto, cuánto
 movió los veredictos el cambio de instrumento. No son una estimación de fiabilidad entre
-codificadores y no deben leerse como tal. La estimación entre codificadores de la ronda ACT
-se reporta en `act_round2/README_ES.md`, por separado para las reglas mecánicas y para las
-reglas de juicio.
+codificadores y no deben leerse como tal. Lo que sí sostiene la ronda ACT se reporta en
+`act_round2/README_ES.md`: una cifra de reproducibilidad entre dos operadores para las
+reglas mecánicas y, para las reglas de juicio, una cifra de acuerdo que tampoco es un
+coeficiente entre codificadores, porque el lado con el que se compara es una resolución
+asistida y no una segunda codificación humana. **En este depósito no se reporta ningún
+coeficiente de fiabilidad entre codificadores.**
 
 En los cinco sitios codificados por los tres evaluadores el patrón se mantiene y ningún
 codificador es el atípico: `R01` frente a la ronda 1 da 0,375 en tres categorías y 0,737 en
@@ -153,7 +156,9 @@ Cuarenta y cinco capturas de pantalla, quince por criterio, en `1.1.1/`, `1.4.3/
 `R01` en la recodificación manual del primer autor, `R02` en la recogida ACT del 8 de
 septiembre, `R03` en la resolución asistida de los elementos de imagen de `qt1vmo`, y `R04`
 en la codificación independiente del segundo evaluador. Cada código designa una sola
-codificación. Ningún archivo de esta
+codificación. Un archivo es la excepción y lo declara en su propia sección: las 81 filas
+rellenadas de `act_round2/review_282_rows.csv` no llevan código de evaluador, porque la
+hoja se rellenó sin registrar quién la rellenó. Ningún archivo de esta
 carpeta identifica a un evaluador: ninguno lleva el nombre, el correo electrónico ni una
 ruta local de nadie del equipo investigador. Existen versiones con nombres de evaluador,
 pero no forman parte de este depósito.

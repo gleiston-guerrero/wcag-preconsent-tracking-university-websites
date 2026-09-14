@@ -300,6 +300,35 @@ Resultado del análisis de sensibilidad a la regla de inclusión de la réplica 
 | `p_<par>` | Valor p exacto de McNemar de cada par. |
 | `pholm_<par>` | El mismo valor tras la corrección de Holm sobre las seis comparaciones. |
 
+### `act_agreement_summary.csv` — 14 filas
+
+Acuerdo entre las dos codificaciones independientes de la ronda ACT, `data/manual/act_round2/recoding/` (`R02`) y `recoding_evaluator2/` (`R04`). Lo escribe `code/analysis/acuerdo_act.py`. Una fila por estrato.
+
+| Columna | Descripción |
+|---|---|
+| `bloque` | `A_mecanicas` las tres reglas que decide la propia regla; `B_juicio` las tres reglas que remiten la decisión a una persona; `C_veredictos` las 45 celdas de sitio por criterio. |
+| `estrato` | El estrato dentro del bloque: una regla, un criterio de conformidad, `TOTAL` o `45 celdas`. |
+| `n` | Comparaciones del estrato. En `A` y `B`, pares de elementos emparejados con resultado definitivo en las dos codificaciones; en `C`, celdas. |
+| `acuerdo` | Acuerdo observado, en proporción. |
+| `kappa` | Kappa de Cohen. **Vacía cuando no se reporta coeficiente**, y entonces `nota` dice por qué. |
+| `ic_inf`, `ic_sup` | IC del 95 % de la kappa, error estándar asintótico, recortado a [−1, 1]. Vacíos siempre que `kappa` lo esté. |
+| `nota` | Por qué falta la kappa o por qué es inestable: no definida con una sola categoría, no reportada por debajo de 10 pares, inestable con una categoría minoritaria por debajo del 5 %, poco fiable por debajo de n = 30. |
+
+`bloque` es lo que separa dos cosas distintas. `A_mecanicas` mide la reproducibilidad del instrumento entre dos operadores. `B_juicio` es una cifra de acuerdo y **no** un coeficiente entre codificadores: el lado `R02` viene de la resolución asistida y no de un segundo juicio humano. `data/manual/act_round2/README_ES.md` lo enuncia y da la sensibilidad de cada cifra a la regla de exclusión y a la clave de emparejamiento.
+
+### `act_agreement_disagreements.csv` — 56 filas
+
+Cada desacuerdo que hay detrás de la tabla anterior, una fila por desacuerdo, de modo que cualquier cifra de aquélla pueda trazarse hasta los elementos que la produjeron.
+
+| Columna | Descripción |
+|---|---|
+| `bloque` | Como arriba. |
+| `abbr`, `group`, `criterion`, `act_rule` | Institución, `mundo`/`ecuador`, criterio de conformidad, regla ACT. |
+| `selector` | Selector CSS del elemento, tal como lo registró el recolector. Dos selectores unidos por `;` en las reglas por pares `fd3a94` y `5effbb`. Vacío en las filas `C_veredictos`, que no son de elemento. |
+| `element_n_R02`, `element_n_R04` | Número de elemento en cada codificación. No designan el mismo elemento entre codificaciones; el emparejamiento es por selector. |
+| `outcome_R02`, `outcome_R04` | `cumple` / `falla` en cada codificación. |
+| `measured_R02`, `measured_R04` | El valor medido donde la regla lo tiene, es decir el ratio de contraste bajo `afw4f7`. Vacíos en los demás casos. |
+
 ---
 
 ## 5. Informes HTML

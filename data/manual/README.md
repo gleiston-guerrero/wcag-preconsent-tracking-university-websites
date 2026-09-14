@@ -76,9 +76,12 @@ column of `wcag_validation_15_sites.csv` and round 2 from the `code` column of
 instrument: round 1 sampled elements at each site and judged a proportion, and round 2
 enumerates every applicable element under ACT rules. The figures above therefore quantify
 how far the change of instrument moved the verdicts. They are not an estimate of
-inter-coder reliability, and must not be read as one. The inter-coder estimate for the ACT
-round is reported in `act_round2/README.md`, separately for the mechanical rules and for
-the judgement rules.
+inter-coder reliability, and must not be read as one. What the ACT round supports is
+reported in `act_round2/README.md`: a two-operator reproducibility figure for the
+mechanical rules, and, for the judgement rules, an agreement figure that is not an
+inter-coder coefficient either, because the side it is compared against is an assisted
+resolution rather than a second human coding. **No inter-coder reliability coefficient is
+reported anywhere in this deposit.**
 
 On the five sites coded by all three evaluators, the same pattern holds and no single
 coder is the outlier: `R01` against round 1 gives 0.375 in three categories and 0.737
@@ -149,7 +152,10 @@ by institution. They are the evidence behind round 1 and round 2.
 `E01`–`E10` for the first coding round, `D01` for the partial second coding, `R01` for
 the first author's manual recoding, `R02` for the ACT collection of 8 September, `R03` for
 the assisted resolution of the `qt1vmo` image elements, and `R04` for the independent
-second evaluator. Each code designates one coding and one only. No file in this folder identifies an
+second evaluator. Each code designates one coding and one only. One file is an exception
+and says so in its own section: the 81 filled rows of `act_round2/review_282_rows.csv`
+carry no evaluator code, because the worksheet was filled in without recording who filled
+it. No file in this folder identifies an
 evaluator: none carries the name, the e-mail address or a local file path of anyone on the
 research team. Versions carrying evaluator names exist but are not part of this deposit.
 
