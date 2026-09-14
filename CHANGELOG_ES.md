@@ -87,7 +87,12 @@ material.
   distintos en cada ejecución y seis de las 305 entradas de `CHECKSUMS.txt` no se podían
   volver a obtener regenerando la figura. Los scripts suprimen ahora esa fecha. El contenido
   no cambia —las figuras regeneradas son idénticas píxel a píxel a las que esta versión
-  sustituye— y dos ejecuciones separadas dan ya bytes idénticos.
+  sustituye— y dos ejecuciones separadas dan ya bytes idénticos. Comprobado además entre
+  sistemas: Linux con Python 3.11.15 y Windows con Python 3.10.3, ambos con matplotlib
+  3.10.9, producen los mismos seis ficheros byte a byte. `requirements.txt` registra ahora
+  también que las figuras exigen Python 3.10 o posterior, porque matplotlib 3.10.9 no se
+  instala en 3.9, mientras que los scripts estadísticos corren en 3.9.13 con numpy 2.0.2 y
+  scipy 1.13.1 y dan salida idéntica.
 - Los cinco scripts de la ronda resolvían sus entradas contra el directorio de trabajo, dos
   esperando la raíz del repositorio y uno esperando `code/analysis/`. Todos resuelven ahora
   contra la raíz del repositorio y funcionan desde cualquiera de los dos sitios.

@@ -3,6 +3,17 @@
 # El codigo puede funcionar con otras versiones; los resultados de la
 # Seccion 5 se comprobaron ademas con Python 3.9.13 y scipy 1.13.1,
 # con salida identica.
+#
+# Las FIGURAS exigen Python 3.10 o posterior: matplotlib 3.10.9 no se instala
+# en Python 3.9, cuya ultima rama compatible es la 3.9.x de matplotlib. Los
+# scripts estadisticos si corren en 3.9.13, comprobado con numpy 2.0.2 y scipy
+# 1.13.1 y salida identica a la del entorno fijado. Si el comando "python" de
+# su PATH es un 3.9, invoque el interprete correcto: en Windows,
+# "py -3.10 figures_uais.py".
+#
+# Las seis figuras se reproducen byte a byte con estas versiones, comprobado en
+# dos sistemas: Linux con Python 3.11.15 y Windows con Python 3.10.3, la misma
+# matplotlib, ficheros identicos.
 numpy==2.2.6
 scipy==1.15.3
 matplotlib==3.10.9
