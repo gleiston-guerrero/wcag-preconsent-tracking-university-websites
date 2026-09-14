@@ -192,6 +192,21 @@ def url_imagen(src, url_sitio):
     return (cand, "reconstruida") if cand.endswith(src) else (src, "recortada")
 
 
+def hermano(filas, r, elemento):
+    """La fila 5effbb del elemento indicado, en el mismo sitio y criterio.
+
+    fd3a94 se dispara sobre un grupo de enlaces y su element_n es compuesto
+    ("29+30"). El nombre accesible y el destino de cada enlace del grupo viven en
+    la fila 5effbb de cada elemento, que es de donde se leen.
+    """
+    for x in filas:
+        if (x["abbr"] == r["abbr"] and x["criterion"] == r["criterion"]
+                and str(x["element_n"]).strip() == str(elemento).strip()
+                and x["act_rule"] == "5effbb"):
+            return x
+    return None
+
+
 def campo(notas, etiqueta):
     m = re.search(r'%s:\s*("?)(.*?)\1(?=\s*\|\s|\s*$)' % etiqueta, notas or "")
     return m.group(2).strip() if m else ""
@@ -221,9 +236,38 @@ def generar():
             notas = r["notes"] or ""
             if r["act_rule"] == "fd3a94":
                 s.write("enlaces con nombre y contexto identicos y destino distinto\n")
-                destinos = campo(notas, "destinos")
-                for d in [x.strip() for x in destinos.split("|") if x.strip()]:
-                    s.write("   -> %s\n" % d)
+                # El campo "destinos:" de la nota viene recortado por el
+                # recolector y en algunos casos deja un solo destino, cortado por
+                # la izquierda. El nombre y el destino de cada elemento se leen
+                # por eso de la fila 5effbb de ESE elemento, en esta misma
+                # codificacion. Los href tambien vienen recortados a 60
+                # caracteres, asi que se da la direccion de la pagina: cuando dos
+                # destinos coinciden hasta el corte, la unica forma de decidir es
+                # abrir la pagina y mirar los dos enlaces.
+                hermanos = [x for x in re.split(r"[+,/ ]+", str(r["element_n"]))
+                            if x.strip()]
+                nom_com, contexto_com = "", ""
+                lineas_destino = []
+                for e in hermanos:
+                    par = hermano(filas, r, e)
+                    if par is None:
+                        lineas_destino.append("   elemento %s -> (no localizado "
+                                              "en esta codificacion)\n" % e)
+                        continue
+                    nota_e = par["notes"] or ""
+                    nom_com = nom_com or campo(nota_e, "nombre")
+                    contexto_com = contexto_com or (
+                        par.get("programmatic_context") or "").strip()
+                    lineas_destino.append("   elemento %s -> %s\n"
+                                          % (e, campo(nota_e, "href") or "(sin href)"))
+                s.write("nombre    : %s\n" % (nom_com or "(no registrado)"))
+                s.write("contexto  : %s\n"
+                        % (contexto_com if contexto_com else "SIN CONTEXTO PROGRAMATICO"))
+                s.write("pagina    : %s\n" % (r.get("url") or "(no registrada)"))
+                for l in lineas_destino:
+                    s.write(l)
+                s.write("   (los destinos vienen recortados a 60 caracteres por el "
+                        "recolector)\n")
             elif r["act_rule"] == "qt1vmo":
                 nom = campo(notas, "nombre")
                 s.write("nombre    : %s\n" % nom)
