@@ -38,6 +38,12 @@ DIR = "recoding"
 DIR_EV = "image_evidence"
 HOJAS = {"1.1.1": "hoja_r04_111.txt", "2.4.4": "hoja_r04_244.txt"}
 VALIDOS = ("cumple", "falla")
+# Tercera respuesta admitida, para el bloque que el evaluador no puede juzgar
+# porque el elemento ya no esta en la pagina o la imagen no se puede ver. Se
+# escribe REVISAR en el CSV, con la justificacion, en lugar de forzar un juicio a
+# ciegas. El bloque queda documentado como no decidible y no entra en ninguna
+# estimacion de acuerdo, que es lo correcto: un juicio inventado la falsearia.
+NO_DECIDIBLE = ("no-visible", "no visible", "no decidible", "no-decidible")
 
 CABECERA = """\
 # ============================================================================
@@ -51,6 +57,15 @@ CABECERA = """\
 #
 # No hay categoria intermedia. No escriba "parcial" ni deje el campo vacio.
 # Escriba siempre una frase despues de "JUSTIFICACION:".
+#
+# Si un bloque no se puede juzgar porque el elemento ya no esta en la pagina o la
+# imagen no se puede ver, escriba
+#
+#     no-visible
+#
+# y explique en la justificacion que fue lo que no pudo ver. Esa fila quedara
+# registrada como no decidible y no entrara en ninguna comparacion. Es preferible
+# a un juicio a ciegas, pero uselo solo cuando de verdad no haya nada que mirar.
 #
 # ---------------------------------------------------------------------------
 %s#
@@ -359,8 +374,15 @@ def fusionar(codigo):
         for i, r in enumerate(sub, 1):
             res, jus = hoja[i]
             etq = "%s bloque %03d (%s #%s)" % (nombre, i, r["abbr"], r["element_n"])
-            if res not in VALIDOS:
-                problemas.append("  %s: RESULTADO = %r; debe ser cumple o falla" % (etq, res))
+            if res in NO_DECIDIBLE:
+                if not jus:
+                    problemas.append("  %s: 'no-visible' exige JUSTIFICACION que diga "
+                                     "por que no se pudo ver" % etq)
+                else:
+                    resueltas[id(r)] = ("REVISAR", jus)
+            elif res not in VALIDOS:
+                problemas.append("  %s: RESULTADO = %r; debe ser cumple, falla o "
+                                 "no-visible" % (etq, res))
             elif not jus:
                 problemas.append("  %s: JUSTIFICACION vacia" % etq)
             else:
@@ -392,7 +414,11 @@ def fusionar(codigo):
         w.writerows(rs)
         io.open(archivo, "w", encoding="utf-8", newline="").write("\ufeff" + buf.getvalue())
         print("actualizado %s" % archivo)
-    print("\n%d filas resueltas por %s" % (escritas, codigo))
+    nd = sum(1 for v in resueltas.values() if v[0] == "REVISAR")
+    print("\n%d filas resueltas por %s" % (escritas - nd, codigo))
+    if nd:
+        print("%d fila(s) devueltas como no decidibles: siguen marcadas REVISAR con la "
+              "razon en notes." % nd)
 
     filas = cargar()
     falla = defaultdict(bool)

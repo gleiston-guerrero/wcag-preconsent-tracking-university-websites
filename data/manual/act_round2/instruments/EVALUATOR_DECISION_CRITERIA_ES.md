@@ -2,8 +2,11 @@
 
 *English version: [EVALUATOR_DECISION_CRITERIA.md](EVALUATOR_DECISION_CRITERIA.md)*
 
-Segundo documento del segundo evaluador. Léalo **después** de haber ejecutado el
-script en los quince sitios y **antes** de rellenar ninguna casilla.
+Segundo documento del segundo evaluador, para la **segunda fase** del trabajo. La
+primera, la recogida con el script en los quince sitios, ya está hecha. Lo que
+queda es resolver las filas que la regla remite al juicio humano, y se resuelven
+en dos hojas de texto plano, `hoja_r04_111.txt` y `hoja_r04_244.txt`, no en los
+CSV. Lea este documento **antes** de escribir nada en las hojas.
 
 El script ya ha decidido todo lo que la regla define de forma mecánica. Lo que
 queda son las filas marcadas `REVISAR`, donde la regla ACT remite explícitamente
@@ -17,18 +20,28 @@ para no condicionar su criterio.
 
 ## Regla única de decisión
 
-En cada fila `REVISAR`, escriba en la columna `outcome` una de dos palabras:
+Cada fila es un bloque de la hoja. En cada bloque, escriba después de
+`RESULTADO:` una de estas palabras:
 
 | | |
 |---|---|
 | `cumple` | El elemento satisface la expectativa de la regla |
 | `falla` | No la satisface |
+| `no-visible` | No se puede juzgar: el elemento ya no está en la página, o la imagen no se puede ver |
 
-**No existe categoría intermedia.** No escriba «parcial», «dudoso», ni deje la
-casilla vacía. Si duda, elija y explique su duda en `justification`.
+**No existe categoría intermedia.** No escriba «parcial», «dudoso», ni deje el
+campo vacío. Si duda entre `cumple` y `falla`, elija y explique su duda.
 
-Rellene siempre la columna `justification` con una frase. Esa frase es lo que
-permitirá reconciliar las discrepancias después.
+`no-visible` no es una tercera categoría de juicio: es la constancia de que no
+hubo nada que juzgar. Esas filas quedan registradas como no decidibles y no entran
+en ninguna comparación. Úselo solo cuando de verdad no haya nada que mirar, nunca
+para evitar una decisión difícil.
+
+Escriba siempre una frase después de `JUSTIFICACION:`. Esa frase es lo que
+permitirá reconciliar las discrepancias después, y en el caso de `no-visible` debe
+decir qué fue lo que no pudo ver. La herramienta que devuelve las hojas al CSV
+rechaza la hoja completa, sin escribir nada, si algún bloque queda vacío, lleva
+una palabra que no sea una de las tres, o no lleva justificación.
 
 ---
 
@@ -56,14 +69,20 @@ nombre no corresponde a lo que se representa.
 
 ### Qué hacer en la práctica
 
-1. Abra la dirección de la columna `src` o localice el elemento con el `selector`.
+1. Abra la dirección de la línea `imagen` del bloque, o localice el elemento en la
+   página con la línea `selector`.
 2. Mire la imagen.
-3. Lea el nombre accesible.
+3. Lea el nombre accesible, que es la línea `nombre`.
 4. Decida si el segundo sirve el propósito del primero.
 
-Si la imagen no carga o no puede localizarla, escriba `falla` solo si está seguro;
-si no puede verla, deje la fila sin rellenar y **anótelo en su nota de incidencias**.
-Una fila sin resolver es preferible a una resuelta a ciegas.
+Treinta y ocho de los 203 bloques de 1.1.1 no traen una dirección utilizable:
+son fondos CSS, `svg` en línea o imágenes que la pasada no llegó a ver. En esos,
+localice el elemento por su selector.
+
+Si aun así la imagen no se puede ver, escriba `no-visible` y diga en la
+justificación qué buscó y qué encontró. No escriba `falla` por no haber podido
+mirar: eso no es un juicio, y una fila registrada como no decidible es preferible
+a una resuelta a ciegas.
 
 ### Casos que encontrará y cómo tratarlos
 
@@ -101,9 +120,14 @@ está en:
 `article` que envuelva la sección, ni el texto que se ve cerca en pantalla, ni lo
 que usted deduzca del diseño de la página.
 
-El script ya ha extraído el contexto válido y lo ha puesto en la columna
-`programmatic_context`. Cuando esa columna dice `SIN CONTEXTO PROGRAMATICO`,
-significa que **no hay ninguno**: debe juzgar el nombre accesible por sí solo.
+El script ya ha extraído el contexto válido y lo ha puesto en la línea `contexto`
+del bloque. Cuando esa línea dice `SIN CONTEXTO PROGRAMATICO`, significa que **no
+hay ninguno**: debe juzgar el nombre accesible por sí solo.
+
+La hoja de 2.4.4 no le da la dirección de la página, y es a propósito: la regla no
+le permite considerar lo que se ve alrededor del enlace. Lo que la regla admite es
+el nombre, el contexto de esa lista cerrada y el destino, y las tres cosas están
+en el bloque.
 
 ### Ejemplos oficiales del W3C
 
@@ -123,7 +147,7 @@ contexto determinado programáticamente aunque se lea justo al lado.
 
 ### Qué hacer en la práctica
 
-Lea el nombre accesible y el contexto de la columna. Pregúntese: **¿podría alguien
+Lea las líneas `nombre` y `contexto` del bloque. Pregúntese: **¿podría alguien
 que solo oye esto saber adónde lleva el enlace?**
 
 Un usuario de lector de pantalla puede navegar saltando de enlace en enlace, sin
@@ -137,8 +161,15 @@ oír el resto de la página. Esa es la situación que la regla contempla.
 sirven un propósito equivalente.
 
 El script solo genera estas filas cuando ha encontrado **dos o más enlaces con
-nombre y contexto idénticos que apuntan a destinos distintos**, y le indica cuáles
-son esos destinos en la columna `notes`.
+nombre y contexto idénticos que apuntan a destinos distintos**. Hay tres bloques
+así. Cada uno le da el nombre compartido, el contexto, la dirección de la página y
+el destino de cada uno de los enlaces del grupo.
+
+Aquí sí tiene la dirección de la página, porque la pregunta es sobre los destinos
+y **los destinos vienen recortados a 60 caracteres** por el recolector. En el
+bloque de Cornell los dos destinos coinciden hasta el corte: son la misma
+dirección con parámetros de seguimiento distintos, y la única forma de verlo es
+abrir la página y mirar los dos enlaces.
 
 **La pregunta:** ¿esos destinos distintos sirven el mismo propósito?
 
@@ -150,17 +181,15 @@ el mismo nombre que lleven a contenidos sin relación entre sí, no.
 
 ## Cuánto tiene que revisar
 
-Puede detenerse antes de terminar, y conviene que sepa por qué.
+Las dos hojas traen **318 bloques**: 203 del criterio 1.1.1 y 115 del 2.4.4. No
+son todas las filas que su recogida dejó marcadas `REVISAR`, que son 1 351, sino
+solo las que todavía deciden el veredicto de un sitio. Las otras 1 033 pertenecen
+a criterios que ya fallan en su sitio por otro elemento, así que resolverlas no
+cambiaría ningún resultado y no se le piden.
 
-Un criterio **no se satisface** en un sitio en cuanto **un** elemento aplicable
-falla. Si al revisar las filas de un criterio en un sitio encuentra un `falla`
-claro, el veredicto de ese sitio ya está decidido y las filas restantes de ese
-mismo criterio y sitio no lo cambiarán.
-
-Sin embargo, **para esta comparación conviene que las resuelva todas**, porque el
-acuerdo se mide fila a fila y no solo sitio a sitio. Si el volumen resulta
-inabordable, resuelva al menos todas las filas de los criterios que no tengan
-ningún `falla` previo, y avise de dónde se detuvo.
+**Resuelva los 318.** La herramienta no acepta hojas a medias: rechaza la hoja
+completa si queda un solo bloque sin responder. Si el volumen resulta inabordable,
+dígalo antes de empezar y se parte el trabajo por sitios.
 
 ---
 
@@ -174,14 +203,21 @@ ninguna herramienta puede hacer.
 
 **No pregunte cuál es el resultado esperado.** No hay resultado esperado.
 
-**No modifique ninguna otra columna** del CSV. Solo `outcome` y `justification`.
+**No modifique las líneas de datos ni las cabeceras** `=== NNN | ... ===` de las
+hojas. Escriba solo después de `RESULTADO:` y de `JUSTIFICACION:`.
+
+**No abra las hojas con Excel ni con ninguna hoja de cálculo.** Son texto plano a
+propósito, porque las justificaciones llevan comas, comillas y punto y coma, y una
+hoja de cálculo las destroza. Use el Bloc de notas, Notepad++ o VS Code, y guarde
+en UTF-8.
 
 ---
 
 ## Qué entregar
 
-Los quince CSV con las columnas `outcome` y `justification` rellenas en las filas
-`REVISAR`, sin renombrar los ficheros, más su nota de incidencias.
+Las dos hojas, `hoja_r04_111.txt` y `hoja_r04_244.txt`, rellenas y sin renombrar,
+más su nota de incidencias. Nada más: los CSV no se tocan, de eso se encarga la
+herramienta al recibir las hojas.
 
 Si en algún momento le pareció que la regla no cubría bien un caso, dígalo en la
 nota. Ese tipo de observación es tan útil como la codificación misma.
