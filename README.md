@@ -31,6 +31,7 @@ This repository is that clean start. Every file here was checked for identifying
 | Multi-vantage replication | 15 August 2026, 15:58–23:10 UTC |
 | Extended five-vantage campaign | 16 August 2026, 03:46–19:57 UTC |
 | Telconet operator control | 7 September 2026, 22:00–23:07 UTC |
+| ETAPA September series | 14 September 2026, 21:49–23:25 UTC |
 | Manual validation, rounds 1–2 | 25 August, 27 August, 1–2 September 2026 |
 | ACT round | 8 September 2026 |
 
@@ -50,7 +51,7 @@ The deposit holds **two reported measurements that must not be mixed**:
 
 The two differ in date, in the set of retained sites and in consolidation rule, and their tracking figures are not interchangeable. `CODEBOOK.md` sets out the relation between them.
 
-Two further campaigns are released but **not analysed in the article**: an extended five-vantage campaign of 16 August, and an operator control from a second Ecuadorian ISP on 7 September. Both are described below.
+Three further campaigns are released but **not analysed in the article**: an extended five-vantage campaign of 16 August, an operator control from a second Ecuadorian ISP on 7 September, and a second ETAPA series on 14 September that makes that control interpretable and isolates the effect of the date. All three are described below.
 
 ---
 
@@ -74,6 +75,10 @@ data/
                         Switzerland. NOT analysed in the article.
     tracking_telconet/  9 files of an operator control from a second Ecuadorian
                         ISP. NOT analysed in the article.
+    tracking_etapa_september/
+                        9 files of a second ETAPA series, one month after the
+                        reported campaign: same operator, city and machine.
+                        NOT analysed in the article.
   manual/             manual validation of three success criteria on 15 sites:
                         four coding rounds, 39 CSV tables, 45 screenshots,
                         the collection instruments and their data dictionary.
@@ -87,7 +92,7 @@ code/
                       axe/                   dependencies of the single pass
                       extended/              instrument and launchers of the
                                              five-vantage campaign
-  analysis/           twenty-two scripts; see "Reproduction"
+  analysis/           twenty-three scripts; see "Reproduction"
 docs/
   reports/            four HTML cookie reports
 figures/              the six figures of the article, in PDF
@@ -118,9 +123,17 @@ Each `meta_*.json` records seven location checks per pass — at the start, afte
 
 `data/raw/tracking_extended/` holds a later campaign, 16 August 2026, that adds a Swiss vantage point and uses a more recent build of the instrument. **The article does not analyse it.** It is released because the measurements exist and are valid, not as support for any figure in the text. It is not an extension of the reported campaign but an independent measurement, with a different instrument, a different set of passes and a different date. Any analysis using it must treat it separately.
 
-### The Telconet operator control
+### The two Ecuadorian controls
 
-`data/raw/tracking_telconet/` holds three passes over the 126 sites from a residential Ecuadorian connection of Telconet S.A. (AS27947, Guayaquil), on 7 September 2026. Its purpose is narrow: the reported campaign measured the Ecuadorian vantage point from ETAPA EP (AS27668, Cuenca), and this series checks whether the Ecuadorian result depends on the network operator. **The article does not analyse it**, and it must not be merged with either of the campaigns above. See `data/raw/tracking_telconet/READ_ME.md`.
+The reported campaign measured Ecuador from a single connection on a single day: ETAPA EP (AS27668, Cuenca), 15 August 2026. Two further series test whether that result depends on the operator or on the date. **The article analyses neither of them**, and neither may be merged with the campaigns above.
+
+`data/raw/tracking_telconet/` holds three passes over the 126 sites from a residential Ecuadorian connection of Telconet S.A. (AS27947, Guayaquil), on 7 September 2026, on a different machine of the same specification.
+
+`data/raw/tracking_etapa_september/` holds three passes from the same ETAPA connection and the same machine as the August campaign, on 14 September 2026. It serves two purposes: it gives the Telconet series a same-month counterpart, so that the operator comparison no longer confounds operator with date, and it isolates the date against the August campaign, holding operator, city, machine, instrument and Node version fixed.
+
+`code/analysis/controles_ecuador.py` reports both contrasts from the raw passes. Neither shows a difference: the operator contrast gives 86 of 126 sites tracking against 84, four discordant pairs, exact McNemar *p* = 0.625; the date contrast gives 68.0 per cent on both occasions, two discordant sites in a month, *p* = 1.000. So the Ecuadorian result is not an artefact of the network operator and not an artefact of the day of measurement — and the second figure puts a number on the caveat, repeated throughout this deposit, that the sites change from one day to the next.
+
+See `data/raw/tracking_telconet/READ_ME.md` and `data/raw/tracking_etapa_september/READ_ME.md` for the measurement conditions and for what each contrast can and cannot separate.
 
 ---
 
@@ -169,6 +182,7 @@ python sensitivity_sampling.py       # sensitivity of the benchmark group
 python figures_uais.py               # five of the six figures
 python fig_vantage.py                # vendor-by-vantage figure
 python verify_multivantage.py        # the whole multi-vantage results section
+python controles_ecuador.py          # the two Ecuadorian controls: operator and date
 python sensitivity_inclusion.py ../../data/raw/tracking
 python kappa_wcag.py                 # agreement of the manual validation
 python extract_documentary_matrix.py # documentary matrix from the appendices

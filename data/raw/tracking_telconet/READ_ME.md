@@ -19,7 +19,23 @@ Node v24.18.1.
 
 It records the state of the cookie jar, not the network requests.
 
-Measurement conditions: same machine and same security configuration as in
-August. Microsoft Defender inactive, McAfee installed with no web-protection or
-anti-tracking services running. Chromium is launched with a clean profile and no
-extensions.
+Measurement conditions: **a different machine from the one used in August**, of
+the same specification and with the same security software installed — Microsoft
+Defender inactive, McAfee installed with no web-protection or anti-tracking
+services running. Chromium is launched with a clean profile and no extensions.
+An earlier version of this file said "same machine"; that was wrong and is
+corrected here. The different Node version recorded in the metadata is a
+consequence of the different machine.
+
+The machine therefore varies alongside the operator in this comparison, and the
+comparison cannot separate the two. What makes that tolerable is the outcome:
+`code/analysis/controles_ecuador.py` finds no difference, so the Ecuadorian
+result survives two changes at once rather than one. Had a difference appeared,
+this series alone could not have said whether the operator or the machine caused
+it.
+
+Since 14 September 2026 there is a third Ecuadorian series,
+`../tracking_etapa_september/`, three passes from ETAPA one week after these.
+That one holds the machine, the city and the Node version fixed against the
+August campaign, so the two series answer different questions and the same script
+reports both.

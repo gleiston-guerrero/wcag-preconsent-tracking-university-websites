@@ -31,6 +31,7 @@ Este repositorio es ese comienzo limpio. Cada archivo se revisó en busca de con
 | Réplica multipunto | 15 de agosto de 2026, 15:58–23:10 UTC |
 | Campaña extendida de cinco puntos | 16 de agosto de 2026, 03:46–19:57 UTC |
 | Control de operador Telconet | 7 de septiembre de 2026, 22:00–23:07 UTC |
+| Serie ETAPA de septiembre | 14 de septiembre de 2026, 21:49–23:25 UTC |
 | Validación manual, rondas 1–2 | 25 de agosto, 27 de agosto, 1–2 de septiembre de 2026 |
 | Ronda ACT | 8 de septiembre de 2026 |
 
@@ -50,7 +51,7 @@ El depósito contiene **dos mediciones reportadas que no deben mezclarse**:
 
 Las dos difieren en fecha, en el conjunto de sitios retenidos y en la regla de consolidación, y sus cifras de rastreo no son intercambiables. `CODEBOOK.md` establece la relación entre ambas.
 
-Se publican además otras dos campañas que **el artículo no analiza**: una campaña extendida de cinco puntos del 16 de agosto y un control de operador desde un segundo proveedor ecuatoriano el 7 de septiembre. Ambas se describen más abajo.
+Se publican además otras tres campañas que **el artículo no analiza**: una campaña extendida de cinco puntos del 16 de agosto, un control de operador desde un segundo proveedor ecuatoriano el 7 de septiembre, y una segunda serie de ETAPA del 14 de septiembre que hace interpretable ese control y aísla el efecto de la fecha. Las tres se describen más abajo.
 
 ---
 
@@ -74,6 +75,10 @@ data/
                         incluida Suiza. NO analizada en el artículo.
     tracking_telconet/  9 archivos de un control de operador desde un segundo
                         proveedor ecuatoriano. NO analizado en el artículo.
+    tracking_etapa_september/
+                        9 archivos de una segunda serie de ETAPA, un mes después
+                        de la campaña reportada: mismo operador, ciudad y
+                        máquina. NO analizada en el artículo.
   manual/             validación manual de tres criterios de conformidad en 15
                         sitios: cuatro rondas de codificación, 39 tablas CSV,
                         45 capturas de pantalla, los instrumentos de recolección
@@ -87,7 +92,7 @@ code/
                       axe/                   dependencias de la pasada única
                       extended/              instrumento y lanzadores de la
                                              campaña de cinco puntos
-  analysis/           veintidós scripts; véase «Reproducción»
+  analysis/           veintitrés scripts; véase «Reproducción»
 docs/
   reports/            cuatro informes HTML de cookies
 figures/              las seis figuras del artículo, en PDF
@@ -118,9 +123,17 @@ Cada `meta_*.json` registra siete controles de ubicación por pasada —al inici
 
 `data/raw/tracking_extended/` contiene una campaña posterior, del 16 de agosto de 2026, que añade un punto suizo y usa una construcción más reciente del instrumento. **El artículo no la analiza.** Se publica porque las mediciones existen y son válidas, no como respaldo de ninguna cifra del texto. No es una ampliación de la campaña reportada, sino una medición independiente, con otro instrumento, otro conjunto de pasadas y otra fecha. Cualquier análisis que la use debe tratarla por separado.
 
-### El control de operador Telconet
+### Los dos controles ecuatorianos
 
-`data/raw/tracking_telconet/` contiene tres pasadas sobre los 126 sitios desde una conexión residencial ecuatoriana de Telconet S.A. (AS27947, Guayaquil), el 7 de septiembre de 2026. Su propósito es estrecho: la campaña reportada midió el punto ecuatoriano desde ETAPA EP (AS27668, Cuenca), y esta serie comprueba si el resultado ecuatoriano depende del operador de red. **El artículo no la analiza**, y no debe fusionarse con ninguna de las campañas anteriores. Véase `data/raw/tracking_telconet/READ_ME.md`.
+La campaña reportada midió Ecuador desde una sola conexión y en un solo día: ETAPA EP (AS27668, Cuenca), 15 de agosto de 2026. Dos series adicionales comprueban si ese resultado depende del operador o de la fecha. **El artículo no analiza ninguna de las dos**, y ninguna debe fusionarse con las campañas anteriores.
+
+`data/raw/tracking_telconet/` contiene tres pasadas sobre los 126 sitios desde una conexión residencial ecuatoriana de Telconet S.A. (AS27947, Guayaquil), el 7 de septiembre de 2026, en otra máquina de las mismas características.
+
+`data/raw/tracking_etapa_september/` contiene tres pasadas desde la misma conexión de ETAPA y la misma máquina de la campaña de agosto, el 14 de septiembre de 2026. Sirve a dos propósitos: da a la serie de Telconet una contraparte del mismo mes, de modo que la comparación de operador deje de confundir operador con fecha, y aísla la fecha frente a la campaña de agosto, manteniendo fijos el operador, la ciudad, la máquina, el instrumento y la versión de Node.
+
+`code/analysis/controles_ecuador.py` reporta los dos contrastes desde las pasadas crudas. Ninguno muestra diferencia: el de operador da 86 de 126 sitios con rastreo frente a 84, cuatro pares discordantes, McNemar exacta *p* = 0,625; el de fecha da el 68,0 % en las dos ocasiones, dos sitios discordantes en un mes, *p* = 1,000. El resultado ecuatoriano no es, por tanto, un artefacto del operador de red ni un artefacto del día de medición, y la segunda cifra pone número a la advertencia, repetida en todo este depósito, de que los sitios cambian de un día para otro.
+
+Véanse `data/raw/tracking_telconet/READ_ME_ES.md` y `data/raw/tracking_etapa_september/READ_ME_ES.md` para las condiciones de medición y para lo que cada contraste puede y no puede separar.
 
 ---
 
@@ -169,6 +182,7 @@ python sensitivity_sampling.py       # sensibilidad del grupo de referencia
 python figures_uais.py               # cinco de las seis figuras
 python fig_vantage.py                # figura de proveedor por punto
 python verify_multivantage.py        # toda la sección de resultados multipunto
+python controles_ecuador.py          # los dos controles ecuatorianos: operador y fecha
 python sensitivity_inclusion.py ../../data/raw/tracking
 python kappa_wcag.py                 # acuerdo de la validación manual
 python extract_documentary_matrix.py # matriz documental desde los apéndices

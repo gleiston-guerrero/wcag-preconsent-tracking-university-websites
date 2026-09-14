@@ -1,0 +1,75 @@
+# Ecuadorian series from ETAPA, 14 September 2026
+
+*Versión en español: [READ_ME_ES.md](READ_ME_ES.md)*
+
+Three passes over the 126 sites of the census, from the same Ecuadorian
+residential connection of ETAPA EP (AS27668, Cuenca) that the reported campaign
+used, with no virtual private network.
+
+This series exists for two reasons, and it answers a different question in each.
+
+**It completes the operator control.** `../tracking_telconet/` measures the census
+from a second Ecuadorian operator, but it was taken on 7 September, three weeks
+after the reported campaign of 15 August, so comparing it with that campaign
+mixed the operator with the date. Compared against this series instead, both
+sides are from September and the date stops varying.
+
+**It isolates the date.** Against the August campaign, this series holds the
+operator, the city, the machine, the instrument, the Node version and the
+configuration fixed, and varies only the month. It is the only comparison in the
+deposit that does. The deposit warns in several places that the sites change from
+one day to the next; this is the figure behind that warning.
+
+`code/analysis/controles_ecuador.py` reports both contrasts and aborts if they do
+not match the figures given below.
+
+**This series is not part of the four-vantage replication and the article does
+not analyse it.** It must not be merged with `../tracking/` or with
+`../tracking_extended/`.
+
+## Measurement conditions
+
+| | |
+|---|---|
+| Passes | 3, run consecutively on 14 September 2026, 21:49–23:25 UTC |
+| Duration | 19 minutes each |
+| Sites | 126 attempted, **126 successful and 0 failed in all three passes** |
+| Location checks | 7 per pass, 21 in total: at the start, after sites 25, 50, 75, 100 and 125, and at the end. All 21 returned `AS27668 ETAPA EP`, Cuenca, with the same IPv4 address throughout |
+| Machine | the same machine as the August campaign, same security configuration: Microsoft Defender inactive, McAfee installed with no web-protection or anti-tracking services running |
+| Instrument | `code/collection/audit_multivantage.js`, unmodified |
+| Versions | axe-core 4.13.0, Playwright 1.62.1, Node v24.18.1 — the same Node as the August campaign |
+| Browser | Chromium launched with a clean profile and no extensions |
+
+It records the state of the cookie jar, not the network requests, like the
+campaigns it is compared with.
+
+## What the two contrasts give
+
+A site is counted as tracking if any cookie set before any consent interaction
+matches the extended taxonomy, with the three passes of each series consolidated
+by majority — the same construction the article uses. The test is the two-sided
+exact McNemar test on the discordant pairs.
+
+**Stability within this series: 126 of 126 sites return the same verdict in all
+three passes.** The August campaign gives 123 of 124 and the Telconet series 122
+of 126.
+
+| Contrast | n | Tracking | a, b, c, d | Discordant | p |
+|---|---|---|---|---|---|
+| Operator: ETAPA vs Telconet, both September | 126 | 86 (68.3 %) vs 84 (66.7 %) | 83, 3, 1, 39 | 4 | 0.625 |
+| Date: ETAPA September vs ETAPA August | 125 | 85 (68.0 %) vs 85 (68.0 %) | 84, 1, 1, 39 | 2 | 1.000 |
+
+The operator contrast still varies the machine and the city alongside the
+operator, because the Telconet series was taken on a different machine. It
+therefore moves three things at once and cannot separate them; it is conclusive
+only because no difference appears. Had one appeared, this pair of series could
+not have said which of the three caused it.
+
+The date contrast is the clean one. Two sites of 125 changed verdict in a month,
+ULVR and UPenn, in opposite directions. Both proportions are 68.0 %, and they
+agree with the 67.8 % the article reports for Ecuador in the multi-vantage
+section.
+
+Neither contrast supports any figure in the article. What they establish is
+negative and worth having: the Ecuadorian result is not an artefact of the
+network operator, and it is not an artefact of the day it was measured.
