@@ -104,11 +104,6 @@ no conforme da 73,3 % con kappa 0,226 sobre 12. En el esquema binario, 11 de eso
 desacuerdos van hacia la no conformidad, que es lo que la enumeración exhaustiva le hace a
 los veredictos obtenidos muestreando una proporción de los elementos.
 
-Hasta la versión 2.0.0 de este depósito, los README de `act_round2/` reportaban esta
-comparación como 62,2 % de acuerdo con kappa 0,201 sobre 17 desacuerdos. Ninguno de los dos
-esquemas da esas cifras, no se pudieron recalcular desde los archivos depositados y se
-retiraron. `CHANGELOG_ES.md` registra la retirada.
-
 `kappa_wcag.py`, en `code/analysis/`, calcula la kappa de los cinco sitios de doble
 codificación de `wcag_kappa_pairs.csv`: 0,517 excluyendo la pareja con evidencia
 contradictoria y 0,457 incluyéndola. `kappa_rondas.py`, en la misma carpeta, reproduce

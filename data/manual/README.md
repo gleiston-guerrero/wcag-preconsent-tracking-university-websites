@@ -102,11 +102,6 @@ conforming gives 73.3 per cent with a kappa of 0.226 over 12. In the binary sche
 those 12 disagreements run toward non-conformity, which is what exhaustive enumeration does
 to verdicts reached by sampling a proportion of the elements.
 
-Until version 2.0.0 of this deposit the READMEs of `act_round2/` reported this comparison as
-62.2 per cent agreement with a kappa of 0.201 over 17 disagreements. Neither scheme yields
-those numbers, they could not be recomputed from the deposited files, and they were
-withdrawn. `CHANGELOG.md` records the withdrawal.
-
 `kappa_wcag.py`, in `code/analysis/`, computes the kappa of the five double-coded sites of
 `wcag_kappa_pairs.csv`: 0.517 excluding the pair with contradictory evidence and 0.457
 including it. `kappa_rondas.py`, in the same folder, reproduces every figure of this

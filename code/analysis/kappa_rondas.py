@@ -34,9 +34,7 @@ ESPERADO = {
     "R01 vs ronda1": (0.375, 0.737),
     "R01 vs D01": (0.192, 0.324),
     "ronda1 vs D01": (0.457, 0.359),
-    # Comparacion de la ronda 1 con la ronda ACT del 8-9 de septiembre. Sustituye
-    # al 62,2 % con kappa 0,201 que declararon los README de act_round2 hasta la
-    # version 2.0.0 y que no se reproduce desde los ficheros depositados.
+    # Comparacion de la ronda 1 con la ronda ACT del 8-9 de septiembre.
     "act_tri": (45, 0.378, 0.097, 28),
     "act_bin": (45, 0.733, 0.226, 12),
     "act_direccion": (1, 11),
@@ -171,8 +169,7 @@ def veredictos_act():
 
 
 def ronda_act(r1):
-    """La comparacion de la ronda 1 con la ronda ACT, que sustituye a la cifra
-    retirada en la version 2.0.0 del deposito."""
+    """La comparacion de la ronda 1 con la ronda ACT."""
     act = veredictos_act()
     comunes = sorted(set(r1) & set(act))
     print("")
@@ -212,10 +209,6 @@ def ronda_act(r1):
     if (sube, baja) != ESPERADO["act_direccion"]:
         sys.exit("DISCREPANCIA en la direccion: %d/%d, reportados %d/%d"
                  % ((sube, baja) + ESPERADO["act_direccion"]))
-    print("")
-    print("  Hasta la version 2.0.0 los README de act_round2 declaraban 62,2 % de")
-    print("  acuerdo con kappa 0,201 y 17 desacuerdos para esta comparacion.")
-    print("  Ninguno de los dos esquemas da esas cifras, y por eso se retiraron.")
 
 
 if __name__ == "__main__":

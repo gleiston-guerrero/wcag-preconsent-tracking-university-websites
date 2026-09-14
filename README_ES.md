@@ -92,7 +92,6 @@ docs/
   reports/            cuatro informes HTML de cookies
 figures/              las seis figuras del artículo, en PDF
 CODEBOOK.md           definición de cada columna de cada tabla
-CHANGELOG_ES.md       qué cambió en cada versión publicada y qué se retiró
 CHECKSUMS.txt         SHA-256 de cada archivo del depósito
 ```
 
@@ -224,12 +223,6 @@ Cinco sitios quedan fuera del análisis pareado entre puntos de observación por
 El campo `https` de `results.json` informa `true` para los 126 sitios. Es un artefacto: Playwright rechaza los certificados inválidos como fallos de carga, de modo que un sitio con una cadena deficiente nunca llega a auditarse. Una comprobación manual en navegador identificó los cinco sitios ecuatorianos afectados; están registrados en `data/processed/tls_deficiencies_august2026.csv`.
 
 La taxonomía de cookies de rastreo se amplió después de la recolección, una vez inspeccionados los nombres de cookie observados, y se aplicó reclasificando los nombres almacenados, sin volver a medir. `data/processed/cookies_unclassified_names.csv` lista los 243 nombres distintos que no coinciden con ninguna familia conocida, para que la clasificación pueda discutirse.
-
----
-
-## Versiones de este depósito
-
-`CHANGELOG_ES.md` registra qué cambió en cada versión publicada y, cuando se retiró una cifra, por qué. La versión **1.0.0** del registro de Zenodo se publicó el 5 de septiembre de 2026, cuatro días antes de que existiera este repositorio, y se armó con el material que describe *Historia de este repositorio*, más arriba. Su inventario de archivos no es, por tanto, el que fija `CHECKSUMS.txt`, y cualquier estadístico de acuerdo que llevara debe leerse contra la entrada de 2.0.0 de `CHANGELOG_ES.md`, que dice qué cifras se retiraron y por qué. Quien cite el DOI de concepto llega a la última versión.
 
 ---
 

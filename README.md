@@ -92,7 +92,6 @@ docs/
   reports/            four HTML cookie reports
 figures/              the six figures of the article, in PDF
 CODEBOOK.md           definition of every column of every table
-CHANGELOG.md          what changed in each published version, and what was withdrawn
 CHECKSUMS.txt         SHA-256 of every file in the deposit
 ```
 
@@ -224,12 +223,6 @@ Five sites fall out of the paired analysis across vantage points because they fa
 The `https` field of `results.json` reports `true` for all 126 sites. This is an artefact: Playwright rejects invalid certificates as load failures, so a site with a deficient chain never reaches the audit at all. A manual browser check identified the five Ecuadorian sites concerned; they are recorded in `data/processed/tls_deficiencies_august2026.csv`.
 
 The tracking-cookie taxonomy was extended after collection, once the observed cookie names had been inspected, and was applied by reclassifying the stored names, with no re-measurement. `data/processed/cookies_unclassified_names.csv` lists the 243 distinct names that match no known family, so that the classification can be contested.
-
----
-
-## Versions of this deposit
-
-`CHANGELOG.md` records what changed in each published version and, where a figure was withdrawn, why. Version **1.0.0** of the Zenodo record was published on 5 September 2026, four days before this repository was created, and was assembled from the material described under *Repository history* above. Its file inventory is therefore not the one `CHECKSUMS.txt` fixes, and any agreement statistic it carried must be read against the `CHANGELOG.md` entry for 2.0.0, which states which figures were withdrawn and why. Anyone citing the concept DOI reaches the latest version.
 
 ---
 
