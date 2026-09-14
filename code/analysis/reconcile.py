@@ -2,8 +2,14 @@
 """Reconcilia el inventario de 126 sitios con los datos embebidos en los informes HTML."""
 import csv, json, re
 
-comb = json.load(open("../../data/interim/_comb.json"))
-anex = json.load(open("../../data/interim/_anex.json"))
+# La codificacion se declara siempre: sin ella, open() usa la pagina de codigos
+# del sistema, que en Windows no es UTF-8, y los acentos de los JSON intermedios
+# se leen mal y se reescriben doblemente codificados en cookies_126_sites_v2.csv
+# y, por derivacion, en la v3.
+with open("../../data/interim/_comb.json", encoding="utf-8") as fh:
+    comb = json.load(fh)
+with open("../../data/interim/_anex.json", encoding="utf-8") as fh:
+    anex = json.load(fh)
 R    = list(csv.DictReader(open("../../data/interim/cookies_126_sites.csv", encoding="utf-8")))
 cm = {r["sigla"]: r for r in comb}
 am = {r["sigla"]: r for r in anex}

@@ -92,6 +92,13 @@ because material was added.
   Python 3.10 or later, because matplotlib 3.10.9 does not install on 3.9, while the
   statistical scripts run on 3.9.13 with numpy 2.0.2 and scipy 1.13.1 and give identical
   output.
+- `reconcile.py` read the two intermediate JSON files without declaring their encoding.
+  On Linux that is UTF-8 and the accents survive; on Windows `open()` uses the system code
+  page, so every accented character was read wrongly and written back double-encoded into
+  `cookies_126_sites_v2.csv` and, by derivation, into the v3. A reader who followed the
+  reproduction instructions on Windows therefore corrupted two of the deposited tables and
+  saw 210 lines of spurious difference. The encoding is now declared. The deposited files do
+  not change: they were produced where the default already was UTF-8.
 - The five scripts of the round resolved their inputs against the current working
   directory, two of them expecting the repository root and one expecting
   `code/analysis/`. All of them now resolve against the root of the repository and run from

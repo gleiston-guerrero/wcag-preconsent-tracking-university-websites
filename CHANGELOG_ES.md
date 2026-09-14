@@ -93,6 +93,13 @@ material.
   también que las figuras exigen Python 3.10 o posterior, porque matplotlib 3.10.9 no se
   instala en 3.9, mientras que los scripts estadísticos corren en 3.9.13 con numpy 2.0.2 y
   scipy 1.13.1 y dan salida idéntica.
+- `reconcile.py` leía los dos archivos JSON intermedios sin declarar su codificación. En
+  Linux eso es UTF-8 y los acentos sobreviven; en Windows `open()` usa la página de códigos
+  del sistema, así que cada carácter acentuado se leía mal y se reescribía doblemente
+  codificado en `cookies_126_sites_v2.csv` y, por derivación, en la v3. Quien siguiera las
+  instrucciones de reproducción en Windows corrompía por tanto dos de las tablas depositadas
+  y veía 210 líneas de diferencia espuria. La codificación se declara ahora. Los archivos
+  depositados no cambian: se produjeron donde el valor por omisión ya era UTF-8.
 - Los cinco scripts de la ronda resolvían sus entradas contra el directorio de trabajo, dos
   esperando la raíz del repositorio y uno esperando `code/analysis/`. Todos resuelven ahora
   contra la raíz del repositorio y funcionan desde cualquiera de los dos sitios.
