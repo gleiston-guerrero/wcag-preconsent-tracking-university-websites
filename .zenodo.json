@@ -1,0 +1,46 @@
+{
+  "title": "WCAG conformance and pre-consent tracking on Ecuadorian and top-ranked university websites: audit dataset, multi-vantage measurements and analysis code",
+  "upload_type": "dataset",
+  "language": "eng",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "2.0.0",
+  "creators": [
+    {
+      "name": "Guerrero-Ulloa, Gleiston",
+      "affiliation": "Facultad de Ciencias de la Computacion, Universidad Tecnica Estatal de Quevedo, Quevedo, Ecuador",
+      "orcid": "0000-0001-5990-2357"
+    },
+    {
+      "name": "Zuniga Paredes, Andrea",
+      "affiliation": "Ministerio de Educacion del Ecuador, Quito, Ecuador",
+      "orcid": "0000-0003-4042-1523"
+    },
+    {
+      "name": "Diaz-Macias, Efrain",
+      "affiliation": "Facultad de Ciencias de la Computacion, Universidad Tecnica Estatal de Quevedo, Quevedo, Ecuador",
+      "orcid": "0000-0003-4087-029X"
+    }
+  ],
+  "keywords": [
+    "web accessibility",
+    "WCAG 2.2",
+    "axe-core",
+    "ACT rules",
+    "pre-consent tracking",
+    "cookies",
+    "geo-differential measurement",
+    "higher education",
+    "university websites",
+    "Ecuador",
+    "data protection"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "identifier": "https://github.com/gleiston-guerrero/wcag-preconsent-tracking-university-websites"
+    }
+  ],
+  "description": "<p>Data, evidence and code supporting an audit of 126 university home pages: the complete census of the 63 Ecuadorian higher education institutions and a benchmark of 63 institutions drawn from the consensus of three international rankings.</p><p>The deposit contains the single-pass accessibility and cookie audit of 14 August 2026, the four-vantage replication of the live audit of 15 August 2026, an extended five-vantage campaign and an operator control from a second Ecuadorian ISP that the article does not analyse, the manual validation of three WCAG 2.2 success criteria on a subsample of 15 sites across four coding rounds, and the analysis code that reproduces every reported figure from the raw files.</p><p><strong>Licences.</strong> Data and documentation are released under CC BY 4.0, which is the licence of this record. The code, everything under <code>code/</code>, is released under the MIT licence, stated in <code>LICENSE-CODE</code> in the archive. Zenodo records carry a single licence field, so the MIT licence of the code is declared here rather than in that field.</p><p><strong>Versions.</strong> <code>CHANGELOG.md</code> in the archive records what changed in each published version and, where a figure was withdrawn, why. Version 2.0.0 withdraws an agreement statistic reported over the 45 site-by-criterion cells of the manual validation that could not be recomputed from the deposited files, and adds a script that makes every remaining agreement figure reproducible. Anyone citing this deposit should cite the concept DOI 10.5281/zenodo.22405998, which always resolves to the latest version.</p><p><strong>Integrity.</strong> <code>CHECKSUMS.txt</code> holds a SHA-256 for every file of the archive.</p>"
+}

@@ -70,8 +70,16 @@ that cannot.
 
 ## review_282_rows.csv
 
-The subset of rows whose outcome determines a site-level verdict, extracted for
-review.
+The subset of rows whose outcome determined a site-level verdict when the file was
+extracted: 201 under SC 1.1.1 and 81 under SC 2.4.4.
+
+**Only the 81 rows of SC 2.4.4 carry an outcome.** The other 201 are deliberately left
+empty. By the time the resolution reached them, SC 1.1.1 had already been established as
+failing at every site those rows belong to, through elements resolved in
+`qt1vmo_345_resolved.csv`; a verdict on them can no longer change any cell of the
+fifteen-by-three matrix. `code/analysis/inventario_revisar.py` reports this directly: of
+the rows still marked `REVISAR` in the first coding, none can decide a verdict. Resolving
+them would add completeness to the deposit, not evidence to the article.
 
 Column names in every CSV of this folder are in English; the coded **values** stay in
 Spanish (`mundo`/`ecuador`, `si`/`no`, `cumple`/`falla`, `REVISAR`), which is the
@@ -171,5 +179,6 @@ sampling elements and judging a proportion, and this one enumerates every
 applicable element under ACT rules. The differences between them over the 45
 cells they share reflect that change of instrument — exhaustive enumeration finds
 failures that proportional sampling does not — and not a disagreement between
-people. No agreement statistic is reported for that comparison, because it would
-measure the change of instrument rather than agreement between coders.
+people. That comparison is quantified in `../README.md`, and it is labelled there
+for what it measures: the effect of the change of instrument, never agreement
+between coders. `code/analysis/kappa_rondas.py` reproduces it.

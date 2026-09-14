@@ -33,8 +33,12 @@ import re
 import sys
 from collections import Counter, defaultdict
 
-R02 = "data/manual/act_round2"
-R04 = "data/manual/act_round2/recoding_evaluator2"
+# Rutas resueltas contra la raiz del repositorio: el script funciona igual
+# desde la raiz o desde code/analysis/.
+_RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      os.pardir, os.pardir))
+R02 = os.path.join(_RAIZ, "data", "manual", "act_round2")
+R04 = os.path.join(R02, "recoding_evaluator2")
 RESUELTO = os.path.join(R02, "qt1vmo_345_resolved.csv")
 HOJA = "hoja_cierre_r02.txt"
 CRITERIOS = ("1.1.1", "1.4.3", "2.4.4")
@@ -56,7 +60,7 @@ def filas(ruta):
 def cargar(base, sub="recoding"):
     d = os.path.join(base, sub)
     if not os.path.isdir(d):
-        morir("no existe %s (ejecute desde la raiz del repositorio)" % d)
+        morir("no existe %s (el deposito esta incompleto)" % d)
     out = []
     for f in sorted(glob.glob(os.path.join(d, "*.csv"))):
         for r in filas(f):

@@ -87,11 +87,12 @@ code/
                       axe/                   dependencias de la pasada única
                       extended/              instrumento y lanzadores de la
                                              campaña de cinco puntos
-  analysis/           dieciséis scripts; véase «Reproducción»
+  analysis/           veintidós scripts; véase «Reproducción»
 docs/
   reports/            cuatro informes HTML de cookies
 figures/              las seis figuras del artículo, en PDF
 CODEBOOK.md           definición de cada columna de cada tabla
+CHANGELOG_ES.md       qué cambió en cada versión publicada y qué se retiró
 CHECKSUMS.txt         SHA-256 de cada archivo del depósito
 ```
 
@@ -151,7 +152,7 @@ node audit_multivantage.js --vantage=EC --run=1   # una pasada de un punto
 
 ### Análisis
 
-Todos los scripts de `code/analysis/` se ejecutan **desde ese directorio** y encuentran sus datos por rutas relativas.
+Todos los scripts de `code/analysis/` resuelven sus rutas contra la raíz del repositorio, de modo que pueden ejecutarse desde la raíz o desde `code/analysis/`. Los comandos siguientes usan `code/analysis/` porque ahí está `requirements.txt`.
 
 ```bash
 cd code/analysis
@@ -173,7 +174,22 @@ python extract_documentary_matrix.py # matriz documental desde los apéndices
 python power_analysis.py             # potencia estadística de las comparaciones
 python normalise_acronym.py          # normalización de siglas en el depósito
 python verify_live_divergence.py     # automática vs verificación en vivo: 39 = 35 + 4
+python kappa_rondas.py               # ronda 1 frente a ronda 2 sobre las 45 celdas
 ```
+
+La validación manual de la ronda 2 tiene cinco scripts propios. Leen `data/manual/act_round2/` y no escriben nada salvo donde se indica.
+
+```bash
+python comprobar_brecha.py           # la brecha: codificación manual vs auditoría automática
+python acuerdo_act.py                # acuerdo entre las dos codificaciones ACT
+                                     #   escribe act_agreement_summary.csv y
+                                     #   act_agreement_disagreements.csv
+python inventario_revisar.py         # qué sigue marcado REVISAR y si cambia algo
+python reparar_duplicados.py         # comprobación de duplicados del fichero de resoluciones
+python cerrar_revisar.py hoja        # hoja de las filas que aún deciden un veredicto
+```
+
+`figures_uais.py` y `fig_vantage.py` escriben sus PDF en el directorio actual. Las copias usadas en el artículo son las depositadas en `figures/`; los ficheros regenerados coinciden con ellas en tamaño y contenido para los mismos datos.
 
 `extract_documentary_matrix.py` lee `data/raw/appendix_documentary_tables.tex`, las dos tablas de apéndice del artículo depositadas literalmente, y deriva de ellas la matriz documental. Aborta si los recuentos que obtiene no coinciden con los que reporta el artículo. El artículo en sí no se deposita; solo las dos tablas de las que la matriz se deriva, para que la derivación sea auditable y no una afirmación.
 
@@ -211,9 +227,15 @@ La taxonomía de cookies de rastreo se amplió después de la recolección, una 
 
 ---
 
+## Versiones de este depósito
+
+`CHANGELOG_ES.md` registra qué cambió en cada versión publicada y, cuando se retiró una cifra, por qué. La versión **1.0.0** del registro de Zenodo se publicó el 5 de septiembre de 2026, cuatro días antes de que existiera este repositorio, y se armó con el material que describe *Historia de este repositorio*, más arriba. Su inventario de archivos no es, por tanto, el que fija `CHECKSUMS.txt`, y cualquier estadístico de acuerdo que llevara debe leerse contra la entrada de 2.0.0 de `CHANGELOG_ES.md`, que dice qué cifras se retiraron y por qué. Quien cite el DOI de concepto llega a la última versión.
+
+---
+
 ## Licencias
 
-Datos y documentación bajo **CC BY 4.0** (`LICENSE`). Código bajo **MIT** (`LICENSE-CODE`).
+Datos y documentación bajo **CC BY 4.0** (`LICENSE`). Código bajo **MIT** (`LICENSE-CODE`). El registro de Zenodo lleva un único campo de licencia, CC BY 4.0; la licencia MIT del código se declara en la descripción del registro y en `LICENSE-CODE`, y rige todo lo que hay bajo `code/`.
 
 Los informes HTML de `docs/reports/` incluyen nombres de cookies y de proveedores observados en sitios de terceros. Se publican como evidencia de la observación; los derechos sobre el contenido de esos sitios pertenecen a sus titulares.
 

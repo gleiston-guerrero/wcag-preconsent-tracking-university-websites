@@ -33,8 +33,12 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-AUTO = "data/raw/accessibility/results.json"
-RAIZ_M = "data/manual/act_round2"
+# Rutas resueltas contra la raiz del repositorio: el script funciona igual
+# desde la raiz o desde code/analysis/.
+_RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      os.pardir, os.pardir))
+AUTO = os.path.join(_RAIZ, "data", "raw", "accessibility", "results.json")
+RAIZ_M = os.path.join(_RAIZ, "data", "manual", "act_round2")
 CRITERIOS = ("1.1.1", "1.4.3", "2.4.4")
 NIVEL = {"1.1.1": "A", "1.4.3": "AA", "2.4.4": "A"}
 
@@ -67,7 +71,7 @@ def consolidar():
             falla[(r["abbr"], r["criterion"])] = True
             proc[(r["abbr"], r["criterion"])]["recoding"] += 1
     if not grupo:
-        morir("no encuentro %s/recoding/ (ejecute desde la raiz del repositorio)" % RAIZ_M)
+        morir("no encuentro %s/recoding/ (el deposito esta incompleto)" % RAIZ_M)
 
     # --- fuentes 2 y 3: las resoluciones ------------------------------------
     # Se anota QUE elemento quedo resuelto, en lugar de descontar una unidad de

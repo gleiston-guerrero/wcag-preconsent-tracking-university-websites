@@ -87,11 +87,12 @@ code/
                       axe/                   dependencies of the single pass
                       extended/              instrument and launchers of the
                                              five-vantage campaign
-  analysis/           sixteen scripts; see "Reproduction"
+  analysis/           twenty-two scripts; see "Reproduction"
 docs/
   reports/            four HTML cookie reports
 figures/              the six figures of the article, in PDF
 CODEBOOK.md           definition of every column of every table
+CHANGELOG.md          what changed in each published version, and what was withdrawn
 CHECKSUMS.txt         SHA-256 of every file in the deposit
 ```
 
@@ -151,7 +152,7 @@ node audit_multivantage.js --vantage=EC --run=1   # one pass of one vantage poin
 
 ### Analysis
 
-All scripts in `code/analysis/` are run **from that directory** and find their data by relative paths.
+All scripts in `code/analysis/` resolve their paths against the root of the repository, so they can be run from the root or from `code/analysis/`. The commands below use `code/analysis/` because that is where `requirements.txt` lives.
 
 ```bash
 cd code/analysis
@@ -173,7 +174,22 @@ python extract_documentary_matrix.py # documentary matrix from the appendices
 python power_analysis.py             # statistical power of the comparisons
 python normalise_acronym.py          # acronym normalisation across the deposit
 python verify_live_divergence.py     # automated pass vs live check: 39 = 35 + 4
+python kappa_rondas.py               # round 1 vs round 2 over the 45 shared cells
 ```
+
+The manual validation of round 2 has five scripts of its own. They read `data/manual/act_round2/` and write nothing except where stated.
+
+```bash
+python comprobar_brecha.py           # the gap: manual coding vs automated audit
+python acuerdo_act.py                # agreement between the two ACT codings
+                                     #   writes act_agreement_summary.csv and
+                                     #   act_agreement_disagreements.csv
+python inventario_revisar.py         # what remains marked REVISAR, and whether it matters
+python reparar_duplicados.py         # duplicate check on the resolution file
+python cerrar_revisar.py hoja        # worksheet of the rows that still decide a verdict
+```
+
+`figures_uais.py` and `fig_vantage.py` write their PDFs into the current directory. The copies used in the article are the ones deposited in `figures/`; the regenerated files are byte-identical in size and content for the same data.
 
 `extract_documentary_matrix.py` reads `data/raw/appendix_documentary_tables.tex`, the two appendix tables of the article deposited verbatim, and derives the documentary matrix from them. It aborts if the counts it obtains do not match the ones the article reports. The article itself is not deposited; only the two tables the matrix is derived from, so that the derivation is auditable rather than asserted.
 
@@ -211,9 +227,15 @@ The tracking-cookie taxonomy was extended after collection, once the observed co
 
 ---
 
+## Versions of this deposit
+
+`CHANGELOG.md` records what changed in each published version and, where a figure was withdrawn, why. Version **1.0.0** of the Zenodo record was published on 5 September 2026, four days before this repository was created, and was assembled from the material described under *Repository history* above. Its file inventory is therefore not the one `CHECKSUMS.txt` fixes, and any agreement statistic it carried must be read against the `CHANGELOG.md` entry for 2.0.0, which states which figures were withdrawn and why. Anyone citing the concept DOI reaches the latest version.
+
+---
+
 ## Licences
 
-Data and documentation under **CC BY 4.0** (`LICENSE`). Code under **MIT** (`LICENSE-CODE`).
+Data and documentation under **CC BY 4.0** (`LICENSE`). Code under **MIT** (`LICENSE-CODE`). The Zenodo record carries a single licence field, CC BY 4.0; the MIT licence of the code is stated in the record description and in `LICENSE-CODE`, and it governs everything under `code/`.
 
 The HTML reports in `docs/reports/` include cookie and vendor names observed on third-party sites. They are published as evidence of the observation; rights over the content of those sites belong to their owners.
 

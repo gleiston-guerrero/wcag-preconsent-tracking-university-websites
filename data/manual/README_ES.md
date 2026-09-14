@@ -8,6 +8,13 @@ Los criterios son **1.1.1** contenido no textual, **1.4.3** contraste (mínimo) 
 propósito del enlace (en contexto), todos de WCAG 2.2, publicada además como
 ISO/IEC 40500:2025.
 
+**Cómo se eligieron los quince sitios.** La submuestra se seleccionó de forma intencional,
+para cubrir los dos grupos y un rango de resultados automatizados, y el criterio no quedó
+registrado por escrito en su momento. No se puede reconstruir ahora, de modo que se declara
+aquí por lo que es: una selección intencional de regla no registrada. Nada de lo medido en
+estos quince sitios se extrapola a los 126 del censo, y el artículo no los presenta como una
+muestra probabilística.
+
 La carpeta contiene **dos rondas de codificación por evaluadores distintos**, más el
 instrumento preparado para una tercera. No deben fusionarse: cada ronda usó un esquema de
 codificación diferente, y la diferencia entre ellas es en sí misma un hallazgo.
@@ -56,28 +63,60 @@ acuerdo, para esos cinco sitios.
 
 ---
 
-## Qué muestra el acuerdo entre rondas
+## Qué muestra la comparación entre rondas
 
-Calculado sobre las 45 celdas que comparten la ronda 1 y la ronda 2:
+Calculado sobre las 45 celdas que comparten la ronda 1 y la ronda 2, tomando la ronda 1 de
+la columna `code` de `wcag_validation_15_sites.csv` y la ronda 2 de la columna `code` de
+`recoding_111.csv`, `recoding_143.csv` y `recoding_244.csv`:
 
 | Esquema de codificación | Acuerdo observado | Kappa de Cohen | IC 95 % |
 |---|---|---|---|
-| Tres categorías (`1` / `P` / `0`) | 60,0 % | 0,399 | [0,18, 0,60] |
-| Binario (`P` contado como no conforme) | 80,0 % | 0,590 | [0,35, 0,81] |
+| Tres categorías (`1` / `P` / `0`) | 60,0 % | 0,399 | [0,18, 0,61] |
+| Binario (`P` contado como no conforme) | 80,0 % | 0,590 | [0,35, 0,83] |
+
+**Qué mide este estadístico y qué no.** Las dos rondas no comparten instrumento: la ronda 1
+muestreaba elementos en cada sitio y juzgaba una proporción, y la ronda 2 enumera todos los
+elementos aplicables bajo reglas ACT. Las cifras anteriores cuantifican, por tanto, cuánto
+movió los veredictos el cambio de instrumento. No son una estimación de fiabilidad entre
+codificadores y no deben leerse como tal. La estimación entre codificadores de la ronda ACT
+se reporta en `act_round2/README_ES.md`, por separado para las reglas mecánicas y para las
+reglas de juicio.
 
 En los cinco sitios codificados por los tres evaluadores el patrón se mantiene y ningún
 codificador es el atípico: `R01` frente a la ronda 1 da 0,375 en tres categorías y 0,737 en
 binario; `R01` frente a `D01` da 0,192 y 0,324; la ronda 1 frente a `D01` da 0,457 y 0,359.
+Aquí `D01` es la columna `delivered_code` de `wcag_double_evaluation_5_sites.csv`, es decir
+el código tal como lo entregó el segundo evaluador, y no el `admissible_code` que la
+revisión de la evidencia admitió después.
 
-De los 18 desacuerdos sobre las 45 celdas, casi todos se dan entre `P` y uno de los
-extremos, y no entre conforme y no conforme. Los codificadores vieron lo mismo y
+De los 18 desacuerdos sobre las 45 celdas, 17 se dan entre `P` y uno de los extremos y solo
+uno —el criterio 1.4.3 en HKUST— se da entre conforme y no conforme. Los codificadores vieron lo mismo y
 discreparon sobre dónde estaba el umbral de *parcial*. **La dicotomía es fiable; la
 tricotomía no.**
 
+### La ronda 1 frente a la ronda ACT del 8 y 9 de septiembre
+
+La ronda ACT codifica cada elemento aplicable bajo una regla y devuelve un veredicto de sitio
+con dos valores solamente, cumple o falla. La ronda 1 tiene tres. La comparación depende, por
+tanto, de cómo se trate la `P`, y la elección cambia la respuesta: manteniendo las tres
+categorías da 37,8 % de acuerdo con kappa 0,097 sobre 28 desacuerdos, y contando la `P` como
+no conforme da 73,3 % con kappa 0,226 sobre 12. En el esquema binario, 11 de esos 12
+desacuerdos van hacia la no conformidad, que es lo que la enumeración exhaustiva le hace a
+los veredictos obtenidos muestreando una proporción de los elementos.
+
+Hasta la versión 2.0.0 de este depósito, los README de `act_round2/` reportaban esta
+comparación como 62,2 % de acuerdo con kappa 0,201 sobre 17 desacuerdos. Ninguno de los dos
+esquemas da esas cifras, no se pudieron recalcular desde los archivos depositados y se
+retiraron. `CHANGELOG_ES.md` registra la retirada.
+
 `kappa_wcag.py`, en `code/analysis/`, calcula la kappa de los cinco sitios de doble
 codificación de `wcag_kappa_pairs.csv`: 0,517 excluyendo la pareja con evidencia
-contradictoria y 0,457 incluyéndola. Las cifras de la tabla anterior, que comparan la ronda
-1 con la ronda 2 sobre las 45 celdas, no las produce ningún script depositado.
+contradictoria y 0,457 incluyéndola. `kappa_rondas.py`, en la misma carpeta, reproduce
+todas las cifras de esta sección a partir de los archivos depositados —la comparación de
+las 45 celdas, sus intervalos de confianza, el número y el tipo de los desacuerdos y las
+tres comparaciones por parejas de los cinco sitios de doble codificación— y se detiene con
+error si alguna no sale. Los intervalos al 95 por ciento usan el error estándar asintótico
+`sqrt(po(1-po)/(n(1-pe)^2))`.
 
 ---
 

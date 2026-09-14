@@ -36,3 +36,7 @@ data/manual/others/
 hoja_cierre_r02.txt
 hoja_r04_111.txt
 hoja_r04_244.txt
+
+# figuras que los scripts escriben junto al codigo;
+# las copias depositadas estan en figures/
+code/analysis/fig_*.pdf

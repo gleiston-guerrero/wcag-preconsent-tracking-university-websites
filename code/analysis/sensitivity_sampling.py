@@ -156,7 +156,7 @@ def main():
     print()
     print("Nota: la reconciliacion de nombres entre rankings es manual y esta en ALIAS.")
     print("Sin ella, una institucion con tres denominaciones distintas se contabiliza")
-    print("tres veces y la regla de cobertura da results erroneos.")
+    print("tres veces y la regla de cobertura da resultados erroneos.")
 
 
 if __name__ == "__main__":

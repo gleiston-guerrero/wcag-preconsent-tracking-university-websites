@@ -75,6 +75,17 @@ que no.
 
 ## review_282_rows.csv
 
+El subconjunto de filas cuyo resultado decidía un veredicto de sitio en el momento de
+extraer el archivo: 201 del criterio 1.1.1 y 81 del 2.4.4.
+
+**Solo las 81 filas del 2.4.4 llevan resultado.** Las otras 201 se dejan vacías a
+propósito. Cuando la resolución llegó a ellas, el criterio 1.1.1 ya estaba establecido como
+fallido en todos los sitios a los que pertenecen, por elementos resueltos en
+`qt1vmo_345_resolved.csv`; un veredicto sobre ellas ya no puede cambiar ninguna celda de la
+matriz de quince por tres. `code/analysis/inventario_revisar.py` lo informa directamente:
+de las filas que siguen marcadas `REVISAR` en la primera codificación, ninguna decide un
+veredicto. Resolverlas añadiría completitud al depósito, no evidencia al artículo.
+
 El subconjunto de filas cuyo resultado determina un veredicto de sitio, extraído
 para revisión.
 
@@ -181,6 +192,6 @@ sitio muestreando elementos y juzgando una proporción, y ésta enumera todos lo
 elementos aplicables bajo reglas ACT. Las diferencias entre ambas sobre las 45
 celdas que comparten reflejan ese cambio de instrumento —la enumeración
 exhaustiva encuentra fallos que el muestreo proporcional no encuentra— y no un
-desacuerdo entre personas. Por eso no se reporta ningún estadístico de acuerdo
-para esa comparación: mediría el cambio de instrumento, no el acuerdo entre
-codificadores.
+desacuerdo entre personas. Esa comparación se cuantifica en `../README_ES.md`, y
+allí queda etiquetada por lo que mide: el efecto del cambio de instrumento, nunca
+el acuerdo entre codificadores. `code/analysis/kappa_rondas.py` la reproduce.

@@ -24,7 +24,12 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-CSV = "data/manual/act_round2/qt1vmo_345_resolved.csv"
+# Rutas resueltas contra la raiz del repositorio: el script funciona igual
+# desde la raiz o desde code/analysis/.
+_RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      os.pardir, os.pardir))
+CSV = os.path.join(_RAIZ, "data", "manual", "act_round2",
+                   "qt1vmo_345_resolved.csv")
 
 
 def morir(m):
@@ -38,7 +43,7 @@ def main():
     a = ap.parse_args()
 
     if not os.path.isfile(CSV):
-        morir("no encuentro %s (ejecute desde la raiz del repositorio)" % CSV)
+        morir("no encuentro %s (el deposito esta incompleto)" % CSV)
     with io.open(CSV, encoding="utf-8-sig", newline="") as fh:
         rd = csv.DictReader(fh)
         campos = list(rd.fieldnames)

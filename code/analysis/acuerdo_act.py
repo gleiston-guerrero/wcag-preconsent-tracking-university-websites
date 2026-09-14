@@ -50,9 +50,14 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-R02 = "../../data/manual/act_round2/recoding"
-R04 = "../../data/manual/act_round2/recoding_evaluator2/recoding"
-SALIDA = "../../data/processed"
+# Rutas resueltas contra la raiz del repositorio: el script funciona igual
+# desde la raiz o desde code/analysis/.
+_RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      os.pardir, os.pardir))
+R02 = os.path.join(_RAIZ, "data", "manual", "act_round2", "recoding")
+R04 = os.path.join(_RAIZ, "data", "manual", "act_round2",
+                   "recoding_evaluator2", "recoding")
+SALIDA = os.path.join(_RAIZ, "data", "processed")
 
 MECANICAS = ("23a2a8", "afw4f7", "c487ae")
 JUICIO = ("qt1vmo", "5effbb", "fd3a94")
@@ -122,7 +127,7 @@ def fmt(res):
 # --------------------------------------------------------------------------- #
 def cargar(directorio, etiqueta):
     if not os.path.isdir(directorio):
-        sys.exit("no existe %s\n(ejecute el script desde code/analysis/)" % directorio)
+        sys.exit("no existe %s\n(el deposito esta incompleto)" % directorio)
     filas = []
     for f in sorted(glob.glob(os.path.join(directorio, "*.csv"))):
         with io.open(f, encoding="utf-8-sig", newline="") as fh:
@@ -371,6 +376,11 @@ def main():
     cd = ["bloque", "abbr", "group", "criterion", "act_rule", "selector",
           "element_n_R02", "element_n_R04", "outcome_R02", "outcome_R04",
           "measured_R02", "measured_R04"]
+    # Orden fijo: el emparejamiento recorre conjuntos, cuyo orden de iteracion
+    # depende de la aleatorizacion del hash de cadenas de Python y cambia de una
+    # ejecucion a otra. Sin este orden el fichero no es reproducible byte a byte
+    # y su sha256 del manifiesto no se puede volver a obtener.
+    desac.sort(key=lambda r: tuple(str(r.get(c, "")) for c in cd))
     with io.open(os.path.join(SALIDA, "act_agreement_disagreements.csv"), "w",
                  encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cd, lineterminator="\n")

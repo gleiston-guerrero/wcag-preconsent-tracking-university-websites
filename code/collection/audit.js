@@ -265,7 +265,7 @@ async function auditarSitio(browser, uni) {
   const results = lista.map((u) => hechos.get(u.id) || null);
 
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
-  console.log('== Auditoria de ' + lista.length + ' universities (axe-core + cookies) ==\n');
+  console.log('== Auditoria de ' + lista.length + ' universidades (axe-core + cookies) ==\n');
 
   for (let i = 0; i < lista.length; i++) {
     const uni = lista[i];

@@ -7,6 +7,12 @@ Manual verification of the automated audit for three success criteria on a subsa
 criteria are **1.1.1** non-text content, **1.4.3** contrast (minimum) and **2.4.4** link
 purpose (in context), all of WCAG 2.2, which is also published as ISO/IEC 40500:2025.
 
+**How the fifteen sites were chosen.** The subsample was selected purposively, to cover both
+groups and a range of automated outcomes, and the criterion was not recorded in writing at the
+time. It cannot be reconstructed now, so it is stated here as what it is: a purposive
+selection of unrecorded rule. Nothing measured on these fifteen sites is extrapolated to the
+126 of the census, and the article does not present them as a probability sample.
+
 The folder holds **two rounds of coding by different evaluators**, plus the instrument
 prepared for a third. They must not be merged: each round used a different coding scheme,
 and the difference between them is itself a finding.
@@ -55,29 +61,60 @@ those five sites.
 
 ---
 
-## What the agreement between rounds shows
+## What the comparison between rounds shows
 
-Computed over the 45 cells shared by round 1 and round 2:
+Computed over the 45 cells shared by round 1 and round 2, taking round 1 from the `code`
+column of `wcag_validation_15_sites.csv` and round 2 from the `code` column of
+`recoding_111.csv`, `recoding_143.csv` and `recoding_244.csv`:
 
 | Coding scheme | Observed agreement | Cohen's kappa | 95% CI |
 |---|---|---|---|
-| Three categories (`1` / `P` / `0`) | 60.0% | 0.399 | [0.18, 0.60] |
-| Binary (`P` counted as not conforming) | 80.0% | 0.590 | [0.35, 0.81] |
+| Three categories (`1` / `P` / `0`) | 60.0% | 0.399 | [0.18, 0.61] |
+| Binary (`P` counted as not conforming) | 80.0% | 0.590 | [0.35, 0.83] |
+
+**What this statistic measures, and what it does not.** The two rounds do not share an
+instrument: round 1 sampled elements at each site and judged a proportion, and round 2
+enumerates every applicable element under ACT rules. The figures above therefore quantify
+how far the change of instrument moved the verdicts. They are not an estimate of
+inter-coder reliability, and must not be read as one. The inter-coder estimate for the ACT
+round is reported in `act_round2/README.md`, separately for the mechanical rules and for
+the judgement rules.
 
 On the five sites coded by all three evaluators, the same pattern holds and no single
 coder is the outlier: `R01` against round 1 gives 0.375 in three categories and 0.737
 binary; `R01` against `D01` gives 0.192 and 0.324; round 1 against `D01` gives 0.457 and
-0.359.
+0.359. `D01` here is the `delivered_code` column of `wcag_double_evaluation_5_sites.csv`,
+that is, the code as the second evaluator submitted it, not the `admissible_code` that the
+review of the evidence later allowed.
 
-Of the 18 disagreements across the 45 cells, almost all are between `P` and one of the
-extremes rather than between conforming and non-conforming. The coders saw the same thing
+Of the 18 disagreements across the 45 cells, 17 are between `P` and one of the extremes and
+only one — SC 1.4.3 at HKUST — is between conforming and non-conforming. The coders saw the same thing
 and differed on where the threshold of *partial* lay. **The dichotomy is reliable; the
 trichotomy is not.**
 
+### Round 1 against the ACT round of 8 and 9 September
+
+The ACT round codes each applicable element under a rule and returns a site verdict with two
+values only, conforming or failing. Round 1 has three. The comparison therefore depends on
+how `P` is treated, and the choice changes the answer: keeping the three categories gives
+37.8 per cent agreement with a kappa of 0.097 over 28 disagreements, and counting `P` as not
+conforming gives 73.3 per cent with a kappa of 0.226 over 12. In the binary scheme 11 of
+those 12 disagreements run toward non-conformity, which is what exhaustive enumeration does
+to verdicts reached by sampling a proportion of the elements.
+
+Until version 2.0.0 of this deposit the READMEs of `act_round2/` reported this comparison as
+62.2 per cent agreement with a kappa of 0.201 over 17 disagreements. Neither scheme yields
+those numbers, they could not be recomputed from the deposited files, and they were
+withdrawn. `CHANGELOG.md` records the withdrawal.
+
 `kappa_wcag.py`, in `code/analysis/`, computes the kappa of the five double-coded sites of
 `wcag_kappa_pairs.csv`: 0.517 excluding the pair with contradictory evidence and 0.457
-including it. The figures in the table above, which compare round 1 with round 2 over the
-45 cells, are not produced by any deposited script.
+including it. `kappa_rondas.py`, in the same folder, reproduces every figure of this
+section from the deposited files — the 45-cell comparison, its confidence intervals, the
+count and type of the disagreements, and the three pairwise comparisons of the five
+double-coded sites — and stops with an error if any of them fails to come out. The 95 per
+cent intervals use the asymptotic standard error
+`sqrt(po(1-po)/(n(1-pe)^2))`.
 
 ---
 
