@@ -149,6 +149,8 @@ node audit_multivantage.js --vantage=EC --run=1   # una pasada de un punto
 
 `audit.js` lee el censo y escribe su salida de forma incremental; si se interrumpe, al volver a ejecutarlo reanuda donde se detuvo. `audit_multivantage.js` comprueba la geolocalización de la IP pública antes de empezar y en cada control periódico, y aborta la pasada si la ubicación deja de coincidir con el punto declarado.
 
+Los dos escriben su salida dentro de `code/collection/`, junto al propio script y con los mismos nombres que llevan las pasadas depositadas en `data/raw/tracking*/`. **Esas salidas son una medición nueva, no la de este estudio.** La web cambia de un día para otro, así que una pasada ejecutada hoy mide las páginas de hoy y no se puede comparar con la campaña de agosto de 2026 ni fusionar con ella; las pasadas depositadas son la evidencia de todas las cifras del artículo. `.gitignore` excluye esos nombres bajo `code/collection/` para que reproducir la recogida deje el árbol de trabajo limpio, y lo mismo con la copia del censo que los scripts leen de esa carpeta: el censo depositado es `data/raw/census/universities.json`.
+
 ### Análisis
 
 Todos los scripts de `code/analysis/` resuelven sus rutas contra la raíz del repositorio, de modo que pueden ejecutarse desde la raíz o desde `code/analysis/`. Los comandos siguientes usan `code/analysis/` porque ahí está `requirements.txt`.

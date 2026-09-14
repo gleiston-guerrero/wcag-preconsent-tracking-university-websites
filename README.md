@@ -149,6 +149,8 @@ node audit_multivantage.js --vantage=EC --run=1   # one pass of one vantage poin
 
 `audit.js` reads the census and writes its output incrementally; if interrupted, running it again resumes where it stopped. `audit_multivantage.js` checks the geolocation of the public IP before starting and at every periodic check, and aborts the pass if the location stops matching the vantage point declared.
 
+Both write their output into `code/collection/` itself, next to the script, under the same names the deposited passes carry in `data/raw/tracking*/`. **Those outputs are a new measurement, not this study's.** The web changes from one day to the next, so a pass run today measures today's pages and cannot be compared with the August 2026 campaign or merged into it; the deposited passes are the evidence for every figure in the article. `.gitignore` excludes those file names under `code/collection/` so that reproducing the collection leaves the working tree clean, and the copy of the census the scripts read from that folder is likewise ignored — the deposited census is `data/raw/census/universities.json`.
+
 ### Analysis
 
 All scripts in `code/analysis/` resolve their paths against the root of the repository, so they can be run from the root or from `code/analysis/`. The commands below use `code/analysis/` because that is where `requirements.txt` lives.

@@ -40,3 +40,13 @@ hoja_r04_244.txt
 # figuras que los scripts escriben junto al codigo;
 # las copias depositadas estan en figures/
 code/analysis/fig_*.pdf
+
+# salidas que los recolectores escriben junto al codigo cuando se reproduce
+# la recogida; son una MEDICION NUEVA, no la del estudio, y no forman parte
+# del deposito: las pasadas depositadas estan en data/raw/tracking*/ y la
+# lista de universidades en data/raw/census/. Sin estas reglas, reproducir
+# la recogida deja el arbol de trabajo sucio y parece que faltan archivos.
+code/collection/results*.json
+code/collection/results*.csv
+code/collection/meta_*.json
+code/collection/universities.json
