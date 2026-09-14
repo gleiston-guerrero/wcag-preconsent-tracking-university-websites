@@ -189,7 +189,7 @@ python reparar_duplicados.py         # comprobación de duplicados del fichero d
 python cerrar_revisar.py hoja        # hoja de las filas que aún deciden un veredicto
 ```
 
-`figures_uais.py` y `fig_vantage.py` escriben sus PDF en el directorio actual. Las copias usadas en el artículo son las depositadas en `figures/`; los ficheros regenerados coinciden con ellas en tamaño y contenido para los mismos datos.
+`figures_uais.py` y `fig_vantage.py` escriben sus PDF en el directorio actual. Las copias usadas en el artículo son las depositadas en `figures/`, y regenerarlas con los mismos datos reproduce esos ficheros byte a byte: los scripts suprimen la fecha de creación que matplotlib escribiría dentro de cada PDF, que era lo que hacía que la salida cambiara de una ejecución a otra. Si las regenera, copie las seis sobre `figures/` y `CHECKSUMS.txt` seguirá verificando.
 
 `extract_documentary_matrix.py` lee `data/raw/appendix_documentary_tables.tex`, las dos tablas de apéndice del artículo depositadas literalmente, y deriva de ellas la matriz documental. Aborta si los recuentos que obtiene no coinciden con los que reporta el artículo. El artículo en sí no se deposita; solo las dos tablas de las que la matriz se deriva, para que la derivación sea auditable y no una afirmación.
 

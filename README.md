@@ -189,7 +189,7 @@ python reparar_duplicados.py         # duplicate check on the resolution file
 python cerrar_revisar.py hoja        # worksheet of the rows that still decide a verdict
 ```
 
-`figures_uais.py` and `fig_vantage.py` write their PDFs into the current directory. The copies used in the article are the ones deposited in `figures/`; the regenerated files are byte-identical in size and content for the same data.
+`figures_uais.py` and `fig_vantage.py` write their PDFs into the current directory. The copies used in the article are the ones deposited in `figures/`, and regenerating them from the same data reproduces those files byte for byte: the scripts suppress the creation date that matplotlib would otherwise write inside each PDF, which is what made the output differ between runs. Copy the six over `figures/` if you regenerate them, and `CHECKSUMS.txt` still verifies.
 
 `extract_documentary_matrix.py` reads `data/raw/appendix_documentary_tables.tex`, the two appendix tables of the article deposited verbatim, and derives the documentary matrix from them. It aborts if the counts it obtains do not match the ones the article reports. The article itself is not deposited; only the two tables the matrix is derived from, so that the derivation is auditable rather than asserted.
 

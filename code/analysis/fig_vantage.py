@@ -14,6 +14,12 @@ plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5,
                      "axes.edgecolor": GREY, "axes.linewidth": 0.9,
                      "pdf.fonttype": 42, "savefig.bbox": "tight",
                      "savefig.pad_inches": 0.03})
+
+# Sin fecha de creacion dentro del PDF: matplotlib graba la hora de la
+# ejecucion, y con ella el mismo grafico da bytes distintos cada vez, de
+# modo que el sha256 del manifiesto no se puede volver a obtener
+# regenerando la figura. El contenido no cambia; solo se omite la fecha.
+SIN_FECHA = {"CreationDate": None}
 N = 121
 # vendor: (Ecuador, United States, United Kingdom, Germany)
 DATA = [
@@ -49,5 +55,5 @@ for s in ("top", "right"): ax.spines[s].set_visible(False)
 ax.legend(handles=[Patch(facecolor=c, hatch=ht, edgecolor="white", label=nm)
                    for nm, c, ht in series],
           loc="lower right", ncol=1, frameon=False)
-fig.savefig("fig_vantage.pdf")
+fig.savefig("fig_vantage.pdf", metadata=SIN_FECHA)
 print("fig_vantage.pdf generada desde los datos reales")

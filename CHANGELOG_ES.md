@@ -82,6 +82,12 @@ material.
   Python, de modo que los mismos datos producían las mismas filas en orden distinto en cada
   ejecución y el sha256 del manifiesto no se podía volver a obtener. Las filas van ahora
   ordenadas.
+- Las seis figuras de `figures/` tampoco eran reproducibles byte a byte: matplotlib escribe
+  la hora de la ejecución dentro de cada PDF, así que el mismo gráfico salía con bytes
+  distintos en cada ejecución y seis de las 305 entradas de `CHECKSUMS.txt` no se podían
+  volver a obtener regenerando la figura. Los scripts suprimen ahora esa fecha. El contenido
+  no cambia —las figuras regeneradas son idénticas píxel a píxel a las que esta versión
+  sustituye— y dos ejecuciones separadas dan ya bytes idénticos.
 - Los cinco scripts de la ronda resolvían sus entradas contra el directorio de trabajo, dos
   esperando la raíz del repositorio y uno esperando `code/analysis/`. Todos resuelven ahora
   contra la raíz del repositorio y funcionan desde cualquiera de los dos sitios.

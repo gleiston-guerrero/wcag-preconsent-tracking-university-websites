@@ -81,6 +81,12 @@ because material was added.
   iterates sets, whose iteration order depends on Python's per-process string hash
   randomisation, so the same data produced the same rows in a different order on every run
   and the sha256 of the manifest could not be obtained again. The rows are now sorted.
+- The six figures of `figures/` were not reproducible byte for byte either: matplotlib
+  writes the time of the run inside each PDF, so the same plot came out with different bytes
+  on every execution and six of the 305 entries of `CHECKSUMS.txt` could not be obtained
+  again by regenerating the figure. The scripts now suppress that date. The content is
+  unchanged — the regenerated figures are pixel-identical to the ones this version replaces —
+  and two separate runs now produce identical bytes.
 - The five scripts of the round resolved their inputs against the current working
   directory, two of them expecting the repository root and one expecting
   `code/analysis/`. All of them now resolve against the root of the repository and run from
