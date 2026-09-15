@@ -92,7 +92,7 @@ code/
                       axe/                   dependencias de la pasada única
                       extended/              instrumento y lanzadores de la
                                              campaña de cinco puntos
-  analysis/           veintitrés scripts; véase «Reproducción»
+  analysis/           veinticuatro scripts; véase «Reproducción»
 docs/
   reports/            cuatro informes HTML de cookies
 figures/              las seis figuras del artículo, en PDF
@@ -131,7 +131,7 @@ La campaña reportada midió Ecuador desde una sola conexión y en un solo día:
 
 `data/raw/tracking_etapa_september/` contiene tres pasadas desde la misma conexión de ETAPA y la misma máquina de la campaña de agosto, el 14 de septiembre de 2026. Sirve a dos propósitos: da a la serie de Telconet una contraparte del mismo mes, de modo que la comparación de operador deje de confundir operador con fecha, y aísla la fecha frente a la campaña de agosto, manteniendo fijos el operador, la ciudad, la máquina, el instrumento y la versión de Node.
 
-`code/analysis/controles_ecuador.py` reporta los dos contrastes desde las pasadas crudas. Ninguno muestra diferencia: el de operador da 86 de 126 sitios con rastreo frente a 84, cuatro pares discordantes, McNemar exacta *p* = 0,625; el de fecha da el 68,0 % en las dos ocasiones, dos sitios discordantes en un mes, *p* = 1,000. El resultado ecuatoriano no es, por tanto, un artefacto del operador de red ni un artefacto del día de medición, y la segunda cifra pone número a la advertencia, repetida en todo este depósito, de que los sitios cambian de un día para otro.
+`code/analysis/controles_ecuador.py` reporta los dos contrastes desde las pasadas crudas, y `code/analysis/deriva_accesibilidad.py` hace lo mismo con los campos de accesibilidad que las dos series de ETAPA registran también. Ninguno muestra diferencia: el de operador da 86 de 126 sitios con rastreo frente a 84, cuatro pares discordantes, McNemar exacta *p* = 0,625; el de fecha da el 68,0 % en las dos ocasiones, dos sitios discordantes en un mes, *p* = 1,000. El resultado ecuatoriano no es, por tanto, un artefacto del operador de red ni un artefacto del día de medición, y la segunda cifra pone número a la advertencia, repetida en todo este depósito, de que los sitios cambian de un día para otro.
 
 Véanse `data/raw/tracking_telconet/READ_ME_ES.md` y `data/raw/tracking_etapa_september/READ_ME_ES.md` para las condiciones de medición y para lo que cada contraste puede y no puede separar.
 
@@ -183,6 +183,7 @@ python figures_uais.py               # cinco de las seis figuras
 python fig_vantage.py                # figura de proveedor por punto
 python verify_multivantage.py        # toda la sección de resultados multipunto
 python controles_ecuador.py          # los dos controles ecuatorianos: operador y fecha
+python deriva_accesibilidad.py       # deriva de accesibilidad entre las dos ocasiones
 python sensitivity_inclusion.py ../../data/raw/tracking
 python kappa_wcag.py                 # acuerdo de la validación manual
 python extract_documentary_matrix.py # matriz documental desde los apéndices

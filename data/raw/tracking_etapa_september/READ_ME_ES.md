@@ -75,3 +75,40 @@ sección multipunto.
 Ninguno de los dos contrastes sostiene ninguna cifra del artículo. Lo que
 establecen es negativo y vale tenerlo: el resultado ecuatoriano no es un
 artefacto del operador de red ni un artefacto del día en que se midió.
+
+## El lado de accesibilidad de esas mismas dos ocasiones
+
+Cada pasada registra también un objeto `accesibilidad`, de modo que esta serie y
+la campaña de agosto dan **dos ocasiones de la salida del instrumento en
+accesibilidad sobre las mismas 126 portadas**, a un mes de distancia y con
+operador, ciudad, máquina, instrumento y versiones fijos.
+`code/analysis/deriva_accesibilidad.py` lo reporta y aborta si las cifras de más
+abajo no se reproducen.
+
+**Ésta no es la medición de accesibilidad que reporta el artículo.** Todas las
+cifras de accesibilidad del artículo salen de la pasada única del 14 de agosto de
+2026, `../accessibility/results.json`, que no se ha repetido nunca. Lo que sigue
+acota la deriva de la salida del instrumento, no de esa medición, y no la
+sustituye.
+
+Dentro de cada serie el veredicto binario es perfectamente estable: que un sitio
+tenga algún nodo que falla de nivel A es idéntico en las tres pasadas en **124 de
+124** sitios en agosto y en **126 de 126** en septiembre.
+
+| Comparación | n | Agosto | Septiembre | Resultado |
+|---|---|---|---|---|
+| Algún nodo que falla de nivel A | 125 | 94 (75,2 %) | 94 (75,2 %) | a=93, b=1, c=1, d=30; 2 discordantes; McNemar exacta *p* = 1,000 |
+| Nivel más alto sin fallo | 125 | — | — | idéntico en 122 de 125 (97,6 %) |
+| Nodos que fallan, mediana por sitio | 125 | 23 | 21 | cambio con mediana 0; sin cambio en 69 de 125 sitios; rango intercuartílico del cambio de 0 a +1 |
+
+Los dos sitios que cambian de veredicto son U. Hemisferios, que deja de fallar el
+nivel A, y UCL, que empieza a fallarlo. Los tres cuyo nivel más alto limpio se
+mueve son Princeton (de AAA a AA), U. Hemisferios (de ninguno a A) y UCL (de AAA
+a ninguno). UCL es el único sitio que aparece en las dos listas y el único que se
+movió de forma apreciable.
+
+La tercera fila es la más débil de las tres y se da solo por completitud: los
+recuentos de nodos que fallan no están normalizados por complejidad de la página,
+de modo que un portal grande acumula más nodos sin ser menos accesible. Los
+totales bajan un 2,9 % en el mes, lo que dice menos que el hecho de que 69 de 125
+sitios no se muevan en absoluto.

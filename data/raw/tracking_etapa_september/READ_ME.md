@@ -73,3 +73,38 @@ section.
 Neither contrast supports any figure in the article. What they establish is
 negative and worth having: the Ecuadorian result is not an artefact of the
 network operator, and it is not an artefact of the day it was measured.
+
+## The accessibility side of the same two occasions
+
+Each pass also records an `accesibilidad` object, so this series and the August
+campaign give **two occasions of the instrument's accessibility output over the
+same 126 home pages**, one month apart, with operator, city, machine, instrument
+and versions held fixed. `code/analysis/deriva_accesibilidad.py` reports it and
+aborts if the figures below do not reproduce.
+
+**This is not the accessibility measurement the article reports.** Every
+accessibility figure in the article comes from the single-pass audit of 14 August
+2026, `../accessibility/results.json`, which has never been repeated. What
+follows bounds the drift of the instrument's output, not of that measurement, and
+does not replace it.
+
+Within each series the binary verdict is perfectly stable: whether a site has any
+failing node at level A is identical across all three passes in **124 of 124**
+sites in August and **126 of 126** in September.
+
+| Comparison | n | August | September | Result |
+|---|---|---|---|---|
+| Any failing node at level A | 125 | 94 (75.2 %) | 94 (75.2 %) | a=93, b=1, c=1, d=30; 2 discordant; exact McNemar *p* = 1.000 |
+| Highest level with no failure | 125 | — | — | identical at 122 of 125 (97.6 %) |
+| Failing nodes, median per site | 125 | 23 | 21 | median change 0; no change at 69 of 125 sites; interquartile range of the change 0 to +1 |
+
+The two sites that change verdict are U. Hemisferios, which stops failing level
+A, and UCL, which starts. The three whose highest clean level moves are Princeton
+(AAA to AA), U. Hemisferios (none to A) and UCL (AAA to none). UCL is the only
+site in both lists and the only one that moved appreciably.
+
+The third row is the weakest of the three and is given for completeness only:
+failing-node counts are not normalised by page complexity, so a large portal
+accumulates more nodes without being less accessible. The totals fall by 2.9 per
+cent over the month, which says less than the fact that 69 of 125 sites do not
+move at all.

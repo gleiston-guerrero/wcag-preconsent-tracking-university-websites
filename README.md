@@ -92,7 +92,7 @@ code/
                       axe/                   dependencies of the single pass
                       extended/              instrument and launchers of the
                                              five-vantage campaign
-  analysis/           twenty-three scripts; see "Reproduction"
+  analysis/           twenty-four scripts; see "Reproduction"
 docs/
   reports/            four HTML cookie reports
 figures/              the six figures of the article, in PDF
@@ -131,7 +131,7 @@ The reported campaign measured Ecuador from a single connection on a single day:
 
 `data/raw/tracking_etapa_september/` holds three passes from the same ETAPA connection and the same machine as the August campaign, on 14 September 2026. It serves two purposes: it gives the Telconet series a same-month counterpart, so that the operator comparison no longer confounds operator with date, and it isolates the date against the August campaign, holding operator, city, machine, instrument and Node version fixed.
 
-`code/analysis/controles_ecuador.py` reports both contrasts from the raw passes. Neither shows a difference: the operator contrast gives 86 of 126 sites tracking against 84, four discordant pairs, exact McNemar *p* = 0.625; the date contrast gives 68.0 per cent on both occasions, two discordant sites in a month, *p* = 1.000. So the Ecuadorian result is not an artefact of the network operator and not an artefact of the day of measurement — and the second figure puts a number on the caveat, repeated throughout this deposit, that the sites change from one day to the next.
+`code/analysis/controles_ecuador.py` reports both contrasts from the raw passes, and `code/analysis/deriva_accesibilidad.py` does the same for the accessibility fields the two ETAPA series also record. Neither shows a difference: the operator contrast gives 86 of 126 sites tracking against 84, four discordant pairs, exact McNemar *p* = 0.625; the date contrast gives 68.0 per cent on both occasions, two discordant sites in a month, *p* = 1.000. So the Ecuadorian result is not an artefact of the network operator and not an artefact of the day of measurement — and the second figure puts a number on the caveat, repeated throughout this deposit, that the sites change from one day to the next.
 
 See `data/raw/tracking_telconet/READ_ME.md` and `data/raw/tracking_etapa_september/READ_ME.md` for the measurement conditions and for what each contrast can and cannot separate.
 
@@ -183,6 +183,7 @@ python figures_uais.py               # five of the six figures
 python fig_vantage.py                # vendor-by-vantage figure
 python verify_multivantage.py        # the whole multi-vantage results section
 python controles_ecuador.py          # the two Ecuadorian controls: operator and date
+python deriva_accesibilidad.py       # accessibility drift between the two occasions
 python sensitivity_inclusion.py ../../data/raw/tracking
 python kappa_wcag.py                 # agreement of the manual validation
 python extract_documentary_matrix.py # documentary matrix from the appendices
