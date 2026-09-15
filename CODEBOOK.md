@@ -302,7 +302,7 @@ Result of the sensitivity analysis on the inclusion rule of the multi-vantage re
 | `p_<pair>` | Exact McNemar p value for each pair. |
 | `pholm_<pair>` | The same value after Holm correction across the six comparisons. |
 
-### `act_agreement_summary.csv` — 14 rows
+### `act_agreement_summary.csv` — 16 rows
 
 Agreement between the two independent codings of the ACT round, `data/manual/act_round2/recoding/` (`R02`) and `recoding_evaluator2/` (`R04`). Written by `code/analysis/acuerdo_act.py`. One row per stratum.
 

@@ -300,7 +300,7 @@ Resultado del análisis de sensibilidad a la regla de inclusión de la réplica 
 | `p_<par>` | Valor p exacto de McNemar de cada par. |
 | `pholm_<par>` | El mismo valor tras la corrección de Holm sobre las seis comparaciones. |
 
-### `act_agreement_summary.csv` — 14 filas
+### `act_agreement_summary.csv` — 16 filas
 
 Acuerdo entre las dos codificaciones independientes de la ronda ACT, `data/manual/act_round2/recoding/` (`R02`) y `recoding_evaluator2/` (`R04`). Lo escribe `code/analysis/acuerdo_act.py`. Una fila por estrato.
 
