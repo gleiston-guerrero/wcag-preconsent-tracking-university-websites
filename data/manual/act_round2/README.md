@@ -113,6 +113,14 @@ it and without it.
 `act_recode.js` — collector for the three criteria, run in the browser console.
 `act_images.js` — image evidence collector for `qt1vmo`.
 `act_recode_evaluator2.js` — the same collector prepared for a second evaluator.
+`galeria_carrusel.js` — builds a gallery of the images inside a carousel, each
+with its accessible name, its full address and its rendered size, and marks the
+slides the carousel had cloned. It evaluates nothing and writes no outcome; it
+only makes visible what a carousel hides. The second evaluator used it on the
+UNESUM home page, where the rotating content meant a name could not be paired
+with its image from the worksheet alone, and on that basis re-decided 13 of the
+blocks between 05:18 and 05:28 on 11 September; the changes are listed in
+`recoding_evaluator2/nota_incidencias.txt`.
 `SECOND_EVALUATOR_MANUAL.md` — collection protocol for the second evaluator.
 `EVALUATOR_DECISION_CRITERIA.md` — decision criteria for the judgement rows, built
 on the official W3C rule definitions and examples. It deliberately contains no

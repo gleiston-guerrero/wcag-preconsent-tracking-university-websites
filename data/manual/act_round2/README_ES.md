@@ -121,6 +121,14 @@ navegador.
 `act_images.js` — recolector de evidencia de imagen para `qt1vmo`.
 `act_recode_evaluator2.js` — el mismo recolector preparado para un segundo
 evaluador.
+`galeria_carrusel.js` — construye una galería de las imágenes que hay dentro de
+un carrusel, cada una con su nombre accesible, su dirección completa y su tamaño
+representado, y marca las diapositivas que el carrusel había clonado. No evalúa
+nada ni escribe ningún resultado: solo hace visible lo que un carrusel esconde.
+El segundo evaluador lo usó en la portada de UNESUM, donde el contenido rotatorio
+impedía emparejar un nombre con su imagen solo con la hoja, y sobre esa base
+volvió a decidir 13 bloques entre las 05:18 y las 05:28 del 11 de septiembre; los
+cambios están enumerados en `recoding_evaluator2/nota_incidencias.txt`.
 `SECOND_EVALUATOR_MANUAL.md` — protocolo de recogida para el segundo evaluador.
 `EVALUATOR_DECISION_CRITERIA.md` — criterios de decisión para las filas de juicio,
 construidos sobre las definiciones y los ejemplos oficiales de las reglas del W3C.

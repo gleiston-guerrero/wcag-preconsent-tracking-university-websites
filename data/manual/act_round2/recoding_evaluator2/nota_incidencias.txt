@@ -31,7 +31,7 @@ Ninguno. No marque ningun bloque como no-visible.
 
 3. CAMBIOS EN LAS PAGINAS
 -----------------------------------------------------------------------
-111 / 079 a 106 (UNESUM) / Contenido rotatorio en un carrusel. [comunicado por R04] Para ver las imagenes del carrusel y emparejar cada nombre con su imagen use la galeria generada con galeria_carrusel.js (extrae de la pagina cada imagen con su nombre accesible y su direccion; no evalua nada). Entre las 05:18 y las 05:28 volvi a decidir 13 bloques (079, 080, 084, 086, 087, 088, 089, 090, 091, 092, 093, 094, 095); 8 pasaron de falla a cumple (084, 087, 088, 090, 091, 092, 093, 095) y 5 conservaron el resultado.
+111 / 079 a 106 (UNESUM) / Contenido rotatorio en un carrusel. [comunicado por R04] Para ver las imagenes del carrusel y emparejar cada nombre con su imagen use la galeria generada con galeria_carrusel.js (extrae de la pagina cada imagen con su nombre accesible y su direccion; no evalua nada), depositado en ../instruments/galeria_carrusel.js. Entre las 05:18 y las 05:28 volvi a decidir 13 bloques (079, 080, 084, 086, 087, 088, 089, 090, 091, 092, 093, 094, 095); 8 pasaron de falla a cumple (084, 087, 088, 090, 091, 092, 093, 095) y 5 conservaron el resultado.
 111 / 046 (HKUST) / El elemento no se veia en la pagina: "Aunque no se ve la imagen en la página. Y es un background."
 [comunicado por R04] Las imagenes que se veian blancas del apartado 1 tampoco se veian en el sitio web; solo se veian al abrirlas como imagen.
 
