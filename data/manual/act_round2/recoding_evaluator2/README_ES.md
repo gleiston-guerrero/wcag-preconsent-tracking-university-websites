@@ -95,8 +95,18 @@ constan en él; `nota_incidencias.txt` las enumera.
 investigador principal a partir de las justificaciones escritas, del registro de
 la sesión y de observaciones que el evaluador comunicó de palabra, que van
 marcadas como tales. Su último apartado es del investigador principal y va
-etiquetado como no perteneciente al evaluador. Dos campos, la versión del
-navegador y la lista de extensiones activas, siguen marcados como pendientes.
+etiquetado como no perteneciente al evaluador.
+
+Los dos campos que la nota dejaba abiertos se completaron el 15 de septiembre de
+2026: el evaluador reporta Google Chrome 153.0.8010.37, 64 bits, **sin ninguna
+extensión instalada** y con el modo desarrollador desactivado. La versión se leyó
+del navegador cuatro días después de la sesión de codificación y Chrome se
+actualiza solo, de modo que es la versión que el evaluador reporta y no una
+registrada en el momento; la nota lo dice. El campo de extensiones es el que
+importa aquí, porque la primera recogida de este evaluador se descartó por la
+traducción automática del navegador —una función propia de Chrome y no una
+extensión, tratada aparte desactivándola y comprobando que los ficheros no
+contienen elementos `font` inyectados.
 
 ## Consistencia interna de las justificaciones
 

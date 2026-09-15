@@ -6,8 +6,8 @@ Revisada y conforme por R04 (fecha y firma o iniciales en el acta interna, no en
 
 Evaluador (codigo): R04
 Fechas de trabajo: 11 de septiembre de 2026, de 01:43 a 06:59 segun el registro (hoja 111 durante toda la sesion; hoja 244 entre 03:49 y 04:42), con una pausa de 41 minutos; correccion posterior del bloque 114 de la hoja 244 el mismo dia.
-Navegador y version: [pendiente de completar por R04]
-Extensiones activas (si hubo alguna): [pendiente de completar por R04]
+Navegador y version: Google Chrome 153.0.8010.37 (build oficial, 64 bits). [comunicado por R04, 15 de septiembre de 2026] La version se leyo de chrome://settings/help el 15 de septiembre, cuatro dias despues de la sesion; Chrome se actualiza solo, asi que es la version que R04 reporta y no una registrada en el momento de codificar.
+Extensiones activas (si hubo alguna): ninguna. [comunicado por R04, 15 de septiembre de 2026] chrome://extensions no lista ninguna extension instalada y el modo desarrollador esta desactivado. Importa porque la primera recogida de este evaluador se descarto por la traduccion automatica del navegador; esa es una funcion propia de Chrome y no una extension, y se trato aparte desactivandola y comprobando que los ficheros no contienen elementos font inyectados.
 
 
 1. BLOQUES QUE NO PUDE JUZGAR

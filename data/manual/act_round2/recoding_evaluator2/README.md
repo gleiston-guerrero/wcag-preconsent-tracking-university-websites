@@ -90,8 +90,17 @@ in it; `nota_incidencias.txt` lists them.
 `nota_incidencias.txt` is the evaluator's incident note, compiled by the first
 author from the written justifications, the session log and remarks the evaluator
 made orally, which are labelled as such. Its last section is the first author's
-own, and is labelled as not being the evaluator's. Two fields, the browser version
-and the list of active extensions, are still marked as pending.
+own, and is labelled as not being the evaluator's.
+
+The two fields the note left open were filled in on 15 September 2026: the
+evaluator reports Google Chrome 153.0.8010.37, 64-bit, with **no extensions
+installed** and developer mode off. The version was read from the browser four
+days after the coding session and Chrome updates itself, so it is the version
+the evaluator reports rather than one recorded at the time; the note says so.
+The extensions field is the one that matters here, because this evaluator's
+first collection was discarded over the browser's automatic translation — a
+built-in Chrome feature rather than an extension, handled separately by
+disabling it and checking that the files contain no injected `font` elements.
 
 ## Internal consistency of the justifications
 
