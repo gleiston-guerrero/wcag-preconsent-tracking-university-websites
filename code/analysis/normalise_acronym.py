@@ -12,7 +12,7 @@ Alcance. La sigla es una ETIQUETA arrastrada desde el censo de entrada, no una
 cantidad medida. Corregirla no altera ninguna observacion: las mediciones son
 los recuentos de cookies, las violaciones WCAG y los campos derivados de ellos,
 que este script no toca. Por eso la correccion puede aplicarse tambien a los
-ficheros de results sin comprometer la integridad del registro.
+ficheros de resultados sin comprometer la integridad del registro.
 
 Precaucion deliberada. Solo se sustituye la forma ACENTUADA. La forma sin tilde
 ya aparece en los datos dentro del titulo de la pagina auditada ("UPACIFICO

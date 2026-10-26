@@ -3,7 +3,7 @@
 =======================================================================
 
 QUE HACE
-  Visita las 126 universities (63 de Ecuador + 63 del mundo), y de cada
+  Visita las 126 universidades (63 de Ecuador + 63 del mundo), y de cada
   sitio recoge evidencia REAL y reproducible, sin inventar nada:
 
   ACCESIBILIDAD (motor axe-core, el estandar profesional):
@@ -71,7 +71,7 @@ NOTA 2 (conformidad): una herramienta automatica DEMUESTRA el
   indicativo del subconjunto verificable por maquina, no un certificado.
 
 NOTA 3 (privacidad de tu equipo): el script solo LEE los sitios
-  publicos; no envia nada a ningun lado. Los results quedan en tu
+  publicos; no envia nada a ningun lado. Los resultados quedan en tu
   carpeta hasta que tu decidas compartirlos.
 
 -----------------------------------------------------------------------

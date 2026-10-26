@@ -32,7 +32,7 @@ A third figure exists, the live verification held in the `*_verificacion` column
 
 **Group** (`grupo`): `Ecuador` or `Mundo` in the JSON files; `ecuador` or `mundo` in the derived tables. *Mundo* means the benchmark group.
 
-**Site identifier** (`id`): integer from 1 to 126, stable across every file in the deposit. It joins any table to any other. The one exception is `documentary_matrix.csv`, which carries a position within its group table rather than the global identifier.
+**Site identifier** (`id`): integer from 1 to 126, **defined by `data/raw/census/universities.json`**, which is the authoritative list. It is stable across every file in the deposit: an identifier denotes one institution everywhere, so it joins any table to any other. `sigla` is equally valid as a join key and is the one to use where a table carries no `id`. The one exception is `documentary_matrix.csv`, whose `#` column is a position within its group table and not the global identifier; that table joins by `Abbr.`
 
 **Yes/no**: `yes` or `no` in the derived CSV tables; boolean in the JSON files. The documentary matrix uses `si` / `no` instead, since it was transcribed from the article.
 
@@ -186,7 +186,7 @@ The cookie table of the article, with both taxonomies in separate columns. Produ
 
 The difference between `rastreo_base` and `rastreo` is a single Ecuadorian site, which crosses the threshold because its only matching cookies belong to the Sourcebuster family added in the extended list. The Ecuadorian count therefore rises from 40 to 41; the benchmark count stays at 43.
 
-The `*_verificacion` columns come from a manual inspection distinct from the automated measurement. They disagree with the `rastreo` column at 39 of the 126 sites: 34 where the automated measurement detects tracking and the live verification does not, and 5 the other way round. Neither is in error: they are observations at different moments of sites that change. **Do not mix the two columns in a single count.**
+The `*_verificacion` columns come from a manual inspection distinct from the automated measurement. They disagree with the `rastreo` column at 39 of the 126 sites: 35 where the automated measurement detects tracking and the live verification does not, and 4 the other way round. The four are EPN, FLACSO, UTE and Peking, where the live check found Google Analytics or Baidu cookies that the automated pass did not. Neither observation is in error: they are taken at different moments of sites that change. `verify_live_divergence.py` recomputes all three figures from the deposited tables. **Do not mix the two columns in a single count.**
 
 ### `cookies_126_sites_v2.csv` — 126 rows
 
@@ -266,7 +266,7 @@ Values: `si` present, `no` absent, `parcial` limited scope or a generic framewor
 
 The two groups were coded with partly different column sets, which is why some columns are empty for one group and not the other. The Ecuadorian group carries between two and six `nv` cells per indicator; the benchmark group carries none. That asymmetry is itself a finding and is invisible in the aggregate percentages.
 
-**Provenance.** These indicators were coded manually and published institution by institution in the article appendices. `extract_documentary_matrix.py` recovers them from the LaTeX source of the article, which is **not** part of this deposit, since the rights belong to the publisher. The script therefore cannot be run from this repository alone; it is released so the extraction is auditable, and its output is the table above. Run against the article source, it reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement.
+**Provenance.** These indicators were coded manually and published institution by institution in the article appendices. The two appendix tables are deposited verbatim as `data/raw/appendix_documentary_tables.tex`, and `extract_documentary_matrix.py` derives this table and its long form from them, so the whole derivation runs inside this repository. Run with no arguments, the script reproduces the five counts of Figure 1 exactly: 59 and 39 for the privacy notice, 47 and 31 for the framework cited, 47 and 35 for rights, 54 and 24 for the privacy contact, and 47 and 7 for the accessibility statement, and it aborts if any of them fails. Only the two tables are deposited, not the article, which is distributed by the journal.
 
 ### `documentary_matrix_long.csv` — 756 rows
 
@@ -302,6 +302,35 @@ Result of the sensitivity analysis on the inclusion rule of the multi-vantage re
 | `p_<pair>` | Exact McNemar p value for each pair. |
 | `pholm_<pair>` | The same value after Holm correction across the six comparisons. |
 
+### `act_agreement_summary.csv` — 16 rows
+
+Agreement between the two independent codings of the ACT round, `data/manual/act_round2/recoding/` (`R02`) and `recoding_evaluator2/` (`R04`). Written by `code/analysis/acuerdo_act.py`. One row per stratum.
+
+| Column | Description |
+|---|---|
+| `bloque` | `A_mecanicas` the three rules the rule decides on its own; `B_juicio` the three rules that refer the decision to a person; `B_juicio_procedencia` the same comparisons split by who decided the `recoding/` side; `C_veredictos` the 45 site-by-criterion cells. |
+| `estrato` | The stratum within the block: a rule, a success criterion, `TOTAL`, or `45 celdas`. |
+| `n` | Comparisons in the stratum. For `A` and `B`, matched element pairs with a definite outcome in both; for `C`, cells. |
+| `acuerdo` | Observed agreement, proportion. |
+| `kappa` | Cohen's kappa. **Empty when no coefficient is reported**, in which case `nota` says why. |
+| `ic_inf`, `ic_sup` | 95% CI of kappa, asymptotic SE, clamped to [−1, 1]. Empty whenever `kappa` is. |
+| `nota` | Why kappa is absent or unstable: undefined with a single category, not reported below 10 pairs, unstable with a minority category under 5%, unreliable below n = 30. |
+
+`bloque` is what keeps three different things apart. `A_mecanicas` measures the reproducibility of the instrument across two operators. `B_juicio` is an agreement figure over mixed provenance and **not** an inter-coder coefficient. `B_juicio_procedencia` splits it: the `R02=R02` row, 62 link comparisons under SC 2.4.4, is the only inter-coder reliability estimate in the deposit, and its interval includes zero; the `R02=R03` row, 168 image comparisons under SC 1.1.1, is agreement against the assisted resolution and is not a reliability coefficient. `data/manual/act_round2/README.md` states this and gives the sensitivity of every figure to the exclusion rule and to the matching key.
+
+### `act_agreement_disagreements.csv` — 56 rows
+
+Every disagreement behind the previous table, one row each, so that any figure in it can be traced to the elements that produced it.
+
+| Column | Description |
+|---|---|
+| `bloque` | As above. |
+| `abbr`, `group`, `criterion`, `act_rule` | Institution, `mundo`/`ecuador`, success criterion, ACT rule. |
+| `selector` | CSS selector of the element, as the collector recorded it. Two selectors joined by `;` for the paired rules `fd3a94` and `5effbb`. Empty in `C_veredictos` rows, which are not element-level. |
+| `element_n_R02`, `element_n_R04` | Element number in each coding. They do not designate the same element across codings; the pairing is by selector. |
+| `outcome_R02`, `outcome_R04` | `cumple` / `falla` in each coding. |
+| `measured_R02`, `measured_R04` | The measured value where the rule has one, that is the contrast ratio under `afw4f7`. Empty otherwise. |
+
 ---
 
 ## 5. HTML reports
@@ -336,11 +365,15 @@ results.json + v2 ───────────► rebuild_cookies.py
                                      ├─► cookies_unclassified_names.csv
                                      └─► cookies_divergences_v2.csv
 
+cookies_126_sites_v3.csv    ┐
+report_cookies_domestic.csv ├─► verify_live_divergence.py   (39 = 35 + 4)
+report_cookies_foreign.csv  ┘
+
 data/raw/tracking/ ─────────────► verify_multivantage.py     (results section)
                                 ► sensitivity_inclusion.py   ─► sensitivity_inclusion.csv
 
-article appendices (external) ──► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
+appendix_documentary_tables.tex ► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
                                                                └─► documentary_matrix_long.csv
 ```
 
-Files in `data/interim/` are not versioned because `build_entries.py` regenerates them from material that is published. The article source is not part of the deposit, which is why the last step above cannot be run from this repository alone.
+Files in `data/interim/` are not versioned because `build_entries.py` regenerates them from material that is published. Every step above runs from this repository alone.

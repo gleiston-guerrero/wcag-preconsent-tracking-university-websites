@@ -2,8 +2,8 @@
 """Detecta y lista, fila a fila, las irregularidades del inventario de 126 sitios."""
 import csv, sys
 
-ENTRADA = sys.argv[1] if len(sys.argv) > 1 else "work/cookies_126_sites.csv"
-SALIDA  = sys.argv[2] if len(sys.argv) > 2 else "work/qa_irregularities.csv"
+ENTRADA = sys.argv[1] if len(sys.argv) > 1 else "../../data/interim/cookies_126_sites.csv"
+SALIDA  = sys.argv[2] if len(sys.argv) > 2 else "../../data/processed/qa_irregularities.csv"
 
 R = list(csv.DictReader(open(ENTRADA, encoding="utf-8")))
 

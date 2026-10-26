@@ -6,7 +6,7 @@
  *  y del comportamiento de cookies ANTES de cualquier consentimiento.
  *
  *  No inventa nada: todo sale del navegador real cargando cada sitio.
- *  Escribe los results de forma incremental (resistente a cortes) en:
+ *  Escribe los resultados de forma incremental (resistente a cortes) en:
  *      - results.json  (detalle completo, fuente de verdad)
  *      - results.csv   (resumen para vista rapida)
  *
@@ -256,7 +256,7 @@ async function auditarSitio(browser, uni) {
   if (!fs.existsSync(ARCHIVO_LISTA)) { console.error('Falta ' + ARCHIVO_LISTA); process.exit(1); }
   const lista = JSON.parse(fs.readFileSync(ARCHIVO_LISTA, 'utf8'));
 
-  // Reanudacion: cargar results previos y saltar los ya hechos con exito
+  // Reanudacion: cargar resultados previos y saltar los ya hechos con exito
   let previos = [];
   if (fs.existsSync(SALIDA_JSON)) {
     try { previos = JSON.parse(fs.readFileSync(SALIDA_JSON, 'utf8')); } catch (e) { previos = []; }
@@ -265,17 +265,17 @@ async function auditarSitio(browser, uni) {
   const results = lista.map((u) => hechos.get(u.id) || null);
 
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
-  console.log('== Auditoria de ' + lista.length + ' universities (axe-core + cookies) ==\n');
+  console.log('== Auditoria de ' + lista.length + ' universidades (axe-core + cookies) ==\n');
 
   for (let i = 0; i < lista.length; i++) {
     const uni = lista[i];
-    if (resultados[i] && resultados[i].ok) {
+    if (results[i] && results[i].ok) {
       console.log(`[${i + 1}/${lista.length}] ${uni.sigla} — ya auditado, se omite`);
       continue;
     }
     process.stdout.write(`[${i + 1}/${lista.length}] ${uni.grupo} · ${uni.sigla}  ${uni.url}  ... `);
     const rec = await auditarSitio(browser, uni);
-    resultados[i] = rec;
+    results[i] = rec;
     if (rec.ok) {
       const a = rec.accesibilidad, c = rec.cookies || {};
       const cookieMsg = rec.cookies ? `cookies: ${c.total_pre} (${c.rastreo_pre} rastreo) | CMP: ${(c.cmp[0] || '-')} | ` : '';

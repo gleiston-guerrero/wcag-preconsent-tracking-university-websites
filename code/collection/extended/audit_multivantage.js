@@ -690,13 +690,13 @@ function guardarCSV(res) {
 	const t0 = Date.now();
 	for (let i = 0; i < lista.length; i++) {
 		const uni = lista[i];
-		if (resultados[i] && resultados[i].ok) {
+		if (results[i] && results[i].ok) {
 			console.log(`[${i + 1}/${lista.length}] ${uni.sigla} — ya auditado en esta pasada, se omite`);
 			continue;
 		}
 		process.stdout.write(`[${i + 1}/${lista.length}] ${VANTAGE} · ${uni.sigla}  ${uni.url}  ... `);
 		const rec = await auditarSitio(browser, uni);
-		resultados[i] = rec;
+		results[i] = rec;
 		if (rec.ok) {
 			const a = rec.accesibilidad, c = rec.cookies || {};
 			const sinCookie = (rec.red_proveedores || [])

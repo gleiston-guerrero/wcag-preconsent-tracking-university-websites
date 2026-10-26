@@ -1,8 +1,4 @@
 sigla,campo,antes,despues,motivo
-UCE,cookies_antes_consentir,(vacio),5,restaurado del informe HTML combinado
-UCE,nombres_cookies,(vacio),"__utma, __utmc, __utmz, __utmt, __utmb",restaurado del informe HTML combinado
-UCE,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
-UG,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
 MIT,rastreo,(vacio),no,importado del informe HTML combinado
 Stanford,rastreo,(vacio),yes,importado del informe HTML combinado
 Harvard,rastreo,(vacio),no,importado del informe HTML combinado
@@ -66,4 +62,8 @@ TU Delft,rastreo,(vacio),no,importado del informe HTML combinado
 ANU,rastreo,(vacio),no,importado del informe HTML combinado
 KU Leuven,rastreo,(vacio),no,importado del informe HTML combinado
 Queensland,rastreo,(vacio),no,importado del informe HTML combinado
+UCE,cookies_antes_consentir,(vacio),5,restaurado del informe HTML combinado
+UCE,nombres_cookies,(vacio),"__utma, __utmc, __utmz, __utmt, __utmb",restaurado del informe HTML combinado
+UCE,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
+UG,rastreo,HTML=yes,CSV=no,"se conserva el valor del CSV, posterior al HTML"
 UCE,rastreo,no,yes,las cookies coinciden con la lista RASTREO de audit.js

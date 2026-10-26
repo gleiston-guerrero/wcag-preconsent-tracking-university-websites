@@ -1,0 +1,166 @@
+# -*- coding: utf-8 -*-
+"""inventario_revisar.py - inventario completo de las filas marcadas REVISAR.
+
+Responde a la pregunta "que falta para cerrarlo todo" con cifras, y distingue lo
+que cambia una cifra del articulo de lo que no.
+
+  A. Deciden un veredicto de sitio y siguen sin resolver.
+  B. Su criterio ya falla en ese sitio por otro elemento: resolverlas no puede
+     cambiar ningun veredicto ni ninguna cifra publicada.
+  C. Filas de la segunda codificacion, que corresponden al segundo evaluador.
+
+Y calcula aparte lo unico que exige resolver filas del grupo B: el subconjunto
+EMPAREJADO que haria falta para estimar la fiabilidad entre codificadores en las
+reglas de juicio, que hoy no se puede estimar porque ninguna fila tiene
+resultado definitivo en las dos codificaciones a la vez.
+
+No escribe nada. Ejecutar desde la raiz del repositorio.
+"""
+import csv
+import glob
+import io
+import os
+import sys
+from collections import Counter, defaultdict
+
+# Rutas resueltas contra la raiz del repositorio: el script funciona igual
+# desde la raiz o desde code/analysis/.
+_RAIZ = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                      os.pardir, os.pardir))
+R02 = os.path.join(_RAIZ, "data", "manual", "act_round2")
+R04 = os.path.join(R02, "recoding_evaluator2")
+JUICIO = ("qt1vmo", "5effbb", "fd3a94")
+
+
+def filas(p):
+    if not os.path.isfile(p):
+        return []
+    with io.open(p, encoding="utf-8-sig", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def cargar(base):
+    d = os.path.join(base, "recoding")
+    if not os.path.isdir(d):
+        sys.exit("no existe %s (el deposito esta incompleto)" % d)
+    out = []
+    for f in sorted(glob.glob(os.path.join(d, "*.csv"))):
+        out += filas(f)
+    return out
+
+
+def resuelto_en(base):
+    """Devuelve (elementos_resueltos, pares_sitio_criterio_que_fallan)."""
+    hecho, fallan = set(), set()
+    for nombre in ("qt1vmo_345_resolved.csv", "review_282_rows.csv"):
+        for r in filas(os.path.join(base, nombre)):
+            o = (r.get("outcome") or r.get("outcome_TOFILL") or "").strip()
+            if o not in ("cumple", "falla"):
+                continue
+            c = (r.get("criterion") or "1.1.1").strip()
+            hecho.add((r["abbr"], c, r["element_n"]))
+            if o == "falla":
+                fallan.add((r["abbr"], c))
+    return hecho, fallan
+
+
+def analizar(rec, hecho, fallos_ext, etiqueta):
+    """fallos_ext: pares (sigla, criterio) que fallan segun los ficheros de
+    resolucion. Sin ellos, un sitio cuyo unico fallo de un criterio esta en el
+    fichero de resoluciones parecia no fallar, y sus filas REVISAR se contaban
+    como capaces de decidir un veredicto cuando ya no podian decidir nada."""
+    falla = defaultdict(bool)
+    for r in rec:
+        if r["outcome"].strip() == "falla":
+            falla[(r["abbr"], r["criterion"])] = True
+    for k in fallos_ext:
+        falla[k] = True
+    rev = [r for r in rec if r["outcome"].strip() == "REVISAR"]
+    pend = [r for r in rev if (r["abbr"], r["criterion"], r["element_n"]) not in hecho]
+    a = [r for r in pend if not falla[(r["abbr"], r["criterion"])]]
+    b = [r for r in pend if falla[(r["abbr"], r["criterion"])]]
+    print("\n%s" % etiqueta)
+    print("-" * 74)
+    print("  filas totales                  %5d" % len(rec))
+    print("  marcadas REVISAR               %5d" % len(rev))
+    print("  ya resueltas en otro fichero   %5d" % (len(rev) - len(pend)))
+    print("  sin resolver                   %5d" % len(pend))
+    print("     grupo A, deciden veredicto  %5d  %s"
+          % (len(a), dict(Counter(r["act_rule"] for r in a))))
+    for (s, c), n in sorted(Counter((r["abbr"], r["criterion"]) for r in a).items()):
+        print("        %-13s %-7s %4d filas" % (s, c, n))
+    print("     grupo B, no cambian nada    %5d  %s"
+          % (len(b), dict(Counter(r["act_rule"] for r in b))))
+    return pend, a, b
+
+
+def main():
+    rec2 = cargar(R02)
+    h2, f2 = resuelto_en(R02)
+    p2, a2, b2 = analizar(rec2, h2, f2, "PRIMERA CODIFICACION  (R02/R03/R01, 8 de septiembre)")
+
+    rec4 = cargar(R04)
+    h4, f4 = resuelto_en(R04)
+    p4, a4, b4 = analizar(rec4, h4, f4, "SEGUNDA CODIFICACION  (R04, 9 de septiembre)")
+
+    print("\n" + "=" * 74)
+    print("PARA CERRARLO ABSOLUTAMENTE TODO")
+    print("=" * 74)
+    print("  juicios humanos pendientes: %d  (%d en la primera, %d en la segunda)"
+          % (len(p2) + len(p4), len(p2), len(p4)))
+    print("  de esos, los que cambian alguna cifra del articulo: %d" % (len(a2) + len(a4)))
+    print("  de esos, los que no cambian ninguna:                %d" % (len(b2) + len(b4)))
+
+    # --- el subconjunto emparejado que daria la kappa de juicio -------------
+    def clave(r):
+        return (r["abbr"], r["criterion"], r["act_rule"], r["selector_or_description"])
+
+    def indice(rec, hecho):
+        d = defaultdict(list)
+        for r in rec:
+            if r["act_rule"] in JUICIO:
+                d[clave(r)].append(r)
+        return d
+
+    i2, i4 = indice(rec2, h2), indice(rec4, h4)
+    comunes = sorted(set(i2) & set(i4))
+    pares = sum(min(len(i2[k]), len(i4[k])) for k in comunes)
+
+    def sin_resolver(rec, hecho, k, idx):
+        return sum(1 for r in idx[k]
+                   if r["outcome"].strip() == "REVISAR"
+                   and (r["abbr"], r["criterion"], r["element_n"]) not in hecho)
+
+    falta2 = sum(min(sin_resolver(rec2, h2, k, i2), len(i4[k])) for k in comunes)
+    falta4 = sum(min(sin_resolver(rec4, h4, k, i4), len(i2[k])) for k in comunes)
+
+    print("\n" + "=" * 74)
+    print("LO UNICO QUE EXIGE RESOLVER FILAS DEL GRUPO B")
+    print("=" * 74)
+    print("  El bloque B de acuerdo_act.py necesita filas con resultado definitivo")
+    print("  en LAS DOS codificaciones. El segundo evaluador resolvio sus 318 filas")
+    print("  decisorias el 11 de septiembre de 2026, de modo que ese bloque ya sale")
+    print("  con 230 comparaciones.")
+    print("\n  elementos de juicio emparejables entre las dos codificaciones: %d" % pares)
+    print("  de esos, sin resolver en la primera:  %d" % falta2)
+    print("  de esos, sin resolver en la segunda:  %d" % falta4)
+    print("\n  Ese total no es una fiabilidad entre codificadores, porque mezcla dos")
+    print("  procedencias del lado de la primera codificacion, que no sale de las")
+    print("  filas recogidas sino de sus ficheros de resolucion:")
+    print("    62 comparaciones del criterio 2.4.4 llevan codigo R02, un")
+    print("       codificador humano: esas SI sostienen el coeficiente, aunque son")
+    print("       enlaces de un solo sitio y su intervalo incluye el cero.")
+    print("    168 del criterio 1.1.1 llevan codigo R03, la resolucion asistida")
+    print("       por un sistema de IA generativa y revisada por el primer autor:")
+    print("       esas se informan como acuerdo y nunca como fiabilidad.")
+    print("  acuerdo_act.py imprime las dos por separado, y la del bloque C hereda")
+    print("  la misma mezcla en 1.1.1 y 2.4.4.")
+    print("\n  Para un coeficiente de 1.1.1 haria falta que un codificador humano")
+    print("  decidiera de nuevo esos elementos sin el fichero asistido delante, y")
+    print("  que no fuese la misma persona que resolvio el otro lado: si una misma")
+    print("  persona resuelve ambos, la kappa deja de medir acuerdo entre")
+    print("  codificadores y no debe reportarse como tal.")
+
+
+if __name__ == "__main__":
+    main()

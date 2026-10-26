@@ -189,7 +189,7 @@ echo       python verify_multivantage.py
 echo.
 echo   MIRE LA SECCION 1b DEL INFORME. Si algun punto aparece como
 echo   SOSPECHOSO, ese nodo de VPN perdio contenido y hay que repetirlo
-echo   desde otro servidor antes de usar los results.
+echo   desde otro servidor antes de usar los resultados.
 echo.
 pause
 endlocal

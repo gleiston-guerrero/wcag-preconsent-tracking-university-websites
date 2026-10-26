@@ -30,7 +30,7 @@ Existe además una tercera cifra, la verificación en vivo que figura en las col
 
 **Grupo** (`grupo`): `Ecuador` o `Mundo` en los archivos JSON; `ecuador` o `mundo` en las tablas derivadas.
 
-**Identificador de sitio** (`id`): entero de 1 a 126, estable en todos los archivos del depósito. Permite unir cualquier tabla con cualquier otra. La única excepción es `documentary_matrix.csv`, que lleva la posición dentro de la tabla de su grupo y no el identificador global.
+**Identificador de sitio** (`id`): entero de 1 a 126, **definido por `data/raw/census/universities.json`**, que es la lista autoritativa. Es estable en todos los archivos del depósito: un identificador designa a una sola institución en todas partes, de modo que permite unir cualquier tabla con cualquier otra. `sigla` sirve igualmente como clave de unión y es la que hay que usar donde una tabla no lleve `id`. La única excepción es `documentary_matrix.csv`, cuya columna `#` es la posición dentro de la tabla de su grupo y no el identificador global; esa tabla se une por `Abbr.`
 
 **Sí/no**: `yes` o `no` en las tablas CSV derivadas; booleano en los JSON. La matriz documental usa `si` y `no`, porque se transcribió del artículo.
 
@@ -184,7 +184,7 @@ Tabla de cookies del artículo, con las dos taxonomías en columnas separadas. L
 
 La diferencia entre `rastreo_base` y `rastreo` es de un solo sitio ecuatoriano, que cruza el umbral porque sus únicas cookies coincidentes pertenecen a la familia Sourcebuster, añadida en la lista extendida. El recuento ecuatoriano pasa así de 40 a 41; el de referencia se mantiene en 43.
 
-Las columnas `*_verificacion` proceden de una inspección manual distinta de la medición automatizada. Discrepan de la columna `rastreo` en 39 de los 126 sitios: 34 donde la medición automatizada detecta rastreo y la verificación en vivo no, y 5 en sentido contrario. No es un error de ninguna de las dos: son observaciones en momentos distintos de sitios que cambian. **No mezcle ambas columnas en un mismo recuento.**
+Las columnas `*_verificacion` proceden de una inspección manual distinta de la medición automatizada. Discrepan de la columna `rastreo` en 39 de los 126 sitios: 35 donde la medición automatizada detecta rastreo y la verificación en vivo no, y 4 en sentido contrario. Esos cuatro son EPN, FLACSO, UTE y Peking, donde la comprobación en vivo encontró cookies de Google Analytics o de Baidu que la pasada automatizada no había registrado. Ninguna de las dos observaciones es errónea: se toman en momentos distintos de sitios que cambian. `verify_live_divergence.py` recalcula las tres cifras a partir de las tablas depositadas. **No mezcle ambas columnas en un mismo recuento.**
 
 ### `cookies_126_sites_v2.csv` — 126 filas
 
@@ -264,7 +264,7 @@ Valores: `si` presente, `no` ausente, `parcial` alcance limitado o marco genéri
 
 Los dos grupos se codificaron con conjuntos de columnas en parte distintos, y por eso algunas quedan vacías en un grupo y no en el otro. El grupo ecuatoriano tiene entre dos y seis celdas `nv` por indicador; el de referencia no tiene ninguna. Esa asimetría es en sí misma un hallazgo y queda invisible en los porcentajes agregados.
 
-**Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. `extract_documentary_matrix.py` los recupera del fuente LaTeX del artículo, que **no** forma parte de este depósito porque los derechos corresponden al editor. El script, por tanto, no puede ejecutarse solo con este repositorio; se publica para que la extracción sea auditable, y su salida es la tabla anterior. Ejecutado contra el fuente del artículo, reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad.
+**Procedencia.** Estos indicadores se codificaron manualmente y se publican institución por institución en los apéndices del artículo. Las dos tablas de apéndice se depositan literalmente como `data/raw/appendix_documentary_tables.tex`, y `extract_documentary_matrix.py` deriva de ellas esta tabla y su forma larga, de modo que toda la derivación se ejecuta dentro de este repositorio. Sin argumentos, el script reproduce exactamente los cinco recuentos de la Figura 1: 59 y 39 para el aviso de privacidad, 47 y 31 para el marco citado, 47 y 35 para los derechos, 54 y 24 para el contacto de privacidad, y 47 y 7 para la declaración de accesibilidad, y aborta si alguno falla. Solo se depositan las dos tablas, no el artículo, que difunde la revista.
 
 ### `documentary_matrix_long.csv` — 756 filas
 
@@ -272,7 +272,7 @@ La misma matriz en formato largo, una fila por celda codificada. Columnas: `grup
 
 ### `tls_deficiencies_august2026.csv` — 5 filas
 
-Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de results.
+Los cinco sitios ecuatorianos cuya cadena TLS se encontró deficiente en la verificación documental de agosto de 2026. Son la diferencia entre los 63 sitios servidos por HTTPS y los 58 contados como certificado válido en la Figura 1 y en la tabla de resultados.
 
 | Columna | Descripción |
 |---|---|
@@ -299,6 +299,35 @@ Resultado del análisis de sensibilidad a la regla de inclusión de la réplica 
 | `marg_EC`, `marg_EU`, `marg_GB`, `marg_US` | Sitios con rastreo en cada punto. |
 | `p_<par>` | Valor p exacto de McNemar de cada par. |
 | `pholm_<par>` | El mismo valor tras la corrección de Holm sobre las seis comparaciones. |
+
+### `act_agreement_summary.csv` — 16 filas
+
+Acuerdo entre las dos codificaciones independientes de la ronda ACT, `data/manual/act_round2/recoding/` (`R02`) y `recoding_evaluator2/` (`R04`). Lo escribe `code/analysis/acuerdo_act.py`. Una fila por estrato.
+
+| Columna | Descripción |
+|---|---|
+| `bloque` | `A_mecanicas` las tres reglas que decide la propia regla; `B_juicio` las tres reglas que remiten la decisión a una persona; `B_juicio_procedencia` las mismas comparaciones separadas según quién decidió el lado de `recoding/`; `C_veredictos` las 45 celdas de sitio por criterio. |
+| `estrato` | El estrato dentro del bloque: una regla, un criterio de conformidad, `TOTAL` o `45 celdas`. |
+| `n` | Comparaciones del estrato. En `A` y `B`, pares de elementos emparejados con resultado definitivo en las dos codificaciones; en `C`, celdas. |
+| `acuerdo` | Acuerdo observado, en proporción. |
+| `kappa` | Kappa de Cohen. **Vacía cuando no se reporta coeficiente**, y entonces `nota` dice por qué. |
+| `ic_inf`, `ic_sup` | IC del 95 % de la kappa, error estándar asintótico, recortado a [−1, 1]. Vacíos siempre que `kappa` lo esté. |
+| `nota` | Por qué falta la kappa o por qué es inestable: no definida con una sola categoría, no reportada por debajo de 10 pares, inestable con una categoría minoritaria por debajo del 5 %, poco fiable por debajo de n = 30. |
+
+`bloque` es lo que mantiene separadas tres cosas distintas. `A_mecanicas` mide la reproducibilidad del instrumento entre dos operadores. `B_juicio` es una cifra de acuerdo sobre procedencia mezclada y **no** un coeficiente entre codificadores. `B_juicio_procedencia` la separa: la fila `R02=R02`, 62 comparaciones de enlaces del criterio 2.4.4, es la única estimación de fiabilidad entre codificadores del depósito, y su intervalo incluye el cero; la fila `R02=R03`, 168 comparaciones de imágenes del criterio 1.1.1, es acuerdo contra la resolución asistida y no es un coeficiente de fiabilidad. `data/manual/act_round2/README_ES.md` lo enuncia y da la sensibilidad de cada cifra a la regla de exclusión y a la clave de emparejamiento.
+
+### `act_agreement_disagreements.csv` — 56 filas
+
+Cada desacuerdo que hay detrás de la tabla anterior, una fila por desacuerdo, de modo que cualquier cifra de aquélla pueda trazarse hasta los elementos que la produjeron.
+
+| Columna | Descripción |
+|---|---|
+| `bloque` | Como arriba. |
+| `abbr`, `group`, `criterion`, `act_rule` | Institución, `mundo`/`ecuador`, criterio de conformidad, regla ACT. |
+| `selector` | Selector CSS del elemento, tal como lo registró el recolector. Dos selectores unidos por `;` en las reglas por pares `fd3a94` y `5effbb`. Vacío en las filas `C_veredictos`, que no son de elemento. |
+| `element_n_R02`, `element_n_R04` | Número de elemento en cada codificación. No designan el mismo elemento entre codificaciones; el emparejamiento es por selector. |
+| `outcome_R02`, `outcome_R04` | `cumple` / `falla` en cada codificación. |
+| `measured_R02`, `measured_R04` | El valor medido donde la regla lo tiene, es decir el ratio de contraste bajo `afw4f7`. Vacíos en los demás casos. |
 
 ---
 
@@ -334,11 +363,15 @@ results.json + v2 ───────────► rebuild_cookies.py
                                      ├─► cookies_unclassified_names.csv
                                      └─► cookies_divergences_v2.csv
 
-data/raw/tracking/ ─────────────► verify_multivantage.py     (seccion de results)
+cookies_126_sites_v3.csv    ┐
+report_cookies_domestic.csv ├─► verify_live_divergence.py   (39 = 35 + 4)
+report_cookies_foreign.csv  ┘
+
+data/raw/tracking/ ─────────────► verify_multivantage.py     (sección de resultados)
                                 ► sensitivity_inclusion.py   ─► sensitivity_inclusion.csv
 
-apendices del articulo (externo) ► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
+appendix_documentary_tables.tex ► extract_documentary_matrix.py ─┬─► documentary_matrix.csv
                                                                  └─► documentary_matrix_long.csv
 ```
 
-Los archivos de `data/interim/` no se versionan porque `build_entries.py` los regenera desde material que sí está publicado. El fuente del artículo no forma parte del depósito, y por eso el último paso del esquema no puede ejecutarse solo con este repositorio.
+Los archivos de `data/interim/` no se versionan porque `build_entries.py` los regenera desde material que sí está publicado. Todos los pasos del esquema se ejecutan solo con este repositorio.

@@ -35,6 +35,12 @@ plt.rcParams.update({
     "savefig.pad_inches": 0.03,
 })
 
+
+# Sin fecha de creacion dentro del PDF: matplotlib graba la hora de la
+# ejecucion, y con ella el mismo grafico da bytes distintos cada vez, de
+# modo que el sha256 del manifiesto no se puede volver a obtener
+# regenerando la figura. El contenido no cambia; solo se omite la fecha.
+SIN_FECHA = {"CreationDate": None}
 N = 63
 
 
@@ -126,7 +132,7 @@ ax.text(99, 1.45, "Sites meeting indicator (b : e)", va="center", ha="right",
         fontsize=7, style="italic", color=GREY)
 ax.legend(handles=leg, loc="lower center", bbox_to_anchor=(0.42, -0.235),
           ncol=2, frameon=False)
-fig.savefig("fig_forest.pdf")
+fig.savefig("fig_forest.pdf", metadata=SIN_FECHA)
 plt.close(fig)
 
 # ===========================================================================
@@ -159,7 +165,7 @@ ax.set_axisbelow(True)
 leg = [Patch(facecolor="white", edgecolor=BENCH, hatch="//", label=f"Benchmark group (n={N})"),
        Patch(facecolor="white", edgecolor=ECU, hatch="xx", label=f"Ecuador (n={N})")]
 ax.legend(handles=leg, loc="lower center", bbox_to_anchor=(0.5, -0.34), ncol=2, frameon=False)
-fig.savefig("fig_cookies.pdf")
+fig.savefig("fig_cookies.pdf", metadata=SIN_FECHA)
 plt.close(fig)
 
 # ===========================================================================
@@ -191,7 +197,7 @@ axes[0].set_ylabel("Percentage of the group's failing nodes")
 leg = [Patch(facecolor="white", edgecolor=BENCH, hatch="//", label=f"Benchmark group (n={N})"),
        Patch(facecolor="white", edgecolor=ECU, hatch="xx", label=f"Ecuador (n={N})")]
 fig.legend(handles=leg, loc="lower center", bbox_to_anchor=(0.5, -0.045), ncol=2, frameon=False)
-fig.savefig("fig_wcag_levels.pdf")
+fig.savefig("fig_wcag_levels.pdf", metadata=SIN_FECHA)
 plt.close(fig)
 
 # ===========================================================================
@@ -217,7 +223,7 @@ ax.spines[["top", "right", "left"]].set_visible(False)
 ax.tick_params(axis="y", length=0)
 ax.grid(axis="x", color="#CCCCCC", lw=0.6, zorder=0)
 ax.set_axisbelow(True)
-fig.savefig("fig_countries.pdf")
+fig.savefig("fig_countries.pdf", metadata=SIN_FECHA)
 plt.close(fig)
 
 # ===========================================================================
@@ -255,7 +261,7 @@ leg = [Line2D([], [], marker="D", ls="none", mfc=ECU, mec=ECU, ms=7, label="Ecua
        Line2D([], [], marker="o", ls="none", mfc="white", mec=BENCH, mew=1.6, ms=5.5,
               label="Jurisdictions of the benchmark group")]
 ax.legend(handles=leg, loc="lower center", bbox_to_anchor=(0.45, -0.09), ncol=2, frameon=False)
-fig.savefig("fig_timeline.pdf")
+fig.savefig("fig_timeline.pdf", metadata=SIN_FECHA)
 plt.close(fig)
 
 print("Figuras generadas: fig_forest.pdf, fig_cookies.pdf, fig_wcag_levels.pdf, "

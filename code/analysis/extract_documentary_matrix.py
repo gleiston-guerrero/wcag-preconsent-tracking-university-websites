@@ -10,10 +10,11 @@ fuente LaTeX y produce esa tabla, ademas de contar cada indicador por grupo
 para poder contrastarlo con las cifras reportadas.
 
 Uso:
-    python extract_documentary_matrix.py <ruta_al_tex> [salida.csv]
+    python extract_documentary_matrix.py [ruta_al_tex] [salida.csv]
 
-Ejemplo:
-    python extract_documentary_matrix.py "..\\manuscrito\\privacidad_UAIS_en.tex" documentary_matrix.csv
+Sin argumentos toma el fragmento de apendice depositado en
+data/raw/appendix_documentary_tables.tex y escribe en data/processed/, de modo
+que la derivacion se reproduce con solo este repositorio.
 
 Salidas:
     <salida>.csv        matriz ancha, una fila por institucion
@@ -59,6 +60,11 @@ CODIGOS = [
     (r"\\textbf\{P\}", "parcial"),   # forma antigua, se conserva
 ]
 
+# Fuente por defecto: el fragmento de apendice depositado, de modo que el script
+# se ejecute con solo este repositorio. Se puede pasar otro .tex como argumento.
+TEX_POR_DEFECTO = "../../data/raw/appendix_documentary_tables.tex"
+SALIDA_POR_DEFECTO = "../../data/processed/documentary_matrix.csv"
+
 # Valor explicito para las celdas cuya columna no aplica al grupo de la fila.
 NO_APLICA = "no_aplica"
 
@@ -92,6 +98,11 @@ def limpiar(celda: str):
             return valor + ("*" if marcada else ""), marcada, nueva
     # celda de texto: se limpia de comandos, llaves y residuos de superindice
     c = re.sub(r"\\textbf\{([^}]*)\}", r"\1", c)
+    # Escapes de acento y de espacio fino: \'I -> I, "U.\ Otavalo" -> "U. Otavalo".
+    # Sin esto la sigla conserva el escape y deja de coincidir con la del censo,
+    # que es la clave por la que esta tabla se une a las demas.
+    c = re.sub(r"\\([`'^\"~=.])\s*\{?([A-Za-z])\}?", r"\2", c)
+    c = c.replace("\\ ", " ")
     c = re.sub(r"\$\^?\\d?dagger\$", "", c)
     c = re.sub(r"\\[a-zA-Z]+\s*", "", c)
     c = c.replace("{", "").replace("}", "").replace("~", " ")
@@ -138,10 +149,10 @@ def extraer_tabla(texto: str, etiqueta: str, grupo: str):
 
 
 def main():
-    if len(sys.argv) < 2:
-        sys.exit(__doc__)
-    tex = Path(sys.argv[1])
-    salida = Path(sys.argv[2] if len(sys.argv) > 2 else "documentary_matrix.csv")
+    tex = Path(sys.argv[1] if len(sys.argv) > 1 else TEX_POR_DEFECTO)
+    salida = Path(sys.argv[2] if len(sys.argv) > 2 else SALIDA_POR_DEFECTO)
+    if not tex.exists():
+        sys.exit("No encuentro el fuente LaTeX: " + str(tex) + "\n" + __doc__)
     texto = tex.read_text(encoding="utf-8")
 
     cab_m, filas_m = extraer_tabla(texto, "ap:mundo", "mundo")

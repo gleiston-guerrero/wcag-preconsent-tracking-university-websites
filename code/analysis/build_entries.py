@@ -76,7 +76,11 @@ def main():
         print(f"{ruta.name} -> {nombre}: {len(datos)} registros")
 
     comb = json.loads((SALIDA / "_comb.json").read_text(encoding="utf-8"))
-    orden = {r["sigla"]: i + 1 for i, r in enumerate(comb)}
+    # El identificador de sitio es el del censo, que es la lista autoritativa.
+    # Derivarlo del orden del informe HTML, como se hacia antes, producia una
+    # segunda numeracion incompatible con la del resto del deposito.
+    censo = json.loads((RAIZ / "data/raw/census/universities.json").read_text(encoding="utf-8"))
+    orden = {r["sigla"]: r["id"] for r in censo}
 
     nac = list(csv.DictReader(NACIONALES.open(encoding="utf-8-sig")))
     ext = list(csv.DictReader(EXTRANJERAS.open(encoding="utf-8-sig")))

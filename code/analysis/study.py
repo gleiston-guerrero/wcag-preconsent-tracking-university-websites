@@ -2,7 +2,7 @@
 """Aplana results.json en dos tablas canonicas."""
 import csv, json
 
-d = json.load(open("p1/results.json", encoding="utf-8"))
+d = json.load(open("../../data/raw/accessibility/results.json", encoding="utf-8"))
 d.sort(key=lambda r: r["id"])
 assert len(d) == 126 and all(r["ok"] for r in d)
 
@@ -35,7 +35,7 @@ for r in d:
                    x["nivel"] or "", x["nodos"], x["ayuda"]])
 
 for nom, H, R in (("study_126_sites", H1, R1), ("study_rules_per_site", H2, R2)):
-    with open(f"work/{nom}.csv", "w", newline="", encoding="utf-8") as fh:
+    with open(f"../../data/processed/{nom}.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh); w.writerow(H); w.writerows(R)
 
 print("study_126_sites.csv     :", len(R1), "filas,", len(H1), "columnas")

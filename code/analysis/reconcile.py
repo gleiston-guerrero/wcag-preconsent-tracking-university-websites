@@ -2,9 +2,15 @@
 """Reconcilia el inventario de 126 sitios con los datos embebidos en los informes HTML."""
 import csv, json, re
 
-comb = json.load(open("work/_comb.json"))
-anex = json.load(open("work/_anex.json"))
-R    = list(csv.DictReader(open("work/cookies_126_sites.csv", encoding="utf-8")))
+# La codificacion se declara siempre: sin ella, open() usa la pagina de codigos
+# del sistema, que en Windows no es UTF-8, y los acentos de los JSON intermedios
+# se leen mal y se reescriben doblemente codificados en cookies_126_sites_v2.csv
+# y, por derivacion, en la v3.
+with open("../../data/interim/_comb.json", encoding="utf-8") as fh:
+    comb = json.load(fh)
+with open("../../data/interim/_anex.json", encoding="utf-8") as fh:
+    anex = json.load(fh)
+R    = list(csv.DictReader(open("../../data/interim/cookies_126_sites.csv", encoding="utf-8")))
 cm = {r["sigla"]: r for r in comb}
 am = {r["sigla"]: r for r in anex}
 assert len(comb) == len(anex) == len(R) == 126
@@ -98,9 +104,9 @@ for o in OUT:
         CAMBIOS.append([o[I_SIG], "rastreo", ant, base,
                         "las cookies coinciden con la lista RASTREO de audit.js"])
 
-with open("work/cookies_126_sites_v2.csv", "w", newline="", encoding="utf-8") as fh:
+with open("../../data/processed/cookies_126_sites_v2.csv", "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh); w.writerow(H); w.writerows(OUT)
-with open("work/reconciliation_changes.csv", "w", newline="", encoding="utf-8") as fh:
+with open("../../data/processed/reconciliation_changes.csv", "w", newline="", encoding="utf-8") as fh:
     w = csv.writer(fh); w.writerow(["sigla","campo","antes","despues","motivo"]); w.writerows(CAMBIOS)
 
 from collections import Counter

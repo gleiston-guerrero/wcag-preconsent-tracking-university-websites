@@ -6,12 +6,12 @@
  *    - Registro de la IP publica y su geolocalizacion como EVIDENCIA de que la
  *      medicion se hizo realmente desde el pais declarado
  *    - Un archivo de salida por (punto de observacion, pasada), de modo que los
- *      results quedan PAREADOS sitio a sitio y admiten la prueba de McNemar
+ *      resultados quedan PAREADOS sitio a sitio y admiten la prueba de McNemar
  *    - Orden de visita FIJO en todas las pasadas, para que cada sitio se mida
  *      siempre en el mismo momento relativo de la pasada
  *
  *  El metodo de medicion es IDENTICO al de la auditoria de agosto de 2026,
- *  para que los results sean comparables con los ya publicados.
+ *  para que los resultados sean comparables con los ya publicados.
  *
  *  USO (Windows, desde la carpeta del proyecto):
  *      node audit_multivantage.js --vantage=EC --run=1
@@ -405,13 +405,13 @@ function guardarCSV(res) {
 	const t0 = Date.now();
 	for (let i = 0; i < lista.length; i++) {
 		const uni = lista[i];
-		if (resultados[i] && resultados[i].ok) {
+		if (results[i] && results[i].ok) {
 			console.log(`[${i + 1}/${lista.length}] ${uni.sigla} — ya auditado en esta pasada, se omite`);
 			continue;
 		}
 		process.stdout.write(`[${i + 1}/${lista.length}] ${VANTAGE} · ${uni.sigla}  ${uni.url}  ... `);
 		const rec = await auditarSitio(browser, uni);
-		resultados[i] = rec;
+		results[i] = rec;
 		if (rec.ok) {
 			const a = rec.accesibilidad, c = rec.cookies || {};
 			const ck = rec.cookies ? `cookies ${c.total_pre} (${c.rastreo_pre} rastreo) | banner ${c.banner ? 'SI' : 'no'} | CMP ${(c.cmp[0] || '-')} | ` : '';
