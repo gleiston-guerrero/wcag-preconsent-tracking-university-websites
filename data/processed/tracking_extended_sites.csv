@@ -1,0 +1,122 @@
+id,abbr,group,EC,US,EU,GB,CH
+61,ANU,mundo,1,1,1,1,1
+94,Amawtay Wasi,ecuador,0,0,0,0,0
+51,CMU,mundo,1,1,1,1,1
+50,CUHK,mundo,1,1,1,1,1
+6,Caltech,mundo,1,1,1,1,1
+5,Cambridge,mundo,0,0,0,0,0
+115,Casa Grande,ecuador,1,1,1,1,1
+19,Columbia,mundo,1,1,1,1,1
+15,Cornell,mundo,1,1,1,1,1
+39,Duke,mundo,1,1,1,1,1
+124,ECOTEC,ecuador,1,1,1,1,1
+27,EPFL,mundo,1,1,1,1,1
+64,EPN,ecuador,0,0,0,0,0
+67,ESPAM MFL,ecuador,0,0,0,0,0
+68,ESPE,ecuador,1,1,1,1,1
+66,ESPOCH,ecuador,0,0,0,0,0
+65,ESPOL,ecuador,1,1,1,1,1
+11,ETH Zurich,mundo,0,0,0,0,0
+26,Edinburgh,mundo,0,0,0,0,0
+98,FLACSO,ecuador,1,1,1,1,1
+30,Fudan,mundo,1,1,1,1,1
+32,HKU,mundo,1,1,1,1,1
+58,HKUST,mundo,1,1,1,1,0
+3,Harvard,mundo,1,1,1,1,1
+57,Heidelberg,mundo,0,0,0,0,0
+96,IAEN,ecuador,1,1,1,1,1
+92,Ikiam,ecuador,1,1,1,1,1
+45,Illinois,mundo,1,1,1,1,1
+9,Imperial,mundo,0,0,0,0,0
+18,Johns Hopkins,mundo,1,1,1,1,1
+36,KCL,mundo,0,0,0,0,0
+62,KU Leuven,mundo,0,0,0,0,0
+59,Karolinska,mundo,0,0,0,0,0
+44,Kyoto,mundo,1,1,1,1,1
+38,LMU,mundo,0,0,0,0,0
+1,MIT,mundo,0,0,0,0,0
+40,Manchester,mundo,1,1,0,0,1
+49,McGill,mundo,0,0,0,0,0
+25,Melbourne,mundo,1,1,1,1,1
+28,Michigan,mundo,0,1,0,0,0
+55,Monash,mundo,1,1,1,1,1
+48,NTU,mundo,1,1,1,1,1
+22,NUS,mundo,1,1,1,1,0
+34,NYU,mundo,1,0,0,0,0
+29,Northwestern,mundo,0,0,0,0,0
+4,Oxford,mundo,1,1,1,1,1
+31,PSL,mundo,0,0,0,0,0
+99,PUCE,ecuador,1,1,0,1,0
+43,Paris-Saclay,mundo,0,0,0,0,0
+17,Peking,mundo,1,1,0,0,0
+8,Princeton,mundo,1,1,1,1,1
+63,Queensland,mundo,1,1,1,1,1
+35,SJTU,mundo,1,1,0,0,0
+56,SNU,mundo,1,1,1,1,1
+2,Stanford,mundo,1,1,1,1,1
+42,Sydney,mundo,1,1,1,1,1
+60,TU Delft,mundo,0,0,0,0,0
+24,TUM,mundo,0,0,0,0,0
+20,Toronto,mundo,1,1,1,1,1
+16,Tsinghua,mundo,0,0,0,0,0
+10,U Chicago,mundo,1,1,1,1,1
+23,U Tokyo,mundo,1,1,0,1,0
+122,U. Hemisferios,ecuador,1,1,1,1,1
+120,U. Otavalo,ecuador,0,0,0,0,0
+73,UAE,ecuador,1,1,1,1,1
+97,UASB,ecuador,1,1,1,1,1
+93,UArtes,ecuador,1,1,1,1,1
+41,UBC,mundo,1,1,1,1,1
+126,UBE,ecuador,0,0,0,0,0
+7,UC Berkeley,mundo,1,1,1,1,1
+101,UCACUE,ecuador,1,1,1,1,1
+69,UCE,ecuador,1,1,1,1,1
+14,UCL,mundo,0,0,0,0,0
+21,UCLA,mundo,1,1,1,1,1
+100,UCSG,ecuador,1,1,1,1,1
+70,UCuenca,ecuador,1,1,1,1,1
+105,UDA,ecuador,1,1,1,1,1
+110,UDLA,ecuador,0,0,0,0,0
+125,UDR,ecuador,1,1,1,1,1
+85,UEA,ecuador,1,1,1,1,1
+82,UEB,ecuador,0,0,0,0,0
+108,UEES,ecuador,1,1,1,1,1
+111,UIDE,ecuador,1,1,1,1,1
+107,UISEK,ecuador,1,1,1,1,1
+117,UISRAEL,ecuador,1,0,1,1,0
+87,ULEAM,ecuador,1,1,1,1,1
+102,ULVR,ecuador,0,0,0,0,0
+119,UMET,ecuador,1,1,1,1,1
+88,UNACH,ecuador,1,1,1,0,0
+89,UNAE,ecuador,1,1,1,1,1
+84,UNEMI,ecuador,1,1,1,1,1
+83,UNESUM,ecuador,0,0,0,0,0
+112,UNIANDES,ecuador,0,0,0,0,0
+123,UNIB.E,ecuador,0,0,0,0,0
+72,UNL,ecuador,1,1,1,1,1
+90,UPEC,ecuador,1,1,1,1,1
+106,UPS,ecuador,1,1,1,1,1
+86,UPSE,ecuador,0,0,0,0,0
+13,UPenn,mundo,1,1,1,1,0
+95,USECIPOL,ecuador,0,0,0,0,0
+109,USFQ,ecuador,1,1,1,1,1
+121,USGP,ecuador,1,1,1,1,1
+53,USTC,mundo,1,1,1,1,1
+46,UT Austin,mundo,1,1,1,0,0
+74,UTA,ecuador,0,0,0,0,0
+75,UTB,ecuador,1,1,1,1,1
+76,UTC,ecuador,1,1,1,1,1
+104,UTE,ecuador,0,0,0,0,0
+116,UTEG,ecuador,1,1,1,1,1
+81,UTELVT,ecuador,0,0,0,0,0
+80,UTEQ,ecuador,1,1,1,1,1
+114,UTI,ecuador,1,1,1,1,1
+78,UTM,ecuador,0,0,0,0,0
+77,UTMACH,ecuador,0,0,0,0,0
+103,UTPL,ecuador,1,1,1,1,1
+47,UW,mundo,1,1,1,1,1
+54,WUSTL,mundo,1,1,1,1,1
+52,Wisconsin,mundo,1,1,1,1,1
+91,Yachay Tech,ecuador,0,0,0,0,0
+12,Yale,mundo,1,1,1,1,1
+33,Zhejiang,mundo,0,0,0,0,0

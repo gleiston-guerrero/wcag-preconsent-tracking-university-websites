@@ -1,0 +1,31 @@
+family,vantage,focal_sites,cookie_set,request_sent_no_cookie,request_not_sent
+Microsoft,EC,14,14,0,0
+Microsoft,US,14,14,0,0
+Microsoft,EU,14,0,13,1
+Microsoft,GB,14,0,12,2
+Microsoft,CH,14,0,13,1
+LinkedIn,EC,13,13,0,0
+LinkedIn,US,13,13,0,0
+LinkedIn,EU,13,4,7,2
+LinkedIn,GB,13,3,7,3
+LinkedIn,CH,13,2,9,2
+TapAd,EC,4,4,0,0
+TapAd,US,4,4,0,0
+TapAd,EU,4,0,0,4
+TapAd,GB,4,0,0,4
+TapAd,CH,4,0,0,4
+StackAdapt,EC,2,2,0,0
+StackAdapt,US,2,2,0,0
+StackAdapt,EU,2,0,1,1
+StackAdapt,GB,2,0,0,2
+StackAdapt,CH,2,0,1,1
+Meta,EC,25,25,0,0
+Meta,US,25,24,0,1
+Meta,EU,25,16,8,1
+Meta,GB,25,15,8,2
+Meta,CH,25,11,13,1
+Google Analytics,EC,69,69,0,0
+Google Analytics,US,69,67,0,2
+Google Analytics,EU,69,61,3,5
+Google Analytics,GB,69,61,3,5
+Google Analytics,CH,69,55,4,10

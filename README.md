@@ -51,7 +51,7 @@ The deposit holds **two reported measurements that must not be mixed**:
 
 The two differ in date, in the set of retained sites and in consolidation rule, and their tracking figures are not interchangeable. `CODEBOOK.md` sets out the relation between them.
 
-Three further campaigns are released but **not analysed in the article**: an extended five-vantage campaign of 16 August, an operator control from a second Ecuadorian ISP on 7 September, and a second ETAPA series on 14 September that makes that control interpretable and isolates the effect of the date. All three are described below.
+Three further campaigns are released: an extended five-vantage campaign of 16 August, whose network records the article uses to locate the layer at which each vendor's cookie is withheld (`vendor_layer.py`, Table 7), an operator control from a second Ecuadorian ISP on 7 September, and a second ETAPA series on 14 September that makes that control interpretable and isolates the effect of the date. The article reports the last two only as controls in its threats to validity. All three are described below.
 
 ---
 
@@ -72,13 +72,13 @@ data/
                         results_{EC,EU,GB,US}_r*.{json,csv}
                         meta_*.json  public IP, geolocation and versions per pass
     tracking_extended/  48 files of a later five-vantage campaign, including
-                        Switzerland. NOT analysed in the article.
+                        Switzerland, with network records. Used for Table 7.
     tracking_telconet/  9 files of an operator control from a second Ecuadorian
-                        ISP. NOT analysed in the article.
+                        ISP. Reported only as a control.
     tracking_etapa_september/
                         9 files of a second ETAPA series, one month after the
                         reported campaign: same operator, city and machine.
-                        NOT analysed in the article.
+                        Reported only as a control.
   manual/             manual validation of three success criteria on 15 sites:
                         four coding rounds, 39 CSV tables, 45 screenshots,
                         the collection instruments and their data dictionary.
@@ -121,11 +121,11 @@ Each `meta_*.json` records seven location checks per pass — at the start, afte
 
 ### The extended five-vantage campaign
 
-`data/raw/tracking_extended/` holds a later campaign, 16 August 2026, that adds a Swiss vantage point and uses a more recent build of the instrument. **The article does not analyse it.** It is released because the measurements exist and are valid, not as support for any figure in the text. It is not an extension of the reported campaign but an independent measurement, with a different instrument, a different set of passes and a different date. Any analysis using it must treat it separately.
+`data/raw/tracking_extended/` holds a later campaign, 16 August 2026, that adds a Swiss vantage point and uses a more recent build of the instrument. Version 3.0 of the instrument adds, without changing any measurement parameter, a passive record of the requests the page sends to each vendor family and of whether any response carried a `Set-Cookie` header. The article uses those records, through `vendor_layer.py`, to establish whether a vendor's cookie is withheld by the vendor (the request is sent and no cookie results) or upstream of it (the request is not sent); that is Table 7 and the site-level comparison that follows it. It is an independent measurement, with a different instrument build, a different set of passes and a different date, and it is never merged with the campaign of 15 August.
 
 ### The two Ecuadorian controls
 
-The reported campaign measured Ecuador from a single connection on a single day: ETAPA EP (AS27668, Cuenca), 15 August 2026. Two further series test whether that result depends on the operator or on the date. **The article analyses neither of them**, and neither may be merged with the campaigns above.
+The reported campaign measured Ecuador from a single connection on a single day: ETAPA EP (AS27668, Cuenca), 15 August 2026. Two further series test whether that result depends on the operator or on the date. The article reports them only as controls in its threats to validity, and neither may be merged with the campaigns above.
 
 `data/raw/tracking_telconet/` holds three passes over the 126 sites from a residential Ecuadorian connection of Telconet S.A. (AS27947, Guayaquil), on 7 September 2026, on a different machine of the same specification.
 
@@ -191,6 +191,7 @@ python power_analysis.py             # statistical power of the comparisons
 python normalise_acronym.py          # acronym normalisation across the deposit
 python verify_live_divergence.py     # automated pass vs live check: 39 = 35 + 4
 python kappa_rondas.py               # round 1 vs round 2 over the 45 shared cells
+python vendor_layer.py               # layer at which each vendor cookie is withheld, 16 August
 ```
 
 The manual validation of round 2 has five scripts of its own. They read `data/manual/act_round2/` and write nothing except where stated.

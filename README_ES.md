@@ -51,7 +51,7 @@ El depósito contiene **dos mediciones reportadas que no deben mezclarse**:
 
 Las dos difieren en fecha, en el conjunto de sitios retenidos y en la regla de consolidación, y sus cifras de rastreo no son intercambiables. `CODEBOOK.md` establece la relación entre ambas.
 
-Se publican además otras tres campañas que **el artículo no analiza**: una campaña extendida de cinco puntos del 16 de agosto, un control de operador desde un segundo proveedor ecuatoriano el 7 de septiembre, y una segunda serie de ETAPA del 14 de septiembre que hace interpretable ese control y aísla el efecto de la fecha. Las tres se describen más abajo.
+Se publican además otras tres campañas: una campaña extendida de cinco puntos del 16 de agosto, cuyos registros de red usa el artículo para localizar la capa en la que se retiene cada cookie de proveedor (`vendor_layer.py`, Tabla 7), un control de operador desde un segundo proveedor ecuatoriano el 7 de septiembre, y una segunda serie de ETAPA del 14 de septiembre que hace interpretable ese control y aísla el efecto de la fecha. El artículo informa estas dos últimas solo como controles en sus amenazas a la validez. Las tres se describen más abajo.
 
 ---
 
@@ -72,13 +72,13 @@ data/
                         results_{EC,EU,GB,US}_r*.{json,csv}
                         meta_*.json  IP pública, geolocalización y versiones por pasada
     tracking_extended/  48 archivos de una campaña posterior de cinco puntos,
-                        incluida Suiza. NO analizada en el artículo.
+                        incluida Suiza, con registros de red. Usada en la Tabla 7.
     tracking_telconet/  9 archivos de un control de operador desde un segundo
-                        proveedor ecuatoriano. NO analizado en el artículo.
+                        proveedor ecuatoriano. Informado solo como control.
     tracking_etapa_september/
                         9 archivos de una segunda serie de ETAPA, un mes después
                         de la campaña reportada: mismo operador, ciudad y
-                        máquina. NO analizada en el artículo.
+                        máquina. Informada solo como control.
   manual/             validación manual de tres criterios de conformidad en 15
                         sitios: cuatro rondas de codificación, 39 tablas CSV,
                         45 capturas de pantalla, los instrumentos de recolección
@@ -121,11 +121,11 @@ Cada `meta_*.json` registra siete controles de ubicación por pasada —al inici
 
 ### La campaña extendida de cinco puntos
 
-`data/raw/tracking_extended/` contiene una campaña posterior, del 16 de agosto de 2026, que añade un punto suizo y usa una construcción más reciente del instrumento. **El artículo no la analiza.** Se publica porque las mediciones existen y son válidas, no como respaldo de ninguna cifra del texto. No es una ampliación de la campaña reportada, sino una medición independiente, con otro instrumento, otro conjunto de pasadas y otra fecha. Cualquier análisis que la use debe tratarla por separado.
+`data/raw/tracking_extended/` contiene una campaña posterior, del 16 de agosto de 2026, que añade un punto suizo y usa una construcción más reciente del instrumento. La versión 3.0 del instrumento añade, sin cambiar ningún parámetro de medición, un registro pasivo de las peticiones que la página envía a cada familia de proveedor y de si alguna respuesta trajo cabecera `Set-Cookie`. El artículo usa esos registros, mediante `vendor_layer.py`, para establecer si la cookie de un proveedor la retiene el proveedor (la petición se envía y no hay cookie) o una capa anterior (la petición no se envía); son la Tabla 7 y la comparación por sitio que la sigue. Es una medición independiente, con otra construcción del instrumento, otro conjunto de pasadas y otra fecha, y nunca se fusiona con la campaña del 15 de agosto.
 
 ### Los dos controles ecuatorianos
 
-La campaña reportada midió Ecuador desde una sola conexión y en un solo día: ETAPA EP (AS27668, Cuenca), 15 de agosto de 2026. Dos series adicionales comprueban si ese resultado depende del operador o de la fecha. **El artículo no analiza ninguna de las dos**, y ninguna debe fusionarse con las campañas anteriores.
+La campaña reportada midió Ecuador desde una sola conexión y en un solo día: ETAPA EP (AS27668, Cuenca), 15 de agosto de 2026. Dos series adicionales comprueban si ese resultado depende del operador o de la fecha. El artículo las informa solo como controles en sus amenazas a la validez, y ninguna debe fusionarse con las campañas anteriores.
 
 `data/raw/tracking_telconet/` contiene tres pasadas sobre los 126 sitios desde una conexión residencial ecuatoriana de Telconet S.A. (AS27947, Guayaquil), el 7 de septiembre de 2026, en otra máquina de las mismas características.
 
@@ -191,6 +191,7 @@ python power_analysis.py             # potencia estadística de las comparacione
 python normalise_acronym.py          # normalización de siglas en el depósito
 python verify_live_divergence.py     # automática vs verificación en vivo: 39 = 35 + 4
 python kappa_rondas.py               # ronda 1 frente a ronda 2 sobre las 45 celdas
+python vendor_layer.py               # capa en la que se retiene cada cookie de proveedor, 16 de agosto
 ```
 
 La validación manual de la ronda 2 tiene cinco scripts propios. Leen `data/manual/act_round2/` y no escriben nada salvo donde se indica.
